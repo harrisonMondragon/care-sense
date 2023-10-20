@@ -2,7 +2,7 @@ import Toybox.Lang;
 import Toybox.System;
 import Toybox.WatchUi;
 
-class 1-rep-maxMenuDelegate extends WatchUi.MenuInputDelegate {
+class one_repMenuDelegate extends WatchUi.MenuInputDelegate {
 
     function initialize() {
         MenuInputDelegate.initialize();

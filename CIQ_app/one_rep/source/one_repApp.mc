@@ -2,7 +2,7 @@ import Toybox.Application;
 import Toybox.Lang;
 import Toybox.WatchUi;
 
-class 1-rep-maxApp extends Application.AppBase {
+class one_repApp extends Application.AppBase {
 
     function initialize() {
         AppBase.initialize();
@@ -18,11 +18,11 @@ class 1-rep-maxApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() as Array<Views or InputDelegates>? {
-        return [ new 1-rep-maxView(), new 1-rep-maxDelegate() ] as Array<Views or InputDelegates>;
+        return [ new one_repView(), new one_repDelegate() ] as Array<Views or InputDelegates>;
     }
 
 }
 
-function getApp() as 1-rep-maxApp {
-    return Application.getApp() as 1-rep-maxApp;
+function getApp() as one_repApp {
+    return Application.getApp() as one_repApp;
 }
