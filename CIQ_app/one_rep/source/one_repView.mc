@@ -1,7 +1,7 @@
 import Toybox.Graphics;
 import Toybox.WatchUi;
 
-class one_repView extends WatchUi.View {
+class OneRepViewHome extends WatchUi.View {
 
     function initialize() {
         View.initialize();

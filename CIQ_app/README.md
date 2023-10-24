@@ -16,3 +16,6 @@ they are added/developed.
 - [Garmin Help Forums](https://forums.garmin.com/developer/)
 
 - [Side Loading an App](https://developer.garmin.com/connect-iq/connect-iq-basics/your-first-app/)
+
+- Example CIQ Applications
+    - [Sign Language Sensor](https://github.com/OmarErak/WBSLDC_ConnectIQ/blob/main/source/WBSLDC_App.mc)
