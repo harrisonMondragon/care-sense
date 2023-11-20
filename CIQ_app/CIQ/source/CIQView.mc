@@ -49,8 +49,19 @@ class CIQSensorConnection extends WatchUi.View {
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
-        // Call the parent onUpdate function to redraw the layout
-        View.onUpdate(dc);
+        var x = dc.getWidth();
+        var y = dc.getHeight();
+
+        // set background color
+        var backgroundColor = Graphics.COLOR_BLACK;
+        dc.setColor(backgroundColor, Graphics.COLOR_TRANSPARENT);
+        dc.fillRectangle (0, 0, x, y);
+
+        // set foreground color
+        dc.setColor((backgroundColor == Graphics.COLOR_BLACK) ? Graphics.COLOR_WHITE : Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+
+        dc.drawText(x / 2, y / 2-30, Graphics.FONT_MEDIUM, "No Sensor Connected", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x / 2, y / 2 + 70, Graphics.FONT_SYSTEM_SMALL, "Check if your charge has\nwandered off.", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     // Called when this View is removed from the screen. Save the
