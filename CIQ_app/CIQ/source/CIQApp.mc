@@ -2,13 +2,13 @@ import Toybox.Application;
 import Toybox.Lang;
 import Toybox.WatchUi;
 
-class OneRepApp extends Application.AppBase {
+class CIQApp extends Application.AppBase {
 
     private var _view;
 
     function initialize() {
         AppBase.initialize();
-        _view = new OneRepViewHome();
+        _view = new CIQDisplay();
     }
 
     // onStart() is called on application start up
@@ -27,6 +27,6 @@ class OneRepApp extends Application.AppBase {
 
 }
 
-function getApp() as OneRepApp {
-    return Application.getApp() as OneRepApp;
+function getApp() as CIQApp {
+    return Application.getApp() as CIQApp;
 }
