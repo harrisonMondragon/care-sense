@@ -14,21 +14,19 @@
 #include <ArduinoBLE.h>
       
 enum {
-  GESTURE_NONE  = -1,
-  GESTURE_UP    = 0,
-  GESTURE_DOWN  = 1,
-  GESTURE_LEFT  = 2,
-  GESTURE_RIGHT = 3
+  SOUND_NONE = -1,
+  SOUND_QUIET = 0,
+  SOUND_MED = 1,
+  SOUND_LOUD = 2
 };
 
 const char* deviceServiceUuid = "19b10000-e8f2-537e-4f6c-d104768a1214";
 const char* deviceServiceCharacteristicUuid = "19b10001-e8f2-537e-4f6c-d104768a1214";
 
-int gesture = -1;
+int sound = -1;
 
-BLEService gestureService(deviceServiceUuid); 
-BLEByteCharacteristic gestureCharacteristic(deviceServiceCharacteristicUuid, BLERead | BLEWrite);
-
+BLEService soundService(deviceServiceUuid); 
+BLEByteCharacteristic soundCharacteristic(deviceServiceCharacteristicUuid, BLERead | BLEWrite);
 
 void setup() {
   Serial.begin(9600);
@@ -44,17 +42,16 @@ void setup() {
   digitalWrite(LEDB, HIGH);
   digitalWrite(LED_BUILTIN, LOW);
 
-  
   if (!BLE.begin()) {
     Serial.println("- Starting Bluetooth® Low Energy module failed!");
     while (1);
   }
 
   BLE.setLocalName("Arduino Nano 33 BLE (Peripheral)");
-  BLE.setAdvertisedService(gestureService);
-  gestureService.addCharacteristic(gestureCharacteristic);
-  BLE.addService(gestureService);
-  gestureCharacteristic.writeValue(-1);
+  BLE.setAdvertisedService(soundService);
+  soundService.addCharacteristic(soundCharacteristic);
+  BLE.addService(soundService);
+  soundCharacteristic.writeValue(-1);
   BLE.advertise();
 
   Serial.println("Nano 33 BLE (Peripheral Device)");
@@ -73,9 +70,9 @@ void loop() {
     Serial.println(" ");
 
     while (central.connected()) {
-      if (gestureCharacteristic.written()) {
-         gesture = gestureCharacteristic.value();
-         writeGesture(gesture);
+      if (soundCharacteristic.written()) {
+         sound = soundCharacteristic.value();
+         writeSound(sound);
        }
     }
     
@@ -83,41 +80,33 @@ void loop() {
   }
 }
 
-void writeGesture(int gesture) {
-  Serial.println("- Characteristic <gesture_type> has changed!");
+void writeSound(int sound) {
+  Serial.println("- Characteristic <sound_type> has changed!");
   
-   switch (gesture) {
-      case GESTURE_UP:
-        Serial.println("Actual value: 0");
+   switch (sound) {
+      case SOUND_LOUD:
+        Serial.println("Sent value: 2, Sound HIGH - turn Red LED on");
         Serial.println(" ");
         digitalWrite(LEDR, LOW);
         digitalWrite(LEDG, HIGH);
         digitalWrite(LEDB, HIGH);
         digitalWrite(LED_BUILTIN, LOW);
         break;
-      case GESTURE_DOWN:
-        Serial.println("Actual value: 1");
+      case SOUND_MED:
+        Serial.println("Sent value: 1, Sound MEDUIM - turn Green LED on");
         Serial.println(" ");
         digitalWrite(LEDR, HIGH);
         digitalWrite(LEDG, LOW);
         digitalWrite(LEDB, HIGH);
         digitalWrite(LED_BUILTIN, LOW);
         break;
-      case GESTURE_LEFT:
-        Serial.println("Actual value: 2");
+      case SOUND_QUIET:
+        Serial.println("Sent value: 0, Sound LOW - turn Blue LED on");
         Serial.println(" ");
         digitalWrite(LEDR, HIGH);
         digitalWrite(LEDG, HIGH);
         digitalWrite(LEDB, LOW);
         digitalWrite(LED_BUILTIN, LOW);
-        break;
-      case GESTURE_RIGHT:
-        Serial.println("Actual value: 3");
-        Serial.println(" ");
-        digitalWrite(LEDR, HIGH);
-        digitalWrite(LEDG, HIGH);
-        digitalWrite(LEDB, HIGH);
-        digitalWrite(LED_BUILTIN, HIGH);
         break;
       default:
         digitalWrite(LEDR, HIGH);
