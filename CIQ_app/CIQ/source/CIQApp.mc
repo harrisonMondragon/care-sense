@@ -1,6 +1,9 @@
 import Toybox.Application;
 import Toybox.Lang;
 import Toybox.WatchUi;
+using Toybox.BluetoothLowEnergy as BLE;
+
+var BLE_DELEGATE;
 
 class CIQApp extends Application.AppBase {
 
@@ -8,12 +11,14 @@ class CIQApp extends Application.AppBase {
 
     function initialize() {
         AppBase.initialize();
-        _view = new CIQDisplay();
+        _view = new BleScanner();
     }
 
     // onStart() is called on application start up
     function onStart(state as Dictionary?) as Void {
         // set up/check BLE connection here
+        BLE_DELEGATE = new Delegate();
+        BLE.setDelegate(BLE_DELEGATE);
     }
 
     // onStop() is called when your application is exiting
