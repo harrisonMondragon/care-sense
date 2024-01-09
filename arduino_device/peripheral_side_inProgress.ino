@@ -84,7 +84,7 @@ void loop() {
       if (millis() - lastTime >= interval) {
     // wait for samples to be read
         if (samplesRead) {
-          Serial.println("@@@@@@");
+          // Serial.println("@@@@@@");
           // calculate the RMS amplitude
           double sumSquared = 0.0;
           for (int i = 0; i < samplesRead; i++) {
@@ -104,6 +104,8 @@ void loop() {
 
           soundCharacteristic.writeValue((byte)rmsAmplitude);
           Serial.println("WRITTEN");
+          Serial.println(rmsAmplitude);
+          
 
           // Compare RMS amplitude against the noise threshold
           if (rmsAmplitude > noiseThreshold) {
