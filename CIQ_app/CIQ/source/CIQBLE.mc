@@ -12,20 +12,44 @@ class Delegate extends BLE.BleDelegate {
 
     function initialize() {
         BleDelegate.initialize();
-        // _scanResults = new[MAX_RESULTS];
+        registerProfiles();
     }
 
     function onScanResults(scanResults) {
         for (var result = scanResults.next(); result != null; result = scanResults.next()) {
-            if (result instanceof BLE.ScanResult && result.getDeviceName() != null) {
+            if (result instanceof BLE.ScanResult && result.getDeviceName() != null && _scanResults.indexOf(result) == -1) {
                 _scanResults =_scanResults.add(result);
             }
         }
+        // for (var result = scanResults.next(); result != null; result = scanResults.next()) {
+        //     if (result instanceof BLE.ScanResult && result.getDeviceName() != null) {
+        //         var iter = result.getServiceUuids();
+        //         for (var uuid = iter.next(); uuid != null; uuid = iter.next()) {
+        //             if (uuid.equals(BLE.stringToUuid("19b10000-e8f2-537e-4f6c-d104768a1214"))) {
+        //                 _scanResults.add(result);
+        //             }
+        //         }
+        //     }
+        // }
     }
 
     function getScanResults() {
         return _scanResults.slice(1, null);
     }
+
+    function registerProfiles() {
+       var profile = {                                                  // Set the Profile
+           :uuid => BLE.stringToUuid("19b10000-e8f2-537e-4f6c-d104768a1214"),
+           :characteristics => [ {                                      // Define the characteristics
+                   :uuid => BLE.stringToUuid("19b10001-e8f2-537e-4f6c-d104768a1214"),     // UUID of the first characteristic
+                   :descriptors => [                                    // Descriptors of the characteristic
+                       BLE.cccdUuid()] },
+                       ]
+       };
+
+       // Make the registerProfile call
+       BLE.registerProfile( profile );
+  }
 }
 
 
@@ -69,19 +93,9 @@ class BleScanner extends WatchUi.View {
             BLE.setScanState(BLE.SCAN_STATE_OFF);
             // showScanMenu(dc);
             var scanResults = BLE_DELEGATE.getScanResults();
-            if (scanResults != null) {
-                var spacing = 50;
-                // dc.drawText(x / 2, y / 2 - 50, Graphics.FONT_MEDIUM, Lang.format("Scanned $1$\ndevices", [scanResults.size()]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-                dc.drawText(x / 2, spacing * 2, Graphics.FONT_SMALL, scanResults[0].getDeviceName(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-                dc.drawText(x / 2, spacing * 3, Graphics.FONT_SMALL, scanResults[1].getDeviceName(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-                dc.drawText(x / 2, spacing * 4, Graphics.FONT_SMALL, scanResults[2].getDeviceName(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-                dc.drawText(x / 2, spacing * 5, Graphics.FONT_SMALL, scanResults[3].getDeviceName(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-                dc.drawText(x / 2, spacing * 6, Graphics.FONT_SMALL, scanResults[4].getDeviceName(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-                // for(var i = 0; i < scanResults.size(); i++) {
-                //     dc.drawText(x / 2, (i * 5), Graphics.FONT_SMALL, scanResults[i].getDeviceName(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-                // }
-            } else {
-                dc.drawText(x / 2, y / 2, Graphics.FONT_MEDIUM, "No Results", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.drawText(x / 2, y / 2 - 125, Graphics.FONT_MEDIUM, Lang.format("Scanned $1$\ndevice(s)", [scanResults.size()]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+            for (var i = 0; i < scanResults.size(); i++) {
+                dc.drawText(x / 2, 200 + (50 * i), Graphics.FONT_SMALL, scanResults[i].getDeviceName(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
             }
         } else {
             dc.drawText(x / 2, y / 2, Graphics.FONT_MEDIUM, "Scanning...", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
@@ -92,16 +106,5 @@ class BleScanner extends WatchUi.View {
     // state of this View here. This includes freeing resources from
     // memory.
     function onHide() as Void {
-    }
-
-    function showScanMenu(dc) {
-        var scanResults = BLE_DELEGATE.getScanResults();
-        if (scanResults != null) {
-            for(var i = 0; i < scanResults.size(); i++) {
-                dc.drawText(x / 2, y + i * 20, Graphics.FONT_SMALL, scanResults[i].getDeviceName(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-            }
-        } else {
-            // use Confirmation and Confirmation Delegate to scan again
-        }
     }
 }

@@ -34,38 +34,42 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.2 = getv ? :BleDelegate;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 15 8 ]
+        %tmp.4 = self;
+        %tmp.5 = getv function %tmp.4 :registerProfiles;
+        invoke %tmp.4 %tmp.5();
 _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_13_26_stop:
     }
     [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 18; ]
     function onScanResults(scanResults) {
 _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_18_40_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 19 8 ]
-        for @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_19_8_for_test @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_19_8_for_incr @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_19_8_for_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_19_8_for_init:
-        [ "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_19_8_for_begin" "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_19_8_for_end" ]
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 24 8 ]
+        for @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_24_8_for_test @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_24_8_for_incr @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_24_8_for_end;
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_24_8_for_init:
+        [ "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_24_8_for_begin" "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_24_8_for_end" ]
         %result.1 = local;
         %tmp.1 = lgetv %scanResults;
         %tmp.2 = getv function %tmp.1 :next;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         lputv %result.1 %tmp.3;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_19_8_for_test:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_24_8_for_test:
         %tmp.5 = lgetv %result.1;
         %tmp.6 = null;
         %tmp.7 = ne %tmp.5 %tmp.6;
-        bf %tmp.7 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_19_8_for_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_19_8_for_begin:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_19_91_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 20 12 ]
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_20_12_if_stmt:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_20_16_begin:
+        bf %tmp.7 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_24_8_for_end;
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_24_8_for_begin:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_24_91_start:
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 25 12 ]
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_25_12_if_stmt:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_25_16_begin:
         %tmp.9 = lgetv %result.1;
         %tmp.10 = as %tmp.9 { (!Null) };
         %tmp.11 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.12 = getv %tmp.11 :ScanResult;
         %tmp.13 = isa %tmp.10 %tmp.12;
         %tmp.14 = dup %tmp.13;
-        bf %tmp.14 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_20_52_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_20_52_true:
+        bf %tmp.14 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_25_52_end;
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_25_52_true:
         %tmp.15 = lgetv %result.1;
         %tmp.16 = as %tmp.15 { (BLE.ScanResult) && (!Null) };
         %tmp.17 = getv function %tmp.16 :getDeviceName;
@@ -74,103 +78,196 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.20 = ne %tmp.18 %tmp.19;
         %tmp.21 = and %tmp.13 %tmp.20;
         push %tmp.21;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_20_52_end:
-        %tmp.22 = phi [%tmp.14 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_20_16_begin] [%tmp.21 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_20_52_true] [%tmp.22 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_20_52_end];
-        bf %tmp.22 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_20_12_if_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_20_12_if_true:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_20_84_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 21 16 ]
-        %tmp.24 = getv ? :_scanResults;
-        %tmp.25 = getv function %tmp.24 :add;
-        %tmp.27 = lgetv %result.1;
-        %tmp.28 = as %tmp.27 { (BLE.ScanResult) && (!Null) };
-        %tmp.29 = invoke %tmp.24 %tmp.25(%tmp.28);
-        putv self :_scanResults %tmp.29;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_20_84_stop:
-        goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_20_12_if_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_20_12_if_end:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_19_91_stop:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_19_8_for_incr:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 19 ]
-        %tmp.30 = lgetv %scanResults;
-        %tmp.31 = getv function %tmp.30 :next;
-        %tmp.32 = invoke %tmp.30 %tmp.31();
-        lputv %result.1 %tmp.32;
-        goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_19_8_for_test;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_19_8_for_end:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_25_52_end:
+        %tmp.22 = phi [%tmp.14 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_25_16_begin] [%tmp.21 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_25_52_true] [%tmp.22 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_25_52_end];
+        bf %tmp.22 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_25_12_if_end;
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_25_12_if_true:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_25_84_start:
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 26 16 ]
+        [ "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_25_84_start" "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_25_84_stop" ]
+        %iter.2 = local;
+        %tmp.23 = lgetv %result.1;
+        %tmp.24 = as %tmp.23 { (BLE.ScanResult) && (!Null) };
+        %tmp.25 = getv function %tmp.24 :getServiceUuids;
+        %tmp.26 = invoke %tmp.24 %tmp.25();
+        lputv %iter.2 %tmp.26;
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 27 16 ]
+        for @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_27_16_for_test @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_27_16_for_incr @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_27_16_for_end;
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_27_16_for_init:
+        [ "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_27_16_for_begin" "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_27_16_for_end" ]
+        %uuid.3 = local;
+        %tmp.27 = lgetv %iter.2;
+        %tmp.28 = getv function %tmp.27 :next;
+        %tmp.29 = invoke %tmp.27 %tmp.28();
+        lputv %uuid.3 %tmp.29;
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_27_16_for_test:
+        %tmp.31 = lgetv %uuid.3;
+        %tmp.32 = null;
+        %tmp.33 = ne %tmp.31 %tmp.32;
+        bf %tmp.33 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_27_16_for_end;
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_27_16_for_begin:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_27_79_start:
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 28 20 ]
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_28_20_if_stmt:
+        %tmp.34 = lgetv %uuid.3;
+        %tmp.35 = as %tmp.34 { (!Null) };
+        %tmp.36 = getv function %tmp.35 :equals;
+        %tmp.37 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.38 = getv function %tmp.37 :stringToUuid;
+        %tmp.39 = "19b10000-e8f2-537e-4f6c-d104768a1214";
+        %tmp.40 = invoke %tmp.37 %tmp.38(%tmp.39);
+        %tmp.41 = invoke %tmp.35 %tmp.36(%tmp.40);
+        bf %tmp.41 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_28_20_if_end;
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_28_20_if_true:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_28_95_start:
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 29 24 ]
+        %tmp.43 = getv ? :_scanResults;
+        %tmp.44 = getv function %tmp.43 :add;
+        %tmp.46 = lgetv %result.1;
+        %tmp.47 = as %tmp.46 { (BLE.ScanResult) && (!Null) };
+        invoke %tmp.43 %tmp.44(%tmp.47);
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_28_95_stop:
+        goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_28_20_if_end;
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_28_20_if_end:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_27_79_stop:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_27_16_for_incr:
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 27 ]
+        %tmp.48 = lgetv %iter.2;
+        %tmp.49 = getv function %tmp.48 :next;
+        %tmp.50 = invoke %tmp.48 %tmp.49();
+        lputv %uuid.3 %tmp.50;
+        goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_27_16_for_test;
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_27_16_for_end:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_25_84_stop:
+        goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_25_12_if_end;
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_25_12_if_end:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_24_91_stop:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_24_8_for_incr:
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 24 ]
+        %tmp.51 = lgetv %scanResults;
+        %tmp.52 = getv function %tmp.51 :next;
+        %tmp.53 = invoke %tmp.51 %tmp.52();
+        lputv %result.1 %tmp.53;
+        goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_24_8_for_test;
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_24_8_for_end:
 _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_18_40_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 26; ]
+    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 36; ]
     function getScanResults() {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_26_30_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 27 8 ]
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_36_30_start:
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 37 8 ]
         %tmp.2 = getv ? :_scanResults;
         %tmp.3 = getv function %tmp.2 :slice;
         %tmp.4 = 1;
         %tmp.5 = null;
         %tmp.6 = invoke %tmp.2 %tmp.3(%tmp.4, %tmp.5);
         ret %tmp.6;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_26_30_stop:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_36_30_stop:
+    }
+    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 40; ]
+    function registerProfiles() {
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_40_32_start:
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 41 7 ]
+        [ "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_40_32_start" "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_40_32_stop" ]
+        %profile.1 = local;
+        %tmp.1 = newd 2;
+        %tmp.3 = const :uuid;
+        %tmp.4 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.5 = getv function %tmp.4 :stringToUuid;
+        %tmp.6 = "19b10000-e8f2-537e-4f6c-d104768a1214";
+        %tmp.7 = invoke %tmp.4 %tmp.5(%tmp.6);
+        %tmp.8 = dup %tmp.1;
+        %tmp.9 = aputv %tmp.8 %tmp.3 %tmp.7;
+        %tmp.11 = const :characteristics;
+        %tmp.12 = newa 1;
+        %tmp.13 = newd 2;
+        %tmp.15 = const :uuid;
+        %tmp.16 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.17 = getv function %tmp.16 :stringToUuid;
+        %tmp.18 = "19b10001-e8f2-537e-4f6c-d104768a1214";
+        %tmp.19 = invoke %tmp.16 %tmp.17(%tmp.18);
+        %tmp.20 = dup %tmp.13;
+        %tmp.21 = aputv %tmp.20 %tmp.15 %tmp.19;
+        %tmp.23 = const :descriptors;
+        %tmp.24 = newa 1;
+        %tmp.25 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.26 = getv function %tmp.25 :cccdUuid;
+        %tmp.27 = invoke %tmp.25 %tmp.26();
+        %tmp.28 = dup %tmp.24;
+        %tmp.29 = aputv %tmp.28 0 %tmp.27;
+        %tmp.30 = dup %tmp.21;
+        %tmp.31 = aputv %tmp.30 %tmp.23 %tmp.29;
+        %tmp.32 = dup %tmp.12;
+        %tmp.33 = aputv %tmp.32 0 %tmp.31;
+        %tmp.34 = dup %tmp.9;
+        %tmp.35 = aputv %tmp.34 %tmp.11 %tmp.33;
+        lputv %profile.1 %tmp.35;
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 51 7 ]
+        %tmp.36 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.37 = getv function %tmp.36 :registerProfile;
+        %tmp.39 = lgetv %profile.1;
+        invoke %tmp.36 %tmp.37(%tmp.39);
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_40_32_stop:
     }
 }
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 32; ]
+[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 56; ]
 class BleScanner extends WatchUi.View{
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 32; ]
+    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 56; ]
     <init> {
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 32; ]
+    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 56; ]
     static
     <init> {
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 33; @position = 10; ]
+    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 57; @position = 10; ]
     const SCAN_DELAY = 5;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 34; @position = 8; ]
+    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 58; @position = 8; ]
     var scanStartTime;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 35; @position = 8; ]
+    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 59; @position = 8; ]
     var scanEndTime;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 36; @position = 8; ]
+    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 60; @position = 8; ]
     var x;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 36; @position = 11; ]
+    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 60; @position = 11; ]
     var y;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 38; ]
+    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 62; ]
     function initialize() as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_38_26_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 39 8 ]
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_62_26_start:
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 63 8 ]
         %tmp.2 = getv ? :View;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_38_26_stop:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_62_26_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 43; ]
+    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 67; ]
     function onLayout(dc as Dc) as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_43_40_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 44 8 ]
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_67_40_start:
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 68 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :getWidth;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         putv self :x %tmp.3;
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 45 8 ]
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 69 8 ]
         %tmp.4 = lgetv %dc;
         %tmp.5 = getv function %tmp.4 :getHeight;
         %tmp.6 = invoke %tmp.4 %tmp.5();
         putv self :y %tmp.6;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_43_40_stop:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_67_40_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 51; ]
+    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 75; ]
     function onShow() as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_51_30_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 52 8 ]
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_75_30_start:
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 76 8 ]
         %tmp.1 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.2 = getv function %tmp.1 :setScanState;
         %tmp.3 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.4 = getv %tmp.3 :SCAN_STATE_SCANNING;
         invoke %tmp.1 %tmp.2(%tmp.4);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 53 8 ]
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 77 8 ]
         %tmp.5 = getm $.Toybox.Time;
         %tmp.6 = getv function %tmp.5 :now;
         %tmp.7 = invoke %tmp.5 %tmp.6();
         putv self :scanStartTime %tmp.7;
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 54 8 ]
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 78 8 ]
         %tmp.9 = getv ? :scanStartTime;
         %tmp.10 = getv function %tmp.9 :add;
         %tmp.13 = getm $.Toybox.Time;
@@ -179,12 +276,12 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.11 = newc %tmp.14 (%tmp.16);
         %tmp.17 = invoke %tmp.9 %tmp.10(%tmp.11);
         putv self :scanEndTime %tmp.17;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_51_30_stop:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_75_30_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 58; ]
+    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 82; ]
     function onUpdate(dc as Dc) as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_58_40_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 60 8 ]
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_82_40_start:
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 84 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :setColor;
         %tmp.3 = getm $.Toybox.Graphics;
@@ -192,7 +289,7 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.5 = getm $.Toybox.Graphics;
         %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
         invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 61 8 ]
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 85 8 ]
         %tmp.7 = lgetv %dc;
         %tmp.8 = getv function %tmp.7 :fillRectangle;
         %tmp.9 = 0;
@@ -200,7 +297,7 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.12 = getv ? :x;
         %tmp.14 = getv ? :y;
         invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10, %tmp.12, %tmp.14);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 64 8 ]
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 88 8 ]
         %tmp.15 = lgetv %dc;
         %tmp.16 = getv function %tmp.15 :setColor;
         %tmp.17 = getm $.Toybox.Graphics;
@@ -208,284 +305,135 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.19 = getm $.Toybox.Graphics;
         %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
         invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 67 8 ]
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_67_8_if_stmt:
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 91 8 ]
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_91_8_if_stmt:
         %tmp.22 = getv ? :scanEndTime;
         %tmp.23 = getv function %tmp.22 :lessThan;
         %tmp.24 = getm $.Toybox.Time;
         %tmp.25 = getv function %tmp.24 :now;
         %tmp.26 = invoke %tmp.24 %tmp.25();
         %tmp.27 = invoke %tmp.22 %tmp.23(%tmp.26);
-        bf %tmp.27 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_67_8_if_false;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_67_8_if_true:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_67_46_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 69 12 ]
+        bf %tmp.27 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_91_8_if_false;
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_91_8_if_true:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_91_46_start:
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 93 12 ]
         %tmp.28 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.29 = getv function %tmp.28 :setScanState;
         %tmp.30 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.31 = getv %tmp.30 :SCAN_STATE_OFF;
         invoke %tmp.28 %tmp.29(%tmp.31);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 71 12 ]
-        [ "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_67_46_start" "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_67_46_stop" ]
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 95 12 ]
+        [ "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_91_46_start" "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_91_46_stop" ]
         %scanResults.1 = local;
         %tmp.33 = getv ? :BLE_DELEGATE;
         %tmp.34 = getv function %tmp.33 :getScanResults;
         %tmp.35 = invoke %tmp.33 %tmp.34();
         lputv %scanResults.1 %tmp.35;
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 72 12 ]
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_72_12_if_stmt:
-        %tmp.37 = lgetv %scanResults.1;
-        %tmp.38 = null;
-        %tmp.39 = ne %tmp.37 %tmp.38;
-        bf %tmp.39 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_72_12_if_false;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_72_12_if_true:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_72_37_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 73 16 ]
-        [ "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_72_37_start" "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_72_37_stop" ]
-        %spacing.2 = local;
-        %tmp.40 = 50;
-        lputv %spacing.2 %tmp.40;
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 75 16 ]
-        %tmp.41 = lgetv %dc;
-        %tmp.42 = getv function %tmp.41 :drawText;
-        %tmp.44 = getv ? :x;
-        %tmp.45 = 2;
-        %tmp.46 = div %tmp.44 %tmp.45;
-        %tmp.48 = lgetv %spacing.2;
-        %tmp.49 = 2;
-        %tmp.50 = mul %tmp.48 %tmp.49;
-        %tmp.51 = getm $.Toybox.Graphics;
-        %tmp.52 = getv %tmp.51 :FONT_SMALL;
-        %tmp.54 = lgetv %scanResults.1;
-        %tmp.55 = as %tmp.54 { (!Null) };
-        %tmp.56 = 0;
-        %tmp.57 = agetv %tmp.55 %tmp.56;
-        %tmp.58 = getv function %tmp.57 :getDeviceName;
-        %tmp.59 = invoke %tmp.57 %tmp.58();
-        %tmp.60 = getm $.Toybox.Graphics;
-        %tmp.61 = getv %tmp.60 :TEXT_JUSTIFY_CENTER;
-        %tmp.62 = getm $.Toybox.Graphics;
-        %tmp.63 = getv %tmp.62 :TEXT_JUSTIFY_VCENTER;
-        %tmp.64 = bitor %tmp.61 %tmp.63;
-        invoke %tmp.41 %tmp.42(%tmp.46, %tmp.50, %tmp.52, %tmp.59, %tmp.64);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 76 16 ]
-        %tmp.65 = lgetv %dc;
-        %tmp.66 = getv function %tmp.65 :drawText;
-        %tmp.68 = getv ? :x;
-        %tmp.69 = 2;
-        %tmp.70 = div %tmp.68 %tmp.69;
-        %tmp.72 = lgetv %spacing.2;
-        %tmp.73 = 3;
-        %tmp.74 = mul %tmp.72 %tmp.73;
-        %tmp.75 = getm $.Toybox.Graphics;
-        %tmp.76 = getv %tmp.75 :FONT_SMALL;
-        %tmp.78 = lgetv %scanResults.1;
-        %tmp.79 = as %tmp.78 { (!Null) };
-        %tmp.80 = 1;
-        %tmp.81 = agetv %tmp.79 %tmp.80;
-        %tmp.82 = getv function %tmp.81 :getDeviceName;
-        %tmp.83 = invoke %tmp.81 %tmp.82();
-        %tmp.84 = getm $.Toybox.Graphics;
-        %tmp.85 = getv %tmp.84 :TEXT_JUSTIFY_CENTER;
-        %tmp.86 = getm $.Toybox.Graphics;
-        %tmp.87 = getv %tmp.86 :TEXT_JUSTIFY_VCENTER;
-        %tmp.88 = bitor %tmp.85 %tmp.87;
-        invoke %tmp.65 %tmp.66(%tmp.70, %tmp.74, %tmp.76, %tmp.83, %tmp.88);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 77 16 ]
-        %tmp.89 = lgetv %dc;
-        %tmp.90 = getv function %tmp.89 :drawText;
-        %tmp.92 = getv ? :x;
-        %tmp.93 = 2;
-        %tmp.94 = div %tmp.92 %tmp.93;
-        %tmp.96 = lgetv %spacing.2;
-        %tmp.97 = 4;
-        %tmp.98 = mul %tmp.96 %tmp.97;
-        %tmp.99 = getm $.Toybox.Graphics;
-        %tmp.100 = getv %tmp.99 :FONT_SMALL;
-        %tmp.102 = lgetv %scanResults.1;
-        %tmp.103 = as %tmp.102 { (!Null) };
-        %tmp.104 = 2;
-        %tmp.105 = agetv %tmp.103 %tmp.104;
-        %tmp.106 = getv function %tmp.105 :getDeviceName;
-        %tmp.107 = invoke %tmp.105 %tmp.106();
-        %tmp.108 = getm $.Toybox.Graphics;
-        %tmp.109 = getv %tmp.108 :TEXT_JUSTIFY_CENTER;
-        %tmp.110 = getm $.Toybox.Graphics;
-        %tmp.111 = getv %tmp.110 :TEXT_JUSTIFY_VCENTER;
-        %tmp.112 = bitor %tmp.109 %tmp.111;
-        invoke %tmp.89 %tmp.90(%tmp.94, %tmp.98, %tmp.100, %tmp.107, %tmp.112);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 78 16 ]
-        %tmp.113 = lgetv %dc;
-        %tmp.114 = getv function %tmp.113 :drawText;
-        %tmp.116 = getv ? :x;
-        %tmp.117 = 2;
-        %tmp.118 = div %tmp.116 %tmp.117;
-        %tmp.120 = lgetv %spacing.2;
-        %tmp.121 = 5;
-        %tmp.122 = mul %tmp.120 %tmp.121;
-        %tmp.123 = getm $.Toybox.Graphics;
-        %tmp.124 = getv %tmp.123 :FONT_SMALL;
-        %tmp.126 = lgetv %scanResults.1;
-        %tmp.127 = as %tmp.126 { (!Null) };
-        %tmp.128 = 3;
-        %tmp.129 = agetv %tmp.127 %tmp.128;
-        %tmp.130 = getv function %tmp.129 :getDeviceName;
-        %tmp.131 = invoke %tmp.129 %tmp.130();
-        %tmp.132 = getm $.Toybox.Graphics;
-        %tmp.133 = getv %tmp.132 :TEXT_JUSTIFY_CENTER;
-        %tmp.134 = getm $.Toybox.Graphics;
-        %tmp.135 = getv %tmp.134 :TEXT_JUSTIFY_VCENTER;
-        %tmp.136 = bitor %tmp.133 %tmp.135;
-        invoke %tmp.113 %tmp.114(%tmp.118, %tmp.122, %tmp.124, %tmp.131, %tmp.136);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 79 16 ]
-        %tmp.137 = lgetv %dc;
-        %tmp.138 = getv function %tmp.137 :drawText;
-        %tmp.140 = getv ? :x;
-        %tmp.141 = 2;
-        %tmp.142 = div %tmp.140 %tmp.141;
-        %tmp.144 = lgetv %spacing.2;
-        %tmp.145 = 6;
-        %tmp.146 = mul %tmp.144 %tmp.145;
-        %tmp.147 = getm $.Toybox.Graphics;
-        %tmp.148 = getv %tmp.147 :FONT_SMALL;
-        %tmp.150 = lgetv %scanResults.1;
-        %tmp.151 = as %tmp.150 { (!Null) };
-        %tmp.152 = 4;
-        %tmp.153 = agetv %tmp.151 %tmp.152;
-        %tmp.154 = getv function %tmp.153 :getDeviceName;
-        %tmp.155 = invoke %tmp.153 %tmp.154();
-        %tmp.156 = getm $.Toybox.Graphics;
-        %tmp.157 = getv %tmp.156 :TEXT_JUSTIFY_CENTER;
-        %tmp.158 = getm $.Toybox.Graphics;
-        %tmp.159 = getv %tmp.158 :TEXT_JUSTIFY_VCENTER;
-        %tmp.160 = bitor %tmp.157 %tmp.159;
-        invoke %tmp.137 %tmp.138(%tmp.142, %tmp.146, %tmp.148, %tmp.155, %tmp.160);
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_72_37_stop:
-        goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_72_12_if_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_72_12_if_false:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_83_19_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 84 16 ]
-        %tmp.161 = lgetv %dc;
-        %tmp.162 = getv function %tmp.161 :drawText;
-        %tmp.164 = getv ? :x;
-        %tmp.165 = 2;
-        %tmp.166 = div %tmp.164 %tmp.165;
-        %tmp.168 = getv ? :y;
-        %tmp.169 = 2;
-        %tmp.170 = div %tmp.168 %tmp.169;
-        %tmp.171 = getm $.Toybox.Graphics;
-        %tmp.172 = getv %tmp.171 :FONT_MEDIUM;
-        %tmp.173 = "No Results";
-        %tmp.174 = getm $.Toybox.Graphics;
-        %tmp.175 = getv %tmp.174 :TEXT_JUSTIFY_CENTER;
-        %tmp.176 = getm $.Toybox.Graphics;
-        %tmp.177 = getv %tmp.176 :TEXT_JUSTIFY_VCENTER;
-        %tmp.178 = bitor %tmp.175 %tmp.177;
-        invoke %tmp.161 %tmp.162(%tmp.166, %tmp.170, %tmp.172, %tmp.173, %tmp.178);
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_83_19_stop:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_72_12_if_end:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_67_46_stop:
-        goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_67_8_if_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_67_8_if_false:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_86_15_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 87 12 ]
-        %tmp.179 = lgetv %dc;
-        %tmp.180 = getv function %tmp.179 :drawText;
-        %tmp.182 = getv ? :x;
-        %tmp.183 = 2;
-        %tmp.184 = div %tmp.182 %tmp.183;
-        %tmp.186 = getv ? :y;
-        %tmp.187 = 2;
-        %tmp.188 = div %tmp.186 %tmp.187;
-        %tmp.189 = getm $.Toybox.Graphics;
-        %tmp.190 = getv %tmp.189 :FONT_MEDIUM;
-        %tmp.191 = "Scanning...";
-        %tmp.192 = getm $.Toybox.Graphics;
-        %tmp.193 = getv %tmp.192 :TEXT_JUSTIFY_CENTER;
-        %tmp.194 = getm $.Toybox.Graphics;
-        %tmp.195 = getv %tmp.194 :TEXT_JUSTIFY_VCENTER;
-        %tmp.196 = bitor %tmp.193 %tmp.195;
-        invoke %tmp.179 %tmp.180(%tmp.184, %tmp.188, %tmp.190, %tmp.191, %tmp.196);
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_86_15_stop:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_67_8_if_end:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_58_40_stop:
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 94; ]
-    function onHide() as Void {
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 97; ]
-    function showScanMenu(dc) {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_97_30_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 98 8 ]
-        [ "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_97_30_start" "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_97_30_stop" ]
-        %scanResults.1 = local;
-        %tmp.2 = getv ? :BLE_DELEGATE;
-        %tmp.3 = getv function %tmp.2 :getScanResults;
-        %tmp.4 = invoke %tmp.2 %tmp.3();
-        lputv %scanResults.1 %tmp.4;
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 99 8 ]
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_99_8_if_stmt:
-        %tmp.6 = lgetv %scanResults.1;
-        %tmp.7 = null;
-        %tmp.8 = ne %tmp.6 %tmp.7;
-        bf %tmp.8 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_99_8_if_false;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_99_8_if_true:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_99_33_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 100 12 ]
-        for @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_100_12_for_test @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_100_12_for_incr @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_100_12_for_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_100_12_for_init:
-        [ "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_100_12_for_begin" "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_100_12_for_end" ]
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 96 12 ]
+        %tmp.36 = lgetv %dc;
+        %tmp.37 = getv function %tmp.36 :drawText;
+        %tmp.39 = getv ? :x;
+        %tmp.40 = 2;
+        %tmp.41 = div %tmp.39 %tmp.40;
+        %tmp.43 = getv ? :y;
+        %tmp.44 = 2;
+        %tmp.45 = div %tmp.43 %tmp.44;
+        %tmp.46 = 125;
+        %tmp.47 = sub %tmp.45 %tmp.46;
+        %tmp.48 = getm $.Toybox.Graphics;
+        %tmp.49 = getv %tmp.48 :FONT_MEDIUM;
+        %tmp.51 = getv ? :Lang;
+        %tmp.52 = getv function %tmp.51 :format;
+        %tmp.53 = "Scanned $1$\ndevice(s)";
+        %tmp.54 = newa 1;
+        %tmp.55 = lgetv %scanResults.1;
+        %tmp.56 = getv function %tmp.55 :size;
+        %tmp.57 = invoke %tmp.55 %tmp.56();
+        %tmp.58 = dup %tmp.54;
+        %tmp.59 = aputv %tmp.58 0 %tmp.57;
+        %tmp.60 = invoke %tmp.51 %tmp.52(%tmp.53, %tmp.59);
+        %tmp.61 = getm $.Toybox.Graphics;
+        %tmp.62 = getv %tmp.61 :TEXT_JUSTIFY_CENTER;
+        %tmp.63 = getm $.Toybox.Graphics;
+        %tmp.64 = getv %tmp.63 :TEXT_JUSTIFY_VCENTER;
+        %tmp.65 = bitor %tmp.62 %tmp.64;
+        invoke %tmp.36 %tmp.37(%tmp.41, %tmp.47, %tmp.49, %tmp.60, %tmp.65);
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 97 12 ]
+        for @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_97_12_for_test @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_97_12_for_incr @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_97_12_for_end;
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_97_12_for_init:
+        [ "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_97_12_for_begin" "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_97_12_for_end" ]
         %i.2 = local;
-        %tmp.9 = 0;
-        lputv %i.2 %tmp.9;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_100_12_for_test:
-        %tmp.11 = lgetv %i.2;
-        %tmp.12 = lgetv %scanResults.1;
-        %tmp.13 = as %tmp.12 { (!Null) };
-        %tmp.14 = getv function %tmp.13 :size;
-        %tmp.15 = invoke %tmp.13 %tmp.14();
-        %tmp.16 = lt %tmp.11 %tmp.15;
-        bf %tmp.16 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_100_12_for_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_100_12_for_begin:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_100_56_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 101 16 ]
-        %tmp.17 = lgetv %dc;
-        %tmp.18 = getv function %tmp.17 :drawText;
-        %tmp.20 = getv ? :x;
-        %tmp.21 = 2;
-        %tmp.22 = div %tmp.20 %tmp.21;
-        %tmp.24 = getv ? :y;
-        %tmp.26 = lgetv %i.2;
-        %tmp.27 = 20;
-        %tmp.28 = mul %tmp.26 %tmp.27;
-        %tmp.29 = add %tmp.24 %tmp.28;
-        %tmp.30 = getm $.Toybox.Graphics;
-        %tmp.31 = getv %tmp.30 :FONT_SMALL;
-        %tmp.33 = lgetv %scanResults.1;
-        %tmp.34 = as %tmp.33 { (!Null) };
-        %tmp.36 = lgetv %i.2;
-        %tmp.37 = agetv %tmp.34 %tmp.36;
-        %tmp.38 = getv function %tmp.37 :getDeviceName;
-        %tmp.39 = invoke %tmp.37 %tmp.38();
-        %tmp.40 = getm $.Toybox.Graphics;
-        %tmp.41 = getv %tmp.40 :TEXT_JUSTIFY_CENTER;
-        %tmp.42 = getm $.Toybox.Graphics;
-        %tmp.43 = getv %tmp.42 :TEXT_JUSTIFY_VCENTER;
-        %tmp.44 = bitor %tmp.41 %tmp.43;
-        invoke %tmp.17 %tmp.18(%tmp.22, %tmp.29, %tmp.31, %tmp.39, %tmp.44);
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_100_56_stop:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_100_12_for_incr:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 100 ]
-        %tmp.47 = lgetv %i.2;
-        %tmp.48 = add %tmp.47 1;
-        lputv %i.2 %tmp.48;
-        goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_100_12_for_test;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_100_12_for_end:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_99_33_stop:
-        goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_99_8_if_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_99_8_if_false:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_99_8_if_end:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_97_30_stop:
+        %tmp.66 = 0;
+        lputv %i.2 %tmp.66;
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_97_12_for_test:
+        %tmp.68 = lgetv %i.2;
+        %tmp.69 = lgetv %scanResults.1;
+        %tmp.70 = getv function %tmp.69 :size;
+        %tmp.71 = invoke %tmp.69 %tmp.70();
+        %tmp.72 = lt %tmp.68 %tmp.71;
+        bf %tmp.72 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_97_12_for_end;
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_97_12_for_begin:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_97_57_start:
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 98 16 ]
+        %tmp.73 = lgetv %dc;
+        %tmp.74 = getv function %tmp.73 :drawText;
+        %tmp.76 = getv ? :x;
+        %tmp.77 = 2;
+        %tmp.78 = div %tmp.76 %tmp.77;
+        %tmp.79 = 200;
+        %tmp.80 = 50;
+        %tmp.82 = lgetv %i.2;
+        %tmp.83 = mul %tmp.80 %tmp.82;
+        %tmp.84 = add %tmp.79 %tmp.83;
+        %tmp.85 = getm $.Toybox.Graphics;
+        %tmp.86 = getv %tmp.85 :FONT_SMALL;
+        %tmp.88 = lgetv %scanResults.1;
+        %tmp.90 = lgetv %i.2;
+        %tmp.91 = agetv %tmp.88 %tmp.90;
+        %tmp.92 = getv function %tmp.91 :getDeviceName;
+        %tmp.93 = invoke %tmp.91 %tmp.92();
+        %tmp.94 = getm $.Toybox.Graphics;
+        %tmp.95 = getv %tmp.94 :TEXT_JUSTIFY_CENTER;
+        %tmp.96 = getm $.Toybox.Graphics;
+        %tmp.97 = getv %tmp.96 :TEXT_JUSTIFY_VCENTER;
+        %tmp.98 = bitor %tmp.95 %tmp.97;
+        invoke %tmp.73 %tmp.74(%tmp.78, %tmp.84, %tmp.86, %tmp.93, %tmp.98);
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_97_57_stop:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_97_12_for_incr:
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 97 ]
+        %tmp.101 = lgetv %i.2;
+        %tmp.102 = add %tmp.101 1;
+        lputv %i.2 %tmp.102;
+        goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_97_12_for_test;
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_97_12_for_end:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_91_46_stop:
+        goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_91_8_if_end;
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_91_8_if_false:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_100_15_start:
+[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 101 12 ]
+        %tmp.103 = lgetv %dc;
+        %tmp.104 = getv function %tmp.103 :drawText;
+        %tmp.106 = getv ? :x;
+        %tmp.107 = 2;
+        %tmp.108 = div %tmp.106 %tmp.107;
+        %tmp.110 = getv ? :y;
+        %tmp.111 = 2;
+        %tmp.112 = div %tmp.110 %tmp.111;
+        %tmp.113 = getm $.Toybox.Graphics;
+        %tmp.114 = getv %tmp.113 :FONT_MEDIUM;
+        %tmp.115 = "Scanning...";
+        %tmp.116 = getm $.Toybox.Graphics;
+        %tmp.117 = getv %tmp.116 :TEXT_JUSTIFY_CENTER;
+        %tmp.118 = getm $.Toybox.Graphics;
+        %tmp.119 = getv %tmp.118 :TEXT_JUSTIFY_VCENTER;
+        %tmp.120 = bitor %tmp.117 %tmp.119;
+        invoke %tmp.103 %tmp.104(%tmp.108, %tmp.112, %tmp.114, %tmp.115, %tmp.120);
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_100_15_stop:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_91_8_if_end:
+_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_82_40_stop:
+    }
+    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 108; ]
+    function onHide() as Void {
     }
 }
 [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc"; @line = 1; ]
