@@ -1,19 +1,24 @@
 import Toybox.Application;
 import Toybox.Lang;
 import Toybox.WatchUi;
+using Toybox.BluetoothLowEnergy as BLE;
 
-class OneRepApp extends Application.AppBase {
+var BLE_DELEGATE;
+
+class CIQApp extends Application.AppBase {
 
     private var _view;
 
     function initialize() {
         AppBase.initialize();
-        _view = new OneRepViewHome();
+        _view = new BleScanner();
     }
 
     // onStart() is called on application start up
     function onStart(state as Dictionary?) as Void {
         // set up/check BLE connection here
+        BLE_DELEGATE = new Delegate();
+        BLE.setDelegate(BLE_DELEGATE);
     }
 
     // onStop() is called when your application is exiting
@@ -27,6 +32,6 @@ class OneRepApp extends Application.AppBase {
 
 }
 
-function getApp() as OneRepApp {
-    return Application.getApp() as OneRepApp;
+function getApp() as CIQApp {
+    return Application.getApp() as CIQApp;
 }
