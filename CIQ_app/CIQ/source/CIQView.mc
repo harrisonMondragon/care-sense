@@ -5,7 +5,7 @@ import Toybox.Lang;
 // Set global sound value to be accessed on all views.
 var sound_value = 73;
 
-class CIQDisplay extends WatchUi.View {
+class SoundDisplay extends WatchUi.View {
 
     function initialize() {
         View.initialize();
@@ -45,7 +45,7 @@ class CIQDisplay extends WatchUi.View {
 
 }
 
-class CIQSensorConnection extends WatchUi.View {
+class SensorDisconnected extends WatchUi.View {
 
     function initialize() {
         View.initialize();
@@ -73,7 +73,7 @@ class CIQSensorConnection extends WatchUi.View {
         // set foreground color
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
-        dc.drawText(x / 2, y / 2-30, Graphics.FONT_MEDIUM, "No Sensor Connected", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x / 2, y / 2-30, Graphics.FONT_MEDIUM, "Sensor has disconnected.", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         dc.drawText(x / 2, y / 2 + 70, Graphics.FONT_SYSTEM_SMALL, "Check if your charge has\nwandered off.", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
@@ -85,7 +85,7 @@ class CIQSensorConnection extends WatchUi.View {
 
 }
 
-class CIQSoundNotification extends WatchUi.View {
+class SoundNotification extends WatchUi.View {
 
     function initialize() {
         View.initialize();

@@ -17,5 +17,16 @@ they are added/developed.
 
 - [Side Loading an App](https://developer.garmin.com/connect-iq/connect-iq-basics/your-first-app/)
 
+- [Monkey C Language Reference](https://developer.garmin.com/connect-iq/reference-guides/monkey-c-reference/)
+
+- [Developer Core Topics & Examples](https://developer.garmin.com/connect-iq/core-topics/bluetooth-low-energy/)
+
 - Example CIQ Applications
     - [Sign Language Sensor](https://github.com/OmarErak/WBSLDC_ConnectIQ/blob/main/source/WBSLDC_App.mc)
+    - [BLE sample Guide](https://github.com/fabiobaltieri/ciq-nrf-blinky/blob/master/source/BleDevice.mc)
+    - [List of CIQ Applications with avaliable source code](https://starttorun.info/connect-iq-apps-with-source-code/)
+
+- Resources for building specific things
+    - [Action Menu](https://dev.to/jenhsuan/day-10-of-100daysofcode-learn-monkey-c-create-a-menu-for-ciq-application-2dc9)
+    - [Garmin Wiki - Getting started with BLE](https://forums.garmin.com/developer/connect-iq/w/wiki/19/getting-started-with-connect-iq-ble-development)
+    - [Menus and UI specific examples](https://developer.garmin.com/connect-iq/core-topics/native-controls/)
