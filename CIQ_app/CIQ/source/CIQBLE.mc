@@ -4,6 +4,9 @@ import Toybox.Timer;
 
 using Toybox.BluetoothLowEnergy as BLE;
 
+// ------------------------------ GLOBALS ------------------------------
+var SOUND_LEVEL = 0;
+
 // ----------------------------- DELEGATES -----------------------------
 class Delegate extends BLE.BleDelegate {
     // Callback class for BLE functions and state changes
@@ -13,6 +16,9 @@ class Delegate extends BLE.BleDelegate {
     // Sensor UUIDs
     public const SERVICE_UUID = BluetoothLowEnergy.stringToUuid("5d390f04-f945-4b02-9e4a-307f6a53b492");
     const CHAR_UUID = BLE.stringToUuid("d7df8570-d653-4ff9-a473-0352de9d0e7c");
+
+    // Device connection info
+    var device;
 
     function initialize() {
         BleDelegate.initialize();
@@ -34,8 +40,46 @@ class Delegate extends BLE.BleDelegate {
         }
     }
 
+    function onConnectedStateChanged(device, state) {
+        if (state == BLE.CONNECTION_STATE_CONNECTED) {
+            System.println("Connected to " + device.getName());
+            self.device = device;
+            // sign up for notifications
+            var descriptor = device.getService(SERVICE_UUID).getCharacteristic(CHAR_UUID).getDescriptor(BLE.cccdUuid());
+            descriptor.requestWrite([0x01, 0x00]b);
+            WatchUi.switchToView(new SoundDisplay(), null, WatchUi.SLIDE_IMMEDIATE);
+            System.println("View switched.");
+        } else {
+            // TODO: make it so that SensorDisconnected view is on top of the
+            // scanning page or that the back button switches back to scanning
+            // when in sensor disconnected
+            self.device = null;
+            WatchUi.switchToView(new SensorDisconnected(), null, WatchUi.SLIDE_IMMEDIATE);
+        }
+    }
+
+    function onDescriptorWrite(descriptor, status) {
+        if (status == BLE.STATUS_WRITE_FAIL) {
+            System.println("Subscribed to notifications failed.");
+            // try again
+        } else if (status == BLE.STATUS_SUCCESS) {
+            System.println("Subscribed to notifications.");
+        }
+    }
+
+    function onCharacteristicChanged(char, val) {
+        System.println("Char changed to " + val);
+        SOUND_LEVEL = val; // set sound levels to latest value
+        WatchUi.requestUpdate(); // update what ever watch face is displayed
+    }
+
     function getScanResult() {
         return sensorScanResult;
+    }
+
+    function connect () {
+        BLE.setScanState(BLE.SCAN_STATE_OFF);
+        BLE.pairDevice(sensorScanResult);
     }
 
     function registerProfiles() {
@@ -50,7 +94,7 @@ class Delegate extends BLE.BleDelegate {
 
        // Make the registerProfile call
        BLE.registerProfile( profile );
-  }
+    }
 }
 
 // ------------------------------- VIEWS -------------------------------
@@ -93,7 +137,7 @@ class BLEScanner extends WatchUi.View {
         if (result == null) {
             WatchUi.pushView(new SensorNotFound(), null, WatchUi.SLIDE_IMMEDIATE);
         } else {
-            WatchUi.switchToView(new SoundDisplay(), null, WatchUi.SLIDE_IMMEDIATE);
+            BLE_DELEGATE.connect();
         }
     }
 

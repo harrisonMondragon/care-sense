@@ -3,7 +3,7 @@ import Toybox.WatchUi;
 import Toybox.Lang;
 
 // Set global sound value to be accessed on all views.
-var sound_value = 73;
+var SOUND_LEVEL = 73;
 
 class SoundDisplay extends WatchUi.View {
 
@@ -34,7 +34,7 @@ class SoundDisplay extends WatchUi.View {
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
         dc.drawText(x / 2, y / 2-70, Graphics.FONT_LARGE, "Sound", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-        dc.drawText(x / 2, y / 2+20, Graphics.FONT_MEDIUM, Lang.format("$1$ dB", [sound_value]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x / 2, y / 2+20, Graphics.FONT_MEDIUM, Lang.format("$1$ dB", [SOUND_LEVEL]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     // Called when this View is removed from the screen. Save the
@@ -117,7 +117,7 @@ class SoundNotification extends WatchUi.View {
 
         // change font color
         dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(x / 2, y / 2 + 100, Graphics.FONT_MEDIUM, Lang.format("$1$ dB", [sound_value]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x / 2, y / 2 + 100, Graphics.FONT_MEDIUM, Lang.format("$1$ dB", [SOUND_LEVEL]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     // Called when this View is removed from the screen. Save the
