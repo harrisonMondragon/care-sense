@@ -10,6 +10,8 @@ class Delegate extends BLE.BleDelegate {
     var MAX_RESULTS = 10;
     var idx = 0;
 
+    public const SENSORY_SERVICE = BluetoothLowEnergy.stringToUuid("5d390f04-f945-4b02-9e4a-307f6a53b492");
+
     function initialize() {
         BleDelegate.initialize();
         registerProfiles();
@@ -17,31 +19,29 @@ class Delegate extends BLE.BleDelegate {
 
     function onScanResults(scanResults) {
         for (var result = scanResults.next(); result != null; result = scanResults.next()) {
-            if (result instanceof BLE.ScanResult && result.getDeviceName() != null && _scanResults.indexOf(result) == -1) {
-                _scanResults =_scanResults.add(result);
+            if (result instanceof BLE.ScanResult && _scanResults.indexOf(result) == -1) {
+                var iter = result.getServiceUuids();
+                for (var uuid = iter.next(); uuid != null; uuid = iter.next()) {
+                    if (uuid.equals(SENSORY_SERVICE)) {
+                        _scanResults.add(result);
+                    }
+                }
             }
         }
-        // for (var result = scanResults.next(); result != null; result = scanResults.next()) {
-        //     if (result instanceof BLE.ScanResult && result.getDeviceName() != null) {
-        //         var iter = result.getServiceUuids();
-        //         for (var uuid = iter.next(); uuid != null; uuid = iter.next()) {
-        //             if (uuid.equals(BLE.stringToUuid("19b10000-e8f2-537e-4f6c-d104768a1214"))) {
-        //                 _scanResults.add(result);
-        //             }
-        //         }
-        //     }
-        // }
     }
 
     function getScanResults() {
         return _scanResults.slice(1, null);
+
+        // Would prefer if this was the following line, couldn't figure out how to display it properly
+        // return _scanResults;
     }
 
     function registerProfiles() {
        var profile = {                                                  // Set the Profile
-           :uuid => BLE.stringToUuid("19b10000-e8f2-537e-4f6c-d104768a1214"),
+           :uuid => BLE.stringToUuid("5d390f04-f945-4b02-9e4a-307f6a53b492"),
            :characteristics => [ {                                      // Define the characteristics
-                   :uuid => BLE.stringToUuid("19b10001-e8f2-537e-4f6c-d104768a1214"),     // UUID of the first characteristic
+                   :uuid => BLE.stringToUuid("d7df8570-d653-4ff9-a473-0352de9d0e7c"),     // UUID of the first characteristic
                    :descriptors => [                                    // Descriptors of the characteristic
                        BLE.cccdUuid()] },
                        ]
@@ -139,7 +139,7 @@ class BleResults extends WatchUi.View {
         var scanResults = BLE_DELEGATE.getScanResults();
         dc.drawText(x / 2, y / 2 - 125, Graphics.FONT_MEDIUM, Lang.format("Scanned $1$\ndevice(s)", [scanResults.size()]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         for (var i = 0; i < scanResults.size(); i++) {
-            dc.drawText(x / 2, 200 + (50 * i), Graphics.FONT_SMALL, scanResults[i].getDeviceName(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.drawText(x / 2, 200 + (50 * i), Graphics.FONT_SMALL, "Found it", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         }
     }
 
