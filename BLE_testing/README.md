@@ -1,0 +1,1 @@
+This folder contains arduino BLE testing code and previous versions. For the latest arduino code, see arduino_device.
