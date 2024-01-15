@@ -1,48 +1,49 @@
 import Toybox.Graphics;
 import Toybox.WatchUi;
-import Toybox.Time;
+import Toybox.Timer;
 
 using Toybox.BluetoothLowEnergy as BLE;
 
+// ----------------------------- DELEGATES -----------------------------
 class Delegate extends BLE.BleDelegate {
     // Callback class for BLE functions and state changes
-    var _scanResults = [null];
-    var MAX_RESULTS = 10;
-    var idx = 0;
+    // Delegate initialized in CIQAPP.mc
+    var sensorScanResult = null;
 
-    public const SENSORY_SERVICE = BluetoothLowEnergy.stringToUuid("5d390f04-f945-4b02-9e4a-307f6a53b492");
+    // Sensor UUIDs
+    public const SERVICE_UUID = BluetoothLowEnergy.stringToUuid("5d390f04-f945-4b02-9e4a-307f6a53b492");
+    const CHAR_UUID = BLE.stringToUuid("d7df8570-d653-4ff9-a473-0352de9d0e7c");
 
     function initialize() {
         BleDelegate.initialize();
-        registerProfiles();
+        registerProfiles(); // register custom profiles
     }
 
     function onScanResults(scanResults) {
+        // Within scanning time period, check each scan result for specified
+        // sensor information (hard coded UUID for MVP) and connect.
         for (var result = scanResults.next(); result != null; result = scanResults.next()) {
-            if (result instanceof BLE.ScanResult && _scanResults.indexOf(result) == -1) {
+            if (result instanceof BLE.ScanResult) {
                 var iter = result.getServiceUuids();
                 for (var uuid = iter.next(); uuid != null; uuid = iter.next()) {
-                    if (uuid.equals(SENSORY_SERVICE)) {
-                        _scanResults.add(result);
+                    if (uuid.equals(SERVICE_UUID)) {
+                        sensorScanResult = result;
                     }
                 }
             }
         }
     }
 
-    function getScanResults() {
-        return _scanResults.slice(1, null);
-
-        // Would prefer if this was the following line, couldn't figure out how to display it properly
-        // return _scanResults;
+    function getScanResult() {
+        return sensorScanResult;
     }
 
     function registerProfiles() {
-       var profile = {                                                  // Set the Profile
-           :uuid => BLE.stringToUuid("5d390f04-f945-4b02-9e4a-307f6a53b492"),
-           :characteristics => [ {                                      // Define the characteristics
-                   :uuid => BLE.stringToUuid("d7df8570-d653-4ff9-a473-0352de9d0e7c"),     // UUID of the first characteristic
-                   :descriptors => [                                    // Descriptors of the characteristic
+       var profile = {                     // Set the Profile
+           :uuid => SERVICE_UUID,
+           :characteristics => [ {         // Define the characteristics
+                   :uuid => CHAR_UUID,     // UUID of the first characteristic
+                   :descriptors => [       // Descriptors of the characteristic
                        BLE.cccdUuid()] },
                        ]
        };
@@ -52,35 +53,30 @@ class Delegate extends BLE.BleDelegate {
   }
 }
 
-
-class BleScanner extends WatchUi.View {
-    const SCAN_DELAY = 5;
-    // var scanStartTime;
-    // var scanEndTime;
-    var x, y;
-    var timer = new Timer.Timer();
+// ------------------------------- VIEWS -------------------------------
+class BLEScanner extends WatchUi.View {
+    // View to display while scanning for sensor
+    public const SCAN_DELAY = 5000; // delay in ms
+    var x, y; // display size
+    var timer = new Timer.Timer(); // used for timed callbacks
 
     function initialize() {
         View.initialize();
     }
 
-    // Load your resources here
     function onLayout(dc as Dc) as Void {
+        // Load screen height and width as dynamic resources
         x = dc.getWidth();
         y = dc.getHeight();
     }
 
-    // Called when this View is brought to the foreground. Restore
-    // the state of this View and prepare it to be shown. This includes
-    // loading resources into memory.
     function onShow() as Void {
+        // Start scanning everytime the page is shown and begin scan delay timer
         BLE.setScanState(BLE.SCAN_STATE_SCANNING);
-        timer.start(method(:scanEnd), 5000, false);
-        // scanStartTime = Time.now();
-        // scanEndTime = scanStartTime.add(new Time.Duration(SCAN_DELAY));
+        timer.start(method(:scanEnd), SCAN_DELAY, false);
     }
 
-    // Update the view
+    // Update the view onShow or as WatchUi.requestUpdate
     function onUpdate(dc as Dc) as Void {
         // set background color
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
@@ -93,38 +89,41 @@ class BleScanner extends WatchUi.View {
     }
 
     function scanEnd() {
-        WatchUi.pushView(new BleResults(), null, WatchUi.SLIDE_IMMEDIATE);
+        var result = BLE_DELEGATE.getScanResult();
+        if (result == null) {
+            WatchUi.pushView(new SensorNotFound(), null, WatchUi.SLIDE_IMMEDIATE);
+        } else {
+            WatchUi.switchToView(new SoundDisplay(), null, WatchUi.SLIDE_IMMEDIATE);
+        }
     }
 
-    // Called when this View is removed from the screen. Save the
-    // state of this View here. This includes freeing resources from
-    // memory.
     function onHide() as Void {
+        // Turn off BLE scanning when the page dissapears
+        BLE.setScanState(BLE.SCAN_STATE_OFF);
     }
 }
 
 
-class BleResults extends WatchUi.View {
-    // Temporary class to for scanning purposes.
+class SensorNotFound extends WatchUi.View {
+    // View to display error message if the sensor matching DEV_NAME and UUID
+    // does not exist.
     var x, y;
 
     function initialize() {
         View.initialize();
     }
 
-    // Load your resources here
     function onLayout(dc as Dc) as Void {
+        // load screen height and width as dynamic resources
         x = dc.getWidth();
         y = dc.getHeight();
     }
 
-    // Called when this View is brought to the foreground. Restore
-    // the state of this View and prepare it to be shown. This includes
-    // loading resources into memory.
     function onShow() as Void {
+        BLE.setScanState(BLE.SCAN_STATE_OFF); // stop scanning to preserve resources
     }
 
-    // Update the view
+    // Update the view onShow or as WatchUi.requestUpdate
     function onUpdate(dc as Dc) as Void {
         // set background color
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
@@ -133,19 +132,8 @@ class BleResults extends WatchUi.View {
         // set foreground color
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
-        // dc.drawText(x / 2, y / 2, Graphics.FONT_MEDIUM, "Done", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-        BLE.setScanState(BLE.SCAN_STATE_OFF);
-        // showScanMenu(dc);
-        var scanResults = BLE_DELEGATE.getScanResults();
-        dc.drawText(x / 2, y / 2 - 125, Graphics.FONT_MEDIUM, Lang.format("Scanned $1$\ndevice(s)", [scanResults.size()]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-        for (var i = 0; i < scanResults.size(); i++) {
-            dc.drawText(x / 2, 200 + (50 * i), Graphics.FONT_SMALL, "Found it", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-        }
+        dc.drawText(x / 2, y / 2, Graphics.FONT_MEDIUM, "No Sensor Found.", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
-    // Called when this View is removed from the screen. Save the
-    // state of this View here. This includes freeing resources from
-    // memory.
-    function onHide() as Void {
-    }
+    function onHide() as Void {}
 }
