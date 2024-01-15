@@ -28,7 +28,7 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
 [ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQApp.mc" 14 8 ]
-        %tmp.7 = getv ? :BleScanner;
+        %tmp.7 = getv ? :BLEScanner;
         %tmp.4 = newc %tmp.7 ();
         putv self :_view %tmp.4;
 _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQApp_mc_12_26_stop:

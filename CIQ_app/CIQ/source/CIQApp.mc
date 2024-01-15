@@ -11,7 +11,7 @@ class CIQApp extends Application.AppBase {
 
     function initialize() {
         AppBase.initialize();
-        _view = new BleScanner();
+        _view = new BLEScanner();
     }
 
     // onStart() is called on application start up
