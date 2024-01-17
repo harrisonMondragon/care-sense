@@ -4,7 +4,7 @@ import Toybox.Lang;
 import Toybox.Timer;
 
 // ------------------------------ GLOBALS ------------------------------
-var SOUND_THRESHOLD = 100; // max sound threshold in dB
+var SOUND_THRESHOLD = 80; // max sound threshold in dB
 
 // ------------------------------- VIEWS -------------------------------
 class SoundDisplay extends WatchUi.View {
@@ -68,7 +68,7 @@ class SensorDisconnected extends WatchUi.View {
         // set foreground color
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
-        dc.drawText(x / 2, y / 2-30, Graphics.FONT_MEDIUM, "Sensor has disconnected.", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x / 2, y / 2-50, Graphics.FONT_MEDIUM, "Sensor has\ndisconnected.", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         dc.drawText(x / 2, y / 2 + 70, Graphics.FONT_SYSTEM_SMALL, "Check if your charge has\nwandered off.", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
@@ -109,7 +109,9 @@ class SoundNotification extends WatchUi.View {
         dc.drawText(x / 2, y / 2 - 50, Graphics.FONT_MEDIUM, "Environment\nsound has exceeded\nset threshold.", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
         // change font color
-        dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
+        if (SOUND_LEVEL >= SOUND_THRESHOLD) {
+            dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
+        }
         dc.drawText(x / 2, y / 2 + 100, Graphics.FONT_MEDIUM, Lang.format("$1$ dB", [SOUND_LEVEL]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 

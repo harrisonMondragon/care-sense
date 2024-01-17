@@ -45,46 +45,35 @@ class Delegate extends BLE.BleDelegate {
             System.println("Connected to " + device.getName());
             self.device = device;
             // sign up for notifications
-            var service = device.getService(SERVICE_UUID);
-            var char = (service!=null) ? service.getCharacteristic(CHAR_UUID) : null;
-            System.println(BLE.cccdUuid());
-
-            if(char!=null) {
-                var cccd = char.getDescriptor(BLE.cccdUuid());
-                if (cccd != null) {
-                    cccd.requestWrite([0x01,0x00]b);
-                    WatchUi.switchToView(new SoundDisplay(), null, WatchUi.SLIDE_IMMEDIATE);
-                    System.println("View switched.");
-                } else {
-                    System.println("CCCD is null");
-                }
-            } else {
-                System.println("char is null");
-            }
-            // var descriptor = device.getService(SERVICE_UUID).getCharacteristic(CHAR_UUID).getDescriptor(BLE.cccdUuid());
-            // descriptor.requestWrite([0x01, 0x00]b);
+            var descriptor = device.getService(SERVICE_UUID).getCharacteristic(CHAR_UUID).getDescriptor(BLE.cccdUuid());
+            descriptor.requestWrite([0x01, 0x00]b);
+            WatchUi.switchToView(new Connecting(), null, WatchUi.SLIDE_IMMEDIATE);
+            System.println("View switched.");
         } else {
             // TODO: make it so that SensorDisconnected view is on top of the
             // scanning page or that the back button switches back to scanning
-            // when in sensor disconnected
+            // when in sensor disconnected. Make sure that there is nothing else
+            // underneath the scanning page.
             self.device = null;
             WatchUi.switchToView(new SensorDisconnected(), null, WatchUi.SLIDE_IMMEDIATE);
         }
     }
 
     function onDescriptorWrite(descriptor, status) {
+        // TODO: There is a delay before this succeeds that shows a 0 value of
+        // sound on the home page. Make a new "connecting" page for in between
+        // time.
         if (status == BLE.STATUS_WRITE_FAIL) {
             System.println("Subscribed to notifications failed.");
-            // try again
-            descriptor.requestWrite([0x01,0x00]b);
         } else if (status == BLE.STATUS_SUCCESS) {
             System.println("Subscribed to notifications.");
+            WatchUi.switchToView(new SoundDisplay(), null, WatchUi.SLIDE_IMMEDIATE);
         }
     }
 
     function onCharacteristicChanged(char, val) {
         System.println("Char changed to " + val);
-        SOUND_LEVEL = val; // set sound levels to latest value
+        SOUND_LEVEL = val[0]; // set sound levels to latest value
         WatchUi.requestUpdate(); // update what ever watch face is displayed
     }
 
@@ -192,6 +181,39 @@ class SensorNotFound extends WatchUi.View {
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
         dc.drawText(x / 2, y / 2, Graphics.FONT_MEDIUM, "No Sensor Found.", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+    }
+
+    function onHide() as Void {}
+}
+
+class Connecting extends WatchUi.View {
+    // View to show connection delay
+    var x, y;
+
+    function initialize() {
+        View.initialize();
+    }
+
+    function onLayout(dc as Dc) as Void {
+        // load screen height and width as dynamic resources
+        x = dc.getWidth();
+        y = dc.getHeight();
+    }
+
+    function onShow() as Void {
+        BLE.setScanState(BLE.SCAN_STATE_OFF); // stop scanning to preserve resources
+    }
+
+    // Update the view onShow or as WatchUi.requestUpdate
+    function onUpdate(dc as Dc) as Void {
+        // set background color
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+        dc.fillRectangle (0, 0, x, y);
+
+        // set foreground color
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+
+        dc.drawText(x / 2, y / 2, Graphics.FONT_MEDIUM, "Connecting...", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     function onHide() as Void {}
