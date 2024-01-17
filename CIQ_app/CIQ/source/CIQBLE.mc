@@ -45,10 +45,24 @@ class Delegate extends BLE.BleDelegate {
             System.println("Connected to " + device.getName());
             self.device = device;
             // sign up for notifications
-            var descriptor = device.getService(SERVICE_UUID).getCharacteristic(CHAR_UUID).getDescriptor(BLE.cccdUuid());
-            descriptor.requestWrite([0x01, 0x00]b);
-            WatchUi.switchToView(new SoundDisplay(), null, WatchUi.SLIDE_IMMEDIATE);
-            System.println("View switched.");
+            var service = device.getService(SERVICE_UUID);
+            var char = (service!=null) ? service.getCharacteristic(CHAR_UUID) : null;
+            System.println(BLE.cccdUuid());
+
+            if(char!=null) {
+                var cccd = char.getDescriptor(BLE.cccdUuid());
+                if (cccd != null) {
+                    cccd.requestWrite([0x01,0x00]b);
+                    WatchUi.switchToView(new SoundDisplay(), null, WatchUi.SLIDE_IMMEDIATE);
+                    System.println("View switched.");
+                } else {
+                    System.println("CCCD is null");
+                }
+            } else {
+                System.println("char is null");
+            }
+            // var descriptor = device.getService(SERVICE_UUID).getCharacteristic(CHAR_UUID).getDescriptor(BLE.cccdUuid());
+            // descriptor.requestWrite([0x01, 0x00]b);
         } else {
             // TODO: make it so that SensorDisconnected view is on top of the
             // scanning page or that the back button switches back to scanning
@@ -62,6 +76,7 @@ class Delegate extends BLE.BleDelegate {
         if (status == BLE.STATUS_WRITE_FAIL) {
             System.println("Subscribed to notifications failed.");
             // try again
+            descriptor.requestWrite([0x01,0x00]b);
         } else if (status == BLE.STATUS_SUCCESS) {
             System.println("Subscribed to notifications.");
         }

@@ -1,4 +1,4 @@
-# CIQ App `one_rep`
+# CIQ App `Sensory Device`
 The CIQ application responsibilities and deliverables will be listed below as
 they are added/developed.
 

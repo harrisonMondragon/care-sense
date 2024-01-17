@@ -4,7 +4,7 @@ import Toybox.Lang;
 import Toybox.Timer;
 
 // ------------------------------ GLOBALS ------------------------------
-var SOUND_THRESHOLD;
+var SOUND_THRESHOLD = 100; // max sound threshold in dB
 
 // ------------------------------- VIEWS -------------------------------
 class SoundDisplay extends WatchUi.View {
