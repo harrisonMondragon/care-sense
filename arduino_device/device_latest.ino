@@ -3,7 +3,7 @@
     other sources:
 
     This program uses the ArduinoBLE library to set-up an Arduino Nano 33 BLE Sense Rev2
-    as a peripheral device and specifies a service and a characteristic for sound to connect to 
+    as a peripheral device and specifies a service and a characteristic for sound to connect to
     Garmin watch, acting as central.
 
 */
@@ -25,14 +25,12 @@ const unsigned long interval = 1000; // 1 second interval
 // Threshold for considering a signal as noise
 const double noiseThreshold = 80.0; // Adjust this value based on your environment
 
+// Randomly generated using https://www.uuidgenerator.net/
 const char *deviceServiceUuid = "5d390f04-f945-4b02-9e4a-307f6a53b492";
 const char *deviceServiceCharacteristicUuid = "d7df8570-d653-4ff9-a473-0352de9d0e7c";
 
 BLEService soundService(deviceServiceUuid);
 BLEByteCharacteristic soundCharacteristic(deviceServiceCharacteristicUuid, BLERead | BLEWrite | BLENotify);
-
-// Needed for notifications
-BLEDescriptor soundDescriptor("2902", "sound");
 
 void onPDMdata();
 
@@ -65,8 +63,6 @@ void setup(){
     BLE.setLocalName("Sensory Device (local)");
     BLE.setDeviceName("Sensory Device");
 
-    // Needed for notifications
-    soundCharacteristic.addDescriptor(soundDescriptor);
     BLE.setAdvertisedService(soundService);
     soundService.addCharacteristic(soundCharacteristic);
     BLE.addService(soundService);
@@ -80,7 +76,7 @@ void setup(){
 void loop(){
 
     BLEDevice central = BLE.central();
-    // Serial.println("- Discovering central device...");
+    Serial.println("- Discovering central device...");
 
     if (central){
         Serial.println("* Connected to central device!");
@@ -108,15 +104,17 @@ void loop(){
                     float dB = dBFS + 25;
                     Serial.println("DB reading:" + String(dB));
 
-                    soundCharacteristic.writeValue((byte)dB);
-                    Serial.println("WRITTEN dB");
+                    soundCharacteristic.writeValue(dB);
+                    //Serial.println("WRITTEN dB");
 
-                    // Compare dB against the noise threshold
-                    if (dB > noiseThreshold){
-                        Serial.println("Loud noise detected!");
-                    } else {
-                        Serial.println("Quiet environment.");
-                    }
+                    Serial.println("Subscribed value: " + String(soundCharacteristic.subscribed()));
+
+                    // Compare dB against the noise threshold -- Will not be handled by device side for final MVP
+                    // if (dB > noiseThreshold){
+                    //     Serial.println("Loud noise detected!");
+                    // } else {
+                    //     Serial.println("Quiet environment.");
+                    // }
 
                     // clear the read count
                     samplesRead = 0;
