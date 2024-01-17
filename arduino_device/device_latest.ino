@@ -11,6 +11,7 @@
 #include <ArduinoBLE.h>
 #include <PDM.h>
 #include <math.h>
+#include <Arduino_HS300x.h>
 
 // buffer to read samples into, each sample is 16-bits
 short sampleBuffer[256];
@@ -22,15 +23,18 @@ volatile int samplesRead;
 unsigned long lastTime;
 const unsigned long interval = 1000; // 1 second interval
 
-// Threshold for considering a signal as noise
-const double noiseThreshold = 80.0; // Adjust this value based on your environment
+// humidity and temp
+float old_temp = 0;
+// float old_hum = 0;
 
 // Randomly generated using https://www.uuidgenerator.net/
 const char *deviceServiceUuid = "5d390f04-f945-4b02-9e4a-307f6a53b492";
-const char *deviceServiceCharacteristicUuid = "d7df8570-d653-4ff9-a473-0352de9d0e7c";
+const char *soundCharacteristicUuid = "d7df8570-d653-4ff9-a473-0352de9d0e7c";
+const char *tempCharacteristicUuid = "c4c7df1d-9cd1-4c15-aeb6-bdd362d8d344";
 
-BLEService soundService(deviceServiceUuid);
-BLEByteCharacteristic soundCharacteristic(deviceServiceCharacteristicUuid, BLERead | BLEWrite | BLENotify);
+BLEService sensorService(deviceServiceUuid);
+BLEByteCharacteristic soundCharacteristic(soundCharacteristicUuid, BLERead | BLENotify);
+BLEByteCharacteristic temperatureCharacteristic(tempCharacteristicUuid, BLERead | BLENotify);
 
 void onPDMdata();
 
@@ -43,11 +47,15 @@ void setup(){
     PDM.onReceive(onPDMdata);
 
     // initialize PDM with:
-    // - one channel (mono mode)
-    // - a 16 kHz sample rate
+    // - one channel (mono mode), a 16 kHz sample rate
     if (!PDM.begin(1, 16000)){
         Serial.println("Failed to start PDM!");
         while (1);
+    }
+
+    if (!HS300x.begin()) {
+      Serial.println("Failed to initialize humidity temperature sensor!");
+      while (1);
     }
 
     // initialize lastTime
@@ -63,10 +71,12 @@ void setup(){
     BLE.setLocalName("Sensory Device (local)");
     BLE.setDeviceName("Sensory Device");
 
-    BLE.setAdvertisedService(soundService);
-    soundService.addCharacteristic(soundCharacteristic);
-    BLE.addService(soundService);
-    soundCharacteristic.writeValue(20);
+    BLE.setAdvertisedService(sensorService);
+    sensorService.addCharacteristic(soundCharacteristic);
+    sensorService.addCharacteristic(temperatureCharacteristic);
+    BLE.addService(sensorService);
+    soundCharacteristic.writeValue(-1);
+    temperatureCharacteristic.writeValue(-1);
     BLE.advertise();
 
     Serial.println("Nano 33 BLE (Peripheral Device)");
@@ -86,7 +96,17 @@ void loop(){
 
         while (central.connected()){
 
+            float temperature = HS300x.readTemperature();
+            // float humidity = HS300x.readHumidity();
+
             if (millis() - lastTime >= interval){
+
+                if (abs(old_temp - temperature) >= 0.5 ){
+                    old_temp = temperature;
+                    Serial.println("Temperature = " + String(temperature) + " °C");
+                    temperatureCharacteristic.writeValue(temperature);
+                }
+
                 // wait for samples to be read
                 if (samplesRead){
                     // calculate the RMS amplitude
@@ -106,15 +126,6 @@ void loop(){
 
                     soundCharacteristic.writeValue(dB);
                     //Serial.println("WRITTEN dB");
-
-                    Serial.println("Subscribed value: " + String(soundCharacteristic.subscribed()));
-
-                    // Compare dB against the noise threshold -- Will not be handled by device side for final MVP
-                    // if (dB > noiseThreshold){
-                    //     Serial.println("Loud noise detected!");
-                    // } else {
-                    //     Serial.println("Quiet environment.");
-                    // }
 
                     // clear the read count
                     samplesRead = 0;
