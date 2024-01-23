@@ -200,31 +200,39 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.40 = getv function %tmp.39 :switchToView;
         %tmp.44 = getv ? :Connecting;
         %tmp.41 = newc %tmp.44 ();
-        %tmp.45 = null;
-        %tmp.46 = getm $.Toybox.WatchUi;
-        %tmp.47 = getv %tmp.46 :SLIDE_IMMEDIATE;
-        invoke %tmp.39 %tmp.40(%tmp.41, %tmp.45, %tmp.47);
+        %tmp.48 = getv ? :BackDelegate;
+        %tmp.52 = getv ? :BLEScanner;
+        %tmp.49 = newc %tmp.52 ();
+        %tmp.53 = null;
+        %tmp.45 = newc %tmp.48 (%tmp.49, %tmp.53);
+        %tmp.54 = getm $.Toybox.WatchUi;
+        %tmp.55 = getv %tmp.54 :SLIDE_IMMEDIATE;
+        invoke %tmp.39 %tmp.40(%tmp.41, %tmp.45, %tmp.55);
 [ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 51 12 ]
-        %tmp.49 = getv ? :System;
-        %tmp.50 = getv function %tmp.49 :println;
-        %tmp.51 = "View switched.";
-        invoke %tmp.49 %tmp.50(%tmp.51);
+        %tmp.57 = getv ? :System;
+        %tmp.58 = getv function %tmp.57 :println;
+        %tmp.59 = "View switched.";
+        invoke %tmp.57 %tmp.58(%tmp.59);
 _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_44_53_stop:
         goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_44_8_if_end;
 _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_44_8_if_false:
 _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_52_15_start:
 [ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 57 12 ]
-        %tmp.52 = null;
-        putv self :device %tmp.52;
+        %tmp.60 = null;
+        putv self :device %tmp.60;
 [ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 58 12 ]
-        %tmp.53 = getm $.Toybox.WatchUi;
-        %tmp.54 = getv function %tmp.53 :switchToView;
-        %tmp.58 = getv ? :SensorDisconnected;
-        %tmp.55 = newc %tmp.58 ();
-        %tmp.59 = null;
-        %tmp.60 = getm $.Toybox.WatchUi;
-        %tmp.61 = getv %tmp.60 :SLIDE_IMMEDIATE;
-        invoke %tmp.53 %tmp.54(%tmp.55, %tmp.59, %tmp.61);
+        %tmp.61 = getm $.Toybox.WatchUi;
+        %tmp.62 = getv function %tmp.61 :switchToView;
+        %tmp.66 = getv ? :SensorDisconnected;
+        %tmp.63 = newc %tmp.66 ();
+        %tmp.70 = getv ? :BackDelegate;
+        %tmp.74 = getv ? :BLEScanner;
+        %tmp.71 = newc %tmp.74 ();
+        %tmp.75 = null;
+        %tmp.67 = newc %tmp.70 (%tmp.71, %tmp.75);
+        %tmp.76 = getm $.Toybox.WatchUi;
+        %tmp.77 = getv %tmp.76 :SLIDE_IMMEDIATE;
+        invoke %tmp.61 %tmp.62(%tmp.63, %tmp.67, %tmp.77);
 _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_52_15_stop:
 _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_44_8_if_end:
 _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_43_52_stop:
@@ -268,10 +276,13 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.20 = getv function %tmp.19 :switchToView;
         %tmp.24 = getv ? :SoundDisplay;
         %tmp.21 = newc %tmp.24 ();
-        %tmp.25 = null;
-        %tmp.26 = getm $.Toybox.WatchUi;
-        %tmp.27 = getv %tmp.26 :SLIDE_IMMEDIATE;
-        invoke %tmp.19 %tmp.20(%tmp.21, %tmp.25, %tmp.27);
+        %tmp.28 = getv ? :BackDelegate;
+        %tmp.29 = null;
+        %tmp.30 = null;
+        %tmp.25 = newc %tmp.28 (%tmp.29, %tmp.30);
+        %tmp.31 = getm $.Toybox.WatchUi;
+        %tmp.32 = getv %tmp.31 :SLIDE_IMMEDIATE;
+        invoke %tmp.19 %tmp.20(%tmp.21, %tmp.25, %tmp.32);
 _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_68_49_stop:
         goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_68_15_if_end;
 _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_68_15_if_end:
@@ -498,21 +509,25 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
 _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_141_28_start:
 [ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 142 12 ]
         %tmp.9 = getm $.Toybox.WatchUi;
-        %tmp.10 = getv function %tmp.9 :pushView;
+        %tmp.10 = getv function %tmp.9 :switchToView;
         %tmp.14 = getv ? :SensorNotFound;
         %tmp.11 = newc %tmp.14 ();
-        %tmp.15 = null;
-        %tmp.16 = getm $.Toybox.WatchUi;
-        %tmp.17 = getv %tmp.16 :SLIDE_IMMEDIATE;
-        invoke %tmp.9 %tmp.10(%tmp.11, %tmp.15, %tmp.17);
+        %tmp.18 = getv ? :BackDelegate;
+        %tmp.22 = getv ? :BLEScanner;
+        %tmp.19 = newc %tmp.22 ();
+        %tmp.23 = null;
+        %tmp.15 = newc %tmp.18 (%tmp.19, %tmp.23);
+        %tmp.24 = getm $.Toybox.WatchUi;
+        %tmp.25 = getv %tmp.24 :SLIDE_IMMEDIATE;
+        invoke %tmp.9 %tmp.10(%tmp.11, %tmp.15, %tmp.25);
 _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_141_28_stop:
         goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_141_8_if_end;
 _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_141_8_if_false:
 _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_143_15_start:
 [ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQBLE.mc" 144 12 ]
-        %tmp.19 = getv ? :BLE_DELEGATE;
-        %tmp.20 = getv function %tmp.19 :connect;
-        invoke %tmp.19 %tmp.20();
+        %tmp.27 = getv ? :BLE_DELEGATE;
+        %tmp.28 = getv function %tmp.27 :connect;
+        invoke %tmp.27 %tmp.28();
 _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_143_15_stop:
 _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_141_8_if_end:
 _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_139_23_stop:

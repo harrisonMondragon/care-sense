@@ -6,6 +6,27 @@ import Toybox.Timer;
 // ------------------------------ GLOBALS ------------------------------
 var SOUND_THRESHOLD = 80; // max sound threshold in dB
 
+// ----------------------------- DELEGATES -----------------------------
+class BackDelegate extends BehaviorDelegate {
+    protected var back_page; // page to return to on back
+    protected var back_back_page; // back page for that page
+
+    function initialize(_page, _back_page) {
+        back_page = _page;
+        back_back_page = _back_page;
+        BehaviorDelegate.initialize();
+    }
+
+    function onBack() {
+        if (back_page != null) {
+            WatchUi.switchToView(back_page, new BackDelegate(back_back_page, null), WatchUi.SLIDE_IMMEDIATE);
+        } else {
+            WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
+        }
+        return true;
+    }
+}
+
 // ------------------------------- VIEWS -------------------------------
 class SoundDisplay extends WatchUi.View {
     var x, y;
@@ -25,7 +46,7 @@ class SoundDisplay extends WatchUi.View {
     function onUpdate(dc as Dc) as Void {
         if (SOUND_LEVEL > SOUND_THRESHOLD) {
             // verify the threshold
-            WatchUi.pushView(new SoundNotification(), null, WatchUi.SLIDE_IMMEDIATE);
+            WatchUi.switchToView(new SoundNotification(), new BackDelegate(new SoundDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
         }
 
         // set background color
