@@ -4,6 +4,9 @@ import Toybox.Timer;
 
 using Toybox.BluetoothLowEnergy as BLE;
 
+// ------------------------------ GLOBALS ------------------------------
+var SOUND_LEVEL = 0;
+
 // ----------------------------- DELEGATES -----------------------------
 class Delegate extends BLE.BleDelegate {
     // Callback class for BLE functions and state changes
@@ -13,6 +16,9 @@ class Delegate extends BLE.BleDelegate {
     // Sensor UUIDs
     public const SERVICE_UUID = BluetoothLowEnergy.stringToUuid("5d390f04-f945-4b02-9e4a-307f6a53b492");
     const CHAR_UUID = BLE.stringToUuid("d7df8570-d653-4ff9-a473-0352de9d0e7c");
+
+    // Device connection info
+    var device;
 
     function initialize() {
         BleDelegate.initialize();
@@ -34,8 +40,50 @@ class Delegate extends BLE.BleDelegate {
         }
     }
 
+    function onConnectedStateChanged(device, state) {
+        if (state == BLE.CONNECTION_STATE_CONNECTED) {
+            System.println("Connected to " + device.getName());
+            self.device = device;
+            // sign up for notifications
+            var descriptor = device.getService(SERVICE_UUID).getCharacteristic(CHAR_UUID).getDescriptor(BLE.cccdUuid());
+            descriptor.requestWrite([0x01, 0x00]b);
+            WatchUi.switchToView(new Connecting(), null, WatchUi.SLIDE_IMMEDIATE);
+            System.println("View switched.");
+        } else {
+            // TODO: make it so that SensorDisconnected view is on top of the
+            // scanning page or that the back button switches back to scanning
+            // when in sensor disconnected. Make sure that there is nothing else
+            // underneath the scanning page.
+            self.device = null;
+            WatchUi.switchToView(new SensorDisconnected(), null, WatchUi.SLIDE_IMMEDIATE);
+        }
+    }
+
+    function onDescriptorWrite(descriptor, status) {
+        // TODO: There is a delay before this succeeds that shows a 0 value of
+        // sound on the home page. Make a new "connecting" page for in between
+        // time.
+        if (status == BLE.STATUS_WRITE_FAIL) {
+            System.println("Subscribed to notifications failed.");
+        } else if (status == BLE.STATUS_SUCCESS) {
+            System.println("Subscribed to notifications.");
+            WatchUi.switchToView(new SoundDisplay(), null, WatchUi.SLIDE_IMMEDIATE);
+        }
+    }
+
+    function onCharacteristicChanged(char, val) {
+        System.println("Char changed to " + val);
+        SOUND_LEVEL = val[0]; // set sound levels to latest value
+        WatchUi.requestUpdate(); // update what ever watch face is displayed
+    }
+
     function getScanResult() {
         return sensorScanResult;
+    }
+
+    function connect () {
+        BLE.setScanState(BLE.SCAN_STATE_OFF);
+        BLE.pairDevice(sensorScanResult);
     }
 
     function registerProfiles() {
@@ -50,7 +98,7 @@ class Delegate extends BLE.BleDelegate {
 
        // Make the registerProfile call
        BLE.registerProfile( profile );
-  }
+    }
 }
 
 // ------------------------------- VIEWS -------------------------------
@@ -93,7 +141,7 @@ class BLEScanner extends WatchUi.View {
         if (result == null) {
             WatchUi.pushView(new SensorNotFound(), null, WatchUi.SLIDE_IMMEDIATE);
         } else {
-            WatchUi.switchToView(new SoundDisplay(), null, WatchUi.SLIDE_IMMEDIATE);
+            BLE_DELEGATE.connect();
         }
     }
 
@@ -133,6 +181,39 @@ class SensorNotFound extends WatchUi.View {
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
         dc.drawText(x / 2, y / 2, Graphics.FONT_MEDIUM, "No Sensor Found.", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+    }
+
+    function onHide() as Void {}
+}
+
+class Connecting extends WatchUi.View {
+    // View to show connection delay
+    var x, y;
+
+    function initialize() {
+        View.initialize();
+    }
+
+    function onLayout(dc as Dc) as Void {
+        // load screen height and width as dynamic resources
+        x = dc.getWidth();
+        y = dc.getHeight();
+    }
+
+    function onShow() as Void {
+        BLE.setScanState(BLE.SCAN_STATE_OFF); // stop scanning to preserve resources
+    }
+
+    // Update the view onShow or as WatchUi.requestUpdate
+    function onUpdate(dc as Dc) as Void {
+        // set background color
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+        dc.fillRectangle (0, 0, x, y);
+
+        // set foreground color
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+
+        dc.drawText(x / 2, y / 2, Graphics.FONT_MEDIUM, "Connecting...", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     function onHide() as Void {}
