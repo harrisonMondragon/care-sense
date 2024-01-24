@@ -6,10 +6,6 @@
     as a peripheral device and specifies a service and a characteristic for sound to connect to
     Garmin watch, acting as central.
 
-    To help navigate states:
-      - Red LED is on if we are in setup
-      - Green LED is on if we are in loop but not connected to the watch
-      - Blue LED is on if we are in loop and connected to the watch
 */
 
 #include <ArduinoBLE.h>
@@ -17,61 +13,56 @@
 #include <math.h>
 #include <Arduino_HS300x.h>
 
-// Buffer to read microphone samples into, each sample is 16-bits
+// buffer to read samples into, each sample is 16-bits
 short sampleBuffer[256];
 
-// Number of samples read from microphone
+// number of samples read
 volatile int samplesRead;
 
-// Timer variables
+// timer variables
 unsigned long lastTime;
 const unsigned long interval = 1000; // 1 second interval
 
-// Temperature and humidity
+// humidity and temp
 float old_temp = 0;
 // float old_hum = 0;
 
-// Randomly generated UUIDs using https://www.uuidgenerator.net/
+// Randomly generated using https://www.uuidgenerator.net/
 const char *deviceServiceUuid = "5d390f04-f945-4b02-9e4a-307f6a53b492";
 const char *soundCharacteristicUuid = "d7df8570-d653-4ff9-a473-0352de9d0e7c";
 const char *tempCharacteristicUuid = "c4c7df1d-9cd1-4c15-aeb6-bdd362d8d344";
 
-// Create the service and characteristics
 BLEService sensorService(deviceServiceUuid);
 BLEByteCharacteristic soundCharacteristic(soundCharacteristicUuid, BLERead | BLENotify);
 BLEByteCharacteristic temperatureCharacteristic(tempCharacteristicUuid, BLERead | BLENotify);
 
-// PDM data receive callback
 void onPDMdata();
 
 void setup(){
 
-    // Set LED's pin to output mode
-    pinMode(LEDR, OUTPUT);
-    pinMode(LEDG, OUTPUT);
-    pinMode(LEDB, OUTPUT);
+    Serial.begin(9600);
+    while (!Serial);
 
-    // Turn on only red LED if we are in setup
-    digitalWrite(LEDR, LOW);
-    digitalWrite(LEDG, HIGH);
-    digitalWrite(LEDB, HIGH);
-
-    // Configure the data receive callback
+    // configure the data receive callback
     PDM.onReceive(onPDMdata);
 
-    // Initialize PDM (sound/microphone module) with:
+    // initialize PDM with:
     // - one channel (mono mode), a 16 kHz sample rate
     if (!PDM.begin(1, 16000)){
+        Serial.println("Failed to start PDM!");
         while (1);
     }
 
-    // Initialize HS300x (temperature + humidity module):
     if (!HS300x.begin()) {
+      Serial.println("Failed to initialize humidity temperature sensor!");
       while (1);
     }
 
-    // Initialize BLE (Bluetooth Low Energy module):
+    // initialize lastTime
+    lastTime = millis();
+
     if (!BLE.begin()){
+        Serial.println("- Starting Bluetooth® Low Energy module failed!");
         while (1);
     }
 
@@ -80,56 +71,45 @@ void setup(){
     BLE.setLocalName("Sensory Device (local)");
     BLE.setDeviceName("Sensory Device");
 
-    // Set service UUID and add characteristics to it
     BLE.setAdvertisedService(sensorService);
     sensorService.addCharacteristic(soundCharacteristic);
     sensorService.addCharacteristic(temperatureCharacteristic);
-
-    // Add service and set initial values
     BLE.addService(sensorService);
     soundCharacteristic.writeValue(-1);
     temperatureCharacteristic.writeValue(-1);
-
-    // Start advertising
     BLE.advertise();
 
-    // Initialize lastTime
-    lastTime = millis();
+    Serial.println("Nano 33 BLE (Peripheral Device)");
+    Serial.println(" ");
 }
 
 void loop(){
 
-    // Turn on only green LED if we are in loop but not connected to watch
-    digitalWrite(LEDR, HIGH);
-    digitalWrite(LEDG, LOW);
-    digitalWrite(LEDB, HIGH);
-
     BLEDevice central = BLE.central();
+    Serial.println("- Discovering central device...");
 
     if (central){
-
-        // Turn on only blue LED if we are in loop and connected to watch
-        digitalWrite(LEDR, HIGH);
-        digitalWrite(LEDG, HIGH);
-        digitalWrite(LEDB, LOW);
+        Serial.println("* Connected to central device!");
+        Serial.print("* Device MAC address: ");
+        Serial.println(central.address());
+        Serial.println(" ");
 
         while (central.connected()){
 
             float temperature = HS300x.readTemperature();
             // float humidity = HS300x.readHumidity();
 
-            // Update characteristics at 1Hz
             if (millis() - lastTime >= interval){
 
                 if (abs(old_temp - temperature) >= 0.5 ){
                     old_temp = temperature;
+                    Serial.println("Temperature = " + String(temperature) + " °C");
                     temperatureCharacteristic.writeValue(temperature);
                 }
 
-                // Wait for samples to be read
+                // wait for samples to be read
                 if (samplesRead){
-
-                    // Calculate the RMS amplitude
+                    // calculate the RMS amplitude
                     double sumSquared = 0.0;
                     for (int i = 0; i < samplesRead; i++){
                         sumSquared += pow(sampleBuffer[i], 2);
@@ -142,30 +122,30 @@ void loop(){
                     // dBFS to Positive dB Scale
                     // -26 +- 1 dBFS is reference for 0 dB
                     float dB = dBFS + 25;
+                    Serial.println("DB reading:" + String(dB));
 
-                    // Write the dB value to the characteristic
                     soundCharacteristic.writeValue(dB);
+                    //Serial.println("WRITTEN dB");
 
-                    // Clear the read count
+                    // clear the read count
                     samplesRead = 0;
 
-                    // Update lastTime
+                    // update lastTime
                     lastTime = millis();
                 }
             }
         }
 
-        // Immediately when the central disconnects, turn off the blue LED
-        digitalWrite(LEDB, HIGH);
+        Serial.println("* Disconnected to central device!");
     }
 }
 
-// PDM data receive callback
-void onPDMdata(){
-    // Query the number of bytes available
+void onPDMdata()
+{
+    // query the number of bytes available
     int bytesAvailable = PDM.available();
 
-    // Read data into the sample buffer
+    // read into the sample buffer
     PDM.read(sampleBuffer, bytesAvailable);
 
     // 16-bit, 2 bytes per sample
