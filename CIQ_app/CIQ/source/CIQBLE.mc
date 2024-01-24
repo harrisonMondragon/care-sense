@@ -50,19 +50,12 @@ class Delegate extends BLE.BleDelegate {
             WatchUi.switchToView(new Connecting(), new BackDelegate(new BLEScanner(), null), WatchUi.SLIDE_IMMEDIATE);
             System.println("View switched.");
         } else {
-            // TODO: make it so that SensorDisconnected view is on top of the
-            // scanning page or that the back button switches back to scanning
-            // when in sensor disconnected. Make sure that there is nothing else
-            // underneath the scanning page.
             self.device = null;
             WatchUi.switchToView(new SensorDisconnected(), new BackDelegate(new BLEScanner(), null), WatchUi.SLIDE_IMMEDIATE);
         }
     }
 
     function onDescriptorWrite(descriptor, status) {
-        // TODO: There is a delay before this succeeds that shows a 0 value of
-        // sound on the home page. Make a new "connecting" page for in between
-        // time.
         if (status == BLE.STATUS_WRITE_FAIL) {
             System.println("Subscribed to notifications failed.");
         } else if (status == BLE.STATUS_SUCCESS) {

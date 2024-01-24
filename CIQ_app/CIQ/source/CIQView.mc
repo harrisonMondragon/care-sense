@@ -138,9 +138,6 @@ class SoundNotification extends WatchUi.View {
     }
 
     function onHide() as Void {
-        // TODO: Verify that stop works on non-repeat timers or how to prevent a
-        // timer from triggering. Maybe check view to make sure it is right
-        // before switching.
         timer.stop();
     }
 
