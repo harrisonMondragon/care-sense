@@ -23,6 +23,7 @@ they are added/developed.
 
 - Example CIQ Applications
     - [Sign Language Sensor](https://github.com/OmarErak/WBSLDC_ConnectIQ/blob/main/source/WBSLDC_App.mc)
+    - [Oxygen Sensor](https://github.com/changer65535/NitroxBLE)
     - [BLE sample Guide](https://github.com/fabiobaltieri/ciq-nrf-blinky/blob/master/source/BleDevice.mc)
     - [List of CIQ Applications with avaliable source code](https://starttorun.info/connect-iq-apps-with-source-code/)
 

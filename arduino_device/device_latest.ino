@@ -1,7 +1,4 @@
 /*
-    Base BLE peripheral code from https://docs.arduino.cc/tutorials/nano-33-ble-sense/ble-device-to-device
-    other sources:
-
     This program uses the ArduinoBLE library to set-up an Arduino Nano 33 BLE Sense Rev2
     as a peripheral device and specifies a service and a characteristic for sound to connect to
     Garmin watch, acting as central.
@@ -10,6 +7,11 @@
       - Red LED is on if we are in setup
       - Green LED is on if we are in loop but not connected to the watch
       - Blue LED is on if we are in loop and connected to the watch
+
+    Sources:
+        BLE tutorial: https://docs.arduino.cc/tutorials/nano-33-ble-sense/ble-device-to-device/
+        Microphone tutorial: https://docs.arduino.cc/tutorials/nano-33-ble-sense/microphone-sensor/
+        Root Mean Square Discussion: https://forum.arduino.cc/t/unable-to-get-arduinosound-library-to-work-with-nano-33-ble-boards/607559
 */
 
 #include <ArduinoBLE.h>
