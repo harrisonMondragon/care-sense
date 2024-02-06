@@ -2,9 +2,12 @@ import Toybox.Graphics;
 import Toybox.WatchUi;
 import Toybox.Lang;
 import Toybox.Timer;
+import Toybox.Attention;
 
 // ------------------------------ GLOBALS ------------------------------
 var SOUND_THRESHOLD = 80; // max sound threshold in dB
+var NOTIFICATION_DELAY = 15000; // notification delay in ms
+var VIBE_DURATION = 2000; // vibration duration in ms
 
 // ----------------------------- DELEGATES -----------------------------
 class BackDelegate extends BehaviorDelegate {
@@ -78,7 +81,10 @@ class SensorDisconnected extends WatchUi.View {
         y = dc.getHeight();
     }
 
-    function onShow() as Void {}
+    function onShow() as Void {
+        // Vibrate the watch
+        Attention.vibrate([new Attention.VibeProfile(100, VIBE_DURATION)]);
+    }
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
@@ -100,7 +106,6 @@ class SensorDisconnected extends WatchUi.View {
 class SoundNotification extends WatchUi.View {
     var x, y;
     var timer = new Timer.Timer(); // timer for notification timeout
-    var NOTIFICATION_DELAY = 15000;
 
     function initialize() {
         View.initialize();
@@ -114,6 +119,9 @@ class SoundNotification extends WatchUi.View {
     }
 
     function onShow() as Void {
+        // Vibrate the watch
+        Attention.vibrate([new Attention.VibeProfile(100, VIBE_DURATION)]);
+
         // Start the timer timeout method
         timer.start(method(:notificationDone), NOTIFICATION_DELAY, false);
     }
