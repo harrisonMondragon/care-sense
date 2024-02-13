@@ -67,7 +67,7 @@ class Delegate extends BLE.BleDelegate {
             System.println("Subscribed to notifications failed.");
         } else if (status == BLE.STATUS_SUCCESS) {
             System.println("Subscribed to notifications.");
-            WatchUi.switchToView(new SoundDisplay(), new BackDelegate(null, null), WatchUi.SLIDE_IMMEDIATE);
+            WatchUi.switchToView(new HomeDisplay(), new BackDelegate(null, null), WatchUi.SLIDE_IMMEDIATE);
         }
     }
 
