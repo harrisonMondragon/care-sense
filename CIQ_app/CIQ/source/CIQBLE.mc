@@ -6,6 +6,7 @@ using Toybox.BluetoothLowEnergy as BLE;
 
 // ------------------------------ GLOBALS ------------------------------
 var SOUND_LEVEL = 0;
+var TEMP_VAL = 0;
 
 // ----------------------------- DELEGATES -----------------------------
 class Delegate extends BLE.BleDelegate {
@@ -15,7 +16,8 @@ class Delegate extends BLE.BleDelegate {
 
     // Sensor UUIDs
     public const SERVICE_UUID = BluetoothLowEnergy.stringToUuid("5d390f04-f945-4b02-9e4a-307f6a53b492");
-    const CHAR_UUID = BLE.stringToUuid("d7df8570-d653-4ff9-a473-0352de9d0e7c");
+    const SOUND_UUID = BLE.stringToUuid("d7df8570-d653-4ff9-a473-0352de9d0e7c");
+    const TEMP_UUID = BLE.stringToUuid("c4c7df1d-9cd1-4c15-aeb6-bdd362d8d344");
 
     // Device connection info
     var device;
@@ -45,8 +47,12 @@ class Delegate extends BLE.BleDelegate {
             System.println("Connected to " + device.getName());
             self.device = device;
             // sign up for notifications
-            var descriptor = device.getService(SERVICE_UUID).getCharacteristic(CHAR_UUID).getDescriptor(BLE.cccdUuid());
-            descriptor.requestWrite([0x01, 0x00]b);
+            var sound_desc = device.getService(SERVICE_UUID).getCharacteristic(SOUND_UUID).getDescriptor(BLE.cccdUuid());
+            sound_desc.requestWrite([0x01, 0x00]b);
+
+            var temp_desc = device.getService(SERVICE_UUID).getCharacteristic(TEMP_UUID).getDescriptor(BLE.cccdUuid());
+            temp_desc.requestWrite([0x01, 0x00]b);
+
             WatchUi.switchToView(new Connecting(), new BackDelegate(new BLEScanner(), null), WatchUi.SLIDE_IMMEDIATE);
             System.println("View switched.");
         } else {
@@ -56,6 +62,7 @@ class Delegate extends BLE.BleDelegate {
     }
 
     function onDescriptorWrite(descriptor, status) {
+        // TODO: test if the delay is long enough for both to be subscribed
         if (status == BLE.STATUS_WRITE_FAIL) {
             System.println("Subscribed to notifications failed.");
         } else if (status == BLE.STATUS_SUCCESS) {
@@ -65,9 +72,15 @@ class Delegate extends BLE.BleDelegate {
     }
 
     function onCharacteristicChanged(char, val) {
-        System.println("Char changed to " + val);
-        SOUND_LEVEL = val[0]; // set sound levels to latest value
-        WatchUi.requestUpdate(); // update what ever watch face is displayed
+        if (char.getUuid() == SOUND_UUID) {
+            System.println("Sound char changed to " + val);
+            SOUND_LEVEL = val[0]; // set sound levels to latest value
+            WatchUi.requestUpdate(); // update what ever watch face is displayed
+        } else if (char.getUuid() == TEMP_UUID) {
+            System.println("Temp char changed to " + val);
+            TEMP_VAL = val[0]; // set sound levels to latest value
+            WatchUi.requestUpdate(); // update what ever watch face is displayed
+        }
     }
 
     function getScanResult() {
@@ -82,10 +95,19 @@ class Delegate extends BLE.BleDelegate {
     function registerProfiles() {
        var profile = {                     // Set the Profile
            :uuid => SERVICE_UUID,
-           :characteristics => [ {         // Define the characteristics
-                   :uuid => CHAR_UUID,     // UUID of the first characteristic
-                   :descriptors => [       // Descriptors of the characteristic
-                       BLE.cccdUuid()] },
+           :characteristics => [
+                    {         // Define the characteristics
+                    :uuid => SOUND_UUID,     // UUID of the first characteristic
+                    :descriptors => [       // Descriptors of the characteristic
+                        BLE.cccdUuid()
+                    ]
+                    },
+                    {
+                    :uuid => TEMP_UUID,
+                    :descriptors => [
+                        BLE.cccdUuid()
+                    ]
+                    },
                        ]
        };
 
