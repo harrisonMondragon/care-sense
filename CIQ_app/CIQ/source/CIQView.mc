@@ -42,17 +42,27 @@ class SensoryBehaviorDelegate extends BehaviorDelegate {
     }
 }
 
+// Settings menu to choose what threshold to alter
 class SettingsMenuInputDelegate extends WatchUi.MenuInputDelegate {
+
     function initialize() {
         MenuInputDelegate.initialize();
     }
 
     function onMenuItem(item) {
+        // Sound picker
         if (item == :sound) {
-            WatchUi.pushView(new SoundThresholdPage(), null, WatchUi.SLIDE_LEFT);
+            var title = new WatchUi.Text({:text=>"Sound Threshold", :font=>Graphics.FONT_SMALL});
+            var factory = new NumberFactory(30, 120, 5, "$1$ dB");
+            var picker = new WatchUi.Picker({:title=>title, :pattern=>[factory]});
+            WatchUi.pushView(picker, null, WatchUi.SLIDE_LEFT);
         }
+        // Temp picker
         else if (item == :temp) {
-            WatchUi.pushView(new TempThresholdPage(), null, WatchUi.SLIDE_LEFT);
+            var title = new WatchUi.Text({:text=>"Temp Threshold", :font=>Graphics.FONT_SMALL});
+            var factory = new NumberFactory(-20, 40, 1, "$1$ °C");
+            var picker = new WatchUi.Picker({:title=>title, :pattern=>[factory]});
+            WatchUi.pushView(picker, null, WatchUi.SLIDE_LEFT);
         }
     }
 }
