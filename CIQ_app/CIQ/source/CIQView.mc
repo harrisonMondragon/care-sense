@@ -55,17 +55,76 @@ class SettingsMenuInputDelegate extends WatchUi.MenuInputDelegate {
             var title = new WatchUi.Text({:text=>"Sound Threshold", :font=>Graphics.FONT_SMALL});
             var factory = new NumberFactory(30, 120, 5, "$1$ dB");
             var picker = new WatchUi.Picker({:title=>title, :pattern=>[factory]});
-            WatchUi.pushView(picker, null, WatchUi.SLIDE_LEFT);
+            WatchUi.pushView(picker, new SoundPickerDelegate(), WatchUi.SLIDE_LEFT);
         }
         // Temp picker
         else if (item == :temp) {
             var title = new WatchUi.Text({:text=>"Temp Threshold", :font=>Graphics.FONT_SMALL});
             var factory = new NumberFactory(-20, 40, 1, "$1$ °C");
             var picker = new WatchUi.Picker({:title=>title, :pattern=>[factory]});
-            WatchUi.pushView(picker, null, WatchUi.SLIDE_LEFT);
+            WatchUi.pushView(picker, new TempPickerDelegate(), WatchUi.SLIDE_LEFT);
         }
     }
 }
+
+// Change SOUND_THRESHOLD using sound picker
+class SoundPickerDelegate extends WatchUi.PickerDelegate {
+
+    function initialize() {
+        PickerDelegate.initialize();
+    }
+
+    function onCancel() {
+        WatchUi.popView(WatchUi.SLIDE_RIGHT);
+        return true;
+    }
+
+    function onAccept(values) {
+        SOUND_THRESHOLD = values[0];
+        WatchUi.switchToView(new ThresholdChangeConfirmation(), new ThresholdChangeConfirmationDelegate(), WatchUi.SLIDE_LEFT);
+        return true;
+    }
+}
+
+// Does nothing for now -- placeholer
+class TempPickerDelegate extends WatchUi.PickerDelegate {
+
+    function initialize() {
+        PickerDelegate.initialize();
+    }
+
+    function onCancel() {
+        WatchUi.popView(WatchUi.SLIDE_RIGHT);
+        return true;
+    }
+
+    function onAccept(values) {
+        //SOUND_THRESHOLD = values[0];
+        WatchUi.switchToView(new ThresholdChangeConfirmation(), new ThresholdChangeConfirmationDelegate(), WatchUi.SLIDE_LEFT);
+        return true;
+    }
+}
+
+// Get back to regular pages on threshold confirmation
+class ThresholdChangeConfirmationDelegate extends BehaviorDelegate {
+
+    function initialize() {
+        BehaviorDelegate.initialize();
+    }
+
+    function onBack() {
+        WatchUi.switchToView(new SoundDisplay(), new SensoryBehaviorDelegate(null, null), WatchUi.SLIDE_DOWN);
+        return true;
+    }
+
+    function onSwipe(swipeEvent) {
+        if (swipeEvent.getDirection() == SWIPE_DOWN){
+            WatchUi.switchToView(new SoundDisplay(), new SensoryBehaviorDelegate(null, null), WatchUi.SLIDE_DOWN);
+        }
+        return true;
+    }
+}
+
 
 // ------------------------------- VIEWS -------------------------------
 class SoundDisplay extends WatchUi.View {
@@ -194,9 +253,7 @@ class SoundNotification extends WatchUi.View {
 
 }
 
-// Settings views
-class SoundThresholdPage extends WatchUi.View {
-    // Called when user swipes up from any normal working screens
+class ThresholdChangeConfirmation extends WatchUi.View {
     var x, y;
 
     function initialize() {
@@ -219,38 +276,8 @@ class SoundThresholdPage extends WatchUi.View {
         // set foreground color
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
-        dc.drawText(x / 2, y / 2, Graphics.FONT_MEDIUM, "Adjust Sound\nThreshold", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-    }
-
-    function onHide() as Void {}
-
-}
-
-class TempThresholdPage extends WatchUi.View {
-    // Called when user swipes up from any normal working screens
-    var x, y;
-
-    function initialize() {
-        View.initialize();
-    }
-
-    function onLayout(dc as Dc) as Void {
-        // Load screen height and width as dynamic resources
-        x = dc.getWidth();
-        y = dc.getHeight();
-    }
-
-    function onShow() as Void {}
-
-    function onUpdate(dc as Dc) as Void {
-        // set background color
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.fillRectangle (0, 0, x, y);
-
-        // set foreground color
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-
-        dc.drawText(x / 2, y / 2, Graphics.FONT_MEDIUM, "Adjust Temp\nThreshold", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        // Only show sound for now, add temp too after dev/temp merged
+        dc.drawText(x / 2, y / 2 - 50, Graphics.FONT_SMALL, Lang.format("Current sound\nthreshold: $1$ dB", [SOUND_THRESHOLD]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     function onHide() as Void {}
