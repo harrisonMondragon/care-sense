@@ -175,7 +175,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_54_28_start:
         %tmp.9 = getv function ? %tmp.8 :Text;
         %tmp.10 = newd 2;
         %tmp.12 = const :text;
-        %tmp.13 = "Sound Threshold";
+        %tmp.13 = "Threshold";
         %tmp.14 = dup %tmp.10;
         %tmp.15 = aputv %tmp.14 %tmp.12 %tmp.13;
         %tmp.17 = const :font;
@@ -189,8 +189,8 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_54_28_start:
         [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_54_28_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_54_28_stop" ]
         %factory.2 = local;
         %tmp.25 = getv ? :NumberFactory;
-        %tmp.26 = 30;
-        %tmp.27 = 120;
+        %tmp.26 = 5;
+        %tmp.27 = 200;
         %tmp.28 = 5;
         %tmp.29 = "$1$ dB";
         %tmp.22 = newc %tmp.25 (%tmp.26, %tmp.27, %tmp.28, %tmp.29);
@@ -256,7 +256,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_63_32_start:
         %tmp.82 = getv function ? %tmp.81 :Text;
         %tmp.83 = newd 2;
         %tmp.85 = const :text;
-        %tmp.86 = "Temp Threshold";
+        %tmp.86 = "Threshold";
         %tmp.87 = dup %tmp.83;
         %tmp.88 = aputv %tmp.87 %tmp.85 %tmp.86;
         %tmp.90 = const :font;
