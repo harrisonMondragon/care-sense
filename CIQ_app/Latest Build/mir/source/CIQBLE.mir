@@ -200,7 +200,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_44_53_start:
         %tmp.40 = getv function %tmp.39 :switchToView;
         %tmp.44 = getv ? :Connecting;
         %tmp.41 = newc %tmp.44 ();
-        %tmp.48 = getv ? :BackDelegate;
+        %tmp.48 = getv ? :SensoryBehaviorDelegate;
         %tmp.52 = getv ? :BLEScanner;
         %tmp.49 = newc %tmp.52 ();
         %tmp.53 = null;
@@ -225,7 +225,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_52_15_start:
         %tmp.62 = getv function %tmp.61 :switchToView;
         %tmp.66 = getv ? :SensorDisconnected;
         %tmp.63 = newc %tmp.66 ();
-        %tmp.70 = getv ? :BackDelegate;
+        %tmp.70 = getv ? :SensoryBehaviorDelegate;
         %tmp.74 = getv ? :BLEScanner;
         %tmp.71 = newc %tmp.74 ();
         %tmp.75 = null;
@@ -276,7 +276,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_61_49_start:
         %tmp.20 = getv function %tmp.19 :switchToView;
         %tmp.24 = getv ? :SoundDisplay;
         %tmp.21 = newc %tmp.24 ();
-        %tmp.28 = getv ? :BackDelegate;
+        %tmp.28 = getv ? :SensoryBehaviorDelegate;
         %tmp.29 = null;
         %tmp.30 = null;
         %tmp.25 = newc %tmp.28 (%tmp.29, %tmp.30);
@@ -512,7 +512,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_134_28_start:
         %tmp.10 = getv function %tmp.9 :switchToView;
         %tmp.14 = getv ? :SensorNotFound;
         %tmp.11 = newc %tmp.14 ();
-        %tmp.18 = getv ? :BackDelegate;
+        %tmp.18 = getv ? :SensoryBehaviorDelegate;
         %tmp.22 = getv ? :BLEScanner;
         %tmp.19 = newc %tmp.22 ();
         %tmp.23 = null;

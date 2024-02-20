@@ -85,7 +85,7 @@ class SoundPickerDelegate extends WatchUi.PickerDelegate {
 
     function onAccept(values) {
         SOUND_THRESHOLD = values[0];
-        WatchUi.switchToView(new ThresholdChangeConfirmation(), new ThresholdChangeConfirmationDelegate(), WatchUi.SLIDE_LEFT);
+        WatchUi.pushView(new ThresholdChangeConfirmation(), new ThresholdChangeConfirmationDelegate(), WatchUi.SLIDE_LEFT);
         return true;
     }
 }
@@ -105,7 +105,7 @@ class TempPickerDelegate extends WatchUi.PickerDelegate {
 
     function onAccept(values) {
         // ----- TEMP_THRESHOLD = values[0];
-        WatchUi.switchToView(new ThresholdChangeConfirmation(), new ThresholdChangeConfirmationDelegate(), WatchUi.SLIDE_LEFT);
+        WatchUi.pushView(new ThresholdChangeConfirmation(), new ThresholdChangeConfirmationDelegate(), WatchUi.SLIDE_LEFT);
         return true;
     }
 }
@@ -117,14 +117,11 @@ class ThresholdChangeConfirmationDelegate extends BehaviorDelegate {
         BehaviorDelegate.initialize();
     }
 
-    function onBack() {
-        WatchUi.switchToView(new SoundDisplay(), new SensoryBehaviorDelegate(null, null), WatchUi.SLIDE_DOWN);
-        return true;
-    }
-
     function onSwipe(swipeEvent) {
         if (swipeEvent.getDirection() == SWIPE_DOWN){
-            WatchUi.switchToView(new SoundDisplay(), new SensoryBehaviorDelegate(null, null), WatchUi.SLIDE_DOWN);
+            WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to Picker
+            WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to Menu
+            WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to SoundDisplay
         }
         return true;
     }
@@ -282,9 +279,12 @@ class ThresholdChangeConfirmation extends WatchUi.View {
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
         // TODO: Add temp confirmation too after dev/temp merged
-        dc.drawText(x / 2, y / 2 - 50, Graphics.FONT_SMALL, Lang.format("Current sound\nthreshold: $1$ dB", [SOUND_THRESHOLD]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-        dc.drawText(x / 2, y / 2 + 50, Graphics.FONT_SMALL, Lang.format("Current temp\nthreshold: $1$ °C", [999]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x / 2, y / 2 - 125, Graphics.FONT_TINY, Lang.format(" Current sound\nthreshold: $1$ dB", [SOUND_THRESHOLD]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x / 2, y / 2 - 25, Graphics.FONT_TINY, Lang.format("Current temp\nthreshold: $1$ °C", [999]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         // ----- dc.drawText(x / 2, y / 2 + 50, Graphics.FONT_SMALL, Lang.format("Current temp\nthreshold: $1$ °C", [TEMP_THRESHOLD]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+
+        dc.setColor(Graphics.COLOR_PURPLE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(x / 2, y / 2 + 125, Graphics.FONT_SMALL, "Swipe Down to\nGo Back", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     function onHide() as Void {}
