@@ -1,5 +1,6 @@
 // This file is heavily inspired by:
 // https://github.com/garmin/connectiq-apps/blob/eb0497a0377bbcb9495749c4071e872f67ba81e3/device-apps/bluetooth-mesh-sample/source/NumberFactory.mc
+// To create a PickerFactory for numbers based on a range and an increment amount
 
 using Toybox.Graphics;
 using Toybox.WatchUi;
@@ -11,7 +12,7 @@ class NumberFactory extends WatchUi.PickerFactory {
     hidden var mFormat;
 
     function getIndex(value) {
-        var index = (value / mIncrement) - mStart;
+        var index = (value - mStart) / mIncrement;
         return index;
     }
 

@@ -54,14 +54,18 @@ class SettingsMenuInputDelegate extends WatchUi.MenuInputDelegate {
         if (item == :sound) {
             var title = new WatchUi.Text({:text=>"Sound Threshold", :font=>Graphics.FONT_SMALL});
             var factory = new NumberFactory(30, 120, 5, "$1$ dB");
-            var picker = new WatchUi.Picker({:title=>title, :pattern=>[factory]});
+            var pickerDefault = factory.getIndex(SOUND_THRESHOLD);
+            var picker = new WatchUi.Picker({:title=>title, :pattern=>[factory], :defaults=>[pickerDefault]});
             WatchUi.pushView(picker, new SoundPickerDelegate(), WatchUi.SLIDE_LEFT);
         }
         // Temp picker
+        // TODO: Add the default when merged with dev/temp
         else if (item == :temp) {
             var title = new WatchUi.Text({:text=>"Temp Threshold", :font=>Graphics.FONT_SMALL});
             var factory = new NumberFactory(-20, 40, 1, "$1$ °C");
+            // ----- var pickerDefault = factory.getIndex(TEMP_THRESHOLD);
             var picker = new WatchUi.Picker({:title=>title, :pattern=>[factory]});
+            // ----- var picker = new WatchUi.Picker({:title=>title, :pattern=>[factory] :defaults=>[pickerDefault]});
             WatchUi.pushView(picker, new TempPickerDelegate(), WatchUi.SLIDE_LEFT);
         }
     }
@@ -86,7 +90,8 @@ class SoundPickerDelegate extends WatchUi.PickerDelegate {
     }
 }
 
-// Does nothing for now -- placeholer
+// Change TEMP_THRESHOLD using temp picker
+// TODO: Make it actually change TEMP_THRESHOLD when merged with dev/temp
 class TempPickerDelegate extends WatchUi.PickerDelegate {
 
     function initialize() {
@@ -99,7 +104,7 @@ class TempPickerDelegate extends WatchUi.PickerDelegate {
     }
 
     function onAccept(values) {
-        //SOUND_THRESHOLD = values[0];
+        // ----- TEMP_THRESHOLD = values[0];
         WatchUi.switchToView(new ThresholdChangeConfirmation(), new ThresholdChangeConfirmationDelegate(), WatchUi.SLIDE_LEFT);
         return true;
     }
@@ -276,8 +281,10 @@ class ThresholdChangeConfirmation extends WatchUi.View {
         // set foreground color
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
-        // Only show sound for now, add temp too after dev/temp merged
+        // TODO: Add temp confirmation too after dev/temp merged
         dc.drawText(x / 2, y / 2 - 50, Graphics.FONT_SMALL, Lang.format("Current sound\nthreshold: $1$ dB", [SOUND_THRESHOLD]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x / 2, y / 2 + 50, Graphics.FONT_SMALL, Lang.format("Current temp\nthreshold: $1$ °C", [999]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        // ----- dc.drawText(x / 2, y / 2 + 50, Graphics.FONT_SMALL, Lang.format("Current temp\nthreshold: $1$ °C", [TEMP_THRESHOLD]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     function onHide() as Void {}
