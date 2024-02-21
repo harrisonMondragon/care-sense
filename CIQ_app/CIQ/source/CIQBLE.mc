@@ -47,11 +47,11 @@ class Delegate extends BLE.BleDelegate {
             // sign up for notifications
             var descriptor = device.getService(SERVICE_UUID).getCharacteristic(CHAR_UUID).getDescriptor(BLE.cccdUuid());
             descriptor.requestWrite([0x01, 0x00]b);
-            WatchUi.switchToView(new Connecting(), new BackDelegate(new BLEScanner(), null), WatchUi.SLIDE_IMMEDIATE);
+            WatchUi.switchToView(new Connecting(), new SensoryBehaviorDelegate(new BLEScanner(), null), WatchUi.SLIDE_IMMEDIATE);
             System.println("View switched.");
         } else {
             self.device = null;
-            WatchUi.switchToView(new SensorDisconnected(), new BackDelegate(new BLEScanner(), null), WatchUi.SLIDE_IMMEDIATE);
+            WatchUi.switchToView(new SensorDisconnected(), new SensoryBehaviorDelegate(new BLEScanner(), null), WatchUi.SLIDE_IMMEDIATE);
         }
     }
 
@@ -60,7 +60,7 @@ class Delegate extends BLE.BleDelegate {
             System.println("Subscribed to notifications failed.");
         } else if (status == BLE.STATUS_SUCCESS) {
             System.println("Subscribed to notifications.");
-            WatchUi.switchToView(new SoundDisplay(), new BackDelegate(null, null), WatchUi.SLIDE_IMMEDIATE);
+            WatchUi.switchToView(new SoundDisplay(), new SensoryBehaviorDelegate(null, null), WatchUi.SLIDE_IMMEDIATE);
         }
     }
 
@@ -132,7 +132,7 @@ class BLEScanner extends WatchUi.View {
     function scanEnd() {
         var result = BLE_DELEGATE.getScanResult();
         if (result == null) {
-            WatchUi.switchToView(new SensorNotFound(), new BackDelegate(new BLEScanner(), null), WatchUi.SLIDE_IMMEDIATE);
+            WatchUi.switchToView(new SensorNotFound(), new SensoryBehaviorDelegate(new BLEScanner(), null), WatchUi.SLIDE_IMMEDIATE);
         } else {
             BLE_DELEGATE.connect();
         }
