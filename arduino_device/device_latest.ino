@@ -27,10 +27,6 @@ volatile int samplesRead;
 unsigned long lastTime;
 const unsigned long interval = 1000; // 1 second interval
 
-// Temperature and humidity
-float old_temp = 0;
-// float old_hum = 0;
-
 // Randomly generated UUIDs using https://www.uuidgenerator.net/
 const char *deviceServiceUuid = "5d390f04-f945-4b02-9e4a-307f6a53b492";
 const char *soundCharacteristicUuid = "d7df8570-d653-4ff9-a473-0352de9d0e7c";
@@ -115,17 +111,14 @@ void loop(){
 
         while (central.connected()){
 
-            float temperature = HS300x.readTemperature();
-            // float humidity = HS300x.readHumidity();
-
             // Update characteristics at 1Hz
             if (millis() - lastTime >= interval){
 
-                if (abs(old_temp - temperature) >= 0.5 ){
-                    old_temp = temperature;
-                    temperatureCharacteristic.writeValue(temperature);
-                }
+                // Update temperature -------------------------
+                float temperature = HS300x.readTemperature();
+                temperatureCharacteristic.writeValue(temperature);
 
+                // Update sound -------------------------
                 // Wait for samples to be read
                 if (samplesRead){
 
