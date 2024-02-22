@@ -52,7 +52,7 @@ class SettingsMenuInputDelegate extends WatchUi.MenuInputDelegate {
     function onMenuItem(item) {
         // Sound picker
         if (item == :sound) {
-            var title = new WatchUi.Text({:text=>"Threshold", :font=>Graphics.FONT_SMALL});
+            var title = new WatchUi.Text({:text=>"Threshold", :font=>Graphics.FONT_SMALL, :locX =>WatchUi.LAYOUT_HALIGN_CENTER, :locY=>WatchUi.LAYOUT_VALIGN_CENTER});
             var factory = new NumberFactory(5, 200, 5, "$1$ dB");
             var pickerDefault = factory.getIndex(SOUND_THRESHOLD);
             var picker = new WatchUi.Picker({:title=>title, :pattern=>[factory], :defaults=>[pickerDefault]});
@@ -61,7 +61,7 @@ class SettingsMenuInputDelegate extends WatchUi.MenuInputDelegate {
         // Temp picker
         // TODO: Add the default when merged with dev/temp
         else if (item == :temp) {
-            var title = new WatchUi.Text({:text=>"Threshold", :font=>Graphics.FONT_SMALL});
+            var title = new WatchUi.Text({:text=>"Threshold", :font=>Graphics.FONT_SMALL, :locX =>WatchUi.LAYOUT_HALIGN_CENTER, :locY=>WatchUi.LAYOUT_VALIGN_CENTER});
             var factory = new NumberFactory(-20, 40, 1, "$1$ °C");
             // ----- var pickerDefault = factory.getIndex(TEMP_THRESHOLD);
             var picker = new WatchUi.Picker({:title=>title, :pattern=>[factory]});
