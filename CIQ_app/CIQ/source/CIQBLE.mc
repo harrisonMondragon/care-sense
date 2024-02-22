@@ -7,6 +7,7 @@ using Toybox.BluetoothLowEnergy as BLE;
 // ------------------------------ GLOBALS ------------------------------
 var SOUND_LEVEL = 0;
 var TEMP_VAL = 0;
+var SUBSCRIPTION_COUNT = 0;
 
 // ----------------------------- DELEGATES -----------------------------
 class Delegate extends BLE.BleDelegate {
@@ -44,19 +45,21 @@ class Delegate extends BLE.BleDelegate {
 
     function onConnectedStateChanged(device, state) {
         if (state == BLE.CONNECTION_STATE_CONNECTED) {
-            System.println("Connected to " + device.getName());
+
             self.device = device;
             // sign up for notifications
             var sound_desc = device.getService(SERVICE_UUID).getCharacteristic(SOUND_UUID).getDescriptor(BLE.cccdUuid());
+            var temp_desc = device.getService(SERVICE_UUID).getCharacteristic(TEMP_UUID).getDescriptor(BLE.cccdUuid());
+
+            // Comment one of these and it will work just fine
+            temp_desc.requestWrite([0x01, 0x00]b);
             sound_desc.requestWrite([0x01, 0x00]b);
 
-            var temp_desc = device.getService(SERVICE_UUID).getCharacteristic(TEMP_UUID).getDescriptor(BLE.cccdUuid());
-            temp_desc.requestWrite([0x01, 0x00]b);
-
-            WatchUi.switchToView(new Connecting(), new BackDelegate(new BLEScanner(), null), WatchUi.SLIDE_IMMEDIATE);
-            System.println("View switched.");
+            // Straight to home display
+            WatchUi.switchToView(new HomeDisplay(), new BackDelegate(null, null), WatchUi.SLIDE_IMMEDIATE);
         } else {
             self.device = null;
+            SUBSCRIPTION_COUNT = 0;
             WatchUi.switchToView(new SensorDisconnected(), new BackDelegate(new BLEScanner(), null), WatchUi.SLIDE_IMMEDIATE);
         }
     }
@@ -64,23 +67,26 @@ class Delegate extends BLE.BleDelegate {
     function onDescriptorWrite(descriptor, status) {
         // TODO: test if the delay is long enough for both to be subscribed
         if (status == BLE.STATUS_WRITE_FAIL) {
-            System.println("Subscribed to notifications failed.");
-        } else if (status == BLE.STATUS_SUCCESS) {
-            System.println("Subscribed to notifications.");
-            WatchUi.switchToView(new HomeDisplay(), new BackDelegate(null, null), WatchUi.SLIDE_IMMEDIATE);
+            System.println("Failed subscribe to a notification.");
+        }
+
+        else if (status == BLE.STATUS_SUCCESS) {
+            SUBSCRIPTION_COUNT = SUBSCRIPTION_COUNT + 1;
+            System.println("Subscribed to " + SUBSCRIPTION_COUNT + " notification(s).");
         }
     }
 
     function onCharacteristicChanged(char, val) {
-        if (char.getUuid() == SOUND_UUID) {
-            System.println("Sound char changed to " + val);
-            SOUND_LEVEL = val[0]; // set sound levels to latest value
-            WatchUi.requestUpdate(); // update what ever watch face is displayed
-        } else if (char.getUuid() == TEMP_UUID) {
-            System.println("Temp char changed to " + val);
-            TEMP_VAL = val[0]; // set sound levels to latest value
-            WatchUi.requestUpdate(); // update what ever watch face is displayed
+        if(char.getUuid().equals(TEMP_UUID)){
+            System.println("Temp changed to: " + val);
+            TEMP_VAL = val[0];
         }
+
+        else if (char.getUuid().equals(SOUND_UUID)){
+            System.println("Sound changed to: " + val);
+            SOUND_LEVEL = val[0];
+        }
+        WatchUi.requestUpdate(); // update what ever watch face is displayed
     }
 
     function getScanResult() {
@@ -228,7 +234,7 @@ class Connecting extends WatchUi.View {
         // set foreground color
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
-        dc.drawText(x / 2, y / 2, Graphics.FONT_MEDIUM, "Connecting...", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x / 2, y / 2, Graphics.FONT_MEDIUM, "Setting up\nconnection...", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     function onHide() as Void {}

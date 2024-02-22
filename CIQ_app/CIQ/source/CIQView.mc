@@ -45,13 +45,14 @@ class HomeDisplay extends WatchUi.View {
 
     // Update the view every time a new BLE value comes in (see CIQBLE.mc:onCharacteristicChanged)
     function onUpdate(dc as Dc) as Void {
-        if (SOUND_LEVEL > SOUND_THRESHOLD) {
-            // verify the threshold
-            WatchUi.switchToView(new SoundNotification(), new BackDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
-        }
-        if (TEMP_VAL > TEMP_THRESHOLD) {
-            WatchUi.switchToView(new TempNotification(), new BackDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
-        }
+
+        // if (SOUND_LEVEL > SOUND_THRESHOLD) {
+        //     // verify the threshold
+        //     WatchUi.switchToView(new SoundNotification(), new BackDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
+        // }
+        // if (TEMP_VAL > TEMP_THRESHOLD) {
+        //     WatchUi.switchToView(new TempNotification(), new BackDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
+        // }
 
         // set background color
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
