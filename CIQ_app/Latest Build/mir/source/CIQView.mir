@@ -1,108 +1,57 @@
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 1; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 1; ]
 import Toybox.Graphics;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 2; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 2; ]
 import Toybox.WatchUi;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 3; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 3; ]
 import Toybox.Lang;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 4; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 4; ]
 import Toybox.Timer;
-<<<<<<< Updated upstream
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 7; @position = 4; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 7; @position = 4; ]
 var SOUND_THRESHOLD = 80;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 10; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 8; @position = 4; ]
+var TEMP_THRESHOLD = 35;
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 11; ]
 class BackDelegate extends BehaviorDelegate{
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 10; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 11; ]
     <init> {
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 10; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 11; ]
     static
     <init> {
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 11; @position = 18; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 12; @position = 18; ]
     protected
     var back_page;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 12; @position = 18; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 13; @position = 18; ]
     protected
     var back_back_page;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 14; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 15; ]
     function initialize(_page, _back_page) as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_14_43_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 15 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_15_43_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 16 8 ]
         %tmp.2 = lgetv %_page;
         putv self :back_page %tmp.2;
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 16 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 17 8 ]
         %tmp.4 = lgetv %_back_page;
         putv self :back_back_page %tmp.4;
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 17 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 18 8 ]
         %tmp.6 = getv ? :BehaviorDelegate;
         %tmp.7 = getv function %tmp.6 :initialize;
         invoke %tmp.6 %tmp.7();
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_14_43_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_15_43_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 20; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 21; ]
     function onBack() {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_20_22_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 21 8 ]
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_21_8_if_stmt:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_21_22_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 22 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_22_8_if_stmt:
         %tmp.2 = getv ? :back_page;
         %tmp.3 = null;
         %tmp.4 = ne %tmp.2 %tmp.3;
-        bf %tmp.4 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_21_8_if_false;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_21_8_if_true:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_21_31_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 22 12 ]
-=======
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 5; ]
-import Toybox.Attention;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 8; @position = 4; ]
-var SOUND_THRESHOLD = 80;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 9; @position = 4; ]
-var NOTIFICATION_DELAY = 15000;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 10; @position = 4; ]
-var VIBE_DURATION = 2000;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 13; ]
-class BackDelegate extends BehaviorDelegate{
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 13; ]
-    <init> {
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 13; ]
-    static
-    <init> {
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 14; @position = 18; ]
-    protected
-    var back_page;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 15; @position = 18; ]
-    protected
-    var back_back_page;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 17; ]
-    function initialize(_page, _back_page) as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_17_43_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 18 8 ]
-        %tmp.2 = lgetv %_page;
-        putv self :back_page %tmp.2;
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 19 8 ]
-        %tmp.4 = lgetv %_back_page;
-        putv self :back_back_page %tmp.4;
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 20 8 ]
-        %tmp.6 = getv ? :BehaviorDelegate;
-        %tmp.7 = getv function %tmp.6 :initialize;
-        invoke %tmp.6 %tmp.7();
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_17_43_stop:
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 23; ]
-    function onBack() {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_23_22_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 24 8 ]
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_24_8_if_stmt:
-        %tmp.2 = getv ? :back_page;
-        %tmp.3 = null;
-        %tmp.4 = ne %tmp.2 %tmp.3;
-        bf %tmp.4 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_24_8_if_false;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_24_8_if_true:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_24_31_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 25 12 ]
->>>>>>> Stashed changes
+        bf %tmp.4 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_22_8_if_false;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_22_8_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_22_31_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 23 12 ]
         %tmp.5 = getm $.Toybox.WatchUi;
         %tmp.6 = getv function %tmp.5 :switchToView;
         %tmp.8 = getv ? :back_page;
@@ -114,369 +63,68 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.17 = getm $.Toybox.WatchUi;
         %tmp.18 = getv %tmp.17 :SLIDE_IMMEDIATE;
         invoke %tmp.5 %tmp.6(%tmp.9, %tmp.10, %tmp.18);
-<<<<<<< Updated upstream
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_21_31_stop:
-        goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_21_8_if_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_21_8_if_false:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_23_15_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 24 12 ]
-=======
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_24_31_stop:
-        goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_24_8_if_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_24_8_if_false:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_26_15_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 27 12 ]
->>>>>>> Stashed changes
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_22_31_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_22_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_22_8_if_false:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_24_15_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 25 12 ]
         %tmp.19 = getm $.Toybox.WatchUi;
         %tmp.20 = getv function %tmp.19 :popView;
         %tmp.21 = getm $.Toybox.WatchUi;
         %tmp.22 = getv %tmp.21 :SLIDE_IMMEDIATE;
         invoke %tmp.19 %tmp.20(%tmp.22);
-<<<<<<< Updated upstream
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_23_15_stop:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_21_8_if_end:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 26 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_24_15_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_22_8_if_end:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 27 8 ]
         %tmp.23 = true;
         ret %tmp.23;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_20_22_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_21_22_stop:
     }
 }
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 31; ]
-class SoundDisplay extends WatchUi.View{
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 31; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 32; ]
+class HomeDisplay extends WatchUi.View{
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 32; ]
     <init> {
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 31; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 32; ]
     static
     <init> {
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 32; @position = 8; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 33; @position = 8; ]
     var x;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 32; @position = 11; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 33; @position = 11; ]
     var y;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 33; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 34; ]
     function initialize() as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_33_26_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 34 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_34_26_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 35 8 ]
         %tmp.2 = getv ? :View;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_33_26_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_34_26_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 37; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 38; ]
     function onLayout(dc as Dc) as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_37_40_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 39 8 ]
-=======
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_26_15_stop:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_24_8_if_end:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 29 8 ]
-        %tmp.23 = true;
-        ret %tmp.23;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_23_22_stop:
-    }
-}
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 34; ]
-class SoundDisplay extends WatchUi.View{
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 34; ]
-    <init> {
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 34; ]
-    static
-    <init> {
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 35; @position = 8; ]
-    var x;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 35; @position = 11; ]
-    var y;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 36; ]
-    function initialize() as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_36_26_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 37 8 ]
-        %tmp.2 = getv ? :View;
-        %tmp.3 = getv function %tmp.2 :initialize;
-        invoke %tmp.2 %tmp.3();
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_36_26_stop:
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 40; ]
-    function onLayout(dc as Dc) as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_40_40_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 42 8 ]
->>>>>>> Stashed changes
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_38_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 40 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :getWidth;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         putv self :x %tmp.3;
-<<<<<<< Updated upstream
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 40 8 ]
-=======
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 43 8 ]
->>>>>>> Stashed changes
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 41 8 ]
         %tmp.4 = lgetv %dc;
         %tmp.5 = getv function %tmp.4 :getHeight;
         %tmp.6 = invoke %tmp.4 %tmp.5();
         putv self :y %tmp.6;
-<<<<<<< Updated upstream
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_37_40_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_38_40_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 43; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 44; ]
     function onShow() as Void {
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 46; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 47; ]
     function onUpdate(dc as Dc) as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_46_40_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 47 8 ]
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_47_8_if_stmt:
-        %tmp.2 = getv ? :SOUND_LEVEL;
-        %tmp.4 = getv ? :SOUND_THRESHOLD;
-        %tmp.5 = gt %tmp.2 %tmp.4;
-        bf %tmp.5 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_47_8_if_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_47_8_if_true:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_47_43_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 49 12 ]
-=======
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_40_40_stop:
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 46; ]
-    function onShow() as Void {
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 49; ]
-    function onUpdate(dc as Dc) as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_49_40_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 50 8 ]
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_50_8_if_stmt:
-        %tmp.2 = getv ? :SOUND_LEVEL;
-        %tmp.4 = getv ? :SOUND_THRESHOLD;
-        %tmp.5 = gt %tmp.2 %tmp.4;
-        bf %tmp.5 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_50_8_if_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_50_8_if_true:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_50_43_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 52 12 ]
->>>>>>> Stashed changes
-        %tmp.6 = getm $.Toybox.WatchUi;
-        %tmp.7 = getv function %tmp.6 :switchToView;
-        %tmp.11 = getv ? :SoundNotification;
-        %tmp.8 = newc %tmp.11 ();
-        %tmp.15 = getv ? :BackDelegate;
-        %tmp.19 = getv ? :SoundDisplay;
-        %tmp.16 = newc %tmp.19 ();
-        %tmp.20 = null;
-        %tmp.12 = newc %tmp.15 (%tmp.16, %tmp.20);
-        %tmp.21 = getm $.Toybox.WatchUi;
-        %tmp.22 = getv %tmp.21 :SLIDE_IMMEDIATE;
-        invoke %tmp.6 %tmp.7(%tmp.8, %tmp.12, %tmp.22);
-<<<<<<< Updated upstream
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_47_43_stop:
-        goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_47_8_if_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_47_8_if_end:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 53 8 ]
-=======
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_50_43_stop:
-        goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_50_8_if_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_50_8_if_end:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 56 8 ]
->>>>>>> Stashed changes
-        %tmp.23 = lgetv %dc;
-        %tmp.24 = getv function %tmp.23 :setColor;
-        %tmp.25 = getm $.Toybox.Graphics;
-        %tmp.26 = getv %tmp.25 :COLOR_BLACK;
-        %tmp.27 = getm $.Toybox.Graphics;
-        %tmp.28 = getv %tmp.27 :COLOR_TRANSPARENT;
-        invoke %tmp.23 %tmp.24(%tmp.26, %tmp.28);
-<<<<<<< Updated upstream
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 54 8 ]
-=======
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 57 8 ]
->>>>>>> Stashed changes
-        %tmp.29 = lgetv %dc;
-        %tmp.30 = getv function %tmp.29 :fillRectangle;
-        %tmp.31 = 0;
-        %tmp.32 = 0;
-        %tmp.34 = getv ? :x;
-        %tmp.36 = getv ? :y;
-        invoke %tmp.29 %tmp.30(%tmp.31, %tmp.32, %tmp.34, %tmp.36);
-<<<<<<< Updated upstream
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 57 8 ]
-=======
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 60 8 ]
->>>>>>> Stashed changes
-        %tmp.37 = lgetv %dc;
-        %tmp.38 = getv function %tmp.37 :setColor;
-        %tmp.39 = getm $.Toybox.Graphics;
-        %tmp.40 = getv %tmp.39 :COLOR_WHITE;
-        %tmp.41 = getm $.Toybox.Graphics;
-        %tmp.42 = getv %tmp.41 :COLOR_TRANSPARENT;
-        invoke %tmp.37 %tmp.38(%tmp.40, %tmp.42);
-<<<<<<< Updated upstream
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 59 8 ]
-=======
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 62 8 ]
->>>>>>> Stashed changes
-        %tmp.43 = lgetv %dc;
-        %tmp.44 = getv function %tmp.43 :drawText;
-        %tmp.46 = getv ? :x;
-        %tmp.47 = 2;
-        %tmp.48 = div %tmp.46 %tmp.47;
-        %tmp.50 = getv ? :y;
-        %tmp.51 = 2;
-        %tmp.52 = div %tmp.50 %tmp.51;
-        %tmp.53 = 30;
-        %tmp.54 = sub %tmp.52 %tmp.53;
-        %tmp.55 = getm $.Toybox.Graphics;
-        %tmp.56 = getv %tmp.55 :FONT_MEDIUM;
-        %tmp.57 = "Current Environment\nSound Levels";
-        %tmp.58 = getm $.Toybox.Graphics;
-        %tmp.59 = getv %tmp.58 :TEXT_JUSTIFY_CENTER;
-        %tmp.60 = getm $.Toybox.Graphics;
-        %tmp.61 = getv %tmp.60 :TEXT_JUSTIFY_VCENTER;
-        %tmp.62 = bitor %tmp.59 %tmp.61;
-        invoke %tmp.43 %tmp.44(%tmp.48, %tmp.54, %tmp.56, %tmp.57, %tmp.62);
-<<<<<<< Updated upstream
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 60 8 ]
-=======
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 63 8 ]
->>>>>>> Stashed changes
-        %tmp.63 = lgetv %dc;
-        %tmp.64 = getv function %tmp.63 :drawText;
-        %tmp.66 = getv ? :x;
-        %tmp.67 = 2;
-        %tmp.68 = div %tmp.66 %tmp.67;
-        %tmp.70 = getv ? :y;
-        %tmp.71 = 2;
-        %tmp.72 = div %tmp.70 %tmp.71;
-        %tmp.73 = 80;
-        %tmp.74 = add %tmp.72 %tmp.73;
-        %tmp.75 = getm $.Toybox.Graphics;
-        %tmp.76 = getv %tmp.75 :FONT_MEDIUM;
-        %tmp.77 = getm $.Toybox.Lang;
-        %tmp.78 = getv function %tmp.77 :format;
-        %tmp.79 = "$1$ dB";
-        %tmp.80 = newa 1;
-        %tmp.82 = getv ? :SOUND_LEVEL;
-        %tmp.83 = dup %tmp.80;
-        %tmp.84 = aputv %tmp.83 0 %tmp.82;
-        %tmp.85 = invoke %tmp.77 %tmp.78(%tmp.79, %tmp.84);
-        %tmp.86 = getm $.Toybox.Graphics;
-        %tmp.87 = getv %tmp.86 :TEXT_JUSTIFY_CENTER;
-        %tmp.88 = getm $.Toybox.Graphics;
-        %tmp.89 = getv %tmp.88 :TEXT_JUSTIFY_VCENTER;
-        %tmp.90 = bitor %tmp.87 %tmp.89;
-        invoke %tmp.63 %tmp.64(%tmp.68, %tmp.74, %tmp.76, %tmp.85, %tmp.90);
-<<<<<<< Updated upstream
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_46_40_stop:
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 63; ]
-    function onHide() as Void {
-    }
-}
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 67; ]
-class SensorDisconnected extends WatchUi.View{
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 67; ]
-    <init> {
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 67; ]
-    static
-    <init> {
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 69; @position = 8; ]
-    var x;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 69; @position = 11; ]
-    var y;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 71; ]
-    function initialize() as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_71_26_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 72 8 ]
-        %tmp.2 = getv ? :View;
-        %tmp.3 = getv function %tmp.2 :initialize;
-        invoke %tmp.2 %tmp.3();
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_71_26_stop:
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 75; ]
-    function onLayout(dc as Dc) as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_75_40_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 77 8 ]
-=======
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_49_40_stop:
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 66; ]
-    function onHide() as Void {
-    }
-}
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 70; ]
-class SensorDisconnected extends WatchUi.View{
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 70; ]
-    <init> {
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 70; ]
-    static
-    <init> {
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 72; @position = 8; ]
-    var x;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 72; @position = 11; ]
-    var y;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 74; ]
-    function initialize() as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_74_26_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 75 8 ]
-        %tmp.2 = getv ? :View;
-        %tmp.3 = getv function %tmp.2 :initialize;
-        invoke %tmp.2 %tmp.3();
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_74_26_stop:
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 78; ]
-    function onLayout(dc as Dc) as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_78_40_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 80 8 ]
->>>>>>> Stashed changes
-        %tmp.1 = lgetv %dc;
-        %tmp.2 = getv function %tmp.1 :getWidth;
-        %tmp.3 = invoke %tmp.1 %tmp.2();
-        putv self :x %tmp.3;
-<<<<<<< Updated upstream
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 78 8 ]
-=======
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 81 8 ]
->>>>>>> Stashed changes
-        %tmp.4 = lgetv %dc;
-        %tmp.5 = getv function %tmp.4 :getHeight;
-        %tmp.6 = invoke %tmp.4 %tmp.5();
-        putv self :y %tmp.6;
-<<<<<<< Updated upstream
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_75_40_stop:
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 81; ]
-    function onShow() as Void {
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 84; ]
-    function onUpdate(dc as Dc) as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_84_40_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 86 8 ]
-=======
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_78_40_stop:
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 84; ]
-    function onShow() as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_84_30_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 86 8 ]
-        %tmp.1 = getm $.Toybox.Attention;
-        %tmp.2 = getv function %tmp.1 :vibrate;
-        %tmp.3 = newa 1;
-        %tmp.6 = getm $.Toybox.Attention;
-        %tmp.7 = getv function ? %tmp.6 :VibeProfile;
-        %tmp.8 = 100;
-        %tmp.10 = getv ? :VIBE_DURATION;
-        %tmp.4 = newc %tmp.7 (%tmp.8, %tmp.10);
-        %tmp.11 = dup %tmp.3;
-        %tmp.12 = aputv %tmp.11 0 %tmp.4;
-        invoke %tmp.1 %tmp.2(%tmp.12);
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_84_30_stop:
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 90; ]
-    function onUpdate(dc as Dc) as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_90_40_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 92 8 ]
->>>>>>> Stashed changes
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_47_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 58 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :setColor;
         %tmp.3 = getm $.Toybox.Graphics;
@@ -484,11 +132,7 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.5 = getm $.Toybox.Graphics;
         %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
         invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
-<<<<<<< Updated upstream
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 87 8 ]
-=======
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 93 8 ]
->>>>>>> Stashed changes
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 59 8 ]
         %tmp.7 = lgetv %dc;
         %tmp.8 = getv function %tmp.7 :fillRectangle;
         %tmp.9 = 0;
@@ -496,11 +140,7 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.12 = getv ? :x;
         %tmp.14 = getv ? :y;
         invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10, %tmp.12, %tmp.14);
-<<<<<<< Updated upstream
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 90 8 ]
-=======
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 96 8 ]
->>>>>>> Stashed changes
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 62 8 ]
         %tmp.15 = lgetv %dc;
         %tmp.16 = getv function %tmp.15 :setColor;
         %tmp.17 = getm $.Toybox.Graphics;
@@ -508,11 +148,154 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.19 = getm $.Toybox.Graphics;
         %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
         invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
-<<<<<<< Updated upstream
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 92 8 ]
-=======
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 98 8 ]
->>>>>>> Stashed changes
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 63 8 ]
+        %tmp.21 = lgetv %dc;
+        %tmp.22 = getv function %tmp.21 :drawText;
+        %tmp.24 = getv ? :x;
+        %tmp.25 = 2;
+        %tmp.26 = div %tmp.24 %tmp.25;
+        %tmp.28 = getv ? :y;
+        %tmp.29 = 2;
+        %tmp.30 = div %tmp.28 %tmp.29;
+        %tmp.31 = 70;
+        %tmp.32 = sub %tmp.30 %tmp.31;
+        %tmp.33 = getm $.Toybox.Graphics;
+        %tmp.34 = getv %tmp.33 :FONT_MEDIUM;
+        %tmp.35 = "Current Environment";
+        %tmp.36 = getm $.Toybox.Graphics;
+        %tmp.37 = getv %tmp.36 :TEXT_JUSTIFY_CENTER;
+        %tmp.38 = getm $.Toybox.Graphics;
+        %tmp.39 = getv %tmp.38 :TEXT_JUSTIFY_VCENTER;
+        %tmp.40 = bitor %tmp.37 %tmp.39;
+        invoke %tmp.21 %tmp.22(%tmp.26, %tmp.32, %tmp.34, %tmp.35, %tmp.40);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 64 8 ]
+        %tmp.41 = lgetv %dc;
+        %tmp.42 = getv function %tmp.41 :drawText;
+        %tmp.44 = getv ? :x;
+        %tmp.45 = 2;
+        %tmp.46 = div %tmp.44 %tmp.45;
+        %tmp.48 = getv ? :y;
+        %tmp.49 = 2;
+        %tmp.50 = div %tmp.48 %tmp.49;
+        %tmp.51 = 10;
+        %tmp.52 = add %tmp.50 %tmp.51;
+        %tmp.53 = getm $.Toybox.Graphics;
+        %tmp.54 = getv %tmp.53 :FONT_MEDIUM;
+        %tmp.55 = getm $.Toybox.Lang;
+        %tmp.56 = getv function %tmp.55 :format;
+        %tmp.57 = "Sound: $1$ dB";
+        %tmp.58 = newa 1;
+        %tmp.60 = getv ? :SOUND_LEVEL;
+        %tmp.61 = dup %tmp.58;
+        %tmp.62 = aputv %tmp.61 0 %tmp.60;
+        %tmp.63 = invoke %tmp.55 %tmp.56(%tmp.57, %tmp.62);
+        %tmp.64 = getm $.Toybox.Graphics;
+        %tmp.65 = getv %tmp.64 :TEXT_JUSTIFY_CENTER;
+        %tmp.66 = getm $.Toybox.Graphics;
+        %tmp.67 = getv %tmp.66 :TEXT_JUSTIFY_VCENTER;
+        %tmp.68 = bitor %tmp.65 %tmp.67;
+        invoke %tmp.41 %tmp.42(%tmp.46, %tmp.52, %tmp.54, %tmp.63, %tmp.68);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 65 8 ]
+        %tmp.69 = lgetv %dc;
+        %tmp.70 = getv function %tmp.69 :drawText;
+        %tmp.72 = getv ? :x;
+        %tmp.73 = 2;
+        %tmp.74 = div %tmp.72 %tmp.73;
+        %tmp.76 = getv ? :y;
+        %tmp.77 = 2;
+        %tmp.78 = div %tmp.76 %tmp.77;
+        %tmp.79 = 80;
+        %tmp.80 = add %tmp.78 %tmp.79;
+        %tmp.81 = getm $.Toybox.Graphics;
+        %tmp.82 = getv %tmp.81 :FONT_MEDIUM;
+        %tmp.83 = getm $.Toybox.Lang;
+        %tmp.84 = getv function %tmp.83 :format;
+        %tmp.85 = "Temperature: $1$ °C";
+        %tmp.86 = newa 1;
+        %tmp.88 = getv ? :TEMP_VAL;
+        %tmp.89 = dup %tmp.86;
+        %tmp.90 = aputv %tmp.89 0 %tmp.88;
+        %tmp.91 = invoke %tmp.83 %tmp.84(%tmp.85, %tmp.90);
+        %tmp.92 = getm $.Toybox.Graphics;
+        %tmp.93 = getv %tmp.92 :TEXT_JUSTIFY_CENTER;
+        %tmp.94 = getm $.Toybox.Graphics;
+        %tmp.95 = getv %tmp.94 :TEXT_JUSTIFY_VCENTER;
+        %tmp.96 = bitor %tmp.93 %tmp.95;
+        invoke %tmp.69 %tmp.70(%tmp.74, %tmp.80, %tmp.82, %tmp.91, %tmp.96);
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_47_40_stop:
+    }
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 68; ]
+    function onHide() as Void {
+    }
+}
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 72; ]
+class SensorDisconnected extends WatchUi.View{
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 72; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 72; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 74; @position = 8; ]
+    var x;
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 74; @position = 11; ]
+    var y;
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 76; ]
+    function initialize() as Void {
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_76_26_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 77 8 ]
+        %tmp.2 = getv ? :View;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_76_26_stop:
+    }
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 80; ]
+    function onLayout(dc as Dc) as Void {
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_80_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 82 8 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        putv self :x %tmp.3;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 83 8 ]
+        %tmp.4 = lgetv %dc;
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        putv self :y %tmp.6;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_80_40_stop:
+    }
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 86; ]
+    function onShow() as Void {
+    }
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 89; ]
+    function onUpdate(dc as Dc) as Void {
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_89_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 91 8 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :setColor;
+        %tmp.3 = getm $.Toybox.Graphics;
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        %tmp.5 = getm $.Toybox.Graphics;
+        %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 92 8 ]
+        %tmp.7 = lgetv %dc;
+        %tmp.8 = getv function %tmp.7 :fillRectangle;
+        %tmp.9 = 0;
+        %tmp.10 = 0;
+        %tmp.12 = getv ? :x;
+        %tmp.14 = getv ? :y;
+        invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10, %tmp.12, %tmp.14);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 95 8 ]
+        %tmp.15 = lgetv %dc;
+        %tmp.16 = getv function %tmp.15 :setColor;
+        %tmp.17 = getm $.Toybox.Graphics;
+        %tmp.18 = getv %tmp.17 :COLOR_WHITE;
+        %tmp.19 = getm $.Toybox.Graphics;
+        %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
+        invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 97 8 ]
         %tmp.21 = lgetv %dc;
         %tmp.22 = getv function %tmp.21 :drawText;
         %tmp.24 = getv ? :x;
@@ -532,11 +315,7 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.39 = getv %tmp.38 :TEXT_JUSTIFY_VCENTER;
         %tmp.40 = bitor %tmp.37 %tmp.39;
         invoke %tmp.21 %tmp.22(%tmp.26, %tmp.32, %tmp.34, %tmp.35, %tmp.40);
-<<<<<<< Updated upstream
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 93 8 ]
-=======
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 99 8 ]
->>>>>>> Stashed changes
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 98 8 ]
         %tmp.41 = lgetv %dc;
         %tmp.42 = getv function %tmp.41 :drawText;
         %tmp.44 = getv ? :x;
@@ -556,107 +335,62 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.59 = getv %tmp.58 :TEXT_JUSTIFY_VCENTER;
         %tmp.60 = bitor %tmp.57 %tmp.59;
         invoke %tmp.41 %tmp.42(%tmp.46, %tmp.52, %tmp.54, %tmp.55, %tmp.60);
-<<<<<<< Updated upstream
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_84_40_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_89_40_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 96; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 101; ]
     function onHide() as Void {
     }
 }
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 100; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 105; ]
 class SoundNotification extends WatchUi.View{
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 100; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 105; ]
     <init> {
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 102 8 ]
-=======
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_90_40_stop:
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 102; ]
-    function onHide() as Void {
-    }
-}
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 106; ]
-class SoundNotification extends WatchUi.View{
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 106; ]
-    <init> {
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 108 8 ]
->>>>>>> Stashed changes
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 107 8 ]
         %tmp.3 = getm $.Toybox.Timer;
         %tmp.4 = getv function ? %tmp.3 :Timer;
         %tmp.1 = newc %tmp.4 ();
         putv self :timer %tmp.1;
     }
-<<<<<<< Updated upstream
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 100; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 105; ]
     static
     <init> {
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 101; @position = 8; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 106; @position = 8; ]
     var x;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 101; @position = 11; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 106; @position = 11; ]
     var y;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 102; @position = 8; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 107; @position = 8; ]
     var timer;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 103; @position = 8; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 108; @position = 8; ]
     var NOTIFICATION_DELAY = 15000;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 105; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 110; ]
     function initialize() as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_105_26_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 106 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_110_26_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 111 8 ]
         %tmp.2 = getv ? :View;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_105_26_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_110_26_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 110; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 115; ]
     function onLayout(dc as Dc) as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_110_40_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 112 8 ]
-=======
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 106; ]
-    static
-    <init> {
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 107; @position = 8; ]
-    var x;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 107; @position = 11; ]
-    var y;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 108; @position = 8; ]
-    var timer;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 110; ]
-    function initialize() as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_110_26_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 111 8 ]
-        %tmp.2 = getv ? :View;
-        %tmp.3 = getv function %tmp.2 :initialize;
-        invoke %tmp.2 %tmp.3();
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_110_26_stop:
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 115; ]
-    function onLayout(dc as Dc) as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_115_40_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 117 8 ]
->>>>>>> Stashed changes
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_115_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 117 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :getWidth;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         putv self :x %tmp.3;
-<<<<<<< Updated upstream
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 113 8 ]
-=======
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 118 8 ]
->>>>>>> Stashed changes
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 118 8 ]
         %tmp.4 = lgetv %dc;
         %tmp.5 = getv function %tmp.4 :getHeight;
         %tmp.6 = invoke %tmp.4 %tmp.5();
         putv self :y %tmp.6;
-<<<<<<< Updated upstream
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_110_40_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_115_40_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 116; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 121; ]
     function onShow() as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_116_30_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 118 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_121_30_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 123 8 ]
         %tmp.2 = getv ? :timer;
         %tmp.3 = getv function %tmp.2 :start;
         %tmp.4 = self;
@@ -666,47 +400,12 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.10 = getv ? :NOTIFICATION_DELAY;
         %tmp.11 = false;
         invoke %tmp.2 %tmp.3(%tmp.8, %tmp.10, %tmp.11);
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_116_30_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_121_30_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 122; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 127; ]
     function onUpdate(dc as Dc) as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_122_40_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 124 8 ]
-=======
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_115_40_stop:
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 121; ]
-    function onShow() as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_121_30_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 123 8 ]
-        %tmp.1 = getm $.Toybox.Attention;
-        %tmp.2 = getv function %tmp.1 :vibrate;
-        %tmp.3 = newa 1;
-        %tmp.6 = getm $.Toybox.Attention;
-        %tmp.7 = getv function ? %tmp.6 :VibeProfile;
-        %tmp.8 = 100;
-        %tmp.10 = getv ? :VIBE_DURATION;
-        %tmp.4 = newc %tmp.7 (%tmp.8, %tmp.10);
-        %tmp.11 = dup %tmp.3;
-        %tmp.12 = aputv %tmp.11 0 %tmp.4;
-        invoke %tmp.1 %tmp.2(%tmp.12);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 126 8 ]
-        %tmp.14 = getv ? :timer;
-        %tmp.15 = getv function %tmp.14 :start;
-        %tmp.16 = self;
-        %tmp.17 = getv function %tmp.16 :method;
-        %tmp.19 = const :notificationDone;
-        %tmp.20 = invoke %tmp.16 %tmp.17(%tmp.19);
-        %tmp.22 = getv ? :NOTIFICATION_DELAY;
-        %tmp.23 = false;
-        invoke %tmp.14 %tmp.15(%tmp.20, %tmp.22, %tmp.23);
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_121_30_stop:
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 130; ]
-    function onUpdate(dc as Dc) as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_130_40_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 132 8 ]
->>>>>>> Stashed changes
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_127_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 129 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :setColor;
         %tmp.3 = getm $.Toybox.Graphics;
@@ -714,11 +413,7 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.5 = getm $.Toybox.Graphics;
         %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
         invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
-<<<<<<< Updated upstream
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 125 8 ]
-=======
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 133 8 ]
->>>>>>> Stashed changes
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 130 8 ]
         %tmp.7 = lgetv %dc;
         %tmp.8 = getv function %tmp.7 :fillRectangle;
         %tmp.9 = 0;
@@ -726,11 +421,7 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.12 = getv ? :x;
         %tmp.14 = getv ? :y;
         invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10, %tmp.12, %tmp.14);
-<<<<<<< Updated upstream
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 128 8 ]
-=======
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 136 8 ]
->>>>>>> Stashed changes
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 133 8 ]
         %tmp.15 = lgetv %dc;
         %tmp.16 = getv function %tmp.15 :setColor;
         %tmp.17 = getm $.Toybox.Graphics;
@@ -738,11 +429,7 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.19 = getm $.Toybox.Graphics;
         %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
         invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
-<<<<<<< Updated upstream
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 130 8 ]
-=======
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 138 8 ]
->>>>>>> Stashed changes
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 135 8 ]
         %tmp.21 = lgetv %dc;
         %tmp.22 = getv function %tmp.21 :drawText;
         %tmp.24 = getv ? :x;
@@ -769,11 +456,7 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.47 = getv %tmp.46 :TEXT_JUSTIFY_VCENTER;
         %tmp.48 = bitor %tmp.45 %tmp.47;
         invoke %tmp.21 %tmp.22(%tmp.26, %tmp.32, %tmp.34, %tmp.43, %tmp.48);
-<<<<<<< Updated upstream
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 131 8 ]
-=======
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 139 8 ]
->>>>>>> Stashed changes
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 136 8 ]
         %tmp.49 = lgetv %dc;
         %tmp.50 = getv function %tmp.49 :drawText;
         %tmp.52 = getv ? :x;
@@ -793,27 +476,15 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.67 = getv %tmp.66 :TEXT_JUSTIFY_VCENTER;
         %tmp.68 = bitor %tmp.65 %tmp.67;
         invoke %tmp.49 %tmp.50(%tmp.54, %tmp.60, %tmp.62, %tmp.63, %tmp.68);
-<<<<<<< Updated upstream
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 134 8 ]
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_134_8_if_stmt:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 139 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_139_8_if_stmt:
         %tmp.70 = getv ? :SOUND_LEVEL;
         %tmp.72 = getv ? :SOUND_THRESHOLD;
         %tmp.73 = gte %tmp.70 %tmp.72;
-        bf %tmp.73 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_134_8_if_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_134_8_if_true:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_134_44_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 135 12 ]
-=======
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 142 8 ]
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_142_8_if_stmt:
-        %tmp.70 = getv ? :SOUND_LEVEL;
-        %tmp.72 = getv ? :SOUND_THRESHOLD;
-        %tmp.73 = gte %tmp.70 %tmp.72;
-        bf %tmp.73 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_142_8_if_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_142_8_if_true:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_142_44_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 143 12 ]
->>>>>>> Stashed changes
+        bf %tmp.73 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_139_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_139_8_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_139_44_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 140 12 ]
         %tmp.74 = lgetv %dc;
         %tmp.75 = getv function %tmp.74 :setColor;
         %tmp.76 = getm $.Toybox.Graphics;
@@ -821,17 +492,10 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.78 = getm $.Toybox.Graphics;
         %tmp.79 = getv %tmp.78 :COLOR_TRANSPARENT;
         invoke %tmp.74 %tmp.75(%tmp.77, %tmp.79);
-<<<<<<< Updated upstream
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_134_44_stop:
-        goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_134_8_if_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_134_8_if_end:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 137 8 ]
-=======
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_142_44_stop:
-        goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_142_8_if_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_142_8_if_end:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 145 8 ]
->>>>>>> Stashed changes
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_139_44_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_139_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_139_8_if_end:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 142 8 ]
         %tmp.80 = lgetv %dc;
         %tmp.81 = getv function %tmp.80 :drawText;
         %tmp.83 = getv ? :x;
@@ -858,42 +522,24 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.106 = getv %tmp.105 :TEXT_JUSTIFY_VCENTER;
         %tmp.107 = bitor %tmp.104 %tmp.106;
         invoke %tmp.80 %tmp.81(%tmp.85, %tmp.91, %tmp.93, %tmp.102, %tmp.107);
-<<<<<<< Updated upstream
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_122_40_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_127_40_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 140; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 145; ]
     function onHide() as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_140_30_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 144 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_145_30_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 146 8 ]
         %tmp.2 = getv ? :timer;
         %tmp.3 = getv function %tmp.2 :stop;
         invoke %tmp.2 %tmp.3();
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_140_30_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_145_30_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 148; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 150; ]
     function notificationDone() {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_148_32_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 150 8 ]
-=======
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_130_40_stop:
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 148; ]
-    function onHide() as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_148_30_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 149 8 ]
-        %tmp.2 = getv ? :timer;
-        %tmp.3 = getv function %tmp.2 :stop;
-        invoke %tmp.2 %tmp.3();
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_148_30_stop:
-    }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 153; ]
-    function notificationDone() {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_153_32_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc" 155 8 ]
->>>>>>> Stashed changes
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_150_32_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 152 8 ]
         %tmp.1 = getm $.Toybox.WatchUi;
         %tmp.2 = getv function %tmp.1 :switchToView;
-        %tmp.6 = getv ? :SoundDisplay;
+        %tmp.6 = getv ? :HomeDisplay;
         %tmp.3 = newc %tmp.6 ();
         %tmp.10 = getv ? :BackDelegate;
         %tmp.11 = null;
@@ -902,13 +548,219 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.13 = getm $.Toybox.WatchUi;
         %tmp.14 = getv %tmp.13 :SLIDE_IMMEDIATE;
         invoke %tmp.1 %tmp.2(%tmp.3, %tmp.7, %tmp.14);
-<<<<<<< Updated upstream
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_148_32_stop:
-=======
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_CIQView_mc_153_32_stop:
->>>>>>> Stashed changes
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_150_32_stop:
     }
 }
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/CIQView.mc"; @line = 1; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 157; ]
+class TempNotification extends WatchUi.View{
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 157; ]
+    <init> {
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 159 8 ]
+        %tmp.17 = getm $.Toybox.Timer;
+        %tmp.18 = getv function ? %tmp.17 :Timer;
+        %tmp.15 = newc %tmp.18 ();
+        putv self :timer %tmp.15;
+    }
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 157; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 158; @position = 8; ]
+    var x;
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 158; @position = 11; ]
+    var y;
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 159; @position = 8; ]
+    var timer;
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 160; @position = 8; ]
+    var NOTIFICATION_DELAY = 15000;
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 162; ]
+    function initialize() as Void {
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_162_26_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 163 8 ]
+        %tmp.2 = getv ? :View;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_162_26_stop:
+    }
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 167; ]
+    function onLayout(dc as Dc) as Void {
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_167_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 169 8 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        putv self :x %tmp.3;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 170 8 ]
+        %tmp.4 = lgetv %dc;
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        putv self :y %tmp.6;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_167_40_stop:
+    }
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 173; ]
+    function onShow() as Void {
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_173_30_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 175 8 ]
+        %tmp.2 = getv ? :timer;
+        %tmp.3 = getv function %tmp.2 :start;
+        %tmp.4 = self;
+        %tmp.5 = getv function %tmp.4 :method;
+        %tmp.7 = const :notificationDone;
+        %tmp.8 = invoke %tmp.4 %tmp.5(%tmp.7);
+        %tmp.10 = getv ? :NOTIFICATION_DELAY;
+        %tmp.11 = false;
+        invoke %tmp.2 %tmp.3(%tmp.8, %tmp.10, %tmp.11);
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_173_30_stop:
+    }
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 179; ]
+    function onUpdate(dc as Dc) as Void {
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_179_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 181 8 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :setColor;
+        %tmp.3 = getm $.Toybox.Graphics;
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        %tmp.5 = getm $.Toybox.Graphics;
+        %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 182 8 ]
+        %tmp.7 = lgetv %dc;
+        %tmp.8 = getv function %tmp.7 :fillRectangle;
+        %tmp.9 = 0;
+        %tmp.10 = 0;
+        %tmp.12 = getv ? :x;
+        %tmp.14 = getv ? :y;
+        invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10, %tmp.12, %tmp.14);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 185 8 ]
+        %tmp.15 = lgetv %dc;
+        %tmp.16 = getv function %tmp.15 :setColor;
+        %tmp.17 = getm $.Toybox.Graphics;
+        %tmp.18 = getv %tmp.17 :COLOR_WHITE;
+        %tmp.19 = getm $.Toybox.Graphics;
+        %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
+        invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 187 8 ]
+        %tmp.21 = lgetv %dc;
+        %tmp.22 = getv function %tmp.21 :drawText;
+        %tmp.24 = getv ? :x;
+        %tmp.25 = 2;
+        %tmp.26 = div %tmp.24 %tmp.25;
+        %tmp.28 = getv ? :y;
+        %tmp.29 = 2;
+        %tmp.30 = div %tmp.28 %tmp.29;
+        %tmp.31 = 50;
+        %tmp.32 = sub %tmp.30 %tmp.31;
+        %tmp.33 = getm $.Toybox.Graphics;
+        %tmp.34 = getv %tmp.33 :FONT_MEDIUM;
+        %tmp.35 = getm $.Toybox.Lang;
+        %tmp.36 = getv function %tmp.35 :format;
+        %tmp.37 = "Environment\n temperature has\nexceeded $1$ °C.";
+        %tmp.38 = newa 1;
+        %tmp.40 = getv ? :TEMP_THRESHOLD;
+        %tmp.41 = dup %tmp.38;
+        %tmp.42 = aputv %tmp.41 0 %tmp.40;
+        %tmp.43 = invoke %tmp.35 %tmp.36(%tmp.37, %tmp.42);
+        %tmp.44 = getm $.Toybox.Graphics;
+        %tmp.45 = getv %tmp.44 :TEXT_JUSTIFY_CENTER;
+        %tmp.46 = getm $.Toybox.Graphics;
+        %tmp.47 = getv %tmp.46 :TEXT_JUSTIFY_VCENTER;
+        %tmp.48 = bitor %tmp.45 %tmp.47;
+        invoke %tmp.21 %tmp.22(%tmp.26, %tmp.32, %tmp.34, %tmp.43, %tmp.48);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 188 8 ]
+        %tmp.49 = lgetv %dc;
+        %tmp.50 = getv function %tmp.49 :drawText;
+        %tmp.52 = getv ? :x;
+        %tmp.53 = 2;
+        %tmp.54 = div %tmp.52 %tmp.53;
+        %tmp.56 = getv ? :y;
+        %tmp.57 = 2;
+        %tmp.58 = div %tmp.56 %tmp.57;
+        %tmp.59 = 90;
+        %tmp.60 = add %tmp.58 %tmp.59;
+        %tmp.61 = getm $.Toybox.Graphics;
+        %tmp.62 = getv %tmp.61 :FONT_MEDIUM;
+        %tmp.63 = "Current temp is";
+        %tmp.64 = getm $.Toybox.Graphics;
+        %tmp.65 = getv %tmp.64 :TEXT_JUSTIFY_CENTER;
+        %tmp.66 = getm $.Toybox.Graphics;
+        %tmp.67 = getv %tmp.66 :TEXT_JUSTIFY_VCENTER;
+        %tmp.68 = bitor %tmp.65 %tmp.67;
+        invoke %tmp.49 %tmp.50(%tmp.54, %tmp.60, %tmp.62, %tmp.63, %tmp.68);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 191 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_191_8_if_stmt:
+        %tmp.70 = getv ? :TEMP_VAL;
+        %tmp.72 = getv ? :TEMP_THRESHOLD;
+        %tmp.73 = gte %tmp.70 %tmp.72;
+        bf %tmp.73 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_191_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_191_8_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_191_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 192 12 ]
+        %tmp.74 = lgetv %dc;
+        %tmp.75 = getv function %tmp.74 :setColor;
+        %tmp.76 = getm $.Toybox.Graphics;
+        %tmp.77 = getv %tmp.76 :COLOR_RED;
+        %tmp.78 = getm $.Toybox.Graphics;
+        %tmp.79 = getv %tmp.78 :COLOR_TRANSPARENT;
+        invoke %tmp.74 %tmp.75(%tmp.77, %tmp.79);
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_191_40_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_191_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_191_8_if_end:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 194 8 ]
+        %tmp.80 = lgetv %dc;
+        %tmp.81 = getv function %tmp.80 :drawText;
+        %tmp.83 = getv ? :x;
+        %tmp.84 = 2;
+        %tmp.85 = div %tmp.83 %tmp.84;
+        %tmp.87 = getv ? :y;
+        %tmp.88 = 2;
+        %tmp.89 = div %tmp.87 %tmp.88;
+        %tmp.90 = 140;
+        %tmp.91 = add %tmp.89 %tmp.90;
+        %tmp.92 = getm $.Toybox.Graphics;
+        %tmp.93 = getv %tmp.92 :FONT_MEDIUM;
+        %tmp.94 = getm $.Toybox.Lang;
+        %tmp.95 = getv function %tmp.94 :format;
+        %tmp.96 = "$1$ °C";
+        %tmp.97 = newa 1;
+        %tmp.99 = getv ? :TEMP_VAL;
+        %tmp.100 = dup %tmp.97;
+        %tmp.101 = aputv %tmp.100 0 %tmp.99;
+        %tmp.102 = invoke %tmp.94 %tmp.95(%tmp.96, %tmp.101);
+        %tmp.103 = getm $.Toybox.Graphics;
+        %tmp.104 = getv %tmp.103 :TEXT_JUSTIFY_CENTER;
+        %tmp.105 = getm $.Toybox.Graphics;
+        %tmp.106 = getv %tmp.105 :TEXT_JUSTIFY_VCENTER;
+        %tmp.107 = bitor %tmp.104 %tmp.106;
+        invoke %tmp.80 %tmp.81(%tmp.85, %tmp.91, %tmp.93, %tmp.102, %tmp.107);
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_179_40_stop:
+    }
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 197; ]
+    function onHide() as Void {
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_197_30_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 198 8 ]
+        %tmp.2 = getv ? :timer;
+        %tmp.3 = getv function %tmp.2 :stop;
+        invoke %tmp.2 %tmp.3();
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_197_30_stop:
+    }
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 202; ]
+    function notificationDone() {
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_202_32_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc" 204 8 ]
+        %tmp.1 = getm $.Toybox.WatchUi;
+        %tmp.2 = getv function %tmp.1 :switchToView;
+        %tmp.6 = getv ? :HomeDisplay;
+        %tmp.3 = newc %tmp.6 ();
+        %tmp.10 = getv ? :BackDelegate;
+        %tmp.11 = null;
+        %tmp.12 = null;
+        %tmp.7 = newc %tmp.10 (%tmp.11, %tmp.12);
+        %tmp.13 = getm $.Toybox.WatchUi;
+        %tmp.14 = getv %tmp.13 :SLIDE_IMMEDIATE;
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.7, %tmp.14);
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQView_mc_202_32_stop:
+    }
+}
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQView.mc"; @line = 1; ]
 <init> {
 }

@@ -45,18 +45,18 @@ class Delegate extends BLE.BleDelegate {
 
     function onConnectedStateChanged(device, state) {
         if (state == BLE.CONNECTION_STATE_CONNECTED) {
-
             self.device = device;
-            // sign up for notifications
-            var sound_desc = device.getService(SERVICE_UUID).getCharacteristic(SOUND_UUID).getDescriptor(BLE.cccdUuid());
-            var temp_desc = device.getService(SERVICE_UUID).getCharacteristic(TEMP_UUID).getDescriptor(BLE.cccdUuid());
 
-            // Comment one of these and it will work just fine
-            temp_desc.requestWrite([0x01, 0x00]b);
+            // Subscribe to sound notifications
+            var sound_desc = device.getService(SERVICE_UUID).getCharacteristic(SOUND_UUID).getDescriptor(BLE.cccdUuid());
             sound_desc.requestWrite([0x01, 0x00]b);
 
-            // Straight to home display
-            WatchUi.switchToView(new HomeDisplay(), new BackDelegate(null, null), WatchUi.SLIDE_IMMEDIATE);
+            // Need to either delay oe queue requestWrite calls, see:
+            // https://forums.garmin.com/developer/connect-iq/f/discussion/258434/how-to-do-multiple-successive-btle-characteristic-requestwrite/1234530#1234530
+            var subscribeDelayTimer = new Timer.Timer();
+            subscribeDelayTimer.start(method(:subscribeDelayDone), 10000, false);
+
+            WatchUi.switchToView(new Connecting(), new BackDelegate(new BLEScanner(), null), WatchUi.SLIDE_IMMEDIATE);
         } else {
             self.device = null;
             SUBSCRIPTION_COUNT = 0;
@@ -64,15 +64,24 @@ class Delegate extends BLE.BleDelegate {
         }
     }
 
+    // Subscribe to temp notifications after a delay between sound subscription
+    function subscribeDelayDone() as Void{
+        System.println("Finished subscribe delay");
+        var temp_desc = device.getService(SERVICE_UUID).getCharacteristic(TEMP_UUID).getDescriptor(BLE.cccdUuid());
+        temp_desc.requestWrite([0x01, 0x00]b);
+    }
+
     function onDescriptorWrite(descriptor, status) {
         // TODO: test if the delay is long enough for both to be subscribed
         if (status == BLE.STATUS_WRITE_FAIL) {
             System.println("Failed subscribe to a notification.");
         }
-
         else if (status == BLE.STATUS_SUCCESS) {
             SUBSCRIPTION_COUNT = SUBSCRIPTION_COUNT + 1;
             System.println("Subscribed to " + SUBSCRIPTION_COUNT + " notification(s).");
+            if (SUBSCRIPTION_COUNT >= 2){
+                WatchUi.switchToView(new HomeDisplay(), new BackDelegate(null, null), WatchUi.SLIDE_IMMEDIATE);
+            }
         }
     }
 
