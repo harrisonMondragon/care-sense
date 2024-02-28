@@ -41,14 +41,19 @@ class Delegate extends BLE.BleDelegate {
     }
 
     function onConnectedStateChanged(device, state) {
+        var myTime = System.getClockTime(); // ClockTime object
+        System.println(
+            "Connected state changed to " + state + " at " +
+            myTime.hour.format("%02d") + ":" +
+            myTime.min.format("%02d") + ":" +
+            myTime.sec.format("%02d")
+        );
         if (state == BLE.CONNECTION_STATE_CONNECTED) {
-            System.println("Connected to " + device.getName());
             self.device = device;
             // sign up for notifications
             var descriptor = device.getService(SERVICE_UUID).getCharacteristic(CHAR_UUID).getDescriptor(BLE.cccdUuid());
             descriptor.requestWrite([0x01, 0x00]b);
             WatchUi.switchToView(new Connecting(), new SensoryBehaviorDelegate(new BLEScanner(), null), WatchUi.SLIDE_IMMEDIATE);
-            System.println("View switched.");
         } else {
             self.device = null;
             WatchUi.switchToView(new SensorDisconnected(), new SensoryBehaviorDelegate(new BLEScanner(), null), WatchUi.SLIDE_IMMEDIATE);
@@ -65,7 +70,6 @@ class Delegate extends BLE.BleDelegate {
     }
 
     function onCharacteristicChanged(char, val) {
-        System.println("Char changed to " + val);
         SOUND_LEVEL = val[0]; // set sound levels to latest value
         WatchUi.requestUpdate(); // update what ever watch face is displayed
     }
