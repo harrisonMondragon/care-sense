@@ -148,130 +148,154 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_28_40_stop:
     function onConnectedStateChanged(device, state) {
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_43_52_start:
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 44 8 ]
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_44_8_if_stmt:
-        %tmp.2 = lgetv %state;
-        %tmp.3 = getm $.Toybox.BluetoothLowEnergy;
-        %tmp.4 = getv %tmp.3 :CONNECTION_STATE_CONNECTED;
-        %tmp.5 = eq %tmp.2 %tmp.4;
-        bf %tmp.5 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_44_8_if_false;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_44_8_if_true:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_44_53_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 45 12 ]
-        %tmp.7 = getv ? :System;
-        %tmp.8 = getv function %tmp.7 :println;
-        %tmp.9 = "Connected to ";
-        %tmp.10 = lgetv %device;
-        %tmp.11 = getv function %tmp.10 :getName;
-        %tmp.12 = invoke %tmp.10 %tmp.11();
-        %tmp.13 = add %tmp.9 %tmp.12;
-        invoke %tmp.7 %tmp.8(%tmp.13);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 46 12 ]
-        %tmp.15 = lgetv %device;
-        putv self :device %tmp.15;
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 48 12 ]
-        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_44_53_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_44_53_stop" ]
-        %descriptor.1 = local;
-        %tmp.16 = lgetv %device;
-        %tmp.17 = getv function %tmp.16 :getService;
-        %tmp.19 = getv ? :SERVICE_UUID;
-        %tmp.20 = invoke %tmp.16 %tmp.17(%tmp.19);
-        %tmp.21 = getv function %tmp.20 :getCharacteristic;
-        %tmp.23 = getv ? :CHAR_UUID;
-        %tmp.24 = invoke %tmp.20 %tmp.21(%tmp.23);
-        %tmp.25 = getv function %tmp.24 :getDescriptor;
-        %tmp.26 = getm $.Toybox.BluetoothLowEnergy;
-        %tmp.27 = getv function %tmp.26 :cccdUuid;
-        %tmp.28 = invoke %tmp.26 %tmp.27();
-        %tmp.29 = invoke %tmp.24 %tmp.25(%tmp.28);
-        lputv %descriptor.1 %tmp.29;
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 49 12 ]
-        %tmp.30 = lgetv %descriptor.1;
-        %tmp.31 = getv function %tmp.30 :requestWrite;
-        %tmp.32 = newba 2;
-        %tmp.33 = 0x01;
-        %tmp.34 = dup %tmp.32;
-        %tmp.35 = aputv %tmp.34 0 %tmp.33;
-        %tmp.36 = 0x00;
-        %tmp.37 = dup %tmp.35;
-        %tmp.38 = aputv %tmp.37 1 %tmp.36;
-        invoke %tmp.30 %tmp.31(%tmp.38);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 50 12 ]
-        %tmp.39 = getm $.Toybox.WatchUi;
-        %tmp.40 = getv function %tmp.39 :switchToView;
-        %tmp.44 = getv ? :Connecting;
-        %tmp.41 = newc %tmp.44 ();
-        %tmp.48 = getv ? :SensoryBehaviorDelegate;
-        %tmp.52 = getv ? :BLEScanner;
-        %tmp.49 = newc %tmp.52 ();
-        %tmp.53 = null;
-        %tmp.45 = newc %tmp.48 (%tmp.49, %tmp.53);
-        %tmp.54 = getm $.Toybox.WatchUi;
-        %tmp.55 = getv %tmp.54 :SLIDE_IMMEDIATE;
-        invoke %tmp.39 %tmp.40(%tmp.41, %tmp.45, %tmp.55);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 51 12 ]
-        %tmp.57 = getv ? :System;
-        %tmp.58 = getv function %tmp.57 :println;
-        %tmp.59 = "View switched.";
-        invoke %tmp.57 %tmp.58(%tmp.59);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_44_53_stop:
-        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_44_8_if_end;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_44_8_if_false:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_52_15_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 53 12 ]
-        %tmp.60 = null;
-        putv self :device %tmp.60;
+        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_43_52_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_43_52_stop" ]
+        %myTime.1 = local;
+        %tmp.2 = getv ? :System;
+        %tmp.3 = getv function %tmp.2 :getClockTime;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %myTime.1 %tmp.4;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 45 8 ]
+        %tmp.6 = getv ? :System;
+        %tmp.7 = getv function %tmp.6 :println;
+        %tmp.8 = "Connected state changed to ";
+        %tmp.10 = lgetv %state;
+        %tmp.11 = add %tmp.8 %tmp.10;
+        %tmp.12 = " at ";
+        %tmp.13 = add %tmp.11 %tmp.12;
+        %tmp.14 = lgetv %myTime.1;
+        %tmp.15 = getv %tmp.14 :hour;
+        %tmp.16 = getv function %tmp.15 :format;
+        %tmp.17 = "%02d";
+        %tmp.18 = invoke %tmp.15 %tmp.16(%tmp.17);
+        %tmp.19 = add %tmp.13 %tmp.18;
+        %tmp.20 = ":";
+        %tmp.21 = add %tmp.19 %tmp.20;
+        %tmp.22 = lgetv %myTime.1;
+        %tmp.23 = getv %tmp.22 :min;
+        %tmp.24 = getv function %tmp.23 :format;
+        %tmp.25 = "%02d";
+        %tmp.26 = invoke %tmp.23 %tmp.24(%tmp.25);
+        %tmp.27 = add %tmp.21 %tmp.26;
+        %tmp.28 = ":";
+        %tmp.29 = add %tmp.27 %tmp.28;
+        %tmp.30 = lgetv %myTime.1;
+        %tmp.31 = getv %tmp.30 :sec;
+        %tmp.32 = getv function %tmp.31 :format;
+        %tmp.33 = "%02d";
+        %tmp.34 = invoke %tmp.31 %tmp.32(%tmp.33);
+        %tmp.35 = add %tmp.29 %tmp.34;
+        invoke %tmp.6 %tmp.7(%tmp.35);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 51 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_51_8_if_stmt:
+        %tmp.37 = lgetv %state;
+        %tmp.38 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.39 = getv %tmp.38 :CONNECTION_STATE_CONNECTED;
+        %tmp.40 = eq %tmp.37 %tmp.39;
+        bf %tmp.40 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_51_8_if_false;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_51_8_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_51_53_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 52 12 ]
+        %tmp.42 = lgetv %device;
+        putv self :device %tmp.42;
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 54 12 ]
-        %tmp.61 = getm $.Toybox.WatchUi;
-        %tmp.62 = getv function %tmp.61 :switchToView;
-        %tmp.66 = getv ? :SensorDisconnected;
-        %tmp.63 = newc %tmp.66 ();
-        %tmp.70 = getv ? :SensoryBehaviorDelegate;
-        %tmp.74 = getv ? :BLEScanner;
-        %tmp.71 = newc %tmp.74 ();
-        %tmp.75 = null;
-        %tmp.67 = newc %tmp.70 (%tmp.71, %tmp.75);
-        %tmp.76 = getm $.Toybox.WatchUi;
-        %tmp.77 = getv %tmp.76 :SLIDE_IMMEDIATE;
-        invoke %tmp.61 %tmp.62(%tmp.63, %tmp.67, %tmp.77);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_52_15_stop:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_44_8_if_end:
+        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_51_53_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_51_53_stop" ]
+        %descriptor.2 = local;
+        %tmp.43 = lgetv %device;
+        %tmp.44 = getv function %tmp.43 :getService;
+        %tmp.46 = getv ? :SERVICE_UUID;
+        %tmp.47 = invoke %tmp.43 %tmp.44(%tmp.46);
+        %tmp.48 = getv function %tmp.47 :getCharacteristic;
+        %tmp.50 = getv ? :CHAR_UUID;
+        %tmp.51 = invoke %tmp.47 %tmp.48(%tmp.50);
+        %tmp.52 = getv function %tmp.51 :getDescriptor;
+        %tmp.53 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.54 = getv function %tmp.53 :cccdUuid;
+        %tmp.55 = invoke %tmp.53 %tmp.54();
+        %tmp.56 = invoke %tmp.51 %tmp.52(%tmp.55);
+        lputv %descriptor.2 %tmp.56;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 55 12 ]
+        %tmp.57 = lgetv %descriptor.2;
+        %tmp.58 = getv function %tmp.57 :requestWrite;
+        %tmp.59 = newba 2;
+        %tmp.60 = 0x01;
+        %tmp.61 = dup %tmp.59;
+        %tmp.62 = aputv %tmp.61 0 %tmp.60;
+        %tmp.63 = 0x00;
+        %tmp.64 = dup %tmp.62;
+        %tmp.65 = aputv %tmp.64 1 %tmp.63;
+        invoke %tmp.57 %tmp.58(%tmp.65);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 56 12 ]
+        %tmp.66 = getm $.Toybox.WatchUi;
+        %tmp.67 = getv function %tmp.66 :switchToView;
+        %tmp.71 = getv ? :Connecting;
+        %tmp.68 = newc %tmp.71 ();
+        %tmp.75 = getv ? :SensoryBehaviorDelegate;
+        %tmp.79 = getv ? :BLEScanner;
+        %tmp.76 = newc %tmp.79 ();
+        %tmp.80 = null;
+        %tmp.72 = newc %tmp.75 (%tmp.76, %tmp.80);
+        %tmp.81 = getm $.Toybox.WatchUi;
+        %tmp.82 = getv %tmp.81 :SLIDE_IMMEDIATE;
+        invoke %tmp.66 %tmp.67(%tmp.68, %tmp.72, %tmp.82);
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_51_53_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_51_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_51_8_if_false:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_57_15_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 58 12 ]
+        %tmp.83 = null;
+        putv self :device %tmp.83;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 59 12 ]
+        %tmp.84 = getm $.Toybox.WatchUi;
+        %tmp.85 = getv function %tmp.84 :switchToView;
+        %tmp.89 = getv ? :SensorDisconnected;
+        %tmp.86 = newc %tmp.89 ();
+        %tmp.93 = getv ? :SensoryBehaviorDelegate;
+        %tmp.97 = getv ? :BLEScanner;
+        %tmp.94 = newc %tmp.97 ();
+        %tmp.98 = null;
+        %tmp.90 = newc %tmp.93 (%tmp.94, %tmp.98);
+        %tmp.99 = getm $.Toybox.WatchUi;
+        %tmp.100 = getv %tmp.99 :SLIDE_IMMEDIATE;
+        invoke %tmp.84 %tmp.85(%tmp.86, %tmp.90, %tmp.100);
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_57_15_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_51_8_if_end:
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_43_52_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 58; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 63; ]
     function onDescriptorWrite(descriptor, status) {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_58_51_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 59 8 ]
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_59_8_if_stmt:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_63_51_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 64 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_64_8_if_stmt:
         %tmp.2 = lgetv %status;
         %tmp.3 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.4 = getv %tmp.3 :STATUS_WRITE_FAIL;
         %tmp.5 = eq %tmp.2 %tmp.4;
-        bf %tmp.5 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_59_8_if_false;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_59_8_if_true:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_59_45_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 60 12 ]
+        bf %tmp.5 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_64_8_if_false;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_64_8_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_64_45_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 65 12 ]
         %tmp.7 = getv ? :System;
         %tmp.8 = getv function %tmp.7 :println;
         %tmp.9 = "Subscribed to notifications failed.";
         invoke %tmp.7 %tmp.8(%tmp.9);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_59_45_stop:
-        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_59_8_if_end;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_59_8_if_false:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 61 15 ]
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_61_15_if_stmt:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_64_45_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_64_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_64_8_if_false:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 66 15 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_66_15_if_stmt:
         %tmp.11 = lgetv %status;
         %tmp.12 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.13 = getv %tmp.12 :STATUS_SUCCESS;
         %tmp.14 = eq %tmp.11 %tmp.13;
-        bf %tmp.14 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_61_15_if_end;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_61_15_if_true:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_61_49_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 62 12 ]
+        bf %tmp.14 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_66_15_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_66_15_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_66_49_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 67 12 ]
         %tmp.16 = getv ? :System;
         %tmp.17 = getv function %tmp.16 :println;
         %tmp.18 = "Subscribed to notifications.";
         invoke %tmp.16 %tmp.17(%tmp.18);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 63 12 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 68 12 ]
         %tmp.19 = getm $.Toybox.WatchUi;
         %tmp.20 = getv function %tmp.19 :switchToView;
         %tmp.24 = getv ? :SoundDisplay;
@@ -283,62 +307,55 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_61_49_start:
         %tmp.31 = getm $.Toybox.WatchUi;
         %tmp.32 = getv %tmp.31 :SLIDE_IMMEDIATE;
         invoke %tmp.19 %tmp.20(%tmp.21, %tmp.25, %tmp.32);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_61_49_stop:
-        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_61_15_if_end;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_61_15_if_end:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_59_8_if_end:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_58_51_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_66_49_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_66_15_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_66_15_if_end:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_64_8_if_end:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_63_51_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 67; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 72; ]
     function onCharacteristicChanged(char, val) {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_67_48_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 68 8 ]
-        %tmp.2 = getv ? :System;
-        %tmp.3 = getv function %tmp.2 :println;
-        %tmp.4 = "Char changed to ";
-        %tmp.6 = lgetv %val;
-        %tmp.7 = add %tmp.4 %tmp.6;
-        invoke %tmp.2 %tmp.3(%tmp.7);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 69 8 ]
-        %tmp.9 = lgetv %val;
-        %tmp.10 = 0;
-        %tmp.11 = agetv %tmp.9 %tmp.10;
-        putv self :SOUND_LEVEL %tmp.11;
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 70 8 ]
-        %tmp.12 = getm $.Toybox.WatchUi;
-        %tmp.13 = getv function %tmp.12 :requestUpdate;
-        invoke %tmp.12 %tmp.13();
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_67_48_stop:
-    }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 73; ]
-    function getScanResult() {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_73_29_start:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_72_48_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 73 8 ]
+        %tmp.2 = lgetv %val;
+        %tmp.3 = 0;
+        %tmp.4 = agetv %tmp.2 %tmp.3;
+        putv self :SOUND_LEVEL %tmp.4;
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 74 8 ]
-        %tmp.2 = getv ? :sensorScanResult;
-        ret %tmp.2;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_73_29_stop:
+        %tmp.5 = getm $.Toybox.WatchUi;
+        %tmp.6 = getv function %tmp.5 :requestUpdate;
+        invoke %tmp.5 %tmp.6();
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_72_48_stop:
     }
     [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 77; ]
-    function connect() {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_77_24_start:
+    function getScanResult() {
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_77_29_start:
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 78 8 ]
+        %tmp.2 = getv ? :sensorScanResult;
+        ret %tmp.2;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_77_29_stop:
+    }
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 81; ]
+    function connect() {
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_81_24_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 82 8 ]
         %tmp.1 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.2 = getv function %tmp.1 :setScanState;
         %tmp.3 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.4 = getv %tmp.3 :SCAN_STATE_OFF;
         invoke %tmp.1 %tmp.2(%tmp.4);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 79 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 83 8 ]
         %tmp.5 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.6 = getv function %tmp.5 :pairDevice;
         %tmp.8 = getv ? :sensorScanResult;
         invoke %tmp.5 %tmp.6(%tmp.8);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_77_24_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_81_24_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 82; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 86; ]
     function registerProfiles() {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_82_32_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 83 7 ]
-        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_82_32_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_82_32_stop" ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_86_32_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 87 7 ]
+        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_86_32_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_86_32_stop" ]
         %profile.1 = local;
         %tmp.1 = newd 2;
         %tmp.3 = const :uuid;
@@ -366,71 +383,71 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_82_32_start:
         %tmp.30 = dup %tmp.7;
         %tmp.31 = aputv %tmp.30 %tmp.9 %tmp.29;
         lputv %profile.1 %tmp.31;
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 93 7 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 97 7 ]
         %tmp.32 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.33 = getv function %tmp.32 :registerProfile;
         %tmp.35 = lgetv %profile.1;
         invoke %tmp.32 %tmp.33(%tmp.35);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_82_32_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_86_32_stop:
     }
 }
-[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 98; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 102; ]
 class BLEScanner extends WatchUi.View{
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 98; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 102; ]
     <init> {
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 102 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 106 8 ]
         %tmp.38 = getm $.Toybox.Timer;
         %tmp.39 = getv function ? %tmp.38 :Timer;
         %tmp.36 = newc %tmp.39 ();
         putv self :timer %tmp.36;
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 98; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 102; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 100; @position = 17; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 104; @position = 17; ]
     public
     const SCAN_DELAY = 5000;
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 101; @position = 8; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 105; @position = 8; ]
     var x;
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 101; @position = 11; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 105; @position = 11; ]
     var y;
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 102; @position = 8; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 106; @position = 8; ]
     var timer;
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 104; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 108; ]
     function initialize() as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_104_26_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 105 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_108_26_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 109 8 ]
         %tmp.2 = getv ? :View;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_104_26_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_108_26_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 108; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 112; ]
     function onLayout(dc as Dc) as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_108_40_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 110 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_112_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 114 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :getWidth;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         putv self :x %tmp.3;
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 111 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 115 8 ]
         %tmp.4 = lgetv %dc;
         %tmp.5 = getv function %tmp.4 :getHeight;
         %tmp.6 = invoke %tmp.4 %tmp.5();
         putv self :y %tmp.6;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_108_40_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_112_40_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 114; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 118; ]
     function onShow() as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_114_30_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 116 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_118_30_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 120 8 ]
         %tmp.1 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.2 = getv function %tmp.1 :setScanState;
         %tmp.3 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.4 = getv %tmp.3 :SCAN_STATE_SCANNING;
         invoke %tmp.1 %tmp.2(%tmp.4);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 117 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 121 8 ]
         %tmp.6 = getv ? :timer;
         %tmp.7 = getv function %tmp.6 :start;
         %tmp.8 = self;
@@ -440,12 +457,12 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_114_30_start:
         %tmp.14 = getv ? :SCAN_DELAY;
         %tmp.15 = false;
         invoke %tmp.6 %tmp.7(%tmp.12, %tmp.14, %tmp.15);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_114_30_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_118_30_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 121; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 125; ]
     function onUpdate(dc as Dc) as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_121_40_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 123 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_125_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 127 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :setColor;
         %tmp.3 = getm $.Toybox.Graphics;
@@ -453,7 +470,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_121_40_start:
         %tmp.5 = getm $.Toybox.Graphics;
         %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
         invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 124 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 128 8 ]
         %tmp.7 = lgetv %dc;
         %tmp.8 = getv function %tmp.7 :fillRectangle;
         %tmp.9 = 0;
@@ -461,7 +478,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_121_40_start:
         %tmp.12 = getv ? :x;
         %tmp.14 = getv ? :y;
         invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10, %tmp.12, %tmp.14);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 127 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 131 8 ]
         %tmp.15 = lgetv %dc;
         %tmp.16 = getv function %tmp.15 :setColor;
         %tmp.17 = getm $.Toybox.Graphics;
@@ -469,7 +486,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_121_40_start:
         %tmp.19 = getm $.Toybox.Graphics;
         %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
         invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 129 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 133 8 ]
         %tmp.21 = lgetv %dc;
         %tmp.22 = getv function %tmp.21 :drawText;
         %tmp.24 = getv ? :x;
@@ -487,27 +504,27 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_121_40_start:
         %tmp.37 = getv %tmp.36 :TEXT_JUSTIFY_VCENTER;
         %tmp.38 = bitor %tmp.35 %tmp.37;
         invoke %tmp.21 %tmp.22(%tmp.26, %tmp.30, %tmp.32, %tmp.33, %tmp.38);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_121_40_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_125_40_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 132; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 136; ]
     function scanEnd() {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_132_23_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 133 8 ]
-        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_132_23_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_132_23_stop" ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_136_23_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 137 8 ]
+        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_136_23_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_136_23_stop" ]
         %result.1 = local;
         %tmp.2 = getv ? :BLE_DELEGATE;
         %tmp.3 = getv function %tmp.2 :getScanResult;
         %tmp.4 = invoke %tmp.2 %tmp.3();
         lputv %result.1 %tmp.4;
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 134 8 ]
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_134_8_if_stmt:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 138 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_138_8_if_stmt:
         %tmp.6 = lgetv %result.1;
         %tmp.7 = null;
         %tmp.8 = eq %tmp.6 %tmp.7;
-        bf %tmp.8 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_134_8_if_false;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_134_8_if_true:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_134_28_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 135 12 ]
+        bf %tmp.8 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_138_8_if_false;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_138_8_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_138_28_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 139 12 ]
         %tmp.9 = getm $.Toybox.WatchUi;
         %tmp.10 = getv function %tmp.9 :switchToView;
         %tmp.14 = getv ? :SensorNotFound;
@@ -520,82 +537,82 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_134_28_start:
         %tmp.24 = getm $.Toybox.WatchUi;
         %tmp.25 = getv %tmp.24 :SLIDE_IMMEDIATE;
         invoke %tmp.9 %tmp.10(%tmp.11, %tmp.15, %tmp.25);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_134_28_stop:
-        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_134_8_if_end;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_134_8_if_false:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_136_15_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 137 12 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_138_28_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_138_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_138_8_if_false:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_140_15_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 141 12 ]
         %tmp.27 = getv ? :BLE_DELEGATE;
         %tmp.28 = getv function %tmp.27 :connect;
         invoke %tmp.27 %tmp.28();
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_136_15_stop:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_134_8_if_end:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_132_23_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_140_15_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_138_8_if_end:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_136_23_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 141; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 145; ]
     function onHide() as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_141_30_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 143 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_145_30_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 147 8 ]
         %tmp.1 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.2 = getv function %tmp.1 :setScanState;
         %tmp.3 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.4 = getv %tmp.3 :SCAN_STATE_OFF;
         invoke %tmp.1 %tmp.2(%tmp.4);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_141_30_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_145_30_stop:
     }
 }
-[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 148; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 152; ]
 class SensorNotFound extends WatchUi.View{
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 148; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 152; ]
     <init> {
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 148; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 152; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 151; @position = 8; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 155; @position = 8; ]
     var x;
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 151; @position = 11; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 155; @position = 11; ]
     var y;
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 153; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 157; ]
     function initialize() as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_153_26_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 154 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_157_26_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 158 8 ]
         %tmp.2 = getv ? :View;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_153_26_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_157_26_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 157; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 161; ]
     function onLayout(dc as Dc) as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_157_40_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 159 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_161_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 163 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :getWidth;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         putv self :x %tmp.3;
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 160 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 164 8 ]
         %tmp.4 = lgetv %dc;
         %tmp.5 = getv function %tmp.4 :getHeight;
         %tmp.6 = invoke %tmp.4 %tmp.5();
         putv self :y %tmp.6;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_157_40_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_161_40_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 163; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 167; ]
     function onShow() as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_163_30_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 164 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_167_30_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 168 8 ]
         %tmp.1 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.2 = getv function %tmp.1 :setScanState;
         %tmp.3 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.4 = getv %tmp.3 :SCAN_STATE_OFF;
         invoke %tmp.1 %tmp.2(%tmp.4);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_163_30_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_167_30_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 168; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 172; ]
     function onUpdate(dc as Dc) as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_168_40_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 170 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_172_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 174 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :setColor;
         %tmp.3 = getm $.Toybox.Graphics;
@@ -603,7 +620,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_168_40_start:
         %tmp.5 = getm $.Toybox.Graphics;
         %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
         invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 171 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 175 8 ]
         %tmp.7 = lgetv %dc;
         %tmp.8 = getv function %tmp.7 :fillRectangle;
         %tmp.9 = 0;
@@ -611,7 +628,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_168_40_start:
         %tmp.12 = getv ? :x;
         %tmp.14 = getv ? :y;
         invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10, %tmp.12, %tmp.14);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 174 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 178 8 ]
         %tmp.15 = lgetv %dc;
         %tmp.16 = getv function %tmp.15 :setColor;
         %tmp.17 = getm $.Toybox.Graphics;
@@ -619,7 +636,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_168_40_start:
         %tmp.19 = getm $.Toybox.Graphics;
         %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
         invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 176 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 180 8 ]
         %tmp.21 = lgetv %dc;
         %tmp.22 = getv function %tmp.21 :drawText;
         %tmp.24 = getv ? :x;
@@ -637,64 +654,64 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_168_40_start:
         %tmp.37 = getv %tmp.36 :TEXT_JUSTIFY_VCENTER;
         %tmp.38 = bitor %tmp.35 %tmp.37;
         invoke %tmp.21 %tmp.22(%tmp.26, %tmp.30, %tmp.32, %tmp.33, %tmp.38);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_168_40_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_172_40_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 179; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 183; ]
     function onHide() as Void {
     }
 }
-[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 182; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 186; ]
 class Connecting extends WatchUi.View{
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 182; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 186; ]
     <init> {
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 182; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 186; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 184; @position = 8; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 188; @position = 8; ]
     var x;
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 184; @position = 11; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 188; @position = 11; ]
     var y;
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 186; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 190; ]
     function initialize() as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_186_26_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 187 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_190_26_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 191 8 ]
         %tmp.2 = getv ? :View;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_186_26_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_190_26_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 190; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 194; ]
     function onLayout(dc as Dc) as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_190_40_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 192 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_194_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 196 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :getWidth;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         putv self :x %tmp.3;
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 193 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 197 8 ]
         %tmp.4 = lgetv %dc;
         %tmp.5 = getv function %tmp.4 :getHeight;
         %tmp.6 = invoke %tmp.4 %tmp.5();
         putv self :y %tmp.6;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_190_40_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_194_40_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 196; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 200; ]
     function onShow() as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_196_30_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 197 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_200_30_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 201 8 ]
         %tmp.1 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.2 = getv function %tmp.1 :setScanState;
         %tmp.3 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.4 = getv %tmp.3 :SCAN_STATE_OFF;
         invoke %tmp.1 %tmp.2(%tmp.4);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_196_30_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_200_30_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 201; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 205; ]
     function onUpdate(dc as Dc) as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_201_40_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 203 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_205_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 207 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :setColor;
         %tmp.3 = getm $.Toybox.Graphics;
@@ -702,7 +719,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_201_40_start:
         %tmp.5 = getm $.Toybox.Graphics;
         %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
         invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 204 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 208 8 ]
         %tmp.7 = lgetv %dc;
         %tmp.8 = getv function %tmp.7 :fillRectangle;
         %tmp.9 = 0;
@@ -710,7 +727,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_201_40_start:
         %tmp.12 = getv ? :x;
         %tmp.14 = getv ? :y;
         invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10, %tmp.12, %tmp.14);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 207 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 211 8 ]
         %tmp.15 = lgetv %dc;
         %tmp.16 = getv function %tmp.15 :setColor;
         %tmp.17 = getm $.Toybox.Graphics;
@@ -718,7 +735,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_201_40_start:
         %tmp.19 = getm $.Toybox.Graphics;
         %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
         invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 209 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc" 213 8 ]
         %tmp.21 = lgetv %dc;
         %tmp.22 = getv function %tmp.21 :drawText;
         %tmp.24 = getv ? :x;
@@ -736,9 +753,9 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_201_40_start:
         %tmp.37 = getv %tmp.36 :TEXT_JUSTIFY_VCENTER;
         %tmp.38 = bitor %tmp.35 %tmp.37;
         invoke %tmp.21 %tmp.22(%tmp.26, %tmp.30, %tmp.32, %tmp.33, %tmp.38);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_201_40_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_CIQBLE_mc_205_40_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 212; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\CIQBLE.mc"; @line = 216; ]
     function onHide() as Void {
     }
 }
