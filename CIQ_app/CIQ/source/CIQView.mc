@@ -2,13 +2,17 @@ import Toybox.Graphics;
 import Toybox.WatchUi;
 import Toybox.Lang;
 import Toybox.Timer;
+import Toybox.Attention;
 
 // ------------------------------ GLOBALS ------------------------------
 var SOUND_THRESHOLD = 80; // max sound threshold in dB
 var TEMP_THRESHOLD = 35; // max temperature threshold in ˚C
 
+var NOTIFICATION_DELAY = 15000; // notification delay in ms
+var VIBE_DURATION = 2000; // vibration duration in ms
+
 // ----------------------------- DELEGATES -----------------------------
-class BackDelegate extends BehaviorDelegate {
+class SensoryBehaviorDelegate extends BehaviorDelegate {
     protected var back_page; // page to return to on back
     protected var back_back_page; // back page for that page
 
@@ -20,13 +24,108 @@ class BackDelegate extends BehaviorDelegate {
 
     function onBack() {
         if (back_page != null) {
-            WatchUi.switchToView(back_page, new BackDelegate(back_back_page, null), WatchUi.SLIDE_IMMEDIATE);
+            WatchUi.switchToView(back_page, new SensoryBehaviorDelegate(back_back_page, null), WatchUi.SLIDE_IMMEDIATE);
         } else {
             WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
         }
         return true;
     }
+
+    // Start settings sequence on swipe up
+    function onSwipe(swipeEvent) {
+        if (swipeEvent.getDirection() == SWIPE_UP){
+            var menu = new WatchUi.Menu();
+            menu.setTitle("Settings");
+            menu.addItem("Sound", :sound);
+            menu.addItem("Temperature", :temp);
+            WatchUi.pushView(menu, new SettingsMenuInputDelegate(), WatchUi.SLIDE_UP);
+        }
+        return true;
+    }
 }
+
+// Settings menu to choose what threshold to alter
+class SettingsMenuInputDelegate extends WatchUi.MenuInputDelegate {
+
+    function initialize() {
+        MenuInputDelegate.initialize();
+    }
+
+    function onMenuItem(item) {
+        // Sound picker
+        if (item == :sound) {
+            var title = new WatchUi.Text({:text=>"Threshold", :font=>Graphics.FONT_SMALL, :locX =>WatchUi.LAYOUT_HALIGN_CENTER, :locY=>WatchUi.LAYOUT_VALIGN_CENTER});
+            var factory = new NumberFactory(5, 200, 5, "$1$ dB");
+            var pickerDefault = factory.getIndex(SOUND_THRESHOLD);
+            var picker = new WatchUi.Picker({:title=>title, :pattern=>[factory], :defaults=>[pickerDefault]});
+            WatchUi.pushView(picker, new SoundPickerDelegate(), WatchUi.SLIDE_LEFT);
+        }
+        // Temp picker
+        else if (item == :temp) {
+            var title = new WatchUi.Text({:text=>"Threshold", :font=>Graphics.FONT_SMALL, :locX =>WatchUi.LAYOUT_HALIGN_CENTER, :locY=>WatchUi.LAYOUT_VALIGN_CENTER});
+            var factory = new NumberFactory(-20, 40, 1, "$1$ °C");
+            var pickerDefault = factory.getIndex(TEMP_THRESHOLD);
+            var picker = new WatchUi.Picker({:title=>title, :pattern=>[factory], :defaults=>[pickerDefault]});
+            WatchUi.pushView(picker, new TempPickerDelegate(), WatchUi.SLIDE_LEFT);
+        }
+    }
+}
+
+// Change SOUND_THRESHOLD using sound picker
+class SoundPickerDelegate extends WatchUi.PickerDelegate {
+
+    function initialize() {
+        PickerDelegate.initialize();
+    }
+
+    function onCancel() {
+        WatchUi.popView(WatchUi.SLIDE_RIGHT);
+        return true;
+    }
+
+    function onAccept(values) {
+        SOUND_THRESHOLD = values[0];
+        WatchUi.pushView(new ThresholdChangeConfirmation(), new ThresholdChangeConfirmationDelegate(), WatchUi.SLIDE_LEFT);
+        return true;
+    }
+}
+
+// Change TEMP_THRESHOLD using temp picker
+class TempPickerDelegate extends WatchUi.PickerDelegate {
+
+    function initialize() {
+        PickerDelegate.initialize();
+    }
+
+    function onCancel() {
+        WatchUi.popView(WatchUi.SLIDE_RIGHT);
+        return true;
+    }
+
+    function onAccept(values) {
+        TEMP_THRESHOLD = values[0];
+        WatchUi.pushView(new ThresholdChangeConfirmation(), new ThresholdChangeConfirmationDelegate(), WatchUi.SLIDE_LEFT);
+        return true;
+    }
+}
+
+// Get back to regular pages on threshold confirmation
+class ThresholdChangeConfirmationDelegate extends BehaviorDelegate {
+
+    function initialize() {
+        BehaviorDelegate.initialize();
+    }
+
+    function onSwipe(swipeEvent) {
+        if (swipeEvent.getDirection() == SWIPE_DOWN){
+            WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to Picker
+            WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to Menu
+            WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to HomeDisplay
+        }
+        return true;
+    }
+}
+
 
 // ------------------------------- VIEWS -------------------------------
 class HomeDisplay extends WatchUi.View {
@@ -46,13 +145,13 @@ class HomeDisplay extends WatchUi.View {
     // Update the view every time a new BLE value comes in (see CIQBLE.mc:onCharacteristicChanged)
     function onUpdate(dc as Dc) as Void {
 
-        // if (SOUND_LEVEL > SOUND_THRESHOLD) {
-        //     // verify the threshold
-        //     WatchUi.switchToView(new SoundNotification(), new BackDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
-        // }
-        // if (TEMP_VAL > TEMP_THRESHOLD) {
-        //     WatchUi.switchToView(new TempNotification(), new BackDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
-        // }
+        if (SOUND_LEVEL > SOUND_THRESHOLD) {
+            // verify the threshold
+            WatchUi.switchToView(new SoundNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
+        }
+        if (TEMP_VAL > TEMP_THRESHOLD) {
+            WatchUi.switchToView(new TempNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
+        }
 
         // set background color
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
@@ -83,7 +182,10 @@ class SensorDisconnected extends WatchUi.View {
         y = dc.getHeight();
     }
 
-    function onShow() as Void {}
+    function onShow() as Void {
+        // Vibrate the watch
+        Attention.vibrate([new Attention.VibeProfile(100, VIBE_DURATION)]);
+    }
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
@@ -105,7 +207,6 @@ class SensorDisconnected extends WatchUi.View {
 class SoundNotification extends WatchUi.View {
     var x, y;
     var timer = new Timer.Timer(); // timer for notification timeout
-    var NOTIFICATION_DELAY = 15000;
 
     function initialize() {
         View.initialize();
@@ -119,6 +220,8 @@ class SoundNotification extends WatchUi.View {
     }
 
     function onShow() as Void {
+        // Vibrate the watch
+        Attention.vibrate([new Attention.VibeProfile(100, VIBE_DURATION)]);
         // Start the timer timeout method
         timer.start(method(:notificationDone), NOTIFICATION_DELAY, false);
     }
@@ -149,7 +252,7 @@ class SoundNotification extends WatchUi.View {
 
     function notificationDone() {
         // notification has timed out and returning to home page.
-        WatchUi.switchToView(new HomeDisplay(), new BackDelegate(null, null), WatchUi.SLIDE_IMMEDIATE);
+        WatchUi.switchToView(new HomeDisplay(), new SensoryBehaviorDelegate(null, null), WatchUi.SLIDE_IMMEDIATE);
     }
 
 }
@@ -171,6 +274,8 @@ class TempNotification extends WatchUi.View {
     }
 
     function onShow() as Void {
+        // Vibrate the watch
+        Attention.vibrate([new Attention.VibeProfile(100, VIBE_DURATION)]);
         // Start the timer timeout method
         timer.start(method(:notificationDone), NOTIFICATION_DELAY, false);
     }
@@ -201,7 +306,41 @@ class TempNotification extends WatchUi.View {
 
     function notificationDone() {
         // notification has timed out and returning to home page.
-        WatchUi.switchToView(new HomeDisplay(), new BackDelegate(null, null), WatchUi.SLIDE_IMMEDIATE);
+        WatchUi.switchToView(new HomeDisplay(), new SensoryBehaviorDelegate(null, null), WatchUi.SLIDE_IMMEDIATE);
     }
+
+}
+
+class ThresholdChangeConfirmation extends WatchUi.View {
+    var x, y;
+
+    function initialize() {
+        View.initialize();
+    }
+
+    function onLayout(dc as Dc) as Void {
+        // Load screen height and width as dynamic resources
+        x = dc.getWidth();
+        y = dc.getHeight();
+    }
+
+    function onShow() as Void {}
+
+    function onUpdate(dc as Dc) as Void {
+        // set background color
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+        dc.fillRectangle (0, 0, x, y);
+
+        // set foreground color
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+
+        dc.drawText(x / 2, y / 2 - 125, Graphics.FONT_TINY, Lang.format(" Current sound\nthreshold: $1$ dB", [SOUND_THRESHOLD]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x / 2, y / 2, Graphics.FONT_TINY, Lang.format("Current temp\nthreshold: $1$ °C", [TEMP_THRESHOLD]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+
+        dc.setColor(Graphics.COLOR_PURPLE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(x / 2, y / 2 + 125, Graphics.FONT_SMALL, "Swipe Down to\nGo Back", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+    }
+
+    function onHide() as Void {}
 
 }

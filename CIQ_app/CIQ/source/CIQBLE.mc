@@ -56,11 +56,11 @@ class Delegate extends BLE.BleDelegate {
             var subscribeDelayTimer = new Timer.Timer();
             subscribeDelayTimer.start(method(:subscribeDelayDone), 10000, false);
 
-            WatchUi.switchToView(new Connecting(), new BackDelegate(new BLEScanner(), null), WatchUi.SLIDE_IMMEDIATE);
+            WatchUi.switchToView(new Connecting(), new SensoryBehaviorDelegate(new BLEScanner(), null), WatchUi.SLIDE_IMMEDIATE);
         } else {
             self.device = null;
             SUBSCRIPTION_COUNT = 0;
-            WatchUi.switchToView(new SensorDisconnected(), new BackDelegate(new BLEScanner(), null), WatchUi.SLIDE_IMMEDIATE);
+            WatchUi.switchToView(new SensorDisconnected(), new SensoryBehaviorDelegate(new BLEScanner(), null), WatchUi.SLIDE_IMMEDIATE);
         }
     }
 
@@ -72,7 +72,6 @@ class Delegate extends BLE.BleDelegate {
     }
 
     function onDescriptorWrite(descriptor, status) {
-        // TODO: test if the delay is long enough for both to be subscribed
         if (status == BLE.STATUS_WRITE_FAIL) {
             System.println("Failed subscribe to a notification.");
         }
@@ -80,7 +79,7 @@ class Delegate extends BLE.BleDelegate {
             SUBSCRIPTION_COUNT = SUBSCRIPTION_COUNT + 1;
             System.println("Subscribed to " + SUBSCRIPTION_COUNT + " notification(s).");
             if (SUBSCRIPTION_COUNT >= 2){
-                WatchUi.switchToView(new HomeDisplay(), new BackDelegate(null, null), WatchUi.SLIDE_IMMEDIATE);
+                WatchUi.switchToView(new HomeDisplay(), new SensoryBehaviorDelegate(null, null), WatchUi.SLIDE_IMMEDIATE);
             }
         }
     }
@@ -169,7 +168,7 @@ class BLEScanner extends WatchUi.View {
     function scanEnd() {
         var result = BLE_DELEGATE.getScanResult();
         if (result == null) {
-            WatchUi.switchToView(new SensorNotFound(), new BackDelegate(new BLEScanner(), null), WatchUi.SLIDE_IMMEDIATE);
+            WatchUi.switchToView(new SensorNotFound(), new SensoryBehaviorDelegate(new BLEScanner(), null), WatchUi.SLIDE_IMMEDIATE);
         } else {
             BLE_DELEGATE.connect();
         }

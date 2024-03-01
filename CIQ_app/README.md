@@ -23,8 +23,10 @@ they are added/developed.
 
 - Example CIQ Applications
     - [Sign Language Sensor](https://github.com/OmarErak/WBSLDC_ConnectIQ/blob/main/source/WBSLDC_App.mc)
+    - [Oxygen Sensor](https://github.com/changer65535/NitroxBLE)
     - [BLE sample Guide](https://github.com/fabiobaltieri/ciq-nrf-blinky/blob/master/source/BleDevice.mc)
     - [List of CIQ Applications with avaliable source code](https://starttorun.info/connect-iq-apps-with-source-code/)
+    - [Official repo maintained by the Garmin Connect IQ Team](https://github.com/garmin/connectiq-apps)
 
 - Resources for building specific things
     - [Action Menu](https://dev.to/jenhsuan/day-10-of-100daysofcode-learn-monkey-c-create-a-menu-for-ciq-application-2dc9)
