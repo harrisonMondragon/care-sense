@@ -3,8 +3,24 @@ import Toybox.Lang;
 import Toybox.WatchUi;
 using Toybox.BluetoothLowEnergy as BLE;
 
+// ------------------------------ GLOBALS ------------------------------
+// Current Values
+var SOUND_LEVEL = 0;
+var TEMP_VAL = 0;
+var SUBSCRIPTION_COUNT = 0;
+
+// Thresholds
+var SOUND_THRESHOLD = 80; // max sound threshold in dB
+var TEMP_THRESHOLD = 35; // max temperature threshold in ˚C
+
+// Delays
+var NOTIFICATION_DELAY = 15000; // notification delay in ms
+var VIBE_DURATION = 2000; // vibration duration in ms
+
+// Delegates
 var BLE_DELEGATE;
 
+// ------------------------------ CLASSES ------------------------------
 class CIQApp extends Application.AppBase {
 
     private var _view;
