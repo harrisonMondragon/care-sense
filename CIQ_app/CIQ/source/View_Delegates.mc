@@ -25,7 +25,7 @@ class SensoryBehaviorDelegate extends BehaviorDelegate {
 
     // Start settings sequence on swipe up
     function onSwipe(swipeEvent) {
-        if (swipeEvent.getDirection() == SWIPE_UP){
+        if (swipeEvent.getDirection() == SWIPE_UP && SETTINGS_AVAILABLE == true){
             var menu = new WatchUi.Menu();
             menu.setTitle("Settings");
             menu.addItem("Sound", :sound);

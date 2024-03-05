@@ -16,7 +16,9 @@ class HomeDisplay extends WatchUi.View {
         y = dc.getHeight();
     }
 
-    function onShow() as Void {}
+    function onShow() as Void {
+        SETTINGS_AVAILABLE = true;
+    }
 
     // Update the view every time a new BLE value comes in (see CIQBLE.mc:onCharacteristicChanged)
     function onUpdate(dc as Dc) as Void {
@@ -59,6 +61,7 @@ class SensorDisconnected extends WatchUi.View {
     }
 
     function onShow() as Void {
+        SETTINGS_AVAILABLE = false;
         // Vibrate the watch
         Attention.vibrate([new Attention.VibeProfile(100, VIBE_DURATION)]);
     }

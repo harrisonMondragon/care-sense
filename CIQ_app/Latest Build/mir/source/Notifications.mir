@@ -1,88 +1,91 @@
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 1; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 1; ]
 import Toybox.Graphics;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 2; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 2; ]
 import Toybox.WatchUi;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 3; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 3; ]
 import Toybox.Lang;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 4; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 4; ]
 import Toybox.Timer;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 5; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 5; ]
 import Toybox.Attention;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 7; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 7; ]
 class SoundNotification extends WatchUi.View{
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 7; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 7; ]
     <init> {
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 9 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 9 8 ]
         %tmp.3 = getm $.Toybox.Timer;
         %tmp.4 = getv function ? %tmp.3 :Timer;
         %tmp.1 = newc %tmp.4 ();
         putv self :timer %tmp.1;
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 7; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 7; ]
     static
     <init> {
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 8; @position = 8; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 8; @position = 8; ]
     var x;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 8; @position = 11; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 8; @position = 11; ]
     var y;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 9; @position = 8; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 9; @position = 8; ]
     var timer;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 11; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 11; ]
     function initialize() as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_11_26_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 12 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_11_26_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 12 8 ]
         %tmp.2 = getv ? :View;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_11_26_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_11_26_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 16; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 16; ]
     function onLayout(dc as Dc) as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_16_40_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 18 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_16_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 18 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :getWidth;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         putv self :x %tmp.3;
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 19 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 19 8 ]
         %tmp.4 = lgetv %dc;
         %tmp.5 = getv function %tmp.4 :getHeight;
         %tmp.6 = invoke %tmp.4 %tmp.5();
         putv self :y %tmp.6;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_16_40_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_16_40_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 22; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 22; ]
     function onShow() as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_22_30_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 24 8 ]
-        %tmp.1 = getm $.Toybox.Attention;
-        %tmp.2 = getv function %tmp.1 :vibrate;
-        %tmp.3 = newa 1;
-        %tmp.6 = getm $.Toybox.Attention;
-        %tmp.7 = getv function ? %tmp.6 :VibeProfile;
-        %tmp.8 = 100;
-        %tmp.10 = getv ? :VIBE_DURATION;
-        %tmp.4 = newc %tmp.7 (%tmp.8, %tmp.10);
-        %tmp.11 = dup %tmp.3;
-        %tmp.12 = aputv %tmp.11 0 %tmp.4;
-        invoke %tmp.1 %tmp.2(%tmp.12);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 26 8 ]
-        %tmp.14 = getv ? :timer;
-        %tmp.15 = getv function %tmp.14 :start;
-        %tmp.16 = self;
-        %tmp.17 = getv function %tmp.16 :method;
-        %tmp.19 = const :notificationDone;
-        %tmp.20 = invoke %tmp.16 %tmp.17(%tmp.19);
-        %tmp.22 = getv ? :NOTIFICATION_DELAY;
-        %tmp.23 = false;
-        invoke %tmp.14 %tmp.15(%tmp.20, %tmp.22, %tmp.23);
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_22_30_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_22_30_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 23 8 ]
+        %tmp.1 = false;
+        putv self :SETTINGS_AVAILABLE %tmp.1;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 25 8 ]
+        %tmp.2 = getm $.Toybox.Attention;
+        %tmp.3 = getv function %tmp.2 :vibrate;
+        %tmp.4 = newa 1;
+        %tmp.7 = getm $.Toybox.Attention;
+        %tmp.8 = getv function ? %tmp.7 :VibeProfile;
+        %tmp.9 = 100;
+        %tmp.11 = getv ? :VIBE_DURATION;
+        %tmp.5 = newc %tmp.8 (%tmp.9, %tmp.11);
+        %tmp.12 = dup %tmp.4;
+        %tmp.13 = aputv %tmp.12 0 %tmp.5;
+        invoke %tmp.2 %tmp.3(%tmp.13);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 27 8 ]
+        %tmp.15 = getv ? :timer;
+        %tmp.16 = getv function %tmp.15 :start;
+        %tmp.17 = self;
+        %tmp.18 = getv function %tmp.17 :method;
+        %tmp.20 = const :notificationDone;
+        %tmp.21 = invoke %tmp.17 %tmp.18(%tmp.20);
+        %tmp.23 = getv ? :NOTIFICATION_DELAY;
+        %tmp.24 = false;
+        invoke %tmp.15 %tmp.16(%tmp.21, %tmp.23, %tmp.24);
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_22_30_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 30; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 31; ]
     function onUpdate(dc as Dc) as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_30_40_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 32 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_31_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 33 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :setColor;
         %tmp.3 = getm $.Toybox.Graphics;
@@ -90,7 +93,7 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.5 = getm $.Toybox.Graphics;
         %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
         invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 33 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 34 8 ]
         %tmp.7 = lgetv %dc;
         %tmp.8 = getv function %tmp.7 :fillRectangle;
         %tmp.9 = 0;
@@ -98,7 +101,7 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.12 = getv ? :x;
         %tmp.14 = getv ? :y;
         invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10, %tmp.12, %tmp.14);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 36 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 37 8 ]
         %tmp.15 = lgetv %dc;
         %tmp.16 = getv function %tmp.15 :setColor;
         %tmp.17 = getm $.Toybox.Graphics;
@@ -106,7 +109,7 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.19 = getm $.Toybox.Graphics;
         %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
         invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 38 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 39 8 ]
         %tmp.21 = lgetv %dc;
         %tmp.22 = getv function %tmp.21 :drawText;
         %tmp.24 = getv ? :x;
@@ -133,7 +136,7 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.47 = getv %tmp.46 :TEXT_JUSTIFY_VCENTER;
         %tmp.48 = bitor %tmp.45 %tmp.47;
         invoke %tmp.21 %tmp.22(%tmp.26, %tmp.32, %tmp.34, %tmp.43, %tmp.48);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 39 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 40 8 ]
         %tmp.49 = lgetv %dc;
         %tmp.50 = getv function %tmp.49 :drawText;
         %tmp.52 = getv ? :x;
@@ -153,15 +156,15 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.67 = getv %tmp.66 :TEXT_JUSTIFY_VCENTER;
         %tmp.68 = bitor %tmp.65 %tmp.67;
         invoke %tmp.49 %tmp.50(%tmp.54, %tmp.60, %tmp.62, %tmp.63, %tmp.68);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 42 8 ]
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_42_8_if_stmt:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 43 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_43_8_if_stmt:
         %tmp.70 = getv ? :SOUND_LEVEL;
         %tmp.72 = getv ? :SOUND_THRESHOLD;
         %tmp.73 = gte %tmp.70 %tmp.72;
-        bf %tmp.73 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_42_8_if_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_42_8_if_true:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_42_44_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 43 12 ]
+        bf %tmp.73 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_43_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_43_8_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_43_44_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 44 12 ]
         %tmp.74 = lgetv %dc;
         %tmp.75 = getv function %tmp.74 :setColor;
         %tmp.76 = getm $.Toybox.Graphics;
@@ -169,10 +172,10 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.78 = getm $.Toybox.Graphics;
         %tmp.79 = getv %tmp.78 :COLOR_TRANSPARENT;
         invoke %tmp.74 %tmp.75(%tmp.77, %tmp.79);
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_42_44_stop:
-        goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_42_8_if_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_42_8_if_end:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 45 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_43_44_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_43_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_43_8_if_end:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 46 8 ]
         %tmp.80 = lgetv %dc;
         %tmp.81 = getv function %tmp.80 :drawText;
         %tmp.83 = getv ? :x;
@@ -199,21 +202,21 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.106 = getv %tmp.105 :TEXT_JUSTIFY_VCENTER;
         %tmp.107 = bitor %tmp.104 %tmp.106;
         invoke %tmp.80 %tmp.81(%tmp.85, %tmp.91, %tmp.93, %tmp.102, %tmp.107);
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_30_40_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_31_40_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 48; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 49; ]
     function onHide() as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_48_30_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 49 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_49_30_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 50 8 ]
         %tmp.2 = getv ? :timer;
         %tmp.3 = getv function %tmp.2 :stop;
         invoke %tmp.2 %tmp.3();
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_48_30_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_49_30_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 53; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 54; ]
     function notificationDone() {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_53_32_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 55 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_54_32_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 56 8 ]
         %tmp.1 = getm $.Toybox.WatchUi;
         %tmp.2 = getv function %tmp.1 :switchToView;
         %tmp.6 = getv ? :HomeDisplay;
@@ -225,86 +228,89 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.13 = getm $.Toybox.WatchUi;
         %tmp.14 = getv %tmp.13 :SLIDE_IMMEDIATE;
         invoke %tmp.1 %tmp.2(%tmp.3, %tmp.7, %tmp.14);
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_53_32_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_54_32_stop:
     }
 }
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 60; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 61; ]
 class TempNotification extends WatchUi.View{
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 60; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 61; ]
     <init> {
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 62 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 63 8 ]
         %tmp.17 = getm $.Toybox.Timer;
         %tmp.18 = getv function ? %tmp.17 :Timer;
         %tmp.15 = newc %tmp.18 ();
         putv self :timer %tmp.15;
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 60; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 61; ]
     static
     <init> {
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 61; @position = 8; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 62; @position = 8; ]
     var x;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 61; @position = 11; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 62; @position = 11; ]
     var y;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 62; @position = 8; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 63; @position = 8; ]
     var timer;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 63; @position = 8; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 64; @position = 8; ]
     var NOTIFICATION_DELAY = 15000;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 65; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 66; ]
     function initialize() as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_65_26_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 66 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_66_26_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 67 8 ]
         %tmp.2 = getv ? :View;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_65_26_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_66_26_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 70; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 71; ]
     function onLayout(dc as Dc) as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_70_40_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 72 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_71_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 73 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :getWidth;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         putv self :x %tmp.3;
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 73 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 74 8 ]
         %tmp.4 = lgetv %dc;
         %tmp.5 = getv function %tmp.4 :getHeight;
         %tmp.6 = invoke %tmp.4 %tmp.5();
         putv self :y %tmp.6;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_70_40_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_71_40_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 76; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 77; ]
     function onShow() as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_76_30_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 78 8 ]
-        %tmp.1 = getm $.Toybox.Attention;
-        %tmp.2 = getv function %tmp.1 :vibrate;
-        %tmp.3 = newa 1;
-        %tmp.6 = getm $.Toybox.Attention;
-        %tmp.7 = getv function ? %tmp.6 :VibeProfile;
-        %tmp.8 = 100;
-        %tmp.10 = getv ? :VIBE_DURATION;
-        %tmp.4 = newc %tmp.7 (%tmp.8, %tmp.10);
-        %tmp.11 = dup %tmp.3;
-        %tmp.12 = aputv %tmp.11 0 %tmp.4;
-        invoke %tmp.1 %tmp.2(%tmp.12);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 80 8 ]
-        %tmp.14 = getv ? :timer;
-        %tmp.15 = getv function %tmp.14 :start;
-        %tmp.16 = self;
-        %tmp.17 = getv function %tmp.16 :method;
-        %tmp.19 = const :notificationDone;
-        %tmp.20 = invoke %tmp.16 %tmp.17(%tmp.19);
-        %tmp.22 = getv ? :NOTIFICATION_DELAY;
-        %tmp.23 = false;
-        invoke %tmp.14 %tmp.15(%tmp.20, %tmp.22, %tmp.23);
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_76_30_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_77_30_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 78 8 ]
+        %tmp.1 = false;
+        putv self :SETTINGS_AVAILABLE %tmp.1;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 80 8 ]
+        %tmp.2 = getm $.Toybox.Attention;
+        %tmp.3 = getv function %tmp.2 :vibrate;
+        %tmp.4 = newa 1;
+        %tmp.7 = getm $.Toybox.Attention;
+        %tmp.8 = getv function ? %tmp.7 :VibeProfile;
+        %tmp.9 = 100;
+        %tmp.11 = getv ? :VIBE_DURATION;
+        %tmp.5 = newc %tmp.8 (%tmp.9, %tmp.11);
+        %tmp.12 = dup %tmp.4;
+        %tmp.13 = aputv %tmp.12 0 %tmp.5;
+        invoke %tmp.2 %tmp.3(%tmp.13);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 82 8 ]
+        %tmp.15 = getv ? :timer;
+        %tmp.16 = getv function %tmp.15 :start;
+        %tmp.17 = self;
+        %tmp.18 = getv function %tmp.17 :method;
+        %tmp.20 = const :notificationDone;
+        %tmp.21 = invoke %tmp.17 %tmp.18(%tmp.20);
+        %tmp.23 = getv ? :NOTIFICATION_DELAY;
+        %tmp.24 = false;
+        invoke %tmp.15 %tmp.16(%tmp.21, %tmp.23, %tmp.24);
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_77_30_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 84; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 86; ]
     function onUpdate(dc as Dc) as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_84_40_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 86 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_86_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 88 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :setColor;
         %tmp.3 = getm $.Toybox.Graphics;
@@ -312,7 +318,7 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.5 = getm $.Toybox.Graphics;
         %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
         invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 87 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 89 8 ]
         %tmp.7 = lgetv %dc;
         %tmp.8 = getv function %tmp.7 :fillRectangle;
         %tmp.9 = 0;
@@ -320,7 +326,7 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.12 = getv ? :x;
         %tmp.14 = getv ? :y;
         invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10, %tmp.12, %tmp.14);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 90 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 92 8 ]
         %tmp.15 = lgetv %dc;
         %tmp.16 = getv function %tmp.15 :setColor;
         %tmp.17 = getm $.Toybox.Graphics;
@@ -328,7 +334,7 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.19 = getm $.Toybox.Graphics;
         %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
         invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 92 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 94 8 ]
         %tmp.21 = lgetv %dc;
         %tmp.22 = getv function %tmp.21 :drawText;
         %tmp.24 = getv ? :x;
@@ -355,7 +361,7 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.47 = getv %tmp.46 :TEXT_JUSTIFY_VCENTER;
         %tmp.48 = bitor %tmp.45 %tmp.47;
         invoke %tmp.21 %tmp.22(%tmp.26, %tmp.32, %tmp.34, %tmp.43, %tmp.48);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 93 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 95 8 ]
         %tmp.49 = lgetv %dc;
         %tmp.50 = getv function %tmp.49 :drawText;
         %tmp.52 = getv ? :x;
@@ -375,15 +381,15 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.67 = getv %tmp.66 :TEXT_JUSTIFY_VCENTER;
         %tmp.68 = bitor %tmp.65 %tmp.67;
         invoke %tmp.49 %tmp.50(%tmp.54, %tmp.60, %tmp.62, %tmp.63, %tmp.68);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 96 8 ]
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_96_8_if_stmt:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 98 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_8_if_stmt:
         %tmp.70 = getv ? :TEMP_VAL;
         %tmp.72 = getv ? :TEMP_THRESHOLD;
         %tmp.73 = gte %tmp.70 %tmp.72;
-        bf %tmp.73 @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_96_8_if_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_96_8_if_true:
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_96_40_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 97 12 ]
+        bf %tmp.73 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_8_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 99 12 ]
         %tmp.74 = lgetv %dc;
         %tmp.75 = getv function %tmp.74 :setColor;
         %tmp.76 = getm $.Toybox.Graphics;
@@ -391,10 +397,10 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.78 = getm $.Toybox.Graphics;
         %tmp.79 = getv %tmp.78 :COLOR_TRANSPARENT;
         invoke %tmp.74 %tmp.75(%tmp.77, %tmp.79);
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_96_40_stop:
-        goto @_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_96_8_if_end;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_96_8_if_end:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 99 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_40_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_8_if_end:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 101 8 ]
         %tmp.80 = lgetv %dc;
         %tmp.81 = getv function %tmp.80 :drawText;
         %tmp.83 = getv ? :x;
@@ -421,21 +427,21 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.106 = getv %tmp.105 :TEXT_JUSTIFY_VCENTER;
         %tmp.107 = bitor %tmp.104 %tmp.106;
         invoke %tmp.80 %tmp.81(%tmp.85, %tmp.91, %tmp.93, %tmp.102, %tmp.107);
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_84_40_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_86_40_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 102; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 104; ]
     function onHide() as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_102_30_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 103 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_104_30_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 105 8 ]
         %tmp.2 = getv ? :timer;
         %tmp.3 = getv function %tmp.2 :stop;
         invoke %tmp.2 %tmp.3();
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_102_30_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_104_30_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 107; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 109; ]
     function notificationDone() {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_107_32_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc" 109 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_109_32_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 111 8 ]
         %tmp.1 = getm $.Toybox.WatchUi;
         %tmp.2 = getv function %tmp.1 :switchToView;
         %tmp.6 = getv ? :HomeDisplay;
@@ -447,9 +453,9 @@ _Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_s
         %tmp.13 = getm $.Toybox.WatchUi;
         %tmp.14 = getv %tmp.13 :SLIDE_IMMEDIATE;
         invoke %tmp.1 %tmp.2(%tmp.3, %tmp.7, %tmp.14);
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_Notifications_mc_107_32_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_109_32_stop:
     }
 }
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/Notifications.mc"; @line = 1; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 1; ]
 <init> {
 }

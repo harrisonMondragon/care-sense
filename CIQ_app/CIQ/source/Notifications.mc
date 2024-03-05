@@ -20,6 +20,7 @@ class SoundNotification extends WatchUi.View {
     }
 
     function onShow() as Void {
+        SETTINGS_AVAILABLE = false;
         // Vibrate the watch
         Attention.vibrate([new Attention.VibeProfile(100, VIBE_DURATION)]);
         // Start the timer timeout method
@@ -74,6 +75,7 @@ class TempNotification extends WatchUi.View {
     }
 
     function onShow() as Void {
+        SETTINGS_AVAILABLE = false;
         // Vibrate the watch
         Attention.vibrate([new Attention.VibeProfile(100, VIBE_DURATION)]);
         // Start the timer timeout method
