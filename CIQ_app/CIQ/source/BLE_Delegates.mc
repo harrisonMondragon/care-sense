@@ -8,6 +8,7 @@ class Delegate extends BLE.BleDelegate {
     // Callback class for BLE functions and state changes
     // Delegate initialized in CIQAPP.mc
     var sensorScanResult = null;
+    var queue;
 
     // Sensor UUIDs
     public const SERVICE_UUID = BluetoothLowEnergy.stringToUuid("5d390f04-f945-4b02-9e4a-307f6a53b492");
@@ -20,6 +21,7 @@ class Delegate extends BLE.BleDelegate {
     function initialize() {
         BleDelegate.initialize();
         registerProfiles(); // register custom profiles
+        queue = new Sub2NotifQueue();
     }
 
     function onScanResults(scanResults) {
@@ -42,13 +44,14 @@ class Delegate extends BLE.BleDelegate {
             self.device = device;
 
             // Subscribe to sound notifications
-            var sound_desc = device.getService(SERVICE_UUID).getCharacteristic(SOUND_UUID).getDescriptor(BLE.cccdUuid());
-            sound_desc.requestWrite([0x01, 0x00]b);
+            var sound_char = device.getService(SERVICE_UUID).getCharacteristic(SOUND_UUID);
+            var temp_char = device.getService(SERVICE_UUID).getCharacteristic(TEMP_UUID);
 
-            // Need to either delay oe queue requestWrite calls, see:
-            // https://forums.garmin.com/developer/connect-iq/f/discussion/258434/how-to-do-multiple-successive-btle-characteristic-requestwrite/1234530#1234530
-            var subscribeDelayTimer = new Timer.Timer();
-            subscribeDelayTimer.start(method(:subscribeDelayDone), 10000, false);
+            // Queue characteristics for subscription
+            queue.add(sound_char);
+            queue.add(temp_char);
+
+            queue.run(); // begin subscription process
 
             WatchUi.switchToView(new Connecting(), new SensoryBehaviorDelegate(new BLEScanner(), null), WatchUi.SLIDE_IMMEDIATE);
         } else {
@@ -58,13 +61,6 @@ class Delegate extends BLE.BleDelegate {
         }
     }
 
-    // Subscribe to temp notifications after a delay between sound subscription
-    function subscribeDelayDone() as Void{
-        System.println("Finished subscribe delay");
-        var temp_desc = device.getService(SERVICE_UUID).getCharacteristic(TEMP_UUID).getDescriptor(BLE.cccdUuid());
-        temp_desc.requestWrite([0x01, 0x00]b);
-    }
-
     function onDescriptorWrite(descriptor, status) {
         if (status == BLE.STATUS_WRITE_FAIL) {
             System.println("Failed subscribe to a notification.");
@@ -72,8 +68,10 @@ class Delegate extends BLE.BleDelegate {
         else if (status == BLE.STATUS_SUCCESS) {
             SUBSCRIPTION_COUNT = SUBSCRIPTION_COUNT + 1;
             System.println("Subscribed to " + SUBSCRIPTION_COUNT + " notification(s).");
-            if (SUBSCRIPTION_COUNT >= 2){
+            if (SUBSCRIPTION_COUNT >= 2){ // subscribed to our chars
                 WatchUi.switchToView(new HomeDisplay(), new SensoryBehaviorDelegate(null, null), WatchUi.SLIDE_IMMEDIATE);
+            } else { // still missing one
+                queue.run();
             }
         }
     }
