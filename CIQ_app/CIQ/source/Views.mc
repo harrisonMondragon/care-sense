@@ -120,7 +120,7 @@ class ThresholdChangeConfirmation extends WatchUi.View {
             soundThreshText = Lang.format("Current sound\nthreshold: $1$ dB", [SOUND_THRESHOLD]);
         }
 
-        if (!TEMP_THRESHOLD == null){
+        if (TEMP_THRESHOLD == null){
             tempThreshText = "Current temp\nthreshold: OFF";
         } else {
             tempThreshText = Lang.format("Current temp\nthreshold: $1$ °C", [TEMP_THRESHOLD]);

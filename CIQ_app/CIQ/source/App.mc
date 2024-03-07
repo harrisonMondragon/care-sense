@@ -21,6 +21,13 @@ var VIBE_DURATION = 2000; // vibration duration in ms
 // Delegates
 var BLE_DELEGATE;
 
+// Enum of back pickers for threshold change confirmation page
+enum BACK_PICKERS {
+    TEMP_PICKER,
+    SOUND_PICKER,
+}
+
+
 // ------------------------------ CLASSES ------------------------------
 class CIQApp extends Application.AppBase {
 

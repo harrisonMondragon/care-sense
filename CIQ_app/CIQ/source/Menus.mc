@@ -49,7 +49,7 @@ class SoundPickerDelegate extends WatchUi.PickerDelegate {
     function onAccept(values) {
         SOUND_THRESHOLD = values[0];
         System.println("Sound threshold value is: " + SOUND_THRESHOLD);
-        WatchUi.pushView(new ThresholdChangeConfirmation(), new ThresholdChangeConfirmationDelegate(), WatchUi.SLIDE_LEFT);
+        WatchUi.pushView(new ThresholdChangeConfirmation(), new ThresholdChangeConfirmationDelegate(SOUND_PICKER), WatchUi.SLIDE_LEFT);
         return true;
     }
 }
@@ -69,24 +69,7 @@ class TempPickerDelegate extends WatchUi.PickerDelegate {
     function onAccept(values) {
         TEMP_THRESHOLD = values[0];
         System.println("Temp threshold value is: " + TEMP_THRESHOLD);
-        WatchUi.pushView(new ThresholdChangeConfirmation(), new ThresholdChangeConfirmationDelegate(), WatchUi.SLIDE_LEFT);
-        return true;
-    }
-}
-
-// Get back to regular pages on threshold confirmation
-class ThresholdChangeConfirmationDelegate extends BehaviorDelegate {
-
-    function initialize() {
-        BehaviorDelegate.initialize();
-    }
-
-    function onSwipe(swipeEvent) {
-        if (swipeEvent.getDirection() == SWIPE_DOWN){
-            WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to Picker
-            WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to Menu
-            WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to HomeDisplay
-        }
+        WatchUi.pushView(new ThresholdChangeConfirmation(), new ThresholdChangeConfirmationDelegate(TEMP_PICKER), WatchUi.SLIDE_LEFT);
         return true;
     }
 }

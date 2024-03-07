@@ -35,3 +35,51 @@ class SensoryBehaviorDelegate extends BehaviorDelegate {
         return true;
     }
 }
+
+class ThresholdChangeConfirmationDelegate extends BehaviorDelegate {
+
+    protected var back_picker; // picker to return to on back
+
+    function initialize(_back_picker as BACK_PICKERS or Number) {
+        back_picker = _back_picker;
+        BehaviorDelegate.initialize();
+    }
+
+    function onSwipe(swipeEvent) {
+        if (swipeEvent.getDirection() == SWIPE_DOWN){
+            WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to Picker
+            WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to Menu
+            WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to HomeDisplay
+        }
+        return true;
+    }
+
+    function onBack() {
+        WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to Picker
+        WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to Menu
+
+        var title;
+        var factory;
+        var pickerDefault;
+        var picker;
+
+        switch(back_picker) {
+            case SOUND_PICKER:
+                title = new WatchUi.Text({:text=>"Threshold", :font=>Graphics.FONT_SMALL, :locX =>WatchUi.LAYOUT_HALIGN_CENTER, :locY=>WatchUi.LAYOUT_VALIGN_CENTER});
+                factory = new NumberFactory(5, 200, 5, "$1$ dB");
+                pickerDefault = factory.getIndex(SOUND_THRESHOLD);
+                picker = new WatchUi.Picker({:title=>title, :pattern=>[factory], :defaults=>[pickerDefault]});
+                WatchUi.pushView(picker, new SoundPickerDelegate(), WatchUi.SLIDE_RIGHT);
+                return true;
+            case TEMP_PICKER:
+                title = new WatchUi.Text({:text=>"Threshold", :font=>Graphics.FONT_SMALL, :locX =>WatchUi.LAYOUT_HALIGN_CENTER, :locY=>WatchUi.LAYOUT_VALIGN_CENTER});
+                factory = new NumberFactory(-20, 40, 1, "$1$ °C");
+                pickerDefault = factory.getIndex(TEMP_THRESHOLD);
+                picker = new WatchUi.Picker({:title=>title, :pattern=>[factory], :defaults=>[pickerDefault]});
+                WatchUi.pushView(picker, new TempPickerDelegate(), WatchUi.SLIDE_RIGHT);
+                return true;
+            default:
+                return true;
+        }
+    }
+}

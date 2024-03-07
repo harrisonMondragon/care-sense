@@ -62,7 +62,7 @@ class NumberFactory extends WatchUi.PickerFactory {
     }
 
     function getSize() {
-        // Add an extra index for off
+        // Add an extra index for OFF
         return ( mStop - mStart ) / mIncrement + 2;
     }
 

@@ -466,28 +466,28 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_117_8_if_end:
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 123 8 ]
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_123_8_if_stmt:
         %tmp.37 = getv ? :TEMP_THRESHOLD;
-        %tmp.38 = not %tmp.37;
-        %tmp.39 = null;
-        %tmp.40 = eq %tmp.38 %tmp.39;
-        bf %tmp.40 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_123_8_if_false;
+        %tmp.38 = null;
+        %tmp.39 = eq %tmp.37 %tmp.38;
+        bf %tmp.39 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_123_8_if_false;
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_123_8_if_true:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_123_36_start:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_123_35_start:
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 124 12 ]
-        %tmp.41 = "Current temp\nthreshold: OFF";
-        lputv %tempThreshText.2 %tmp.41;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_123_36_stop:
+        %tmp.40 = "Current temp\nthreshold: OFF";
+        lputv %tempThreshText.2 %tmp.40;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_123_35_stop:
         goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_123_8_if_end;
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_123_8_if_false:
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_125_15_start:
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 126 12 ]
-        %tmp.42 = getm $.Toybox.Lang;
-        %tmp.43 = getv function %tmp.42 :format;
-        %tmp.44 = "Current temp\nthreshold: $1$ °C";
-        %tmp.45 = newa 1;
-        %tmp.47 = getv ? :TEMP_THRESHOLD;
-        %tmp.48 = dup %tmp.45;
+        %tmp.41 = getm $.Toybox.Lang;
+        %tmp.42 = getv function %tmp.41 :format;
+        %tmp.43 = "Current temp\nthreshold: $1$ °C";
+        %tmp.44 = newa 1;
+        %tmp.46 = getv ? :TEMP_THRESHOLD;
+        %tmp.47 = as %tmp.46 { (!Null) };
+        %tmp.48 = dup %tmp.44;
         %tmp.49 = aputv %tmp.48 0 %tmp.47;
-        %tmp.50 = invoke %tmp.42 %tmp.43(%tmp.44, %tmp.49);
+        %tmp.50 = invoke %tmp.41 %tmp.42(%tmp.43, %tmp.49);
         lputv %tempThreshText.2 %tmp.50;
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_125_15_stop:
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_123_8_if_end:
