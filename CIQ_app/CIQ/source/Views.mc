@@ -23,12 +23,16 @@ class HomeDisplay extends WatchUi.View {
     // Update the view every time a new BLE value comes in (see CIQBLE.mc:onCharacteristicChanged)
     function onUpdate(dc as Dc) as Void {
 
-        if (SOUND_LEVEL > SOUND_THRESHOLD) {
-            // verify the threshold
-            WatchUi.switchToView(new SoundNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
+        // Check thresholds against sensor readings
+        if (SOUND_THRESHOLD != null) {
+            if (SOUND_LEVEL > SOUND_THRESHOLD) {
+                WatchUi.switchToView(new SoundNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
+            }
         }
-        if (TEMP_VAL > TEMP_THRESHOLD) {
-            WatchUi.switchToView(new TempNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
+        if (TEMP_THRESHOLD != null) {
+            if (TEMP_VAL > TEMP_THRESHOLD) {
+                WatchUi.switchToView(new TempNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
+            }
         }
 
         // set background color
@@ -106,8 +110,24 @@ class ThresholdChangeConfirmation extends WatchUi.View {
         // set foreground color
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
-        dc.drawText(x / 2, y / 2 - 125, Graphics.FONT_TINY, Lang.format(" Current sound\nthreshold: $1$ dB", [SOUND_THRESHOLD]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-        dc.drawText(x / 2, y / 2, Graphics.FONT_TINY, Lang.format("Current temp\nthreshold: $1$ °C", [TEMP_THRESHOLD]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        // Confirmation messages
+        var soundThreshText;
+        var tempThreshText;
+
+        if (SOUND_THRESHOLD == null){
+            soundThreshText = "Current sound\nthreshold: OFF";
+        } else {
+            soundThreshText = Lang.format("Current sound\nthreshold: $1$ dB", [SOUND_THRESHOLD]);
+        }
+
+        if (!TEMP_THRESHOLD == null){
+            tempThreshText = "Current temp\nthreshold: OFF";
+        } else {
+            tempThreshText = Lang.format("Current temp\nthreshold: $1$ °C", [TEMP_THRESHOLD]);
+        }
+
+        dc.drawText(x / 2, y / 2 - 125, Graphics.FONT_TINY, soundThreshText, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x / 2, y / 2, Graphics.FONT_TINY, tempThreshText, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
         dc.setColor(Graphics.COLOR_PURPLE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(x / 2, y / 2 + 125, Graphics.FONT_SMALL, "Swipe Down to\nGo Back", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);

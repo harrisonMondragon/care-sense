@@ -56,202 +56,226 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_19_30_stop:
     [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 24; ]
     function onUpdate(dc as Dc) as Void {
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_24_40_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 26 8 ]
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_26_8_if_stmt:
-        %tmp.2 = getv ? :SOUND_LEVEL;
-        %tmp.4 = getv ? :SOUND_THRESHOLD;
-        %tmp.5 = gt %tmp.2 %tmp.4;
-        bf %tmp.5 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_26_8_if_end;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_26_8_if_true:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_26_43_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 27 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_8_if_stmt:
+        %tmp.2 = getv ? :SOUND_THRESHOLD;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_8_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_37_start:
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 28 12 ]
-        %tmp.6 = getm $.Toybox.WatchUi;
-        %tmp.7 = getv function %tmp.6 :switchToView;
-        %tmp.11 = getv ? :SoundNotification;
-        %tmp.8 = newc %tmp.11 ();
-        %tmp.15 = getv ? :SensoryBehaviorDelegate;
-        %tmp.19 = getv ? :HomeDisplay;
-        %tmp.16 = newc %tmp.19 ();
-        %tmp.20 = null;
-        %tmp.12 = newc %tmp.15 (%tmp.16, %tmp.20);
-        %tmp.21 = getm $.Toybox.WatchUi;
-        %tmp.22 = getv %tmp.21 :SLIDE_IMMEDIATE;
-        invoke %tmp.6 %tmp.7(%tmp.8, %tmp.12, %tmp.22);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_26_43_stop:
-        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_26_8_if_end;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_26_8_if_end:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 30 8 ]
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_30_8_if_stmt:
-        %tmp.24 = getv ? :TEMP_VAL;
-        %tmp.26 = getv ? :TEMP_THRESHOLD;
-        %tmp.27 = gt %tmp.24 %tmp.26;
-        bf %tmp.27 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_30_8_if_end;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_30_8_if_true:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_30_39_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 31 12 ]
-        %tmp.28 = getm $.Toybox.WatchUi;
-        %tmp.29 = getv function %tmp.28 :switchToView;
-        %tmp.33 = getv ? :TempNotification;
-        %tmp.30 = newc %tmp.33 ();
-        %tmp.37 = getv ? :SensoryBehaviorDelegate;
-        %tmp.41 = getv ? :HomeDisplay;
-        %tmp.38 = newc %tmp.41 ();
-        %tmp.42 = null;
-        %tmp.34 = newc %tmp.37 (%tmp.38, %tmp.42);
-        %tmp.43 = getm $.Toybox.WatchUi;
-        %tmp.44 = getv %tmp.43 :SLIDE_IMMEDIATE;
-        invoke %tmp.28 %tmp.29(%tmp.30, %tmp.34, %tmp.44);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_30_39_stop:
-        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_30_8_if_end;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_30_8_if_end:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 35 8 ]
-        %tmp.45 = lgetv %dc;
-        %tmp.46 = getv function %tmp.45 :setColor;
-        %tmp.47 = getm $.Toybox.Graphics;
-        %tmp.48 = getv %tmp.47 :COLOR_BLACK;
-        %tmp.49 = getm $.Toybox.Graphics;
-        %tmp.50 = getv %tmp.49 :COLOR_TRANSPARENT;
-        invoke %tmp.45 %tmp.46(%tmp.48, %tmp.50);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 36 8 ]
-        %tmp.51 = lgetv %dc;
-        %tmp.52 = getv function %tmp.51 :fillRectangle;
-        %tmp.53 = 0;
-        %tmp.54 = 0;
-        %tmp.56 = getv ? :x;
-        %tmp.58 = getv ? :y;
-        invoke %tmp.51 %tmp.52(%tmp.53, %tmp.54, %tmp.56, %tmp.58);
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_28_12_if_stmt:
+        %tmp.6 = getv ? :SOUND_LEVEL;
+        %tmp.8 = getv ? :SOUND_THRESHOLD;
+        %tmp.9 = as %tmp.8 { (!Null) };
+        %tmp.10 = gt %tmp.6 %tmp.9;
+        bf %tmp.10 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_28_12_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_28_12_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_28_47_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 29 16 ]
+        %tmp.11 = getm $.Toybox.WatchUi;
+        %tmp.12 = getv function %tmp.11 :switchToView;
+        %tmp.16 = getv ? :SoundNotification;
+        %tmp.13 = newc %tmp.16 ();
+        %tmp.20 = getv ? :SensoryBehaviorDelegate;
+        %tmp.24 = getv ? :HomeDisplay;
+        %tmp.21 = newc %tmp.24 ();
+        %tmp.25 = null;
+        %tmp.17 = newc %tmp.20 (%tmp.21, %tmp.25);
+        %tmp.26 = getm $.Toybox.WatchUi;
+        %tmp.27 = getv %tmp.26 :SLIDE_IMMEDIATE;
+        invoke %tmp.11 %tmp.12(%tmp.13, %tmp.17, %tmp.27);
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_28_47_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_28_12_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_28_12_if_end:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_37_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_8_if_end:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 32 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_32_8_if_stmt:
+        %tmp.29 = getv ? :TEMP_THRESHOLD;
+        %tmp.30 = null;
+        %tmp.31 = ne %tmp.29 %tmp.30;
+        bf %tmp.31 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_32_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_32_8_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_32_36_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 33 12 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_33_12_if_stmt:
+        %tmp.33 = getv ? :TEMP_VAL;
+        %tmp.35 = getv ? :TEMP_THRESHOLD;
+        %tmp.36 = as %tmp.35 { (!Null) };
+        %tmp.37 = gt %tmp.33 %tmp.36;
+        bf %tmp.37 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_33_12_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_33_12_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_33_43_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 34 16 ]
+        %tmp.38 = getm $.Toybox.WatchUi;
+        %tmp.39 = getv function %tmp.38 :switchToView;
+        %tmp.43 = getv ? :TempNotification;
+        %tmp.40 = newc %tmp.43 ();
+        %tmp.47 = getv ? :SensoryBehaviorDelegate;
+        %tmp.51 = getv ? :HomeDisplay;
+        %tmp.48 = newc %tmp.51 ();
+        %tmp.52 = null;
+        %tmp.44 = newc %tmp.47 (%tmp.48, %tmp.52);
+        %tmp.53 = getm $.Toybox.WatchUi;
+        %tmp.54 = getv %tmp.53 :SLIDE_IMMEDIATE;
+        invoke %tmp.38 %tmp.39(%tmp.40, %tmp.44, %tmp.54);
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_33_43_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_33_12_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_33_12_if_end:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_32_36_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_32_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_32_8_if_end:
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 39 8 ]
-        %tmp.59 = lgetv %dc;
-        %tmp.60 = getv function %tmp.59 :setColor;
-        %tmp.61 = getm $.Toybox.Graphics;
-        %tmp.62 = getv %tmp.61 :COLOR_WHITE;
-        %tmp.63 = getm $.Toybox.Graphics;
-        %tmp.64 = getv %tmp.63 :COLOR_TRANSPARENT;
-        invoke %tmp.59 %tmp.60(%tmp.62, %tmp.64);
+        %tmp.55 = lgetv %dc;
+        %tmp.56 = getv function %tmp.55 :setColor;
+        %tmp.57 = getm $.Toybox.Graphics;
+        %tmp.58 = getv %tmp.57 :COLOR_BLACK;
+        %tmp.59 = getm $.Toybox.Graphics;
+        %tmp.60 = getv %tmp.59 :COLOR_TRANSPARENT;
+        invoke %tmp.55 %tmp.56(%tmp.58, %tmp.60);
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 40 8 ]
-        %tmp.65 = lgetv %dc;
-        %tmp.66 = getv function %tmp.65 :drawText;
-        %tmp.68 = getv ? :x;
-        %tmp.69 = 2;
-        %tmp.70 = div %tmp.68 %tmp.69;
-        %tmp.72 = getv ? :y;
-        %tmp.73 = 2;
-        %tmp.74 = div %tmp.72 %tmp.73;
-        %tmp.75 = 70;
-        %tmp.76 = sub %tmp.74 %tmp.75;
-        %tmp.77 = getm $.Toybox.Graphics;
-        %tmp.78 = getv %tmp.77 :FONT_MEDIUM;
-        %tmp.79 = "Current Environment";
-        %tmp.80 = getm $.Toybox.Graphics;
-        %tmp.81 = getv %tmp.80 :TEXT_JUSTIFY_CENTER;
-        %tmp.82 = getm $.Toybox.Graphics;
-        %tmp.83 = getv %tmp.82 :TEXT_JUSTIFY_VCENTER;
-        %tmp.84 = bitor %tmp.81 %tmp.83;
-        invoke %tmp.65 %tmp.66(%tmp.70, %tmp.76, %tmp.78, %tmp.79, %tmp.84);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 41 8 ]
-        %tmp.85 = lgetv %dc;
-        %tmp.86 = getv function %tmp.85 :drawText;
-        %tmp.88 = getv ? :x;
-        %tmp.89 = 2;
-        %tmp.90 = div %tmp.88 %tmp.89;
-        %tmp.92 = getv ? :y;
-        %tmp.93 = 2;
-        %tmp.94 = div %tmp.92 %tmp.93;
-        %tmp.95 = 10;
-        %tmp.96 = add %tmp.94 %tmp.95;
-        %tmp.97 = getm $.Toybox.Graphics;
-        %tmp.98 = getv %tmp.97 :FONT_MEDIUM;
-        %tmp.99 = getm $.Toybox.Lang;
-        %tmp.100 = getv function %tmp.99 :format;
-        %tmp.101 = "Sound: $1$ dB";
-        %tmp.102 = newa 1;
-        %tmp.104 = getv ? :SOUND_LEVEL;
-        %tmp.105 = dup %tmp.102;
-        %tmp.106 = aputv %tmp.105 0 %tmp.104;
-        %tmp.107 = invoke %tmp.99 %tmp.100(%tmp.101, %tmp.106);
-        %tmp.108 = getm $.Toybox.Graphics;
-        %tmp.109 = getv %tmp.108 :TEXT_JUSTIFY_CENTER;
-        %tmp.110 = getm $.Toybox.Graphics;
-        %tmp.111 = getv %tmp.110 :TEXT_JUSTIFY_VCENTER;
-        %tmp.112 = bitor %tmp.109 %tmp.111;
-        invoke %tmp.85 %tmp.86(%tmp.90, %tmp.96, %tmp.98, %tmp.107, %tmp.112);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 42 8 ]
-        %tmp.113 = lgetv %dc;
-        %tmp.114 = getv function %tmp.113 :drawText;
-        %tmp.116 = getv ? :x;
-        %tmp.117 = 2;
-        %tmp.118 = div %tmp.116 %tmp.117;
-        %tmp.120 = getv ? :y;
-        %tmp.121 = 2;
-        %tmp.122 = div %tmp.120 %tmp.121;
-        %tmp.123 = 80;
-        %tmp.124 = add %tmp.122 %tmp.123;
-        %tmp.125 = getm $.Toybox.Graphics;
-        %tmp.126 = getv %tmp.125 :FONT_MEDIUM;
-        %tmp.127 = getm $.Toybox.Lang;
-        %tmp.128 = getv function %tmp.127 :format;
-        %tmp.129 = "Temperature: $1$ °C";
-        %tmp.130 = newa 1;
-        %tmp.132 = getv ? :TEMP_VAL;
-        %tmp.133 = dup %tmp.130;
-        %tmp.134 = aputv %tmp.133 0 %tmp.132;
-        %tmp.135 = invoke %tmp.127 %tmp.128(%tmp.129, %tmp.134);
-        %tmp.136 = getm $.Toybox.Graphics;
-        %tmp.137 = getv %tmp.136 :TEXT_JUSTIFY_CENTER;
-        %tmp.138 = getm $.Toybox.Graphics;
-        %tmp.139 = getv %tmp.138 :TEXT_JUSTIFY_VCENTER;
-        %tmp.140 = bitor %tmp.137 %tmp.139;
-        invoke %tmp.113 %tmp.114(%tmp.118, %tmp.124, %tmp.126, %tmp.135, %tmp.140);
+        %tmp.61 = lgetv %dc;
+        %tmp.62 = getv function %tmp.61 :fillRectangle;
+        %tmp.63 = 0;
+        %tmp.64 = 0;
+        %tmp.66 = getv ? :x;
+        %tmp.68 = getv ? :y;
+        invoke %tmp.61 %tmp.62(%tmp.63, %tmp.64, %tmp.66, %tmp.68);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 43 8 ]
+        %tmp.69 = lgetv %dc;
+        %tmp.70 = getv function %tmp.69 :setColor;
+        %tmp.71 = getm $.Toybox.Graphics;
+        %tmp.72 = getv %tmp.71 :COLOR_WHITE;
+        %tmp.73 = getm $.Toybox.Graphics;
+        %tmp.74 = getv %tmp.73 :COLOR_TRANSPARENT;
+        invoke %tmp.69 %tmp.70(%tmp.72, %tmp.74);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 44 8 ]
+        %tmp.75 = lgetv %dc;
+        %tmp.76 = getv function %tmp.75 :drawText;
+        %tmp.78 = getv ? :x;
+        %tmp.79 = 2;
+        %tmp.80 = div %tmp.78 %tmp.79;
+        %tmp.82 = getv ? :y;
+        %tmp.83 = 2;
+        %tmp.84 = div %tmp.82 %tmp.83;
+        %tmp.85 = 70;
+        %tmp.86 = sub %tmp.84 %tmp.85;
+        %tmp.87 = getm $.Toybox.Graphics;
+        %tmp.88 = getv %tmp.87 :FONT_MEDIUM;
+        %tmp.89 = "Current Environment";
+        %tmp.90 = getm $.Toybox.Graphics;
+        %tmp.91 = getv %tmp.90 :TEXT_JUSTIFY_CENTER;
+        %tmp.92 = getm $.Toybox.Graphics;
+        %tmp.93 = getv %tmp.92 :TEXT_JUSTIFY_VCENTER;
+        %tmp.94 = bitor %tmp.91 %tmp.93;
+        invoke %tmp.75 %tmp.76(%tmp.80, %tmp.86, %tmp.88, %tmp.89, %tmp.94);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 45 8 ]
+        %tmp.95 = lgetv %dc;
+        %tmp.96 = getv function %tmp.95 :drawText;
+        %tmp.98 = getv ? :x;
+        %tmp.99 = 2;
+        %tmp.100 = div %tmp.98 %tmp.99;
+        %tmp.102 = getv ? :y;
+        %tmp.103 = 2;
+        %tmp.104 = div %tmp.102 %tmp.103;
+        %tmp.105 = 10;
+        %tmp.106 = add %tmp.104 %tmp.105;
+        %tmp.107 = getm $.Toybox.Graphics;
+        %tmp.108 = getv %tmp.107 :FONT_MEDIUM;
+        %tmp.109 = getm $.Toybox.Lang;
+        %tmp.110 = getv function %tmp.109 :format;
+        %tmp.111 = "Sound: $1$ dB";
+        %tmp.112 = newa 1;
+        %tmp.114 = getv ? :SOUND_LEVEL;
+        %tmp.115 = dup %tmp.112;
+        %tmp.116 = aputv %tmp.115 0 %tmp.114;
+        %tmp.117 = invoke %tmp.109 %tmp.110(%tmp.111, %tmp.116);
+        %tmp.118 = getm $.Toybox.Graphics;
+        %tmp.119 = getv %tmp.118 :TEXT_JUSTIFY_CENTER;
+        %tmp.120 = getm $.Toybox.Graphics;
+        %tmp.121 = getv %tmp.120 :TEXT_JUSTIFY_VCENTER;
+        %tmp.122 = bitor %tmp.119 %tmp.121;
+        invoke %tmp.95 %tmp.96(%tmp.100, %tmp.106, %tmp.108, %tmp.117, %tmp.122);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 46 8 ]
+        %tmp.123 = lgetv %dc;
+        %tmp.124 = getv function %tmp.123 :drawText;
+        %tmp.126 = getv ? :x;
+        %tmp.127 = 2;
+        %tmp.128 = div %tmp.126 %tmp.127;
+        %tmp.130 = getv ? :y;
+        %tmp.131 = 2;
+        %tmp.132 = div %tmp.130 %tmp.131;
+        %tmp.133 = 80;
+        %tmp.134 = add %tmp.132 %tmp.133;
+        %tmp.135 = getm $.Toybox.Graphics;
+        %tmp.136 = getv %tmp.135 :FONT_MEDIUM;
+        %tmp.137 = getm $.Toybox.Lang;
+        %tmp.138 = getv function %tmp.137 :format;
+        %tmp.139 = "Temperature: $1$ °C";
+        %tmp.140 = newa 1;
+        %tmp.142 = getv ? :TEMP_VAL;
+        %tmp.143 = dup %tmp.140;
+        %tmp.144 = aputv %tmp.143 0 %tmp.142;
+        %tmp.145 = invoke %tmp.137 %tmp.138(%tmp.139, %tmp.144);
+        %tmp.146 = getm $.Toybox.Graphics;
+        %tmp.147 = getv %tmp.146 :TEXT_JUSTIFY_CENTER;
+        %tmp.148 = getm $.Toybox.Graphics;
+        %tmp.149 = getv %tmp.148 :TEXT_JUSTIFY_VCENTER;
+        %tmp.150 = bitor %tmp.147 %tmp.149;
+        invoke %tmp.123 %tmp.124(%tmp.128, %tmp.134, %tmp.136, %tmp.145, %tmp.150);
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_24_40_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 45; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 49; ]
     function onHide() as Void {
     }
 }
-[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 49; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 53; ]
 class SensorDisconnected extends WatchUi.View{
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 49; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 53; ]
     <init> {
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 49; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 53; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 51; @position = 8; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 55; @position = 8; ]
     var x;
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 51; @position = 11; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 55; @position = 11; ]
     var y;
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 53; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 57; ]
     function initialize() as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_53_26_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 54 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_57_26_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 58 8 ]
         %tmp.2 = getv ? :View;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_53_26_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_57_26_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 57; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 61; ]
     function onLayout(dc as Dc) as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_57_40_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 59 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_61_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 63 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :getWidth;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         putv self :x %tmp.3;
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 60 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 64 8 ]
         %tmp.4 = lgetv %dc;
         %tmp.5 = getv function %tmp.4 :getHeight;
         %tmp.6 = invoke %tmp.4 %tmp.5();
         putv self :y %tmp.6;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_57_40_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_61_40_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 63; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 67; ]
     function onShow() as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_63_30_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 64 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_67_30_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 68 8 ]
         %tmp.1 = false;
         putv self :SETTINGS_AVAILABLE %tmp.1;
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 66 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 70 8 ]
         %tmp.2 = getm $.Toybox.Attention;
         %tmp.3 = getv function %tmp.2 :vibrate;
         %tmp.4 = newa 1;
@@ -263,12 +287,12 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_63_30_start:
         %tmp.12 = dup %tmp.4;
         %tmp.13 = aputv %tmp.12 0 %tmp.5;
         invoke %tmp.2 %tmp.3(%tmp.13);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_63_30_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_67_30_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 70; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 74; ]
     function onUpdate(dc as Dc) as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_70_40_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 72 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_74_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 76 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :setColor;
         %tmp.3 = getm $.Toybox.Graphics;
@@ -276,7 +300,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_70_40_start:
         %tmp.5 = getm $.Toybox.Graphics;
         %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
         invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 73 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 77 8 ]
         %tmp.7 = lgetv %dc;
         %tmp.8 = getv function %tmp.7 :fillRectangle;
         %tmp.9 = 0;
@@ -284,7 +308,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_70_40_start:
         %tmp.12 = getv ? :x;
         %tmp.14 = getv ? :y;
         invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10, %tmp.12, %tmp.14);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 76 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 80 8 ]
         %tmp.15 = lgetv %dc;
         %tmp.16 = getv function %tmp.15 :setColor;
         %tmp.17 = getm $.Toybox.Graphics;
@@ -292,7 +316,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_70_40_start:
         %tmp.19 = getm $.Toybox.Graphics;
         %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
         invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 78 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 82 8 ]
         %tmp.21 = lgetv %dc;
         %tmp.22 = getv function %tmp.21 :drawText;
         %tmp.24 = getv ? :x;
@@ -312,7 +336,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_70_40_start:
         %tmp.39 = getv %tmp.38 :TEXT_JUSTIFY_VCENTER;
         %tmp.40 = bitor %tmp.37 %tmp.39;
         invoke %tmp.21 %tmp.22(%tmp.26, %tmp.32, %tmp.34, %tmp.35, %tmp.40);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 79 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 83 8 ]
         %tmp.41 = lgetv %dc;
         %tmp.42 = getv function %tmp.41 :drawText;
         %tmp.44 = getv ? :x;
@@ -332,56 +356,56 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_70_40_start:
         %tmp.59 = getv %tmp.58 :TEXT_JUSTIFY_VCENTER;
         %tmp.60 = bitor %tmp.57 %tmp.59;
         invoke %tmp.41 %tmp.42(%tmp.46, %tmp.52, %tmp.54, %tmp.55, %tmp.60);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_70_40_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_74_40_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 82; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 86; ]
     function onHide() as Void {
     }
 }
-[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 86; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 90; ]
 class ThresholdChangeConfirmation extends WatchUi.View{
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 86; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 90; ]
     <init> {
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 86; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 90; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 87; @position = 8; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 91; @position = 8; ]
     var x;
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 87; @position = 11; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 91; @position = 11; ]
     var y;
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 89; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 93; ]
     function initialize() as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_89_26_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 90 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_93_26_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 94 8 ]
         %tmp.2 = getv ? :View;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_89_26_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_93_26_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 93; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 97; ]
     function onLayout(dc as Dc) as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_93_40_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 95 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_97_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 99 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :getWidth;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         putv self :x %tmp.3;
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 96 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 100 8 ]
         %tmp.4 = lgetv %dc;
         %tmp.5 = getv function %tmp.4 :getHeight;
         %tmp.6 = invoke %tmp.4 %tmp.5();
         putv self :y %tmp.6;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_93_40_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_97_40_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 99; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 103; ]
     function onShow() as Void {
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 101; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 105; ]
     function onUpdate(dc as Dc) as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_101_40_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 103 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_105_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 107 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :setColor;
         %tmp.3 = getm $.Toybox.Graphics;
@@ -389,7 +413,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_101_40_start:
         %tmp.5 = getm $.Toybox.Graphics;
         %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
         invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 104 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 108 8 ]
         %tmp.7 = lgetv %dc;
         %tmp.8 = getv function %tmp.7 :fillRectangle;
         %tmp.9 = 0;
@@ -397,7 +421,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_101_40_start:
         %tmp.12 = getv ? :x;
         %tmp.14 = getv ? :y;
         invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10, %tmp.12, %tmp.14);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 107 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 111 8 ]
         %tmp.15 = lgetv %dc;
         %tmp.16 = getv function %tmp.15 :setColor;
         %tmp.17 = getm $.Toybox.Graphics;
@@ -405,89 +429,137 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_101_40_start:
         %tmp.19 = getm $.Toybox.Graphics;
         %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
         invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 109 8 ]
-        %tmp.21 = lgetv %dc;
-        %tmp.22 = getv function %tmp.21 :drawText;
-        %tmp.24 = getv ? :x;
-        %tmp.25 = 2;
-        %tmp.26 = div %tmp.24 %tmp.25;
-        %tmp.28 = getv ? :y;
-        %tmp.29 = 2;
-        %tmp.30 = div %tmp.28 %tmp.29;
-        %tmp.31 = 125;
-        %tmp.32 = sub %tmp.30 %tmp.31;
-        %tmp.33 = getm $.Toybox.Graphics;
-        %tmp.34 = getv %tmp.33 :FONT_TINY;
-        %tmp.35 = getm $.Toybox.Lang;
-        %tmp.36 = getv function %tmp.35 :format;
-        %tmp.37 = " Current sound\nthreshold: $1$ dB";
-        %tmp.38 = newa 1;
-        %tmp.40 = getv ? :SOUND_THRESHOLD;
-        %tmp.41 = dup %tmp.38;
-        %tmp.42 = aputv %tmp.41 0 %tmp.40;
-        %tmp.43 = invoke %tmp.35 %tmp.36(%tmp.37, %tmp.42);
-        %tmp.44 = getm $.Toybox.Graphics;
-        %tmp.45 = getv %tmp.44 :TEXT_JUSTIFY_CENTER;
-        %tmp.46 = getm $.Toybox.Graphics;
-        %tmp.47 = getv %tmp.46 :TEXT_JUSTIFY_VCENTER;
-        %tmp.48 = bitor %tmp.45 %tmp.47;
-        invoke %tmp.21 %tmp.22(%tmp.26, %tmp.32, %tmp.34, %tmp.43, %tmp.48);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 110 8 ]
-        %tmp.49 = lgetv %dc;
-        %tmp.50 = getv function %tmp.49 :drawText;
-        %tmp.52 = getv ? :x;
-        %tmp.53 = 2;
-        %tmp.54 = div %tmp.52 %tmp.53;
-        %tmp.56 = getv ? :y;
-        %tmp.57 = 2;
-        %tmp.58 = div %tmp.56 %tmp.57;
-        %tmp.59 = getm $.Toybox.Graphics;
-        %tmp.60 = getv %tmp.59 :FONT_TINY;
-        %tmp.61 = getm $.Toybox.Lang;
-        %tmp.62 = getv function %tmp.61 :format;
-        %tmp.63 = "Current temp\nthreshold: $1$ °C";
-        %tmp.64 = newa 1;
-        %tmp.66 = getv ? :TEMP_THRESHOLD;
-        %tmp.67 = dup %tmp.64;
-        %tmp.68 = aputv %tmp.67 0 %tmp.66;
-        %tmp.69 = invoke %tmp.61 %tmp.62(%tmp.63, %tmp.68);
-        %tmp.70 = getm $.Toybox.Graphics;
-        %tmp.71 = getv %tmp.70 :TEXT_JUSTIFY_CENTER;
-        %tmp.72 = getm $.Toybox.Graphics;
-        %tmp.73 = getv %tmp.72 :TEXT_JUSTIFY_VCENTER;
-        %tmp.74 = bitor %tmp.71 %tmp.73;
-        invoke %tmp.49 %tmp.50(%tmp.54, %tmp.58, %tmp.60, %tmp.69, %tmp.74);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 112 8 ]
-        %tmp.75 = lgetv %dc;
-        %tmp.76 = getv function %tmp.75 :setColor;
-        %tmp.77 = getm $.Toybox.Graphics;
-        %tmp.78 = getv %tmp.77 :COLOR_PURPLE;
-        %tmp.79 = getm $.Toybox.Graphics;
-        %tmp.80 = getv %tmp.79 :COLOR_TRANSPARENT;
-        invoke %tmp.75 %tmp.76(%tmp.78, %tmp.80);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 113 8 ]
-        %tmp.81 = lgetv %dc;
-        %tmp.82 = getv function %tmp.81 :drawText;
-        %tmp.84 = getv ? :x;
-        %tmp.85 = 2;
-        %tmp.86 = div %tmp.84 %tmp.85;
-        %tmp.88 = getv ? :y;
-        %tmp.89 = 2;
-        %tmp.90 = div %tmp.88 %tmp.89;
-        %tmp.91 = 125;
-        %tmp.92 = add %tmp.90 %tmp.91;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 114 8 ]
+        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_105_40_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_105_40_stop" ]
+        %soundThreshText.1 = local;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 115 8 ]
+        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_105_40_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_105_40_stop" ]
+        %tempThreshText.2 = local;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 117 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_117_8_if_stmt:
+        %tmp.22 = getv ? :SOUND_THRESHOLD;
+        %tmp.23 = null;
+        %tmp.24 = eq %tmp.22 %tmp.23;
+        bf %tmp.24 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_117_8_if_false;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_117_8_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_117_36_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 118 12 ]
+        %tmp.25 = "Current sound\nthreshold: OFF";
+        lputv %soundThreshText.1 %tmp.25;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_117_36_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_117_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_117_8_if_false:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_119_15_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 120 12 ]
+        %tmp.26 = getm $.Toybox.Lang;
+        %tmp.27 = getv function %tmp.26 :format;
+        %tmp.28 = "Current sound\nthreshold: $1$ dB";
+        %tmp.29 = newa 1;
+        %tmp.31 = getv ? :SOUND_THRESHOLD;
+        %tmp.32 = as %tmp.31 { (!Null) };
+        %tmp.33 = dup %tmp.29;
+        %tmp.34 = aputv %tmp.33 0 %tmp.32;
+        %tmp.35 = invoke %tmp.26 %tmp.27(%tmp.28, %tmp.34);
+        lputv %soundThreshText.1 %tmp.35;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_119_15_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_117_8_if_end:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 123 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_123_8_if_stmt:
+        %tmp.37 = getv ? :TEMP_THRESHOLD;
+        %tmp.38 = not %tmp.37;
+        %tmp.39 = null;
+        %tmp.40 = eq %tmp.38 %tmp.39;
+        bf %tmp.40 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_123_8_if_false;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_123_8_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_123_36_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 124 12 ]
+        %tmp.41 = "Current temp\nthreshold: OFF";
+        lputv %tempThreshText.2 %tmp.41;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_123_36_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_123_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_123_8_if_false:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_125_15_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 126 12 ]
+        %tmp.42 = getm $.Toybox.Lang;
+        %tmp.43 = getv function %tmp.42 :format;
+        %tmp.44 = "Current temp\nthreshold: $1$ °C";
+        %tmp.45 = newa 1;
+        %tmp.47 = getv ? :TEMP_THRESHOLD;
+        %tmp.48 = dup %tmp.45;
+        %tmp.49 = aputv %tmp.48 0 %tmp.47;
+        %tmp.50 = invoke %tmp.42 %tmp.43(%tmp.44, %tmp.49);
+        lputv %tempThreshText.2 %tmp.50;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_125_15_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_123_8_if_end:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 129 8 ]
+        %tmp.51 = lgetv %dc;
+        %tmp.52 = getv function %tmp.51 :drawText;
+        %tmp.54 = getv ? :x;
+        %tmp.55 = 2;
+        %tmp.56 = div %tmp.54 %tmp.55;
+        %tmp.58 = getv ? :y;
+        %tmp.59 = 2;
+        %tmp.60 = div %tmp.58 %tmp.59;
+        %tmp.61 = 125;
+        %tmp.62 = sub %tmp.60 %tmp.61;
+        %tmp.63 = getm $.Toybox.Graphics;
+        %tmp.64 = getv %tmp.63 :FONT_TINY;
+        %tmp.66 = lgetv %soundThreshText.1;
+        %tmp.67 = getm $.Toybox.Graphics;
+        %tmp.68 = getv %tmp.67 :TEXT_JUSTIFY_CENTER;
+        %tmp.69 = getm $.Toybox.Graphics;
+        %tmp.70 = getv %tmp.69 :TEXT_JUSTIFY_VCENTER;
+        %tmp.71 = bitor %tmp.68 %tmp.70;
+        invoke %tmp.51 %tmp.52(%tmp.56, %tmp.62, %tmp.64, %tmp.66, %tmp.71);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 130 8 ]
+        %tmp.72 = lgetv %dc;
+        %tmp.73 = getv function %tmp.72 :drawText;
+        %tmp.75 = getv ? :x;
+        %tmp.76 = 2;
+        %tmp.77 = div %tmp.75 %tmp.76;
+        %tmp.79 = getv ? :y;
+        %tmp.80 = 2;
+        %tmp.81 = div %tmp.79 %tmp.80;
+        %tmp.82 = getm $.Toybox.Graphics;
+        %tmp.83 = getv %tmp.82 :FONT_TINY;
+        %tmp.85 = lgetv %tempThreshText.2;
+        %tmp.86 = getm $.Toybox.Graphics;
+        %tmp.87 = getv %tmp.86 :TEXT_JUSTIFY_CENTER;
+        %tmp.88 = getm $.Toybox.Graphics;
+        %tmp.89 = getv %tmp.88 :TEXT_JUSTIFY_VCENTER;
+        %tmp.90 = bitor %tmp.87 %tmp.89;
+        invoke %tmp.72 %tmp.73(%tmp.77, %tmp.81, %tmp.83, %tmp.85, %tmp.90);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 132 8 ]
+        %tmp.91 = lgetv %dc;
+        %tmp.92 = getv function %tmp.91 :setColor;
         %tmp.93 = getm $.Toybox.Graphics;
-        %tmp.94 = getv %tmp.93 :FONT_SMALL;
-        %tmp.95 = "Swipe Down to\nGo Back";
-        %tmp.96 = getm $.Toybox.Graphics;
-        %tmp.97 = getv %tmp.96 :TEXT_JUSTIFY_CENTER;
-        %tmp.98 = getm $.Toybox.Graphics;
-        %tmp.99 = getv %tmp.98 :TEXT_JUSTIFY_VCENTER;
-        %tmp.100 = bitor %tmp.97 %tmp.99;
-        invoke %tmp.81 %tmp.82(%tmp.86, %tmp.92, %tmp.94, %tmp.95, %tmp.100);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_101_40_stop:
+        %tmp.94 = getv %tmp.93 :COLOR_PURPLE;
+        %tmp.95 = getm $.Toybox.Graphics;
+        %tmp.96 = getv %tmp.95 :COLOR_TRANSPARENT;
+        invoke %tmp.91 %tmp.92(%tmp.94, %tmp.96);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 133 8 ]
+        %tmp.97 = lgetv %dc;
+        %tmp.98 = getv function %tmp.97 :drawText;
+        %tmp.100 = getv ? :x;
+        %tmp.101 = 2;
+        %tmp.102 = div %tmp.100 %tmp.101;
+        %tmp.104 = getv ? :y;
+        %tmp.105 = 2;
+        %tmp.106 = div %tmp.104 %tmp.105;
+        %tmp.107 = 125;
+        %tmp.108 = add %tmp.106 %tmp.107;
+        %tmp.109 = getm $.Toybox.Graphics;
+        %tmp.110 = getv %tmp.109 :FONT_SMALL;
+        %tmp.111 = "Swipe Down to\nGo Back";
+        %tmp.112 = getm $.Toybox.Graphics;
+        %tmp.113 = getv %tmp.112 :TEXT_JUSTIFY_CENTER;
+        %tmp.114 = getm $.Toybox.Graphics;
+        %tmp.115 = getv %tmp.114 :TEXT_JUSTIFY_VCENTER;
+        %tmp.116 = bitor %tmp.113 %tmp.115;
+        invoke %tmp.97 %tmp.98(%tmp.102, %tmp.108, %tmp.110, %tmp.111, %tmp.116);
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_105_40_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 116; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 136; ]
     function onHide() as Void {
     }
 }

@@ -48,6 +48,7 @@ class SoundPickerDelegate extends WatchUi.PickerDelegate {
 
     function onAccept(values) {
         SOUND_THRESHOLD = values[0];
+        System.println("Sound threshold value is: " + SOUND_THRESHOLD);
         WatchUi.pushView(new ThresholdChangeConfirmation(), new ThresholdChangeConfirmationDelegate(), WatchUi.SLIDE_LEFT);
         return true;
     }
@@ -67,6 +68,7 @@ class TempPickerDelegate extends WatchUi.PickerDelegate {
 
     function onAccept(values) {
         TEMP_THRESHOLD = values[0];
+        System.println("Temp threshold value is: " + TEMP_THRESHOLD);
         WatchUi.pushView(new ThresholdChangeConfirmation(), new ThresholdChangeConfirmationDelegate(), WatchUi.SLIDE_LEFT);
         return true;
     }
