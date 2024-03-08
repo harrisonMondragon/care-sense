@@ -232,7 +232,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_54_32_s
     }
 }
 [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 61; ]
-class TempNotification extends WatchUi.View{
+class TempMaxNotification extends WatchUi.View{
     [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 61; ]
     <init> {
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 63 8 ]
@@ -351,7 +351,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_86_40_s
         %tmp.36 = getv function %tmp.35 :format;
         %tmp.37 = "Environment\n temperature has\nexceeded $1$ °C.";
         %tmp.38 = newa 1;
-        %tmp.40 = getv ? :TEMP_THRESHOLD;
+        %tmp.40 = getv ? :TEMP_MAX_THRESHOLD;
         %tmp.41 = dup %tmp.38;
         %tmp.42 = aputv %tmp.41 0 %tmp.40;
         %tmp.43 = invoke %tmp.35 %tmp.36(%tmp.37, %tmp.42);
@@ -384,11 +384,11 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_86_40_s
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 98 8 ]
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_8_if_stmt:
         %tmp.70 = getv ? :TEMP_VAL;
-        %tmp.72 = getv ? :TEMP_THRESHOLD;
+        %tmp.72 = getv ? :TEMP_MAX_THRESHOLD;
         %tmp.73 = gte %tmp.70 %tmp.72;
         bf %tmp.73 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_8_if_end;
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_8_if_true:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_40_start:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_44_start:
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 99 12 ]
         %tmp.74 = lgetv %dc;
         %tmp.75 = getv function %tmp.74 :setColor;
@@ -397,7 +397,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_40_s
         %tmp.78 = getm $.Toybox.Graphics;
         %tmp.79 = getv %tmp.78 :COLOR_TRANSPARENT;
         invoke %tmp.74 %tmp.75(%tmp.77, %tmp.79);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_40_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_44_stop:
         goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_8_if_end;
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_8_if_end:
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 101 8 ]

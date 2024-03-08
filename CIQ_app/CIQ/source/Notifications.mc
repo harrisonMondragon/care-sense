@@ -58,7 +58,7 @@ class SoundNotification extends WatchUi.View {
 
 }
 
-class TempNotification extends WatchUi.View {
+class TempMaxNotification extends WatchUi.View {
     var x, y;
     var timer = new Timer.Timer(); // timer for notification timeout
     var NOTIFICATION_DELAY = 15000;
@@ -91,11 +91,11 @@ class TempNotification extends WatchUi.View {
         // set foreground color
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
-        dc.drawText(x / 2, y / 2 - 50, Graphics.FONT_MEDIUM, Lang.format("Environment\n temperature has\nexceeded $1$ °C.", [TEMP_THRESHOLD]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x / 2, y / 2 - 50, Graphics.FONT_MEDIUM, Lang.format("Environment\n temperature has\nexceeded $1$ °C.", [TEMP_MAX_THRESHOLD]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         dc.drawText(x / 2, y / 2 + 90, Graphics.FONT_MEDIUM, "Current temp is", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
         // change font color
-        if (TEMP_VAL >= TEMP_THRESHOLD) {
+        if (TEMP_VAL >= TEMP_MAX_THRESHOLD) {
             dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
         }
         dc.drawText(x / 2, y / 2 + 140, Graphics.FONT_MEDIUM, Lang.format("$1$ °C", [TEMP_VAL]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);

@@ -12,7 +12,8 @@ var SETTINGS_AVAILABLE = false;
 
 // Thresholds
 var SOUND_THRESHOLD = 80; // max sound threshold in dB
-var TEMP_THRESHOLD = 35; // max temperature threshold in ˚C
+var TEMP_MAX_THRESHOLD = 35; // max temperature threshold in ˚C
+var TEMP_MIN_THRESHOLD = 20; // min temperature threshold in ˚C
 
 // Delays
 var NOTIFICATION_DELAY = 15000; // notification delay in ms
@@ -23,7 +24,8 @@ var BLE_DELEGATE;
 
 // Enum of back pickers for threshold change confirmation page
 enum BACK_PICKERS {
-    TEMP_PICKER,
+    TEMP_MAX_PICKER,
+    TEMP_MIN_PICKER,
     SOUND_PICKER,
 }
 

@@ -44,7 +44,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_19_28_start:
         %tmp.9 = getv function ? %tmp.8 :Text;
         %tmp.10 = newd 4;
         %tmp.12 = const :text;
-        %tmp.13 = "Threshold";
+        %tmp.13 = "Sound Max";
         %tmp.14 = dup %tmp.10;
         %tmp.15 = aputv %tmp.14 %tmp.12 %tmp.13;
         %tmp.17 = const :font;
@@ -123,19 +123,19 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_19_8_if_false:
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 27 13 ]
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_13_if_stmt:
         %tmp.87 = lgetv %item;
-        %tmp.89 = const :temp;
+        %tmp.89 = const :tempMax;
         %tmp.90 = eq %tmp.87 %tmp.89;
-        bf %tmp.90 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_13_if_end;
+        bf %tmp.90 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_13_if_false;
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_13_if_true:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_32_start:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_35_start:
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 28 12 ]
-        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_32_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_32_stop" ]
+        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_35_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_35_stop" ]
         %title.5 = local;
         %tmp.93 = getm $.Toybox.WatchUi;
         %tmp.94 = getv function ? %tmp.93 :Text;
         %tmp.95 = newd 4;
         %tmp.97 = const :text;
-        %tmp.98 = "Threshold";
+        %tmp.98 = "Temp Max";
         %tmp.99 = dup %tmp.95;
         %tmp.100 = aputv %tmp.99 %tmp.97 %tmp.98;
         %tmp.102 = const :font;
@@ -156,113 +156,205 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_32_start:
         %tmp.91 = newc %tmp.94 (%tmp.118);
         lputv %title.5 %tmp.91;
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 29 12 ]
-        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_32_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_32_stop" ]
+        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_35_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_35_stop" ]
         %factory.6 = local;
         %tmp.122 = getv ? :NumberFactory;
-        %tmp.123 = -20;
-        %tmp.124 = 40;
-        %tmp.125 = 1;
-        %tmp.126 = "$1$ °C";
-        %tmp.119 = newc %tmp.122 (%tmp.123, %tmp.124, %tmp.125, %tmp.126);
+        %tmp.124 = getv ? :TEMP_MIN_THRESHOLD;
+        %tmp.125 = 40;
+        %tmp.126 = 1;
+        %tmp.127 = "$1$ °C";
+        %tmp.119 = newc %tmp.122 (%tmp.124, %tmp.125, %tmp.126, %tmp.127);
         lputv %factory.6 %tmp.119;
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 30 12 ]
-        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_32_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_32_stop" ]
+        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_35_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_35_stop" ]
         %pickerDefault.7 = local;
-        %tmp.127 = lgetv %factory.6;
-        %tmp.128 = getv function %tmp.127 :getIndex;
-        %tmp.130 = getv ? :TEMP_THRESHOLD;
-        %tmp.131 = invoke %tmp.127 %tmp.128(%tmp.130);
-        lputv %pickerDefault.7 %tmp.131;
+        %tmp.128 = lgetv %factory.6;
+        %tmp.129 = getv function %tmp.128 :getIndex;
+        %tmp.131 = getv ? :TEMP_MAX_THRESHOLD;
+        %tmp.132 = invoke %tmp.128 %tmp.129(%tmp.131);
+        lputv %pickerDefault.7 %tmp.132;
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 31 12 ]
-        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_32_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_32_stop" ]
+        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_35_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_35_stop" ]
         %picker.8 = local;
-        %tmp.134 = getm $.Toybox.WatchUi;
-        %tmp.135 = getv function ? %tmp.134 :Picker;
-        %tmp.136 = newd 3;
-        %tmp.138 = const :title;
-        %tmp.140 = lgetv %title.5;
-        %tmp.141 = dup %tmp.136;
-        %tmp.142 = aputv %tmp.141 %tmp.138 %tmp.140;
-        %tmp.144 = const :pattern;
-        %tmp.145 = newa 1;
-        %tmp.147 = lgetv %factory.6;
-        %tmp.148 = dup %tmp.145;
-        %tmp.149 = aputv %tmp.148 0 %tmp.147;
-        %tmp.150 = dup %tmp.142;
-        %tmp.151 = aputv %tmp.150 %tmp.144 %tmp.149;
-        %tmp.153 = const :defaults;
-        %tmp.154 = newa 1;
-        %tmp.156 = lgetv %pickerDefault.7;
-        %tmp.157 = dup %tmp.154;
-        %tmp.158 = aputv %tmp.157 0 %tmp.156;
-        %tmp.159 = dup %tmp.151;
-        %tmp.160 = aputv %tmp.159 %tmp.153 %tmp.158;
-        %tmp.132 = newc %tmp.135 (%tmp.160);
-        lputv %picker.8 %tmp.132;
+        %tmp.135 = getm $.Toybox.WatchUi;
+        %tmp.136 = getv function ? %tmp.135 :Picker;
+        %tmp.137 = newd 3;
+        %tmp.139 = const :title;
+        %tmp.141 = lgetv %title.5;
+        %tmp.142 = dup %tmp.137;
+        %tmp.143 = aputv %tmp.142 %tmp.139 %tmp.141;
+        %tmp.145 = const :pattern;
+        %tmp.146 = newa 1;
+        %tmp.148 = lgetv %factory.6;
+        %tmp.149 = dup %tmp.146;
+        %tmp.150 = aputv %tmp.149 0 %tmp.148;
+        %tmp.151 = dup %tmp.143;
+        %tmp.152 = aputv %tmp.151 %tmp.145 %tmp.150;
+        %tmp.154 = const :defaults;
+        %tmp.155 = newa 1;
+        %tmp.157 = lgetv %pickerDefault.7;
+        %tmp.158 = dup %tmp.155;
+        %tmp.159 = aputv %tmp.158 0 %tmp.157;
+        %tmp.160 = dup %tmp.152;
+        %tmp.161 = aputv %tmp.160 %tmp.154 %tmp.159;
+        %tmp.133 = newc %tmp.136 (%tmp.161);
+        lputv %picker.8 %tmp.133;
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 32 12 ]
-        %tmp.161 = getm $.Toybox.WatchUi;
-        %tmp.162 = getv function %tmp.161 :pushView;
-        %tmp.164 = lgetv %picker.8;
-        %tmp.168 = getv ? :TempPickerDelegate;
-        %tmp.165 = newc %tmp.168 ();
-        %tmp.169 = getm $.Toybox.WatchUi;
-        %tmp.170 = getv %tmp.169 :SLIDE_LEFT;
-        invoke %tmp.161 %tmp.162(%tmp.164, %tmp.165, %tmp.170);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_32_stop:
+        %tmp.162 = getm $.Toybox.WatchUi;
+        %tmp.163 = getv function %tmp.162 :pushView;
+        %tmp.165 = lgetv %picker.8;
+        %tmp.169 = getv ? :TempMaxPickerDelegate;
+        %tmp.166 = newc %tmp.169 ();
+        %tmp.170 = getm $.Toybox.WatchUi;
+        %tmp.171 = getv %tmp.170 :SLIDE_LEFT;
+        invoke %tmp.162 %tmp.163(%tmp.165, %tmp.166, %tmp.171);
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_35_stop:
         goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_13_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_13_if_false:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 35 13 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_35_13_if_stmt:
+        %tmp.173 = lgetv %item;
+        %tmp.175 = const :tempMin;
+        %tmp.176 = eq %tmp.173 %tmp.175;
+        bf %tmp.176 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_35_13_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_35_13_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_35_35_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 36 12 ]
+        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_35_35_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_35_35_stop" ]
+        %title.9 = local;
+        %tmp.179 = getm $.Toybox.WatchUi;
+        %tmp.180 = getv function ? %tmp.179 :Text;
+        %tmp.181 = newd 4;
+        %tmp.183 = const :text;
+        %tmp.184 = "Temp Min";
+        %tmp.185 = dup %tmp.181;
+        %tmp.186 = aputv %tmp.185 %tmp.183 %tmp.184;
+        %tmp.188 = const :font;
+        %tmp.189 = getm $.Toybox.Graphics;
+        %tmp.190 = getv %tmp.189 :FONT_SMALL;
+        %tmp.191 = dup %tmp.186;
+        %tmp.192 = aputv %tmp.191 %tmp.188 %tmp.190;
+        %tmp.194 = const :locX;
+        %tmp.195 = getm $.Toybox.WatchUi;
+        %tmp.196 = getv %tmp.195 :LAYOUT_HALIGN_CENTER;
+        %tmp.197 = dup %tmp.192;
+        %tmp.198 = aputv %tmp.197 %tmp.194 %tmp.196;
+        %tmp.200 = const :locY;
+        %tmp.201 = getm $.Toybox.WatchUi;
+        %tmp.202 = getv %tmp.201 :LAYOUT_VALIGN_CENTER;
+        %tmp.203 = dup %tmp.198;
+        %tmp.204 = aputv %tmp.203 %tmp.200 %tmp.202;
+        %tmp.177 = newc %tmp.180 (%tmp.204);
+        lputv %title.9 %tmp.177;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 37 12 ]
+        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_35_35_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_35_35_stop" ]
+        %factory.10 = local;
+        %tmp.208 = getv ? :NumberFactory;
+        %tmp.209 = -20;
+        %tmp.211 = getv ? :TEMP_MAX_THRESHOLD;
+        %tmp.212 = 1;
+        %tmp.213 = "$1$ °C";
+        %tmp.205 = newc %tmp.208 (%tmp.209, %tmp.211, %tmp.212, %tmp.213);
+        lputv %factory.10 %tmp.205;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 38 12 ]
+        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_35_35_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_35_35_stop" ]
+        %pickerDefault.11 = local;
+        %tmp.214 = lgetv %factory.10;
+        %tmp.215 = getv function %tmp.214 :getIndex;
+        %tmp.217 = getv ? :TEMP_MIN_THRESHOLD;
+        %tmp.218 = invoke %tmp.214 %tmp.215(%tmp.217);
+        lputv %pickerDefault.11 %tmp.218;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 39 12 ]
+        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_35_35_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_35_35_stop" ]
+        %picker.12 = local;
+        %tmp.221 = getm $.Toybox.WatchUi;
+        %tmp.222 = getv function ? %tmp.221 :Picker;
+        %tmp.223 = newd 3;
+        %tmp.225 = const :title;
+        %tmp.227 = lgetv %title.9;
+        %tmp.228 = dup %tmp.223;
+        %tmp.229 = aputv %tmp.228 %tmp.225 %tmp.227;
+        %tmp.231 = const :pattern;
+        %tmp.232 = newa 1;
+        %tmp.234 = lgetv %factory.10;
+        %tmp.235 = dup %tmp.232;
+        %tmp.236 = aputv %tmp.235 0 %tmp.234;
+        %tmp.237 = dup %tmp.229;
+        %tmp.238 = aputv %tmp.237 %tmp.231 %tmp.236;
+        %tmp.240 = const :defaults;
+        %tmp.241 = newa 1;
+        %tmp.243 = lgetv %pickerDefault.11;
+        %tmp.244 = dup %tmp.241;
+        %tmp.245 = aputv %tmp.244 0 %tmp.243;
+        %tmp.246 = dup %tmp.238;
+        %tmp.247 = aputv %tmp.246 %tmp.240 %tmp.245;
+        %tmp.219 = newc %tmp.222 (%tmp.247);
+        lputv %picker.12 %tmp.219;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 40 12 ]
+        %tmp.248 = getm $.Toybox.WatchUi;
+        %tmp.249 = getv function %tmp.248 :pushView;
+        %tmp.251 = lgetv %picker.12;
+        %tmp.255 = getv ? :TempMinPickerDelegate;
+        %tmp.252 = newc %tmp.255 ();
+        %tmp.256 = getm $.Toybox.WatchUi;
+        %tmp.257 = getv %tmp.256 :SLIDE_LEFT;
+        invoke %tmp.248 %tmp.249(%tmp.251, %tmp.252, %tmp.257);
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_35_35_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_35_13_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_35_13_if_end:
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_27_13_if_end:
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_19_8_if_end:
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_17_30_stop:
     }
 }
-[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 38; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 46; ]
 class SoundPickerDelegate extends WatchUi.PickerDelegate{
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 38; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 46; ]
     <init> {
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 38; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 46; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 40; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 48; ]
     function initialize() as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_40_26_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 41 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_48_26_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 49 8 ]
         %tmp.2 = getv ? :PickerDelegate;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_40_26_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_48_26_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 44; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 52; ]
     function onCancel() {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_44_24_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 45 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_52_24_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 53 8 ]
         %tmp.1 = getm $.Toybox.WatchUi;
         %tmp.2 = getv function %tmp.1 :popView;
         %tmp.3 = getm $.Toybox.WatchUi;
         %tmp.4 = getv %tmp.3 :SLIDE_RIGHT;
         invoke %tmp.1 %tmp.2(%tmp.4);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 46 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 54 8 ]
         %tmp.5 = true;
         ret %tmp.5;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_44_24_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_52_24_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 49; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 57; ]
     function onAccept(values) {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_49_30_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 50 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_57_30_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 58 8 ]
         %tmp.2 = lgetv %values;
         %tmp.3 = 0;
         %tmp.4 = agetv %tmp.2 %tmp.3;
         putv self :SOUND_THRESHOLD %tmp.4;
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 51 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 59 8 ]
         %tmp.6 = getv ? :System;
         %tmp.7 = getv function %tmp.6 :println;
         %tmp.8 = "Sound threshold value is: ";
         %tmp.10 = getv ? :SOUND_THRESHOLD;
         %tmp.11 = add %tmp.8 %tmp.10;
         invoke %tmp.6 %tmp.7(%tmp.11);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 52 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 60 8 ]
         %tmp.12 = getm $.Toybox.WatchUi;
         %tmp.13 = getv function %tmp.12 :pushView;
         %tmp.17 = getv ? :ThresholdChangeConfirmation;
@@ -273,74 +365,138 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_49_30_start:
         %tmp.24 = getm $.Toybox.WatchUi;
         %tmp.25 = getv %tmp.24 :SLIDE_LEFT;
         invoke %tmp.12 %tmp.13(%tmp.14, %tmp.18, %tmp.25);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 53 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 61 8 ]
         %tmp.26 = true;
         ret %tmp.26;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_49_30_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_57_30_stop:
     }
 }
-[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 58; ]
-class TempPickerDelegate extends WatchUi.PickerDelegate{
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 58; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 66; ]
+class TempMaxPickerDelegate extends WatchUi.PickerDelegate{
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 66; ]
     <init> {
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 58; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 66; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 60; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 68; ]
     function initialize() as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_60_26_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 61 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_68_26_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 69 8 ]
         %tmp.2 = getv ? :PickerDelegate;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_60_26_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_68_26_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 64; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 72; ]
     function onCancel() {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_64_24_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 65 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_72_24_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 73 8 ]
         %tmp.1 = getm $.Toybox.WatchUi;
         %tmp.2 = getv function %tmp.1 :popView;
         %tmp.3 = getm $.Toybox.WatchUi;
         %tmp.4 = getv %tmp.3 :SLIDE_RIGHT;
         invoke %tmp.1 %tmp.2(%tmp.4);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 66 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 74 8 ]
         %tmp.5 = true;
         ret %tmp.5;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_64_24_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_72_24_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 69; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 77; ]
     function onAccept(values) {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_69_30_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 70 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_77_30_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 78 8 ]
         %tmp.2 = lgetv %values;
         %tmp.3 = 0;
         %tmp.4 = agetv %tmp.2 %tmp.3;
-        putv self :TEMP_THRESHOLD %tmp.4;
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 71 8 ]
+        putv self :TEMP_MAX_THRESHOLD %tmp.4;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 79 8 ]
         %tmp.6 = getv ? :System;
         %tmp.7 = getv function %tmp.6 :println;
-        %tmp.8 = "Temp threshold value is: ";
-        %tmp.10 = getv ? :TEMP_THRESHOLD;
+        %tmp.8 = "Temp max threshold value is: ";
+        %tmp.10 = getv ? :TEMP_MAX_THRESHOLD;
         %tmp.11 = add %tmp.8 %tmp.10;
         invoke %tmp.6 %tmp.7(%tmp.11);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 72 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 80 8 ]
         %tmp.12 = getm $.Toybox.WatchUi;
         %tmp.13 = getv function %tmp.12 :pushView;
         %tmp.17 = getv ? :ThresholdChangeConfirmation;
         %tmp.14 = newc %tmp.17 ();
         %tmp.21 = getv ? :ThresholdChangeConfirmationDelegate;
-        %tmp.23 = getv ? :TEMP_PICKER;
+        %tmp.23 = getv ? :TEMP_MAX_PICKER;
         %tmp.18 = newc %tmp.21 (%tmp.23);
         %tmp.24 = getm $.Toybox.WatchUi;
         %tmp.25 = getv %tmp.24 :SLIDE_LEFT;
         invoke %tmp.12 %tmp.13(%tmp.14, %tmp.18, %tmp.25);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 73 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 81 8 ]
         %tmp.26 = true;
         ret %tmp.26;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_69_30_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_77_30_stop:
+    }
+}
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 86; ]
+class TempMinPickerDelegate extends WatchUi.PickerDelegate{
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 86; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 86; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 88; ]
+    function initialize() as Void {
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_88_26_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 89 8 ]
+        %tmp.2 = getv ? :PickerDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_88_26_stop:
+    }
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 92; ]
+    function onCancel() {
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_92_24_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 93 8 ]
+        %tmp.1 = getm $.Toybox.WatchUi;
+        %tmp.2 = getv function %tmp.1 :popView;
+        %tmp.3 = getm $.Toybox.WatchUi;
+        %tmp.4 = getv %tmp.3 :SLIDE_RIGHT;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 94 8 ]
+        %tmp.5 = true;
+        ret %tmp.5;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_92_24_stop:
+    }
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 97; ]
+    function onAccept(values) {
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_97_30_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 98 8 ]
+        %tmp.2 = lgetv %values;
+        %tmp.3 = 0;
+        %tmp.4 = agetv %tmp.2 %tmp.3;
+        putv self :TEMP_MIN_THRESHOLD %tmp.4;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 99 8 ]
+        %tmp.6 = getv ? :System;
+        %tmp.7 = getv function %tmp.6 :println;
+        %tmp.8 = "Temp min threshold value is: ";
+        %tmp.10 = getv ? :TEMP_MIN_THRESHOLD;
+        %tmp.11 = add %tmp.8 %tmp.10;
+        invoke %tmp.6 %tmp.7(%tmp.11);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 100 8 ]
+        %tmp.12 = getm $.Toybox.WatchUi;
+        %tmp.13 = getv function %tmp.12 :pushView;
+        %tmp.17 = getv ? :ThresholdChangeConfirmation;
+        %tmp.14 = newc %tmp.17 ();
+        %tmp.21 = getv ? :ThresholdChangeConfirmationDelegate;
+        %tmp.23 = getv ? :TEMP_MIN_PICKER;
+        %tmp.18 = newc %tmp.21 (%tmp.23);
+        %tmp.24 = getm $.Toybox.WatchUi;
+        %tmp.25 = getv %tmp.24 :SLIDE_LEFT;
+        invoke %tmp.12 %tmp.13(%tmp.14, %tmp.18, %tmp.25);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc" 101 8 ]
+        %tmp.26 = true;
+        ret %tmp.26;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Menus_mc_97_30_stop:
     }
 }
 [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Menus.mc"; @line = 1; ]

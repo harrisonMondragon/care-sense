@@ -29,9 +29,9 @@ class HomeDisplay extends WatchUi.View {
                 WatchUi.switchToView(new SoundNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
             }
         }
-        if (TEMP_THRESHOLD != null) {
-            if (TEMP_VAL > TEMP_THRESHOLD) {
-                WatchUi.switchToView(new TempNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
+        if (TEMP_MAX_THRESHOLD != null) {
+            if (TEMP_VAL > TEMP_MAX_THRESHOLD) {
+                WatchUi.switchToView(new TempMaxNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
             }
         }
 
@@ -111,23 +111,30 @@ class ThresholdChangeConfirmation extends WatchUi.View {
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
         // Confirmation messages
-        var soundThreshText;
-        var tempThreshText;
+        var soundThreshString;
+        var tempMinThreshString;
+        var tempMaxThreshString;
 
         if (SOUND_THRESHOLD == null){
-            soundThreshText = "Current sound\nthreshold: OFF";
+            soundThreshString = "OFF";
         } else {
-            soundThreshText = Lang.format("Current sound\nthreshold: $1$ dB", [SOUND_THRESHOLD]);
+            soundThreshString = Lang.format("$1$ dB", [SOUND_THRESHOLD]);
         }
 
-        if (TEMP_THRESHOLD == null){
-            tempThreshText = "Current temp\nthreshold: OFF";
+        if (TEMP_MIN_THRESHOLD == null){
+            tempMinThreshString = "OFF";
         } else {
-            tempThreshText = Lang.format("Current temp\nthreshold: $1$ °C", [TEMP_THRESHOLD]);
+            tempMinThreshString = Lang.format("$1$ °C", [TEMP_MIN_THRESHOLD]);
         }
 
-        dc.drawText(x / 2, y / 2 - 125, Graphics.FONT_TINY, soundThreshText, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-        dc.drawText(x / 2, y / 2, Graphics.FONT_TINY, tempThreshText, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        if (TEMP_MAX_THRESHOLD == null){
+            tempMaxThreshString = "OFF";
+        } else {
+            tempMaxThreshString = Lang.format("$1$ °C", [TEMP_MAX_THRESHOLD]);
+        }
+
+        dc.drawText(x / 2, y / 2 - 125, Graphics.FONT_TINY, Lang.format("Current sound\nthreshold: $1$", [soundThreshString]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x / 2, y / 2, Graphics.FONT_TINY, Lang.format("Current temp thresholds:\nMin: $1$, Max: $2$", [tempMinThreshString, tempMaxThreshString]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
         dc.setColor(Graphics.COLOR_PURPLE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(x / 2, y / 2 + 125, Graphics.FONT_SMALL, "Swipe Down to\nGo Back", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
