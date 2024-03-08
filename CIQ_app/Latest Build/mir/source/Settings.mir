@@ -318,6 +318,14 @@ class SoundPicker extends WatchUi.Picker{
         %tmp.54 = aputv %tmp.53 %tmp.50 %tmp.52;
         %tmp.27 = newc %tmp.30 (%tmp.54);
         putv self :soundTitle %tmp.27;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 91 10 ]
+        %tmp.58 = getv ? :NumberFactory;
+        %tmp.60 = getv ? :SOUND_THRESH_RANGE_LOW;
+        %tmp.62 = getv ? :SOUND_THRESH_RANGE_HI;
+        %tmp.64 = getv ? :SOUND_THRESH_INCREMENT;
+        %tmp.65 = "$1$ dB";
+        %tmp.55 = newc %tmp.58 (%tmp.60, %tmp.62, %tmp.64, %tmp.65);
+        putv self :soundFactory %tmp.55;
     }
     [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 89; ]
     static
@@ -325,217 +333,259 @@ class SoundPicker extends WatchUi.Picker{
     }
     [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 90; @position = 10; ]
     const soundTitle;
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 92; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 91; @position = 10; ]
+    const soundFactory;
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 92; @position = 8; ]
+    var soundDefault;
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 94; ]
     function initialize() as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_92_26_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 93 8 ]
-        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_92_26_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_92_26_stop" ]
-        %factory.1 = local;
-        %tmp.4 = getv ? :NumberFactory;
-        %tmp.5 = 5;
-        %tmp.6 = 200;
-        %tmp.7 = 5;
-        %tmp.8 = "$1$ dB";
-        %tmp.1 = newc %tmp.4 (%tmp.5, %tmp.6, %tmp.7, %tmp.8);
-        lputv %factory.1 %tmp.1;
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 94 8 ]
-        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_92_26_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_92_26_stop" ]
-        %pickerDefault.2 = local;
-        %tmp.9 = lgetv %factory.1;
-        %tmp.10 = getv function %tmp.9 :getIndex;
-        %tmp.12 = getv ? :SOUND_THRESHOLD;
-        %tmp.13 = invoke %tmp.9 %tmp.10(%tmp.12);
-        lputv %pickerDefault.2 %tmp.13;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_94_26_start:
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 95 8 ]
-        %tmp.15 = getv ? :Picker;
-        %tmp.16 = getv function %tmp.15 :initialize;
-        %tmp.17 = newd 3;
-        %tmp.19 = const :title;
-        %tmp.21 = getv ? :soundTitle;
-        %tmp.22 = dup %tmp.17;
-        %tmp.23 = aputv %tmp.22 %tmp.19 %tmp.21;
-        %tmp.25 = const :pattern;
-        %tmp.26 = newa 1;
-        %tmp.28 = lgetv %factory.1;
-        %tmp.29 = dup %tmp.26;
-        %tmp.30 = aputv %tmp.29 0 %tmp.28;
-        %tmp.31 = dup %tmp.23;
-        %tmp.32 = aputv %tmp.31 %tmp.25 %tmp.30;
-        %tmp.34 = const :defaults;
-        %tmp.35 = newa 1;
-        %tmp.37 = lgetv %pickerDefault.2;
-        %tmp.38 = dup %tmp.35;
-        %tmp.39 = aputv %tmp.38 0 %tmp.37;
-        %tmp.40 = dup %tmp.32;
-        %tmp.41 = aputv %tmp.40 %tmp.34 %tmp.39;
-        invoke %tmp.15 %tmp.16(%tmp.41);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_92_26_stop:
+        %tmp.2 = getv ? :soundFactory;
+        %tmp.3 = getv function %tmp.2 :getIndex;
+        %tmp.5 = getv ? :SOUND_THRESHOLD;
+        %tmp.6 = invoke %tmp.2 %tmp.3(%tmp.5);
+        putv self :soundDefault %tmp.6;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 96 8 ]
+        %tmp.8 = getv ? :Picker;
+        %tmp.9 = getv function %tmp.8 :initialize;
+        %tmp.10 = newd 3;
+        %tmp.12 = const :title;
+        %tmp.14 = getv ? :soundTitle;
+        %tmp.15 = dup %tmp.10;
+        %tmp.16 = aputv %tmp.15 %tmp.12 %tmp.14;
+        %tmp.18 = const :pattern;
+        %tmp.19 = newa 1;
+        %tmp.21 = getv ? :soundFactory;
+        %tmp.22 = dup %tmp.19;
+        %tmp.23 = aputv %tmp.22 0 %tmp.21;
+        %tmp.24 = dup %tmp.16;
+        %tmp.25 = aputv %tmp.24 %tmp.18 %tmp.23;
+        %tmp.27 = const :defaults;
+        %tmp.28 = newa 1;
+        %tmp.30 = getv ? :soundDefault;
+        %tmp.31 = dup %tmp.28;
+        %tmp.32 = aputv %tmp.31 0 %tmp.30;
+        %tmp.33 = dup %tmp.25;
+        %tmp.34 = aputv %tmp.33 %tmp.27 %tmp.32;
+        invoke %tmp.8 %tmp.9(%tmp.34);
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_94_26_stop:
     }
 }
-[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 99; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 100; ]
 class TempMinPicker extends WatchUi.Picker{
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 99; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 100; ]
     <init> {
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 100 10 ]
-        %tmp.44 = getm $.Toybox.WatchUi;
-        %tmp.45 = getv function ? %tmp.44 :Text;
-        %tmp.46 = newd 4;
-        %tmp.48 = const :text;
-        %tmp.49 = "Temp Min";
-        %tmp.50 = dup %tmp.46;
-        %tmp.51 = aputv %tmp.50 %tmp.48 %tmp.49;
-        %tmp.53 = const :font;
-        %tmp.54 = getm $.Toybox.Graphics;
-        %tmp.55 = getv %tmp.54 :FONT_SMALL;
-        %tmp.56 = dup %tmp.51;
-        %tmp.57 = aputv %tmp.56 %tmp.53 %tmp.55;
-        %tmp.59 = const :locX;
-        %tmp.60 = getm $.Toybox.WatchUi;
-        %tmp.61 = getv %tmp.60 :LAYOUT_HALIGN_CENTER;
-        %tmp.62 = dup %tmp.57;
-        %tmp.63 = aputv %tmp.62 %tmp.59 %tmp.61;
-        %tmp.65 = const :locY;
-        %tmp.66 = getm $.Toybox.WatchUi;
-        %tmp.67 = getv %tmp.66 :LAYOUT_VALIGN_CENTER;
-        %tmp.68 = dup %tmp.63;
-        %tmp.69 = aputv %tmp.68 %tmp.65 %tmp.67;
-        %tmp.42 = newc %tmp.45 (%tmp.69);
-        putv self :tempMinTitle %tmp.42;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 101 10 ]
+        %tmp.37 = getm $.Toybox.WatchUi;
+        %tmp.38 = getv function ? %tmp.37 :Text;
+        %tmp.39 = newd 4;
+        %tmp.41 = const :text;
+        %tmp.42 = "Temp Min";
+        %tmp.43 = dup %tmp.39;
+        %tmp.44 = aputv %tmp.43 %tmp.41 %tmp.42;
+        %tmp.46 = const :font;
+        %tmp.47 = getm $.Toybox.Graphics;
+        %tmp.48 = getv %tmp.47 :FONT_SMALL;
+        %tmp.49 = dup %tmp.44;
+        %tmp.50 = aputv %tmp.49 %tmp.46 %tmp.48;
+        %tmp.52 = const :locX;
+        %tmp.53 = getm $.Toybox.WatchUi;
+        %tmp.54 = getv %tmp.53 :LAYOUT_HALIGN_CENTER;
+        %tmp.55 = dup %tmp.50;
+        %tmp.56 = aputv %tmp.55 %tmp.52 %tmp.54;
+        %tmp.58 = const :locY;
+        %tmp.59 = getm $.Toybox.WatchUi;
+        %tmp.60 = getv %tmp.59 :LAYOUT_VALIGN_CENTER;
+        %tmp.61 = dup %tmp.56;
+        %tmp.62 = aputv %tmp.61 %tmp.58 %tmp.60;
+        %tmp.35 = newc %tmp.38 (%tmp.62);
+        putv self :tempMinTitle %tmp.35;
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 99; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 100; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 100; @position = 10; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 101; @position = 10; ]
     const tempMinTitle;
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 102; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 102; @position = 8; ]
+    var tempMinFactory;
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 103; @position = 8; ]
+    var tempMinDefault;
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 105; ]
     function initialize() as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_102_25_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 103 8 ]
-        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_102_25_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_102_25_stop" ]
-        %factory.1 = local;
-        %tmp.4 = getv ? :NumberFactory;
-        %tmp.5 = -20;
-        %tmp.7 = getv ? :TEMP_MAX_THRESHOLD;
-        %tmp.8 = 1;
-        %tmp.9 = "$1$ °C";
-        %tmp.1 = newc %tmp.4 (%tmp.5, %tmp.7, %tmp.8, %tmp.9);
-        lputv %factory.1 %tmp.1;
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 104 8 ]
-        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_102_25_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_102_25_stop" ]
-        %pickerDefault.2 = local;
-        %tmp.10 = lgetv %factory.1;
-        %tmp.11 = getv function %tmp.10 :getIndex;
-        %tmp.13 = getv ? :TEMP_MIN_THRESHOLD;
-        %tmp.14 = invoke %tmp.10 %tmp.11(%tmp.13);
-        lputv %pickerDefault.2 %tmp.14;
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 105 8 ]
-        %tmp.16 = getv ? :Picker;
-        %tmp.17 = getv function %tmp.16 :initialize;
-        %tmp.18 = newd 3;
-        %tmp.20 = const :title;
-        %tmp.22 = getv ? :tempMinTitle;
-        %tmp.23 = dup %tmp.18;
-        %tmp.24 = aputv %tmp.23 %tmp.20 %tmp.22;
-        %tmp.26 = const :pattern;
-        %tmp.27 = newa 1;
-        %tmp.29 = lgetv %factory.1;
-        %tmp.30 = dup %tmp.27;
-        %tmp.31 = aputv %tmp.30 0 %tmp.29;
-        %tmp.32 = dup %tmp.24;
-        %tmp.33 = aputv %tmp.32 %tmp.26 %tmp.31;
-        %tmp.35 = const :defaults;
-        %tmp.36 = newa 1;
-        %tmp.38 = lgetv %pickerDefault.2;
-        %tmp.39 = dup %tmp.36;
-        %tmp.40 = aputv %tmp.39 0 %tmp.38;
-        %tmp.41 = dup %tmp.33;
-        %tmp.42 = aputv %tmp.41 %tmp.35 %tmp.40;
-        invoke %tmp.16 %tmp.17(%tmp.42);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_102_25_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_105_25_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 106 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_106_8_if_stmt:
+        %tmp.2 = getv ? :TEMP_MAX_THRESHOLD;
+        %tmp.3 = null;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_106_8_if_false;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_106_8_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_106_38_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 107 12 ]
+        %tmp.8 = getv ? :NumberFactory;
+        %tmp.10 = getv ? :TEMP_THRESH_RANGE_LOW;
+        %tmp.12 = getv ? :TEMP_THRESH_RANGE_HI;
+        %tmp.14 = getv ? :TEMP_THRESH_INCREMENT;
+        %tmp.15 = "$1$ °C";
+        %tmp.5 = newc %tmp.8 (%tmp.10, %tmp.12, %tmp.14, %tmp.15);
+        putv self :tempMinFactory %tmp.5;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_106_38_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_106_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_106_8_if_false:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_114_12_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 115 12 ]
+        %tmp.19 = getv ? :NumberFactory;
+        %tmp.21 = getv ? :TEMP_THRESH_RANGE_LOW;
+        %tmp.23 = getv ? :TEMP_MAX_THRESHOLD;
+        %tmp.24 = as %tmp.23 { (!Null) };
+        %tmp.26 = getv ? :TEMP_THRESH_INCREMENT;
+        %tmp.27 = sub %tmp.24 %tmp.26;
+        %tmp.29 = getv ? :TEMP_THRESH_INCREMENT;
+        %tmp.30 = "$1$ °C";
+        %tmp.16 = newc %tmp.19 (%tmp.21, %tmp.27, %tmp.29, %tmp.30);
+        putv self :tempMinFactory %tmp.16;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_114_12_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_106_8_if_end:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 122 8 ]
+        %tmp.32 = getv ? :tempMinFactory;
+        %tmp.33 = getv function %tmp.32 :getIndex;
+        %tmp.35 = getv ? :TEMP_MIN_THRESHOLD;
+        %tmp.36 = invoke %tmp.32 %tmp.33(%tmp.35);
+        putv self :tempMinDefault %tmp.36;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 123 8 ]
+        %tmp.38 = getv ? :Picker;
+        %tmp.39 = getv function %tmp.38 :initialize;
+        %tmp.40 = newd 3;
+        %tmp.42 = const :title;
+        %tmp.44 = getv ? :tempMinTitle;
+        %tmp.45 = dup %tmp.40;
+        %tmp.46 = aputv %tmp.45 %tmp.42 %tmp.44;
+        %tmp.48 = const :pattern;
+        %tmp.49 = newa 1;
+        %tmp.51 = getv ? :tempMinFactory;
+        %tmp.52 = dup %tmp.49;
+        %tmp.53 = aputv %tmp.52 0 %tmp.51;
+        %tmp.54 = dup %tmp.46;
+        %tmp.55 = aputv %tmp.54 %tmp.48 %tmp.53;
+        %tmp.57 = const :defaults;
+        %tmp.58 = newa 1;
+        %tmp.60 = getv ? :tempMinDefault;
+        %tmp.61 = dup %tmp.58;
+        %tmp.62 = aputv %tmp.61 0 %tmp.60;
+        %tmp.63 = dup %tmp.55;
+        %tmp.64 = aputv %tmp.63 %tmp.57 %tmp.62;
+        invoke %tmp.38 %tmp.39(%tmp.64);
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_105_25_stop:
     }
 }
-[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 109; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 127; ]
 class TempMaxPicker extends WatchUi.Picker{
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 109; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 127; ]
     <init> {
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 110 10 ]
-        %tmp.45 = getm $.Toybox.WatchUi;
-        %tmp.46 = getv function ? %tmp.45 :Text;
-        %tmp.47 = newd 4;
-        %tmp.49 = const :text;
-        %tmp.50 = "Temp Max";
-        %tmp.51 = dup %tmp.47;
-        %tmp.52 = aputv %tmp.51 %tmp.49 %tmp.50;
-        %tmp.54 = const :font;
-        %tmp.55 = getm $.Toybox.Graphics;
-        %tmp.56 = getv %tmp.55 :FONT_SMALL;
-        %tmp.57 = dup %tmp.52;
-        %tmp.58 = aputv %tmp.57 %tmp.54 %tmp.56;
-        %tmp.60 = const :locX;
-        %tmp.61 = getm $.Toybox.WatchUi;
-        %tmp.62 = getv %tmp.61 :LAYOUT_HALIGN_CENTER;
-        %tmp.63 = dup %tmp.58;
-        %tmp.64 = aputv %tmp.63 %tmp.60 %tmp.62;
-        %tmp.66 = const :locY;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 128 10 ]
         %tmp.67 = getm $.Toybox.WatchUi;
-        %tmp.68 = getv %tmp.67 :LAYOUT_VALIGN_CENTER;
-        %tmp.69 = dup %tmp.64;
-        %tmp.70 = aputv %tmp.69 %tmp.66 %tmp.68;
-        %tmp.43 = newc %tmp.46 (%tmp.70);
-        putv self :tempMaxTitle %tmp.43;
+        %tmp.68 = getv function ? %tmp.67 :Text;
+        %tmp.69 = newd 4;
+        %tmp.71 = const :text;
+        %tmp.72 = "Temp Max";
+        %tmp.73 = dup %tmp.69;
+        %tmp.74 = aputv %tmp.73 %tmp.71 %tmp.72;
+        %tmp.76 = const :font;
+        %tmp.77 = getm $.Toybox.Graphics;
+        %tmp.78 = getv %tmp.77 :FONT_SMALL;
+        %tmp.79 = dup %tmp.74;
+        %tmp.80 = aputv %tmp.79 %tmp.76 %tmp.78;
+        %tmp.82 = const :locX;
+        %tmp.83 = getm $.Toybox.WatchUi;
+        %tmp.84 = getv %tmp.83 :LAYOUT_HALIGN_CENTER;
+        %tmp.85 = dup %tmp.80;
+        %tmp.86 = aputv %tmp.85 %tmp.82 %tmp.84;
+        %tmp.88 = const :locY;
+        %tmp.89 = getm $.Toybox.WatchUi;
+        %tmp.90 = getv %tmp.89 :LAYOUT_VALIGN_CENTER;
+        %tmp.91 = dup %tmp.86;
+        %tmp.92 = aputv %tmp.91 %tmp.88 %tmp.90;
+        %tmp.65 = newc %tmp.68 (%tmp.92);
+        putv self :tempMaxTitle %tmp.65;
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 109; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 127; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 110; @position = 10; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 128; @position = 10; ]
     const tempMaxTitle;
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 112; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 129; @position = 8; ]
+    var tempMaxFactory;
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 130; @position = 8; ]
+    var tempMaxDefault;
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 132; ]
     function initialize() as Void {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_112_25_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 113 8 ]
-        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_112_25_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_112_25_stop" ]
-        %factory.1 = local;
-        %tmp.4 = getv ? :NumberFactory;
-        %tmp.6 = getv ? :TEMP_MIN_THRESHOLD;
-        %tmp.7 = 40;
-        %tmp.8 = 1;
-        %tmp.9 = "$1$ °C";
-        %tmp.1 = newc %tmp.4 (%tmp.6, %tmp.7, %tmp.8, %tmp.9);
-        lputv %factory.1 %tmp.1;
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 114 8 ]
-        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_112_25_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_112_25_stop" ]
-        %pickerDefault.2 = local;
-        %tmp.10 = lgetv %factory.1;
-        %tmp.11 = getv function %tmp.10 :getIndex;
-        %tmp.13 = getv ? :TEMP_MAX_THRESHOLD;
-        %tmp.14 = invoke %tmp.10 %tmp.11(%tmp.13);
-        lputv %pickerDefault.2 %tmp.14;
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 115 8 ]
-        %tmp.16 = getv ? :Picker;
-        %tmp.17 = getv function %tmp.16 :initialize;
-        %tmp.18 = newd 3;
-        %tmp.20 = const :title;
-        %tmp.22 = getv ? :tempMaxTitle;
-        %tmp.23 = dup %tmp.18;
-        %tmp.24 = aputv %tmp.23 %tmp.20 %tmp.22;
-        %tmp.26 = const :pattern;
-        %tmp.27 = newa 1;
-        %tmp.29 = lgetv %factory.1;
-        %tmp.30 = dup %tmp.27;
-        %tmp.31 = aputv %tmp.30 0 %tmp.29;
-        %tmp.32 = dup %tmp.24;
-        %tmp.33 = aputv %tmp.32 %tmp.26 %tmp.31;
-        %tmp.35 = const :defaults;
-        %tmp.36 = newa 1;
-        %tmp.38 = lgetv %pickerDefault.2;
-        %tmp.39 = dup %tmp.36;
-        %tmp.40 = aputv %tmp.39 0 %tmp.38;
-        %tmp.41 = dup %tmp.33;
-        %tmp.42 = aputv %tmp.41 %tmp.35 %tmp.40;
-        invoke %tmp.16 %tmp.17(%tmp.42);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_112_25_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_132_25_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 133 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_133_8_if_stmt:
+        %tmp.2 = getv ? :TEMP_MIN_THRESHOLD;
+        %tmp.3 = null;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_133_8_if_false;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_133_8_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_133_38_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 134 12 ]
+        %tmp.8 = getv ? :NumberFactory;
+        %tmp.10 = getv ? :TEMP_THRESH_RANGE_LOW;
+        %tmp.12 = getv ? :TEMP_THRESH_RANGE_HI;
+        %tmp.14 = getv ? :TEMP_THRESH_INCREMENT;
+        %tmp.15 = "$1$ °C";
+        %tmp.5 = newc %tmp.8 (%tmp.10, %tmp.12, %tmp.14, %tmp.15);
+        putv self :tempMaxFactory %tmp.5;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_133_38_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_133_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_133_8_if_false:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_141_12_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 142 12 ]
+        %tmp.19 = getv ? :NumberFactory;
+        %tmp.21 = getv ? :TEMP_MIN_THRESHOLD;
+        %tmp.22 = as %tmp.21 { (!Null) };
+        %tmp.24 = getv ? :TEMP_THRESH_INCREMENT;
+        %tmp.25 = add %tmp.22 %tmp.24;
+        %tmp.27 = getv ? :TEMP_THRESH_RANGE_HI;
+        %tmp.29 = getv ? :TEMP_THRESH_INCREMENT;
+        %tmp.30 = "$1$ °C";
+        %tmp.16 = newc %tmp.19 (%tmp.25, %tmp.27, %tmp.29, %tmp.30);
+        putv self :tempMaxFactory %tmp.16;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_141_12_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_133_8_if_end:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 149 8 ]
+        %tmp.32 = getv ? :tempMaxFactory;
+        %tmp.33 = getv function %tmp.32 :getIndex;
+        %tmp.35 = getv ? :TEMP_MAX_THRESHOLD;
+        %tmp.36 = invoke %tmp.32 %tmp.33(%tmp.35);
+        putv self :tempMaxDefault %tmp.36;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc" 150 8 ]
+        %tmp.38 = getv ? :Picker;
+        %tmp.39 = getv function %tmp.38 :initialize;
+        %tmp.40 = newd 3;
+        %tmp.42 = const :title;
+        %tmp.44 = getv ? :tempMaxTitle;
+        %tmp.45 = dup %tmp.40;
+        %tmp.46 = aputv %tmp.45 %tmp.42 %tmp.44;
+        %tmp.48 = const :pattern;
+        %tmp.49 = newa 1;
+        %tmp.51 = getv ? :tempMaxFactory;
+        %tmp.52 = dup %tmp.49;
+        %tmp.53 = aputv %tmp.52 0 %tmp.51;
+        %tmp.54 = dup %tmp.46;
+        %tmp.55 = aputv %tmp.54 %tmp.48 %tmp.53;
+        %tmp.57 = const :defaults;
+        %tmp.58 = newa 1;
+        %tmp.60 = getv ? :tempMaxDefault;
+        %tmp.61 = dup %tmp.58;
+        %tmp.62 = aputv %tmp.61 0 %tmp.60;
+        %tmp.63 = dup %tmp.55;
+        %tmp.64 = aputv %tmp.63 %tmp.57 %tmp.62;
+        invoke %tmp.38 %tmp.39(%tmp.64);
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Settings_mc_132_25_stop:
     }
 }
 [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Settings.mc"; @line = 1; ]

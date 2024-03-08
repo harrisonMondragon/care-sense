@@ -88,30 +88,65 @@ class TempMaxPickerDelegate extends WatchUi.PickerDelegate {
 
 class SoundPicker extends WatchUi.Picker {
     const soundTitle = new WatchUi.Text({:text=>"Sound Max", :font=>Graphics.FONT_SMALL, :locX =>WatchUi.LAYOUT_HALIGN_CENTER, :locY=>WatchUi.LAYOUT_VALIGN_CENTER});
+    const soundFactory = new NumberFactory(SOUND_THRESH_RANGE_LOW, SOUND_THRESH_RANGE_HI, SOUND_THRESH_INCREMENT, "$1$ dB");
+    var soundDefault;
 
     function initialize() {
-        var factory = new NumberFactory(5, 200, 5, "$1$ dB");
-        var pickerDefault = factory.getIndex(SOUND_THRESHOLD);
-        Picker.initialize({:title=>soundTitle, :pattern=>[factory], :defaults=>[pickerDefault]});
+        soundDefault = soundFactory.getIndex(SOUND_THRESHOLD);
+        Picker.initialize({:title=>soundTitle, :pattern=>[soundFactory], :defaults=>[soundDefault]});
     }
 }
 
 class TempMinPicker extends WatchUi.Picker {
     const tempMinTitle = new WatchUi.Text({:text=>"Temp Min", :font=>Graphics.FONT_SMALL, :locX =>WatchUi.LAYOUT_HALIGN_CENTER, :locY=>WatchUi.LAYOUT_VALIGN_CENTER});
+    var tempMinFactory;
+    var tempMinDefault;
 
     function initialize(){
-        var factory = new NumberFactory(-20, TEMP_MAX_THRESHOLD, 1, "$1$ °C");
-        var pickerDefault = factory.getIndex(TEMP_MIN_THRESHOLD);
-        Picker.initialize({:title=>tempMinTitle, :pattern=>[factory], :defaults=>[pickerDefault]});
+        if(TEMP_MAX_THRESHOLD == null){
+            tempMinFactory = new NumberFactory(
+                TEMP_THRESH_RANGE_LOW,
+                TEMP_THRESH_RANGE_HI,
+                TEMP_THRESH_INCREMENT,
+                "$1$ °C"
+            );
+        }
+        else{
+            tempMinFactory = new NumberFactory(
+                TEMP_THRESH_RANGE_LOW,
+                TEMP_MAX_THRESHOLD - TEMP_THRESH_INCREMENT,
+                TEMP_THRESH_INCREMENT,
+                "$1$ °C"
+            );
+        }
+        tempMinDefault = tempMinFactory.getIndex(TEMP_MIN_THRESHOLD);
+        Picker.initialize({:title=>tempMinTitle, :pattern=>[tempMinFactory], :defaults=>[tempMinDefault]});
     }
 }
 
 class TempMaxPicker extends WatchUi.Picker {
     const tempMaxTitle = new WatchUi.Text({:text=>"Temp Max", :font=>Graphics.FONT_SMALL, :locX =>WatchUi.LAYOUT_HALIGN_CENTER, :locY=>WatchUi.LAYOUT_VALIGN_CENTER});
+    var tempMaxFactory;
+    var tempMaxDefault;
 
     function initialize(){
-        var factory = new NumberFactory(TEMP_MIN_THRESHOLD, 40, 1, "$1$ °C");
-        var pickerDefault = factory.getIndex(TEMP_MAX_THRESHOLD);
-        Picker.initialize({:title=>tempMaxTitle, :pattern=>[factory], :defaults=>[pickerDefault]});
+        if(TEMP_MIN_THRESHOLD == null){
+            tempMaxFactory = new NumberFactory(
+                TEMP_THRESH_RANGE_LOW,
+                TEMP_THRESH_RANGE_HI,
+                TEMP_THRESH_INCREMENT,
+                "$1$ °C"
+            );
+        }
+        else{
+            tempMaxFactory = new NumberFactory(
+                TEMP_MIN_THRESHOLD + TEMP_THRESH_INCREMENT,
+                TEMP_THRESH_RANGE_HI,
+                TEMP_THRESH_INCREMENT,
+                "$1$ °C"
+            );
+        }
+        tempMaxDefault = tempMaxFactory.getIndex(TEMP_MAX_THRESHOLD);
+        Picker.initialize({:title=>tempMaxTitle, :pattern=>[tempMaxFactory], :defaults=>[tempMaxDefault]});
     }
 }
