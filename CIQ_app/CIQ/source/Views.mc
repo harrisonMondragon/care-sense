@@ -29,6 +29,11 @@ class HomeDisplay extends WatchUi.View {
                 WatchUi.switchToView(new SoundNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
             }
         }
+        if (TEMP_MIN_THRESHOLD != null) {
+            if (TEMP_VAL < TEMP_MIN_THRESHOLD) {
+                WatchUi.switchToView(new TempMinNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
+            }
+        }
         if (TEMP_MAX_THRESHOLD != null) {
             if (TEMP_VAL > TEMP_MAX_THRESHOLD) {
                 WatchUi.switchToView(new TempMaxNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
