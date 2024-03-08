@@ -29,8 +29,8 @@ class SensoryBehaviorDelegate extends BehaviorDelegate {
             var menu = new WatchUi.Menu();
             menu.setTitle("Settings");
             menu.addItem("Sound", :sound);
-            menu.addItem("Temp Max", :tempMax);
             menu.addItem("Temp Min", :tempMin);
+            menu.addItem("Temp Max", :tempMax);
             WatchUi.pushView(menu, new SettingsMenuInputDelegate(), WatchUi.SLIDE_UP);
         }
         return true;
@@ -59,32 +59,16 @@ class ThresholdChangeConfirmationDelegate extends BehaviorDelegate {
         WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to Picker
         WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to Menu
 
-        var title;
-        var factory;
-        var pickerDefault;
-        var picker;
-
         switch(back_picker) {
             case SOUND_PICKER:
-                title = new WatchUi.Text({:text=>"Sound Max", :font=>Graphics.FONT_SMALL, :locX =>WatchUi.LAYOUT_HALIGN_CENTER, :locY=>WatchUi.LAYOUT_VALIGN_CENTER});
-                factory = new NumberFactory(5, 200, 5, "$1$ dB");
-                pickerDefault = factory.getIndex(SOUND_THRESHOLD);
-                picker = new WatchUi.Picker({:title=>title, :pattern=>[factory], :defaults=>[pickerDefault]});
-                WatchUi.pushView(picker, new SoundPickerDelegate(), WatchUi.SLIDE_RIGHT);
-                return true;
-            case TEMP_MAX_PICKER:
-                title = new WatchUi.Text({:text=>"Temp Max", :font=>Graphics.FONT_SMALL, :locX =>WatchUi.LAYOUT_HALIGN_CENTER, :locY=>WatchUi.LAYOUT_VALIGN_CENTER});
-                factory = new NumberFactory(TEMP_MIN_THRESHOLD, 40, 1, "$1$ °C");
-                pickerDefault = factory.getIndex(TEMP_MAX_THRESHOLD);
-                picker = new WatchUi.Picker({:title=>title, :pattern=>[factory], :defaults=>[pickerDefault]});
-                WatchUi.pushView(picker, new TempMaxPickerDelegate(), WatchUi.SLIDE_RIGHT);
+                WatchUi.pushView(new SoundPicker(), new SoundPickerDelegate(), WatchUi.SLIDE_RIGHT);
                 return true;
             case TEMP_MIN_PICKER:
-                title = new WatchUi.Text({:text=>"Temp Min", :font=>Graphics.FONT_SMALL, :locX =>WatchUi.LAYOUT_HALIGN_CENTER, :locY=>WatchUi.LAYOUT_VALIGN_CENTER});
-                factory = new NumberFactory(-20, TEMP_MAX_THRESHOLD, 1, "$1$ °C");
-                pickerDefault = factory.getIndex(TEMP_MIN_THRESHOLD);
-                picker = new WatchUi.Picker({:title=>title, :pattern=>[factory], :defaults=>[pickerDefault]});
-                WatchUi.pushView(picker, new TempMinPickerDelegate(), WatchUi.SLIDE_LEFT);
+                WatchUi.pushView(new TempMinPicker(), new TempMinPickerDelegate(), WatchUi.SLIDE_RIGHT);
+                return true;
+            case TEMP_MAX_PICKER:
+                WatchUi.pushView(new TempMaxPicker(), new TempMaxPickerDelegate(), WatchUi.SLIDE_RIGHT);
+                return true;
             default:
                 return true;
 

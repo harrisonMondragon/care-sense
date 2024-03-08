@@ -522,7 +522,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_132_15_start:
         lputv %tempMaxThreshString.3 %tmp.65;
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_132_15_stop:
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_130_8_if_end:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 138 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 136 8 ]
         %tmp.66 = lgetv %dc;
         %tmp.67 = getv function %tmp.66 :drawText;
         %tmp.69 = getv ? :x;
@@ -549,7 +549,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_130_8_if_end:
         %tmp.92 = getv %tmp.91 :TEXT_JUSTIFY_VCENTER;
         %tmp.93 = bitor %tmp.90 %tmp.92;
         invoke %tmp.66 %tmp.67(%tmp.71, %tmp.77, %tmp.79, %tmp.88, %tmp.93);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 139 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 137 8 ]
         %tmp.94 = lgetv %dc;
         %tmp.95 = getv function %tmp.94 :drawText;
         %tmp.97 = getv ? :x;
@@ -577,7 +577,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_130_8_if_end:
         %tmp.122 = getv %tmp.121 :TEXT_JUSTIFY_VCENTER;
         %tmp.123 = bitor %tmp.120 %tmp.122;
         invoke %tmp.94 %tmp.95(%tmp.99, %tmp.103, %tmp.105, %tmp.118, %tmp.123);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 141 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 139 8 ]
         %tmp.124 = lgetv %dc;
         %tmp.125 = getv function %tmp.124 :setColor;
         %tmp.126 = getm $.Toybox.Graphics;
@@ -585,7 +585,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_130_8_if_end:
         %tmp.128 = getm $.Toybox.Graphics;
         %tmp.129 = getv %tmp.128 :COLOR_TRANSPARENT;
         invoke %tmp.124 %tmp.125(%tmp.127, %tmp.129);
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 142 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 140 8 ]
         %tmp.130 = lgetv %dc;
         %tmp.131 = getv function %tmp.130 :drawText;
         %tmp.133 = getv ? :x;
@@ -607,7 +607,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_130_8_if_end:
         invoke %tmp.130 %tmp.131(%tmp.135, %tmp.141, %tmp.143, %tmp.144, %tmp.149);
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_105_40_stop:
     }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 145; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 143; ]
     function onHide() as Void {
     }
 }
