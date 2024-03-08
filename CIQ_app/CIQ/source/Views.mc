@@ -16,17 +16,28 @@ class HomeDisplay extends WatchUi.View {
         y = dc.getHeight();
     }
 
-    function onShow() as Void {}
+    function onShow() as Void {
+        SETTINGS_AVAILABLE = true;
+    }
 
     // Update the view every time a new BLE value comes in (see CIQBLE.mc:onCharacteristicChanged)
     function onUpdate(dc as Dc) as Void {
 
-        if (SOUND_LEVEL > SOUND_THRESHOLD) {
-            // verify the threshold
-            WatchUi.switchToView(new SoundNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
+        // Check thresholds against sensor readings
+        if (SOUND_THRESHOLD != null) {
+            if (SOUND_LEVEL > SOUND_THRESHOLD) {
+                WatchUi.switchToView(new SoundNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
+            }
         }
-        if (TEMP_VAL > TEMP_THRESHOLD) {
-            WatchUi.switchToView(new TempNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
+        if (TEMP_MIN_THRESHOLD != null) {
+            if (TEMP_VAL < TEMP_MIN_THRESHOLD) {
+                WatchUi.switchToView(new TempMinNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
+            }
+        }
+        if (TEMP_MAX_THRESHOLD != null) {
+            if (TEMP_VAL > TEMP_MAX_THRESHOLD) {
+                WatchUi.switchToView(new TempMaxNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
+            }
         }
 
         // set background color
@@ -59,6 +70,7 @@ class SensorDisconnected extends WatchUi.View {
     }
 
     function onShow() as Void {
+        SETTINGS_AVAILABLE = false;
         // Vibrate the watch
         Attention.vibrate([new Attention.VibeProfile(100, VIBE_DURATION)]);
     }
@@ -103,8 +115,31 @@ class ThresholdChangeConfirmation extends WatchUi.View {
         // set foreground color
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
-        dc.drawText(x / 2, y / 2 - 125, Graphics.FONT_TINY, Lang.format(" Current sound\nthreshold: $1$ dB", [SOUND_THRESHOLD]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-        dc.drawText(x / 2, y / 2, Graphics.FONT_TINY, Lang.format("Current temp\nthreshold: $1$ °C", [TEMP_THRESHOLD]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        // Confirmation messages
+        var soundThreshString;
+        var tempMinThreshString;
+        var tempMaxThreshString;
+
+        if (SOUND_THRESHOLD == null){
+            soundThreshString = "OFF";
+        } else {
+            soundThreshString = Lang.format("$1$ dB", [SOUND_THRESHOLD]);
+        }
+
+        if (TEMP_MIN_THRESHOLD == null){
+            tempMinThreshString = "OFF";
+        } else {
+            tempMinThreshString = Lang.format("$1$ °C", [TEMP_MIN_THRESHOLD]);
+        }
+
+        if (TEMP_MAX_THRESHOLD == null){
+            tempMaxThreshString = "OFF";
+        } else {
+            tempMaxThreshString = Lang.format("$1$ °C", [TEMP_MAX_THRESHOLD]);
+        }
+
+        dc.drawText(x / 2, y / 2 - 125, Graphics.FONT_TINY, Lang.format("Current sound\nthreshold: $1$", [soundThreshString]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x / 2, y / 2, Graphics.FONT_TINY, Lang.format("Current temp thresholds:\nMin: $1$, Max: $2$", [tempMinThreshString, tempMaxThreshString]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
         dc.setColor(Graphics.COLOR_PURPLE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(x / 2, y / 2 + 125, Graphics.FONT_SMALL, "Swipe Down to\nGo Back", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);

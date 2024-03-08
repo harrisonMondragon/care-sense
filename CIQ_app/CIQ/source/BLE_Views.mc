@@ -21,6 +21,7 @@ class BLEScanner extends WatchUi.View {
     }
 
     function onShow() as Void {
+        SETTINGS_AVAILABLE = false;
         // Start scanning everytime the page is shown and begin scan delay timer
         BLE.setScanState(BLE.SCAN_STATE_SCANNING);
         timer.start(method(:scanEnd), SCAN_DELAY, false);
@@ -70,6 +71,7 @@ class SensorNotFound extends WatchUi.View {
     }
 
     function onShow() as Void {
+        SETTINGS_AVAILABLE = false;
         BLE.setScanState(BLE.SCAN_STATE_OFF); // stop scanning to preserve resources
     }
 
@@ -103,6 +105,7 @@ class Connecting extends WatchUi.View {
     }
 
     function onShow() as Void {
+        SETTINGS_AVAILABLE = false;
         BLE.setScanState(BLE.SCAN_STATE_OFF); // stop scanning to preserve resources
     }
 
