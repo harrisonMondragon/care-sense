@@ -29,15 +29,11 @@ class EnvNotification extends WatchUi.View {
 
     function onShow() as Void {
         SETTINGS_AVAILABLE = false;
-        // Vibrate the watch
-        Attention.vibrate([new Attention.VibeProfile(100, VIBE_DURATION)]);
-        // Start the timer timeout method
-        // timer.start(method(:notificationDone), NOTIFICATION_DELAY, false);
     }
 
     // Update the view every time a new BLE value comes in (see CIQBLE.mc:onCharacteristicChanged)
     function onUpdate(dc as Dc) as Void {
-        // check if new notification has been triggered
+        // move vibratio and timer start here (controlled with boolean variable) to manage the 2 types of notification triggers.
         if (SOUND_THRESHOLD != null && SOUND_LEVEL > SOUND_THRESHOLD && sound_notif == false) {
             Attention.vibrate([new Attention.VibeProfile(100, VIBE_DURATION)]);
             timer.stop(); // restart the timer
