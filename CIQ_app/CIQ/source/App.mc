@@ -1,6 +1,7 @@
 import Toybox.Application;
 import Toybox.Lang;
 import Toybox.WatchUi;
+import Toybox.Timer;
 using Toybox.BluetoothLowEnergy as BLE;
 
 // ------------------------------ GLOBALS ------------------------------
@@ -39,6 +40,8 @@ var VIBE_DURATION = 2000; // vibration duration in ms
 // Delegates
 var BLE_DELEGATE;
 
+// Timers
+var COOLDOWN_TIMER;
 
 // ------------------------------ CLASSES ------------------------------
 class CIQApp extends Application.AppBase {
@@ -55,6 +58,8 @@ class CIQApp extends Application.AppBase {
         // set up/check BLE connection here
         BLE_DELEGATE = new Delegate();
         BLE.setDelegate(BLE_DELEGATE);
+        // set up notification cool down
+        COOLDOWN_TIMER = new CooldownTimer();
     }
 
     // onStop() is called when your application is exiting

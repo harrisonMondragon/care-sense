@@ -24,19 +24,15 @@ class HomeDisplay extends WatchUi.View {
     function onUpdate(dc as Dc) as Void {
 
         // Check thresholds against sensor readings
-        if (SOUND_THRESHOLD != null) {
-            if (SOUND_LEVEL > SOUND_THRESHOLD) {
-                WatchUi.switchToView(new SoundNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
+        if (!COOLDOWN_TIMER.is_cooling()) {
+            if (SOUND_THRESHOLD != null && SOUND_LEVEL > SOUND_THRESHOLD) {
+                WatchUi.switchToView(new EnvNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
             }
-        }
-        if (TEMP_MIN_THRESHOLD != null) {
-            if (TEMP_VAL < TEMP_MIN_THRESHOLD) {
-                WatchUi.switchToView(new TempMinNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
+            if (TEMP_MIN_THRESHOLD != null && TEMP_VAL < TEMP_MIN_THRESHOLD) {
+                    WatchUi.switchToView(new EnvNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
             }
-        }
-        if (TEMP_MAX_THRESHOLD != null) {
-            if (TEMP_VAL > TEMP_MAX_THRESHOLD) {
-                WatchUi.switchToView(new TempMaxNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
+            if (TEMP_MAX_THRESHOLD != null && TEMP_VAL > TEMP_MAX_THRESHOLD) {
+                    WatchUi.switchToView(new EnvNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
             }
         }
 
