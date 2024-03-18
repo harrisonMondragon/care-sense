@@ -39,7 +39,6 @@ var VIBE_DURATION = 2000; // vibration duration in ms
 // Delegates
 var BLE_DELEGATE;
 
-
 // ------------------------------ CLASSES ------------------------------
 class CIQApp extends Application.AppBase {
 

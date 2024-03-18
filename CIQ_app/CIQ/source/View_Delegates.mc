@@ -50,7 +50,8 @@ class ThresholdChangeConfirmationDelegate extends BehaviorDelegate {
         if (swipeEvent.getDirection() == SWIPE_DOWN){
             WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to Picker
             WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to Menu
-            WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to HomeDisplay
+            WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to HomeDisplay or EnvNotification
+            WatchUi.switchToView(new HomeDisplay(), new SensoryBehaviorDelegate(null, null), WatchUi.SLIDE_IMMEDIATE);
         }
         return true;
     }
