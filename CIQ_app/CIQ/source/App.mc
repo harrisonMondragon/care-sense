@@ -8,10 +8,29 @@ using Toybox.BluetoothLowEnergy as BLE;
 var SOUND_LEVEL = 0;
 var TEMP_VAL = 0;
 var SUBSCRIPTION_COUNT = 0;
+var SETTINGS_AVAILABLE = false;
 
-// Thresholds
+// Default Thresholds
 var SOUND_THRESHOLD = 80; // max sound threshold in dB
-var TEMP_THRESHOLD = 35; // max temperature threshold in ˚C
+var TEMP_MIN_THRESHOLD = 20; // min temperature threshold in ˚C
+var TEMP_MAX_THRESHOLD = 35; // max temperature threshold in ˚C
+
+// Threshold Ranges
+var SOUND_THRESH_RANGE_LOW = 5; // Lowest available sound threshold in dB
+var SOUND_THRESH_RANGE_HI = 200; // Highest available sound threshold in dB
+var TEMP_THRESH_RANGE_LOW = -20; // Lowest available temp threshold in ˚C
+var TEMP_THRESH_RANGE_HI = 40; // Highest available temp threshold in ˚C
+
+// Threshold Picker Increments
+var SOUND_THRESH_INCREMENT = 5; // Sound threshold increment for the picker in dB
+var TEMP_THRESH_INCREMENT = 1; // Temp threshold increment for the picker in ˚C
+
+// Enum of back pickers for threshold change confirmation page
+enum BACK_PICKERS {
+    SOUND_PICKER,
+    TEMP_MIN_PICKER,
+    TEMP_MAX_PICKER,
+}
 
 // Delays
 var NOTIFICATION_DELAY = 15000; // notification delay in ms
@@ -19,6 +38,7 @@ var VIBE_DURATION = 2000; // vibration duration in ms
 
 // Delegates
 var BLE_DELEGATE;
+
 
 // ------------------------------ CLASSES ------------------------------
 class CIQApp extends Application.AppBase {

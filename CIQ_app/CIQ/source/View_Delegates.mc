@@ -25,13 +25,53 @@ class SensoryBehaviorDelegate extends BehaviorDelegate {
 
     // Start settings sequence on swipe up
     function onSwipe(swipeEvent) {
-        if (swipeEvent.getDirection() == SWIPE_UP){
+        if (swipeEvent.getDirection() == SWIPE_UP && SETTINGS_AVAILABLE == true){
             var menu = new WatchUi.Menu();
             menu.setTitle("Settings");
             menu.addItem("Sound", :sound);
-            menu.addItem("Temperature", :temp);
+            menu.addItem("Temp Min", :tempMin);
+            menu.addItem("Temp Max", :tempMax);
             WatchUi.pushView(menu, new SettingsMenuInputDelegate(), WatchUi.SLIDE_UP);
         }
         return true;
+    }
+}
+
+class ThresholdChangeConfirmationDelegate extends BehaviorDelegate {
+
+    protected var back_picker; // picker to return to on back
+
+    function initialize(_back_picker as BACK_PICKERS or Number) {
+        back_picker = _back_picker;
+        BehaviorDelegate.initialize();
+    }
+
+    function onSwipe(swipeEvent) {
+        if (swipeEvent.getDirection() == SWIPE_DOWN){
+            WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to Picker
+            WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to Menu
+            WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to HomeDisplay
+        }
+        return true;
+    }
+
+    function onBack() {
+        WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to Picker
+        WatchUi.popView(WatchUi.SLIDE_IMMEDIATE); // Pop to Menu
+
+        switch(back_picker) {
+            case SOUND_PICKER:
+                WatchUi.pushView(new SoundPicker(), new SoundPickerDelegate(), WatchUi.SLIDE_RIGHT);
+                return true;
+            case TEMP_MIN_PICKER:
+                WatchUi.pushView(new TempMinPicker(), new TempMinPickerDelegate(), WatchUi.SLIDE_RIGHT);
+                return true;
+            case TEMP_MAX_PICKER:
+                WatchUi.pushView(new TempMaxPicker(), new TempMaxPickerDelegate(), WatchUi.SLIDE_RIGHT);
+                return true;
+            default:
+                return true;
+
+        }
     }
 }

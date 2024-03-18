@@ -1,143 +1,205 @@
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc"; @line = 5; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc"; @line = 5; ]
 using Toybox.Graphics;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc"; @line = 6; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc"; @line = 6; ]
 using Toybox.WatchUi;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc"; @line = 8; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc"; @line = 8; ]
 class NumberFactory extends WatchUi.PickerFactory{
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc"; @line = 8; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc"; @line = 8; ]
     <init> {
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc"; @line = 8; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc"; @line = 8; ]
     static
     <init> {
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc"; @line = 9; @position = 15; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc"; @line = 9; @position = 15; ]
     protected
     var mStart;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc"; @line = 10; @position = 15; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc"; @line = 10; @position = 15; ]
     protected
     var mStop;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc"; @line = 11; @position = 15; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc"; @line = 11; @position = 15; ]
     protected
     var mIncrement;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc"; @line = 12; @position = 15; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc"; @line = 12; @position = 15; ]
     protected
     var mFormat;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc"; @line = 14; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc"; @line = 14; ]
     function getIndex(value) {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_14_29_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc" 15 8 ]
-        [ "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_14_29_start" "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_14_29_stop" ]
-        %index.1 = local;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_14_29_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc" 16 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_16_8_if_stmt:
         %tmp.2 = lgetv %value;
-        %tmp.4 = getv ? :mStart;
-        %tmp.5 = sub %tmp.2 %tmp.4;
-        %tmp.7 = getv ? :mIncrement;
-        %tmp.8 = div %tmp.5 %tmp.7;
-        lputv %index.1 %tmp.8;
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc" 16 8 ]
-        %tmp.10 = lgetv %index.1;
-        ret %tmp.10;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_14_29_stop:
+        %tmp.3 = null;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_16_8_if_false;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_16_8_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_16_26_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc" 17 12 ]
+        %tmp.5 = self;
+        %tmp.6 = getv function %tmp.5 :getSize;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        %tmp.8 = 1;
+        %tmp.9 = sub %tmp.7 %tmp.8;
+        ret %tmp.9;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_16_26_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_16_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_16_8_if_false:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_20_13_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc" 21 12 ]
+        %tmp.11 = lgetv %value;
+        %tmp.12 = as %tmp.11 { (!Null) };
+        %tmp.14 = getv ? :mStart;
+        %tmp.15 = sub %tmp.12 %tmp.14;
+        %tmp.17 = getv ? :mIncrement;
+        %tmp.18 = div %tmp.15 %tmp.17;
+        ret %tmp.18;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_20_13_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_16_8_if_end:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_14_29_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc"; @line = 19; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc"; @line = 25; ]
     function initialize(start, stop, increment, format) as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_19_56_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc" 20 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_25_56_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc" 26 8 ]
         %tmp.2 = getv ? :PickerFactory;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc" 21 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc" 27 8 ]
         %tmp.5 = lgetv %start;
         putv self :mStart %tmp.5;
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc" 22 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc" 28 8 ]
         %tmp.7 = lgetv %stop;
         putv self :mStop %tmp.7;
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc" 23 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc" 29 8 ]
         %tmp.9 = lgetv %increment;
         putv self :mIncrement %tmp.9;
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc" 24 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc" 30 8 ]
         %tmp.11 = lgetv %format;
         putv self :mFormat %tmp.11;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_19_56_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_25_56_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc"; @line = 27; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc"; @line = 33; ]
     function getDrawable(index, selected) {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_27_42_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc" 28 8 ]
-        [ "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_27_42_start" "_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_27_42_stop" ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_33_42_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc" 34 8 ]
+        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_33_42_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_33_42_stop" ]
         %value.1 = local;
         %tmp.1 = self;
         %tmp.2 = getv function %tmp.1 :getValue;
         %tmp.4 = lgetv %index;
         %tmp.5 = invoke %tmp.1 %tmp.2(%tmp.4);
         lputv %value.1 %tmp.5;
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc" 30 8 ]
-        %tmp.8 = getm $.Toybox.WatchUi;
-        %tmp.9 = getv function ? %tmp.8 :Text;
-        %tmp.10 = newd 5;
-        %tmp.12 = const :text;
-        %tmp.14 = getv ? :Lang;
-        %tmp.15 = getv function %tmp.14 :format;
-        %tmp.17 = getv ? :mFormat;
-        %tmp.18 = newa 1;
-        %tmp.20 = lgetv %value.1;
-        %tmp.21 = dup %tmp.18;
-        %tmp.22 = aputv %tmp.21 0 %tmp.20;
-        %tmp.23 = invoke %tmp.14 %tmp.15(%tmp.17, %tmp.22);
-        %tmp.24 = dup %tmp.10;
-        %tmp.25 = aputv %tmp.24 %tmp.12 %tmp.23;
-        %tmp.27 = const :color;
-        %tmp.28 = getm $.Toybox.Graphics;
-        %tmp.29 = getv %tmp.28 :COLOR_WHITE;
-        %tmp.30 = dup %tmp.25;
-        %tmp.31 = aputv %tmp.30 %tmp.27 %tmp.29;
-        %tmp.33 = const :font;
-        %tmp.34 = getm $.Toybox.Graphics;
-        %tmp.35 = getv %tmp.34 :FONT_SMALL;
-        %tmp.36 = dup %tmp.31;
-        %tmp.37 = aputv %tmp.36 %tmp.33 %tmp.35;
-        %tmp.39 = const :locX;
-        %tmp.40 = getm $.Toybox.WatchUi;
-        %tmp.41 = getv %tmp.40 :LAYOUT_HALIGN_CENTER;
-        %tmp.42 = dup %tmp.37;
-        %tmp.43 = aputv %tmp.42 %tmp.39 %tmp.41;
-        %tmp.45 = const :locY;
-        %tmp.46 = getm $.Toybox.WatchUi;
-        %tmp.47 = getv %tmp.46 :LAYOUT_VALIGN_CENTER;
-        %tmp.48 = dup %tmp.43;
-        %tmp.49 = aputv %tmp.48 %tmp.45 %tmp.47;
-        %tmp.6 = newc %tmp.9 (%tmp.49);
-        ret %tmp.6;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_27_42_stop:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc" 37 8 ]
+        [ "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_33_42_start" "C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_33_42_stop" ]
+        %pickerText.2 = local;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc" 38 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_38_8_if_stmt:
+        %tmp.7 = lgetv %value.1;
+        %tmp.8 = null;
+        %tmp.9 = eq %tmp.7 %tmp.8;
+        bf %tmp.9 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_38_8_if_false;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_38_8_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_38_26_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc" 39 12 ]
+        %tmp.10 = "OFF";
+        lputv %pickerText.2 %tmp.10;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_38_26_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_38_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_38_8_if_false:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_40_15_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc" 41 12 ]
+        %tmp.12 = getv ? :Lang;
+        %tmp.13 = getv function %tmp.12 :format;
+        %tmp.15 = getv ? :mFormat;
+        %tmp.16 = newa 1;
+        %tmp.18 = lgetv %value.1;
+        %tmp.19 = as %tmp.18 { (!Null) };
+        %tmp.20 = dup %tmp.16;
+        %tmp.21 = aputv %tmp.20 0 %tmp.19;
+        %tmp.22 = invoke %tmp.12 %tmp.13(%tmp.15, %tmp.21);
+        lputv %pickerText.2 %tmp.22;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_40_15_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_38_8_if_end:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc" 44 8 ]
+        %tmp.25 = getm $.Toybox.WatchUi;
+        %tmp.26 = getv function ? %tmp.25 :Text;
+        %tmp.27 = newd 5;
+        %tmp.29 = const :text;
+        %tmp.31 = lgetv %pickerText.2;
+        %tmp.32 = dup %tmp.27;
+        %tmp.33 = aputv %tmp.32 %tmp.29 %tmp.31;
+        %tmp.35 = const :color;
+        %tmp.36 = getm $.Toybox.Graphics;
+        %tmp.37 = getv %tmp.36 :COLOR_WHITE;
+        %tmp.38 = dup %tmp.33;
+        %tmp.39 = aputv %tmp.38 %tmp.35 %tmp.37;
+        %tmp.41 = const :font;
+        %tmp.42 = getm $.Toybox.Graphics;
+        %tmp.43 = getv %tmp.42 :FONT_SMALL;
+        %tmp.44 = dup %tmp.39;
+        %tmp.45 = aputv %tmp.44 %tmp.41 %tmp.43;
+        %tmp.47 = const :locX;
+        %tmp.48 = getm $.Toybox.WatchUi;
+        %tmp.49 = getv %tmp.48 :LAYOUT_HALIGN_CENTER;
+        %tmp.50 = dup %tmp.45;
+        %tmp.51 = aputv %tmp.50 %tmp.47 %tmp.49;
+        %tmp.53 = const :locY;
+        %tmp.54 = getm $.Toybox.WatchUi;
+        %tmp.55 = getv %tmp.54 :LAYOUT_VALIGN_CENTER;
+        %tmp.56 = dup %tmp.51;
+        %tmp.57 = aputv %tmp.56 %tmp.53 %tmp.55;
+        %tmp.23 = newc %tmp.26 (%tmp.57);
+        ret %tmp.23;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_33_42_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc"; @line = 39; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc"; @line = 53; ]
     function getValue(index) {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_39_29_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc" 40 8 ]
-        %tmp.2 = getv ? :mStart;
-        %tmp.4 = lgetv %index;
-        %tmp.6 = getv ? :mIncrement;
-        %tmp.7 = mul %tmp.4 %tmp.6;
-        %tmp.8 = add %tmp.2 %tmp.7;
-        ret %tmp.8;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_39_29_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_53_29_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc" 55 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_55_8_if_stmt:
+        %tmp.2 = lgetv %index;
+        %tmp.3 = self;
+        %tmp.4 = getv function %tmp.3 :getSize;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        %tmp.6 = 1;
+        %tmp.7 = sub %tmp.5 %tmp.6;
+        %tmp.8 = eq %tmp.2 %tmp.7;
+        bf %tmp.8 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_55_8_if_false;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_55_8_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_55_35_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc" 56 12 ]
+        %tmp.9 = null;
+        ret %tmp.9;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_55_35_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_55_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_55_8_if_false:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_59_13_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc" 60 12 ]
+        %tmp.11 = getv ? :mStart;
+        %tmp.13 = lgetv %index;
+        %tmp.15 = getv ? :mIncrement;
+        %tmp.16 = mul %tmp.13 %tmp.15;
+        %tmp.17 = add %tmp.11 %tmp.16;
+        ret %tmp.17;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_59_13_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_55_8_if_end:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_53_29_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc"; @line = 43; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc"; @line = 64; ]
     function getSize() {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_43_23_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc" 44 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_64_23_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc" 66 8 ]
         %tmp.2 = getv ? :mStop;
         %tmp.4 = getv ? :mStart;
         %tmp.5 = sub %tmp.2 %tmp.4;
         %tmp.7 = getv ? :mIncrement;
         %tmp.8 = div %tmp.5 %tmp.7;
-        %tmp.9 = 1;
+        %tmp.9 = 2;
         %tmp.10 = add %tmp.8 %tmp.9;
         ret %tmp.10;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_43_23_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_NumberFactory_mc_64_23_stop:
     }
 }
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/NumberFactory.mc"; @line = 5; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\NumberFactory.mc"; @line = 5; ]
 <init> {
 }

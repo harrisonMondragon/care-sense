@@ -12,8 +12,14 @@ class NumberFactory extends WatchUi.PickerFactory {
     hidden var mFormat;
 
     function getIndex(value) {
-        var index = (value - mStart) / mIncrement;
-        return index;
+        // OFF case
+        if (value == null){
+            return (getSize() - 1);
+        }
+        // Normal case
+        else {
+            return ((value - mStart) / mIncrement);
+        }
     }
 
     function initialize(start, stop, increment, format) {
@@ -27,8 +33,16 @@ class NumberFactory extends WatchUi.PickerFactory {
     function getDrawable(index, selected) {
         var value = getValue(index);
 
+        // Deal with OFF
+        var pickerText;
+        if (value == null){
+            pickerText = "OFF";
+        } else {
+            pickerText = Lang.format(mFormat, [value]);
+        }
+
         return new WatchUi.Text({
-            :text=>Lang.format(mFormat, [value]),
+            :text=>pickerText,
             :color=>Graphics.COLOR_WHITE,
             :font=>Graphics.FONT_SMALL,
             :locX =>WatchUi.LAYOUT_HALIGN_CENTER,
@@ -37,11 +51,19 @@ class NumberFactory extends WatchUi.PickerFactory {
     }
 
     function getValue(index) {
-        return mStart + (index * mIncrement);
+        // OFF case
+        if (index == getSize() - 1){
+            return null;
+        }
+        // Normal case
+        else {
+            return mStart + (index * mIncrement);
+        }
     }
 
     function getSize() {
-        return ( mStop - mStart ) / mIncrement + 1;
+        // Add an extra index for OFF
+        return ( mStop - mStart ) / mIncrement + 2;
     }
 
 }
