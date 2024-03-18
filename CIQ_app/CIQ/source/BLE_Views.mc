@@ -6,14 +6,15 @@ using Toybox.BluetoothLowEnergy as BLE;
 
 class BLEScanner extends WatchUi.View {
     // View to display while scanning for sensor
-    public const SCAN_DELAY = 500; // delay in ms
-    private var max_reps = 10;
-    private var curr_reps = 0;
+    private const SCAN_DELAY = 500; // delay in ms
+    private const max_reps = 10;
+    private var curr_reps;
+    private var timer = new Timer.Timer();
     var x, y; // display size
-    var timer = new Timer.Timer(); // used for timed callbacks
 
     function initialize() {
         View.initialize();
+        curr_reps = 0;
     }
 
     function onLayout(dc as Dc) as Void {
@@ -44,7 +45,8 @@ class BLEScanner extends WatchUi.View {
     function scanEnd() {
         var result = BLE_DELEGATE.getScanResult();
         if (result == null) { // no result found
-            if (max_reps >= 10) { // we haven't found results for the max allowable time and should notify users we cannot find the device
+            if (curr_reps >= max_reps) { // we haven't found results for the max allowable time and should notify users we cannot find the device
+                timer.stop();
                 WatchUi.switchToView(new SensorNotFound(), new SensoryBehaviorDelegate(new BLEScanner(), null), WatchUi.SLIDE_IMMEDIATE);
             } else { // try again but increment the attempt counter
                 curr_reps ++;
