@@ -1,125 +1,123 @@
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 1; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 1; ]
 import Toybox.Application;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 2; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 2; ]
 import Toybox.Lang;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 3; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 3; ]
 import Toybox.WatchUi;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 4; ]
-import Toybox.Timer;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 5; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 4; ]
 using Toybox.BluetoothLowEnergy as :BLE;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 9; @position = 4; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 8; @position = 4; ]
 var SOUND_LEVEL = 0;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 10; @position = 4; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 9; @position = 4; ]
 var TEMP_VAL = 0;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 11; @position = 4; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 10; @position = 4; ]
 var SUBSCRIPTION_COUNT = 0;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 12; @position = 4; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 11; @position = 4; ]
 var SETTINGS_AVAILABLE = false;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 15; @position = 4; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 14; @position = 4; ]
 var SOUND_THRESHOLD = 80;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 16; @position = 4; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 15; @position = 4; ]
 var TEMP_MIN_THRESHOLD = 20;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 17; @position = 4; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 16; @position = 4; ]
 var TEMP_MAX_THRESHOLD = 35;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 20; @position = 4; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 19; @position = 4; ]
 var SOUND_THRESH_RANGE_LOW = 5;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 21; @position = 4; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 20; @position = 4; ]
 var SOUND_THRESH_RANGE_HI = 200;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 22; @position = 4; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 21; @position = 4; ]
 var TEMP_THRESH_RANGE_LOW = -20;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 23; @position = 4; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 22; @position = 4; ]
 var TEMP_THRESH_RANGE_HI = 40;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 26; @position = 4; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 25; @position = 4; ]
 var SOUND_THRESH_INCREMENT = 5;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 27; @position = 4; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 26; @position = 4; ]
 var TEMP_THRESH_INCREMENT = 1;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 30; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 29; ]
 enum BACK_PICKERS {
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 31; @position = 4; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 30; @position = 4; ]
     SOUND_PICKER,
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 32; @position = 4; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 31; @position = 4; ]
     TEMP_MIN_PICKER,
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 33; @position = 4; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 32; @position = 4; ]
     TEMP_MAX_PICKER
 }
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 37; @position = 4; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 36; @position = 4; ]
 var NOTIFICATION_DELAY = 15000;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 38; @position = 4; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 37; @position = 4; ]
 var VIBE_DURATION = 2000;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 41; @position = 4; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 40; @position = 4; ]
 var BLE_DELEGATE;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 44; @position = 4; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 43; @position = 4; ]
 var COOLDOWN_TIMER;
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 47; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 46; ]
 class CIQApp extends Application.AppBase{
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 47; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 46; ]
     <init> {
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 47; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 46; ]
     static
     <init> {
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 49; @position = 16; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 48; @position = 16; ]
     private
     var _view;
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 51; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 50; ]
     function initialize() as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_App_mc_51_26_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc" 52 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_App_mc_50_26_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc" 51 8 ]
         %tmp.2 = getv ? :AppBase;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc" 53 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc" 52 8 ]
         %tmp.7 = getv ? :BLEScanner;
         %tmp.4 = newc %tmp.7 ();
         putv self :_view %tmp.4;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_App_mc_51_26_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_App_mc_50_26_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 57; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 56; ]
     function onStart(state as Dictionary or Null) as Void {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_App_mc_57_51_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc" 59 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_App_mc_56_51_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc" 58 8 ]
         %tmp.4 = getv ? :Delegate;
         %tmp.1 = newc %tmp.4 ();
         putv self :BLE_DELEGATE %tmp.1;
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc" 60 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc" 59 8 ]
         %tmp.5 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.6 = getv function %tmp.5 :setDelegate;
         %tmp.8 = getv ? :BLE_DELEGATE;
         invoke %tmp.5 %tmp.6(%tmp.8);
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc" 62 8 ]
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc" 61 8 ]
         %tmp.12 = getv ? :CooldownTimer;
         %tmp.9 = newc %tmp.12 ();
         putv self :COOLDOWN_TIMER %tmp.9;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_App_mc_57_51_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_App_mc_56_51_stop:
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 66; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 65; ]
     function onStop(state as Dictionary or Null) as Void {
     }
-    [ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 70; ]
+    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 69; ]
     function getInitialView() as Array<Views or InputDelegates> or Null {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_App_mc_70_65_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc" 71 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_App_mc_69_65_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc" 70 8 ]
         %tmp.1 = newa Array<Views or InputDelegates> 1;
         %tmp.3 = getv ? :_view;
         %tmp.4 = dup %tmp.1;
         %tmp.5 = aputv %tmp.4 0 %tmp.3;
         ret %tmp.5;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_App_mc_70_65_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_App_mc_69_65_stop:
     }
 }
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 76; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 75; ]
 function getApp() as CIQApp {
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_App_mc_76_28_start:
-[ "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc" 77 4 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_App_mc_75_28_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc" 76 4 ]
     %tmp.1 = getm $.Toybox.Application;
     %tmp.2 = getv function %tmp.1 :getApp;
     %tmp.3 = invoke %tmp.1 %tmp.2();
     %tmp.4 = as %tmp.3 CIQApp;
     ret %tmp.4;
-_Users_lianagoodman_Documents_School_23_24_capstone_sensory_device_CIQ_app_CIQ_source_App_mc_76_28_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_App_mc_75_28_stop:
 }
-[ @file = "/Users/lianagoodman/Documents/School/23-24/capstone/sensory-device/CIQ_app/CIQ/source/App.mc"; @line = 1; ]
+[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 1; ]
 <init> {
 }
