@@ -78,7 +78,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_21_40_s
     function onShow() as Void {
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_30_30_start:
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 31 8 ]
-        %tmp.1 = false;
+        %tmp.1 = true;
         putv self :SETTINGS_AVAILABLE %tmp.1;
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_30_30_stop:
     }
@@ -684,81 +684,18 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_102_30_
     function notificationDone() {
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_107_32_start:
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 109 8 ]
-        %tmp.2 = getv ? :COOLDOWN_TIMER;
-        %tmp.3 = getv function %tmp.2 :start;
-        invoke %tmp.2 %tmp.3();
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 110 8 ]
-        %tmp.4 = getm $.Toybox.WatchUi;
-        %tmp.5 = getv function %tmp.4 :switchToView;
-        %tmp.9 = getv ? :HomeDisplay;
-        %tmp.6 = newc %tmp.9 ();
-        %tmp.13 = getv ? :SensoryBehaviorDelegate;
-        %tmp.14 = null;
-        %tmp.15 = null;
-        %tmp.10 = newc %tmp.13 (%tmp.14, %tmp.15);
-        %tmp.16 = getm $.Toybox.WatchUi;
-        %tmp.17 = getv %tmp.16 :SLIDE_IMMEDIATE;
-        invoke %tmp.4 %tmp.5(%tmp.6, %tmp.10, %tmp.17);
+        %tmp.1 = getm $.Toybox.WatchUi;
+        %tmp.2 = getv function %tmp.1 :switchToView;
+        %tmp.6 = getv ? :HomeDisplay;
+        %tmp.3 = newc %tmp.6 ();
+        %tmp.10 = getv ? :SensoryBehaviorDelegate;
+        %tmp.11 = null;
+        %tmp.12 = null;
+        %tmp.7 = newc %tmp.10 (%tmp.11, %tmp.12);
+        %tmp.13 = getm $.Toybox.WatchUi;
+        %tmp.14 = getv %tmp.13 :SLIDE_IMMEDIATE;
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.7, %tmp.14);
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_107_32_stop:
-    }
-}
-[ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 115; ]
-class CooldownTimer{
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 115; ]
-    <init> {
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 117 8 ]
-        %tmp.20 = getm $.Toybox.Timer;
-        %tmp.21 = getv function ? %tmp.20 :Timer;
-        %tmp.18 = newc %tmp.21 ();
-        putv self :timer %tmp.18;
-    }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 115; ]
-    static
-    <init> {
-    }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 116; @position = 8; ]
-    var delay = 10000;
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 117; @position = 8; ]
-    var timer;
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 118; @position = 8; ]
-    var cooling = false;
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 120; ]
-    function initialize() as Void {
-    }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 122; ]
-    function start() {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_122_21_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 123 8 ]
-        %tmp.1 = true;
-        putv self :cooling %tmp.1;
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 124 8 ]
-        %tmp.3 = getv ? :timer;
-        %tmp.4 = getv function %tmp.3 :start;
-        %tmp.5 = self;
-        %tmp.6 = getv function %tmp.5 :method;
-        %tmp.8 = const :end;
-        %tmp.9 = invoke %tmp.5 %tmp.6(%tmp.8);
-        %tmp.11 = getv ? :delay;
-        %tmp.12 = false;
-        invoke %tmp.3 %tmp.4(%tmp.9, %tmp.11, %tmp.12);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_122_21_stop:
-    }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 127; ]
-    function is_cooling() {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_127_26_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 128 8 ]
-        %tmp.2 = getv ? :cooling;
-        ret %tmp.2;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_127_26_stop:
-    }
-    [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 131; ]
-    private
-    function end() {
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_131_27_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 132 8 ]
-        %tmp.1 = false;
-        putv self :cooling %tmp.1;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_131_27_stop:
     }
 }
 [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc"; @line = 1; ]

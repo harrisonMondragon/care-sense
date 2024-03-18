@@ -28,7 +28,7 @@ class EnvNotification extends WatchUi.View {
     }
 
     function onShow() as Void {
-        SETTINGS_AVAILABLE = false;
+        SETTINGS_AVAILABLE = true;
     }
 
     // Update the view every time a new BLE value comes in (see CIQBLE.mc:onCharacteristicChanged)
@@ -106,29 +106,7 @@ class EnvNotification extends WatchUi.View {
 
     function notificationDone() {
         // notification has timed out and returning to home page.
-        COOLDOWN_TIMER.start();
         WatchUi.switchToView(new HomeDisplay(), new SensoryBehaviorDelegate(null, null), WatchUi.SLIDE_IMMEDIATE);
     }
 
-}
-
-class CooldownTimer {
-    var delay = 10000;
-    var timer = new Timer.Timer();
-    var cooling = false;
-
-    function initialize () {}
-
-    function start() {
-        cooling = true;
-        timer.start(method(:end), delay, false);
-    }
-
-    function is_cooling() {
-        return cooling;
-    }
-
-    private function end() {
-        cooling = false;
-    }
 }
