@@ -70,20 +70,20 @@
         <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="16" lineNum="61" parent="globals/TempMinPickerDelegate" pc="268437272" symbol="onAccept"/>
         <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="16" lineNum="62" parent="globals/TempMinPickerDelegate" pc="268437304" symbol="onAccept"/>
         <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="16" lineNum="63" parent="globals/TempMinPickerDelegate" pc="268437382" symbol="onAccept"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="17" lineNum="58" parent="globals/SensorNotFound" pc="268437385" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="18" lineNum="73" parent="globals/SensorNotFound" pc="268437404" symbol="onShow"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="18" lineNum="74" parent="globals/SensorNotFound" pc="268437406" symbol="onShow"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="18" lineNum="75" parent="globals/SensorNotFound" pc="268437416" symbol="onShow"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="19" lineNum="67" parent="globals/SensorNotFound" pc="268437438" symbol="onLayout"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="19" lineNum="69" parent="globals/SensorNotFound" pc="268437440" symbol="onLayout"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="19" lineNum="70" parent="globals/SensorNotFound" pc="268437459" symbol="onLayout"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="20" lineNum="63" parent="globals/SensorNotFound" pc="268437479" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="20" lineNum="64" parent="globals/SensorNotFound" pc="268437481" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="22" lineNum="79" parent="globals/SensorNotFound" pc="268437500" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="22" lineNum="81" parent="globals/SensorNotFound" pc="268437502" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="22" lineNum="82" parent="globals/SensorNotFound" pc="268437524" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="22" lineNum="85" parent="globals/SensorNotFound" pc="268437562" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="22" lineNum="87" parent="globals/SensorNotFound" pc="268437584" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="17" lineNum="69" parent="globals/SensorNotFound" pc="268437385" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="18" lineNum="84" parent="globals/SensorNotFound" pc="268437404" symbol="onShow"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="18" lineNum="85" parent="globals/SensorNotFound" pc="268437406" symbol="onShow"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="18" lineNum="86" parent="globals/SensorNotFound" pc="268437416" symbol="onShow"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="19" lineNum="78" parent="globals/SensorNotFound" pc="268437438" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="19" lineNum="80" parent="globals/SensorNotFound" pc="268437440" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="19" lineNum="81" parent="globals/SensorNotFound" pc="268437459" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="20" lineNum="74" parent="globals/SensorNotFound" pc="268437479" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="20" lineNum="75" parent="globals/SensorNotFound" pc="268437481" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="22" lineNum="90" parent="globals/SensorNotFound" pc="268437500" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="22" lineNum="92" parent="globals/SensorNotFound" pc="268437502" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="22" lineNum="93" parent="globals/SensorNotFound" pc="268437524" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="22" lineNum="96" parent="globals/SensorNotFound" pc="268437562" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="22" lineNum="98" parent="globals/SensorNotFound" pc="268437584" symbol="onUpdate"/>
         <entry filename="c:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\Latest Build\\gen\\006-B3703-00\\source\\Rez.mcgen" id="23" lineNum="7" parent="globals/Rez" pc="268437640" symbol="&lt;init&gt;"/>
         <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Queue.mc" id="24" lineNum="5" parent="globals/Sub2NotifQueue" pc="268437664" symbol="&lt;init&gt;"/>
         <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Queue.mc" id="24" lineNum="3" parent="globals/Sub2NotifQueue" pc="268437664" symbol="&lt;init&gt;"/>
@@ -118,20 +118,20 @@
         <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="35" lineNum="24" parent="globals/SettingsMenuInputDelegate" pc="268438267" symbol="onMenuItem"/>
         <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="36" lineNum="12" parent="globals/SettingsMenuInputDelegate" pc="268438344" symbol="initialize"/>
         <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="36" lineNum="13" parent="globals/SettingsMenuInputDelegate" pc="268438346" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="37" lineNum="93" parent="globals/Connecting" pc="268438365" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="38" lineNum="107" parent="globals/Connecting" pc="268438384" symbol="onShow"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="38" lineNum="108" parent="globals/Connecting" pc="268438386" symbol="onShow"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="38" lineNum="109" parent="globals/Connecting" pc="268438396" symbol="onShow"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="39" lineNum="101" parent="globals/Connecting" pc="268438418" symbol="onLayout"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="39" lineNum="103" parent="globals/Connecting" pc="268438420" symbol="onLayout"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="39" lineNum="104" parent="globals/Connecting" pc="268438439" symbol="onLayout"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="40" lineNum="97" parent="globals/Connecting" pc="268438459" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="40" lineNum="98" parent="globals/Connecting" pc="268438461" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="42" lineNum="113" parent="globals/Connecting" pc="268438480" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="42" lineNum="115" parent="globals/Connecting" pc="268438482" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="42" lineNum="116" parent="globals/Connecting" pc="268438504" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="42" lineNum="119" parent="globals/Connecting" pc="268438542" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="42" lineNum="121" parent="globals/Connecting" pc="268438564" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="37" lineNum="104" parent="globals/Connecting" pc="268438365" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="38" lineNum="118" parent="globals/Connecting" pc="268438384" symbol="onShow"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="38" lineNum="119" parent="globals/Connecting" pc="268438386" symbol="onShow"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="38" lineNum="120" parent="globals/Connecting" pc="268438396" symbol="onShow"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="39" lineNum="112" parent="globals/Connecting" pc="268438418" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="39" lineNum="114" parent="globals/Connecting" pc="268438420" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="39" lineNum="115" parent="globals/Connecting" pc="268438439" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="40" lineNum="108" parent="globals/Connecting" pc="268438459" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="40" lineNum="109" parent="globals/Connecting" pc="268438461" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="42" lineNum="124" parent="globals/Connecting" pc="268438480" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="42" lineNum="126" parent="globals/Connecting" pc="268438482" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="42" lineNum="127" parent="globals/Connecting" pc="268438504" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="42" lineNum="130" parent="globals/Connecting" pc="268438542" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="42" lineNum="132" parent="globals/Connecting" pc="268438564" symbol="onUpdate"/>
         <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="43" lineNum="116" parent="globals/TempMaxNotification" pc="268438620" symbol="&lt;init&gt;"/>
         <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="43" lineNum="118" parent="globals/TempMaxNotification" pc="268438638" symbol="&lt;init&gt;"/>
         <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="44" lineNum="132" parent="globals/TempMaxNotification" pc="268438673" symbol="onShow"/>
@@ -157,282 +157,289 @@
         <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="49" lineNum="154" parent="globals/TempMaxNotification" pc="268439223" symbol="onUpdate"/>
         <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="49" lineNum="156" parent="globals/TempMaxNotification" pc="268439248" symbol="onUpdate"/>
         <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="50" lineNum="7" parent="globals/BLEScanner" pc="268439347" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="50" lineNum="11" parent="globals/BLEScanner" pc="268439365" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="51" lineNum="23" parent="globals/BLEScanner" pc="268439400" symbol="onShow"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="51" lineNum="24" parent="globals/BLEScanner" pc="268439402" symbol="onShow"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="51" lineNum="26" parent="globals/BLEScanner" pc="268439412" symbol="onShow"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="51" lineNum="27" parent="globals/BLEScanner" pc="268439433" symbol="onShow"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="52" lineNum="17" parent="globals/BLEScanner" pc="268439475" symbol="onLayout"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="52" lineNum="19" parent="globals/BLEScanner" pc="268439477" symbol="onLayout"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="52" lineNum="20" parent="globals/BLEScanner" pc="268439496" symbol="onLayout"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="53" lineNum="42" parent="globals/BLEScanner" pc="268439516" symbol="scanEnd"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="53" lineNum="43" parent="globals/BLEScanner" pc="268439520" symbol="scanEnd"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="53" lineNum="44" parent="globals/BLEScanner" pc="268439539" symbol="scanEnd"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="53" lineNum="45" parent="globals/BLEScanner" pc="268439546" symbol="scanEnd"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="53" lineNum="47" parent="globals/BLEScanner" pc="268439645" symbol="scanEnd"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="54" lineNum="13" parent="globals/BLEScanner" pc="268439664" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="54" lineNum="14" parent="globals/BLEScanner" pc="268439666" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="55" lineNum="51" parent="globals/BLEScanner" pc="268439685" symbol="onHide"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="55" lineNum="53" parent="globals/BLEScanner" pc="268439687" symbol="onHide"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="56" lineNum="31" parent="globals/BLEScanner" pc="268439709" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="56" lineNum="33" parent="globals/BLEScanner" pc="268439711" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="56" lineNum="34" parent="globals/BLEScanner" pc="268439733" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="56" lineNum="37" parent="globals/BLEScanner" pc="268439771" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="56" lineNum="39" parent="globals/BLEScanner" pc="268439793" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="57" lineNum="7" parent="globals/Delegate" pc="268439849" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="57" lineNum="14" parent="globals/Delegate" pc="268439867" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="57" lineNum="15" parent="globals/Delegate" pc="268439897" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="57" lineNum="16" parent="globals/Delegate" pc="268439925" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="58" lineNum="79" parent="globals/Delegate" pc="268439954" symbol="onCharacteristicChanged"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="58" lineNum="80" parent="globals/Delegate" pc="268439956" symbol="onCharacteristicChanged"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="58" lineNum="82" parent="globals/Delegate" pc="268439987" symbol="onCharacteristicChanged"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="58" lineNum="85" parent="globals/Delegate" pc="268440006" symbol="onCharacteristicChanged"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="58" lineNum="87" parent="globals/Delegate" pc="268440037" symbol="onCharacteristicChanged"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="58" lineNum="89" parent="globals/Delegate" pc="268440056" symbol="onCharacteristicChanged"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="59" lineNum="64" parent="globals/Delegate" pc="268440073" symbol="onDescriptorWrite"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="59" lineNum="65" parent="globals/Delegate" pc="268440075" symbol="onDescriptorWrite"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="59" lineNum="66" parent="globals/Delegate" pc="268440086" symbol="onDescriptorWrite"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="59" lineNum="68" parent="globals/Delegate" pc="268440112" symbol="onDescriptorWrite"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="59" lineNum="69" parent="globals/Delegate" pc="268440123" symbol="onDescriptorWrite"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="59" lineNum="70" parent="globals/Delegate" pc="268440145" symbol="onDescriptorWrite"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="59" lineNum="71" parent="globals/Delegate" pc="268440183" symbol="onDescriptorWrite"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="59" lineNum="72" parent="globals/Delegate" pc="268440200" symbol="onDescriptorWrite"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="59" lineNum="74" parent="globals/Delegate" pc="268440278" symbol="onDescriptorWrite"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="42" parent="globals/Delegate" pc="268440300" symbol="onConnectedStateChanged"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="43" parent="globals/Delegate" pc="268440304" symbol="onConnectedStateChanged"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="44" parent="globals/Delegate" pc="268440315" symbol="onConnectedStateChanged"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="47" parent="globals/Delegate" pc="268440325" symbol="onConnectedStateChanged"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="48" parent="globals/Delegate" pc="268440363" symbol="onConnectedStateChanged"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="51" parent="globals/Delegate" pc="268440401" symbol="onConnectedStateChanged"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="52" parent="globals/Delegate" pc="268440421" symbol="onConnectedStateChanged"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="54" parent="globals/Delegate" pc="268440441" symbol="onConnectedStateChanged"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="56" parent="globals/Delegate" pc="268440459" symbol="onConnectedStateChanged"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="58" parent="globals/Delegate" pc="268440562" symbol="onConnectedStateChanged"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="59" parent="globals/Delegate" pc="268440571" symbol="onConnectedStateChanged"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="60" parent="globals/Delegate" pc="268440584" symbol="onConnectedStateChanged"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="61" lineNum="101" parent="globals/Delegate" pc="268440685" symbol="registerProfiles"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="61" lineNum="102" parent="globals/Delegate" pc="268440689" symbol="registerProfiles"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="61" lineNum="121" parent="globals/Delegate" pc="268440861" symbol="registerProfiles"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="62" lineNum="92" parent="globals/Delegate" pc="268440880" symbol="getScanResult"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="62" lineNum="93" parent="globals/Delegate" pc="268440882" symbol="getScanResult"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="63" lineNum="21" parent="globals/Delegate" pc="268440891" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="63" lineNum="22" parent="globals/Delegate" pc="268440893" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="63" lineNum="23" parent="globals/Delegate" pc="268440911" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="63" lineNum="24" parent="globals/Delegate" pc="268440923" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="64" lineNum="27" parent="globals/Delegate" pc="268440958" symbol="onScanResults"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="64" lineNum="30" parent="globals/Delegate" pc="268440962" symbol="onScanResults"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="64" lineNum="31" parent="globals/Delegate" pc="268440982" symbol="onScanResults"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="64" lineNum="32" parent="globals/Delegate" pc="268441000" symbol="onScanResults"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="64" lineNum="33" parent="globals/Delegate" pc="268441013" symbol="onScanResults"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="64" lineNum="34" parent="globals/Delegate" pc="268441033" symbol="onScanResults"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="64" lineNum="35" parent="globals/Delegate" pc="268441055" symbol="onScanResults"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="65" lineNum="96" parent="globals/Delegate" pc="268441104" symbol="connect"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="65" lineNum="97" parent="globals/Delegate" pc="268441106" symbol="connect"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="65" lineNum="98" parent="globals/Delegate" pc="268441127" symbol="connect"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="66" lineNum="127" parent="globals/TempMaxPicker" pc="268441152" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="66" lineNum="128" parent="globals/TempMaxPicker" pc="268441170" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="67" lineNum="132" parent="globals/TempMaxPicker" pc="268441263" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="67" lineNum="133" parent="globals/TempMaxPicker" pc="268441265" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="67" lineNum="134" parent="globals/TempMaxPicker" pc="268441278" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="67" lineNum="142" parent="globals/TempMaxPicker" pc="268441344" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="67" lineNum="149" parent="globals/TempMaxPicker" pc="268441416" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="67" lineNum="150" parent="globals/TempMaxPicker" pc="268441449" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="68" lineNum="7" parent="globals/SoundNotification" pc="268441550" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="68" lineNum="9" parent="globals/SoundNotification" pc="268441568" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="69" lineNum="22" parent="globals/SoundNotification" pc="268441603" symbol="onShow"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="69" lineNum="23" parent="globals/SoundNotification" pc="268441605" symbol="onShow"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="69" lineNum="25" parent="globals/SoundNotification" pc="268441615" symbol="onShow"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="69" lineNum="27" parent="globals/SoundNotification" pc="268441684" symbol="onShow"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="70" lineNum="16" parent="globals/SoundNotification" pc="268441729" symbol="onLayout"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="70" lineNum="18" parent="globals/SoundNotification" pc="268441731" symbol="onLayout"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="70" lineNum="19" parent="globals/SoundNotification" pc="268441750" symbol="onLayout"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="71" lineNum="11" parent="globals/SoundNotification" pc="268441770" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="71" lineNum="12" parent="globals/SoundNotification" pc="268441772" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="72" lineNum="49" parent="globals/SoundNotification" pc="268441791" symbol="onHide"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="72" lineNum="50" parent="globals/SoundNotification" pc="268441793" symbol="onHide"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="73" lineNum="54" parent="globals/SoundNotification" pc="268441812" symbol="notificationDone"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="73" lineNum="56" parent="globals/SoundNotification" pc="268441814" symbol="notificationDone"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="74" lineNum="31" parent="globals/SoundNotification" pc="268441890" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="74" lineNum="33" parent="globals/SoundNotification" pc="268441892" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="74" lineNum="34" parent="globals/SoundNotification" pc="268441914" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="74" lineNum="37" parent="globals/SoundNotification" pc="268441952" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="74" lineNum="39" parent="globals/SoundNotification" pc="268441974" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="74" lineNum="40" parent="globals/SoundNotification" pc="268442072" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="74" lineNum="43" parent="globals/SoundNotification" pc="268442133" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="74" lineNum="44" parent="globals/SoundNotification" pc="268442153" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="74" lineNum="46" parent="globals/SoundNotification" pc="268442178" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="75" lineNum="8" parent="globals/NumberFactory" pc="268442277" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="76" lineNum="53" parent="globals/NumberFactory" pc="268442296" symbol="getValue"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="76" lineNum="55" parent="globals/NumberFactory" pc="268442298" symbol="getValue"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="76" lineNum="56" parent="globals/NumberFactory" pc="268442321" symbol="getValue"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="76" lineNum="60" parent="globals/NumberFactory" pc="268442326" symbol="getValue"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="77" lineNum="33" parent="globals/NumberFactory" pc="268442348" symbol="getDrawable"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="77" lineNum="34" parent="globals/NumberFactory" pc="268442352" symbol="getDrawable"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="77" lineNum="38" parent="globals/NumberFactory" pc="268442367" symbol="getDrawable"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="77" lineNum="37" parent="globals/NumberFactory" pc="268442367" symbol="getDrawable"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="77" lineNum="39" parent="globals/NumberFactory" pc="268442374" symbol="getDrawable"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="77" lineNum="41" parent="globals/NumberFactory" pc="268442384" symbol="getDrawable"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="77" lineNum="44" parent="globals/NumberFactory" pc="268442427" symbol="getDrawable"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="78" lineNum="64" parent="globals/NumberFactory" pc="268442522" symbol="getSize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="78" lineNum="66" parent="globals/NumberFactory" pc="268442524" symbol="getSize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="79" lineNum="14" parent="globals/NumberFactory" pc="268442557" symbol="getIndex"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="79" lineNum="16" parent="globals/NumberFactory" pc="268442559" symbol="getIndex"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="79" lineNum="17" parent="globals/NumberFactory" pc="268442566" symbol="getIndex"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="79" lineNum="21" parent="globals/NumberFactory" pc="268442587" symbol="getIndex"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="80" lineNum="25" parent="globals/NumberFactory" pc="268442609" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="80" lineNum="26" parent="globals/NumberFactory" pc="268442611" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="80" lineNum="27" parent="globals/NumberFactory" pc="268442629" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="80" lineNum="28" parent="globals/NumberFactory" pc="268442639" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="80" lineNum="29" parent="globals/NumberFactory" pc="268442649" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="80" lineNum="30" parent="globals/NumberFactory" pc="268442659" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\App.mc" id="81" lineNum="71" parent="globals" pc="268442670" symbol="getApp"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\App.mc" id="81" lineNum="72" parent="globals" pc="268442680" symbol="getApp"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="82" lineNum="95" parent="globals/ThresholdChangeConfirmation" pc="268442696" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="84" lineNum="102" parent="globals/ThresholdChangeConfirmation" pc="268442715" symbol="onLayout"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="84" lineNum="104" parent="globals/ThresholdChangeConfirmation" pc="268442717" symbol="onLayout"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="84" lineNum="105" parent="globals/ThresholdChangeConfirmation" pc="268442736" symbol="onLayout"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="85" lineNum="98" parent="globals/ThresholdChangeConfirmation" pc="268442756" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="85" lineNum="99" parent="globals/ThresholdChangeConfirmation" pc="268442758" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="110" parent="globals/ThresholdChangeConfirmation" pc="268442777" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="112" parent="globals/ThresholdChangeConfirmation" pc="268442781" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="113" parent="globals/ThresholdChangeConfirmation" pc="268442803" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="116" parent="globals/ThresholdChangeConfirmation" pc="268442841" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="119" parent="globals/ThresholdChangeConfirmation" pc="268442863" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="123" parent="globals/ThresholdChangeConfirmation" pc="268442863" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="121" parent="globals/ThresholdChangeConfirmation" pc="268442863" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="120" parent="globals/ThresholdChangeConfirmation" pc="268442863" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="124" parent="globals/ThresholdChangeConfirmation" pc="268442876" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="126" parent="globals/ThresholdChangeConfirmation" pc="268442886" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="129" parent="globals/ThresholdChangeConfirmation" pc="268442930" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="130" parent="globals/ThresholdChangeConfirmation" pc="268442943" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="132" parent="globals/ThresholdChangeConfirmation" pc="268442953" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="135" parent="globals/ThresholdChangeConfirmation" pc="268442997" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="136" parent="globals/ThresholdChangeConfirmation" pc="268443010" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="138" parent="globals/ThresholdChangeConfirmation" pc="268443020" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="141" parent="globals/ThresholdChangeConfirmation" pc="268443064" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="142" parent="globals/ThresholdChangeConfirmation" pc="268443156" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="144" parent="globals/ThresholdChangeConfirmation" pc="268443252" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="145" parent="globals/ThresholdChangeConfirmation" pc="268443274" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="88" lineNum="61" parent="globals/TempMinNotification" pc="268443336" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="88" lineNum="63" parent="globals/TempMinNotification" pc="268443354" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="89" lineNum="77" parent="globals/TempMinNotification" pc="268443389" symbol="onShow"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="89" lineNum="78" parent="globals/TempMinNotification" pc="268443391" symbol="onShow"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="89" lineNum="80" parent="globals/TempMinNotification" pc="268443401" symbol="onShow"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="89" lineNum="82" parent="globals/TempMinNotification" pc="268443470" symbol="onShow"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="90" lineNum="71" parent="globals/TempMinNotification" pc="268443515" symbol="onLayout"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="90" lineNum="73" parent="globals/TempMinNotification" pc="268443517" symbol="onLayout"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="90" lineNum="74" parent="globals/TempMinNotification" pc="268443536" symbol="onLayout"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="91" lineNum="66" parent="globals/TempMinNotification" pc="268443556" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="91" lineNum="67" parent="globals/TempMinNotification" pc="268443558" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="92" lineNum="104" parent="globals/TempMinNotification" pc="268443577" symbol="onHide"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="92" lineNum="105" parent="globals/TempMinNotification" pc="268443579" symbol="onHide"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="93" lineNum="109" parent="globals/TempMinNotification" pc="268443598" symbol="notificationDone"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="93" lineNum="111" parent="globals/TempMinNotification" pc="268443600" symbol="notificationDone"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="94" lineNum="86" parent="globals/TempMinNotification" pc="268443676" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="94" lineNum="88" parent="globals/TempMinNotification" pc="268443678" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="94" lineNum="89" parent="globals/TempMinNotification" pc="268443700" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="94" lineNum="92" parent="globals/TempMinNotification" pc="268443738" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="94" lineNum="94" parent="globals/TempMinNotification" pc="268443760" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="94" lineNum="95" parent="globals/TempMinNotification" pc="268443858" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="94" lineNum="98" parent="globals/TempMinNotification" pc="268443919" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="94" lineNum="99" parent="globals/TempMinNotification" pc="268443939" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="94" lineNum="101" parent="globals/TempMinNotification" pc="268443964" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="95" lineNum="89" parent="globals/SoundPicker" pc="268444063" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="95" lineNum="90" parent="globals/SoundPicker" pc="268444081" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="95" lineNum="91" parent="globals/SoundPicker" pc="268444173" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="96" lineNum="94" parent="globals/SoundPicker" pc="268444237" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="96" lineNum="95" parent="globals/SoundPicker" pc="268444239" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="96" lineNum="96" parent="globals/SoundPicker" pc="268444272" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="97" lineNum="58" parent="globals/SensorDisconnected" pc="268444373" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="98" lineNum="72" parent="globals/SensorDisconnected" pc="268444392" symbol="onShow"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="98" lineNum="73" parent="globals/SensorDisconnected" pc="268444394" symbol="onShow"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="98" lineNum="75" parent="globals/SensorDisconnected" pc="268444404" symbol="onShow"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="99" lineNum="66" parent="globals/SensorDisconnected" pc="268444474" symbol="onLayout"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="99" lineNum="68" parent="globals/SensorDisconnected" pc="268444476" symbol="onLayout"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="99" lineNum="69" parent="globals/SensorDisconnected" pc="268444495" symbol="onLayout"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="100" lineNum="62" parent="globals/SensorDisconnected" pc="268444515" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="100" lineNum="63" parent="globals/SensorDisconnected" pc="268444517" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="102" lineNum="79" parent="globals/SensorDisconnected" pc="268444536" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="102" lineNum="81" parent="globals/SensorDisconnected" pc="268444538" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="102" lineNum="82" parent="globals/SensorDisconnected" pc="268444560" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="102" lineNum="85" parent="globals/SensorDisconnected" pc="268444598" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="102" lineNum="87" parent="globals/SensorDisconnected" pc="268444620" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="102" lineNum="88" parent="globals/SensorDisconnected" pc="268444681" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="103" lineNum="7" parent="globals/SensoryBehaviorDelegate" pc="268444743" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="104" lineNum="17" parent="globals/SensoryBehaviorDelegate" pc="268444762" symbol="onBack"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="104" lineNum="18" parent="globals/SensoryBehaviorDelegate" pc="268444764" symbol="onBack"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="104" lineNum="19" parent="globals/SensoryBehaviorDelegate" pc="268444777" symbol="onBack"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="104" lineNum="21" parent="globals/SensoryBehaviorDelegate" pc="268444840" symbol="onBack"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="104" lineNum="23" parent="globals/SensoryBehaviorDelegate" pc="268444861" symbol="onBack"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="105" lineNum="27" parent="globals/SensoryBehaviorDelegate" pc="268444864" symbol="onSwipe"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="105" lineNum="28" parent="globals/SensoryBehaviorDelegate" pc="268444868" symbol="onSwipe"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="105" lineNum="29" parent="globals/SensoryBehaviorDelegate" pc="268444905" symbol="onSwipe"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="105" lineNum="30" parent="globals/SensoryBehaviorDelegate" pc="268444933" symbol="onSwipe"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="105" lineNum="31" parent="globals/SensoryBehaviorDelegate" pc="268444950" symbol="onSwipe"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="105" lineNum="32" parent="globals/SensoryBehaviorDelegate" pc="268444972" symbol="onSwipe"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="105" lineNum="33" parent="globals/SensoryBehaviorDelegate" pc="268444994" symbol="onSwipe"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="105" lineNum="34" parent="globals/SensoryBehaviorDelegate" pc="268445016" symbol="onSwipe"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="105" lineNum="36" parent="globals/SensoryBehaviorDelegate" pc="268445068" symbol="onSwipe"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="106" lineNum="11" parent="globals/SensoryBehaviorDelegate" pc="268445071" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="106" lineNum="12" parent="globals/SensoryBehaviorDelegate" pc="268445073" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="106" lineNum="13" parent="globals/SensoryBehaviorDelegate" pc="268445083" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="106" lineNum="14" parent="globals/SensoryBehaviorDelegate" pc="268445093" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="107" lineNum="67" parent="globals/TempMaxPickerDelegate" pc="268445112" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="108" lineNum="73" parent="globals/TempMaxPickerDelegate" pc="268445131" symbol="onCancel"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="108" lineNum="74" parent="globals/TempMaxPickerDelegate" pc="268445133" symbol="onCancel"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="108" lineNum="75" parent="globals/TempMaxPickerDelegate" pc="268445154" symbol="onCancel"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="109" lineNum="69" parent="globals/TempMaxPickerDelegate" pc="268445157" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="109" lineNum="70" parent="globals/TempMaxPickerDelegate" pc="268445159" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="110" lineNum="78" parent="globals/TempMaxPickerDelegate" pc="268445178" symbol="onAccept"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="110" lineNum="79" parent="globals/TempMaxPickerDelegate" pc="268445180" symbol="onAccept"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="110" lineNum="80" parent="globals/TempMaxPickerDelegate" pc="268445196" symbol="onAccept"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="110" lineNum="81" parent="globals/TempMaxPickerDelegate" pc="268445228" symbol="onAccept"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="110" lineNum="82" parent="globals/TempMaxPickerDelegate" pc="268445306" symbol="onAccept"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="111" lineNum="29" parent="globals/SoundPickerDelegate" pc="268445309" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="112" lineNum="35" parent="globals/SoundPickerDelegate" pc="268445328" symbol="onCancel"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="112" lineNum="36" parent="globals/SoundPickerDelegate" pc="268445330" symbol="onCancel"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="112" lineNum="37" parent="globals/SoundPickerDelegate" pc="268445351" symbol="onCancel"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="113" lineNum="31" parent="globals/SoundPickerDelegate" pc="268445354" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="113" lineNum="32" parent="globals/SoundPickerDelegate" pc="268445356" symbol="initialize"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="114" lineNum="40" parent="globals/SoundPickerDelegate" pc="268445375" symbol="onAccept"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="114" lineNum="41" parent="globals/SoundPickerDelegate" pc="268445377" symbol="onAccept"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="114" lineNum="42" parent="globals/SoundPickerDelegate" pc="268445393" symbol="onAccept"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="114" lineNum="43" parent="globals/SoundPickerDelegate" pc="268445425" symbol="onAccept"/>
-        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="114" lineNum="44" parent="globals/SoundPickerDelegate" pc="268445503" symbol="onAccept"/>
-        <entry filename="c:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\Latest Build\\gen\\006-B3703-00\\source\\Rez.mcgen" id="115" lineNum="22" parent="globals/Rez/Menus/MainMenu" pc="268445506" symbol="&lt;init&gt;"/>
-        <entry filename="c:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\Latest Build\\gen\\006-B3703-00\\source\\Rez.mcgen" id="116" lineNum="23" parent="globals/Rez/Menus/MainMenu" pc="268445525" symbol="initialize"/>
-        <entry filename="c:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\Latest Build\\gen\\006-B3703-00\\source\\Rez.mcgen" id="116" lineNum="24" parent="globals/Rez/Menus/MainMenu" pc="268445527" symbol="initialize"/>
-        <entry filename="c:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\Latest Build\\gen\\006-B3703-00\\source\\Rez.mcgen" id="116" lineNum="25" parent="globals/Rez/Menus/MainMenu" pc="268445545" symbol="initialize"/>
-        <entry filename="c:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\Latest Build\\gen\\006-B3703-00\\source\\Rez.mcgen" id="116" lineNum="26" parent="globals/Rez/Menus/MainMenu" pc="268445601" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="50" lineNum="12" parent="globals/BLEScanner" pc="268439365" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="51" lineNum="26" parent="globals/BLEScanner" pc="268439400" symbol="onShow"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="51" lineNum="27" parent="globals/BLEScanner" pc="268439402" symbol="onShow"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="51" lineNum="30" parent="globals/BLEScanner" pc="268439412" symbol="onShow"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="51" lineNum="31" parent="globals/BLEScanner" pc="268439433" symbol="onShow"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="52" lineNum="20" parent="globals/BLEScanner" pc="268439475" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="52" lineNum="22" parent="globals/BLEScanner" pc="268439477" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="52" lineNum="23" parent="globals/BLEScanner" pc="268439496" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="53" lineNum="46" parent="globals/BLEScanner" pc="268439516" symbol="scanEnd"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="53" lineNum="47" parent="globals/BLEScanner" pc="268439520" symbol="scanEnd"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="53" lineNum="48" parent="globals/BLEScanner" pc="268439552" symbol="scanEnd"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="53" lineNum="49" parent="globals/BLEScanner" pc="268439571" symbol="scanEnd"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="53" lineNum="50" parent="globals/BLEScanner" pc="268439578" symbol="scanEnd"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="53" lineNum="51" parent="globals/BLEScanner" pc="268439595" symbol="scanEnd"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="53" lineNum="52" parent="globals/BLEScanner" pc="268439613" symbol="scanEnd"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="53" lineNum="54" parent="globals/BLEScanner" pc="268439712" symbol="scanEnd"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="53" lineNum="57" parent="globals/BLEScanner" pc="268439734" symbol="scanEnd"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="53" lineNum="58" parent="globals/BLEScanner" pc="268439752" symbol="scanEnd"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="54" lineNum="15" parent="globals/BLEScanner" pc="268439771" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="54" lineNum="16" parent="globals/BLEScanner" pc="268439773" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="54" lineNum="17" parent="globals/BLEScanner" pc="268439791" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="55" lineNum="62" parent="globals/BLEScanner" pc="268439805" symbol="onHide"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="55" lineNum="64" parent="globals/BLEScanner" pc="268439807" symbol="onHide"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="56" lineNum="35" parent="globals/BLEScanner" pc="268439829" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="56" lineNum="37" parent="globals/BLEScanner" pc="268439831" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="56" lineNum="38" parent="globals/BLEScanner" pc="268439853" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="56" lineNum="41" parent="globals/BLEScanner" pc="268439891" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Views.mc" id="56" lineNum="43" parent="globals/BLEScanner" pc="268439913" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="57" lineNum="7" parent="globals/Delegate" pc="268439969" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="57" lineNum="14" parent="globals/Delegate" pc="268439987" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="57" lineNum="15" parent="globals/Delegate" pc="268440017" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="57" lineNum="16" parent="globals/Delegate" pc="268440045" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="58" lineNum="79" parent="globals/Delegate" pc="268440074" symbol="onCharacteristicChanged"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="58" lineNum="80" parent="globals/Delegate" pc="268440076" symbol="onCharacteristicChanged"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="58" lineNum="82" parent="globals/Delegate" pc="268440107" symbol="onCharacteristicChanged"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="58" lineNum="85" parent="globals/Delegate" pc="268440126" symbol="onCharacteristicChanged"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="58" lineNum="87" parent="globals/Delegate" pc="268440157" symbol="onCharacteristicChanged"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="58" lineNum="89" parent="globals/Delegate" pc="268440176" symbol="onCharacteristicChanged"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="59" lineNum="64" parent="globals/Delegate" pc="268440193" symbol="onDescriptorWrite"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="59" lineNum="65" parent="globals/Delegate" pc="268440195" symbol="onDescriptorWrite"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="59" lineNum="66" parent="globals/Delegate" pc="268440206" symbol="onDescriptorWrite"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="59" lineNum="68" parent="globals/Delegate" pc="268440232" symbol="onDescriptorWrite"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="59" lineNum="69" parent="globals/Delegate" pc="268440243" symbol="onDescriptorWrite"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="59" lineNum="70" parent="globals/Delegate" pc="268440265" symbol="onDescriptorWrite"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="59" lineNum="71" parent="globals/Delegate" pc="268440303" symbol="onDescriptorWrite"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="59" lineNum="72" parent="globals/Delegate" pc="268440320" symbol="onDescriptorWrite"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="59" lineNum="74" parent="globals/Delegate" pc="268440398" symbol="onDescriptorWrite"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="42" parent="globals/Delegate" pc="268440420" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="43" parent="globals/Delegate" pc="268440424" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="44" parent="globals/Delegate" pc="268440435" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="47" parent="globals/Delegate" pc="268440445" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="48" parent="globals/Delegate" pc="268440483" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="51" parent="globals/Delegate" pc="268440521" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="52" parent="globals/Delegate" pc="268440541" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="54" parent="globals/Delegate" pc="268440561" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="56" parent="globals/Delegate" pc="268440579" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="58" parent="globals/Delegate" pc="268440682" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="59" parent="globals/Delegate" pc="268440691" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="60" lineNum="60" parent="globals/Delegate" pc="268440704" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="61" lineNum="101" parent="globals/Delegate" pc="268440805" symbol="registerProfiles"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="61" lineNum="102" parent="globals/Delegate" pc="268440809" symbol="registerProfiles"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="61" lineNum="121" parent="globals/Delegate" pc="268440981" symbol="registerProfiles"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="62" lineNum="92" parent="globals/Delegate" pc="268441000" symbol="getScanResult"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="62" lineNum="93" parent="globals/Delegate" pc="268441002" symbol="getScanResult"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="63" lineNum="21" parent="globals/Delegate" pc="268441011" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="63" lineNum="22" parent="globals/Delegate" pc="268441013" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="63" lineNum="23" parent="globals/Delegate" pc="268441031" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="63" lineNum="24" parent="globals/Delegate" pc="268441043" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="64" lineNum="27" parent="globals/Delegate" pc="268441078" symbol="onScanResults"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="64" lineNum="30" parent="globals/Delegate" pc="268441082" symbol="onScanResults"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="64" lineNum="31" parent="globals/Delegate" pc="268441102" symbol="onScanResults"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="64" lineNum="32" parent="globals/Delegate" pc="268441120" symbol="onScanResults"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="64" lineNum="33" parent="globals/Delegate" pc="268441133" symbol="onScanResults"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="64" lineNum="34" parent="globals/Delegate" pc="268441153" symbol="onScanResults"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="64" lineNum="35" parent="globals/Delegate" pc="268441175" symbol="onScanResults"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="65" lineNum="96" parent="globals/Delegate" pc="268441224" symbol="connect"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="65" lineNum="97" parent="globals/Delegate" pc="268441226" symbol="connect"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\BLE_Delegates.mc" id="65" lineNum="98" parent="globals/Delegate" pc="268441247" symbol="connect"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="66" lineNum="127" parent="globals/TempMaxPicker" pc="268441272" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="66" lineNum="128" parent="globals/TempMaxPicker" pc="268441290" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="67" lineNum="132" parent="globals/TempMaxPicker" pc="268441383" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="67" lineNum="133" parent="globals/TempMaxPicker" pc="268441385" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="67" lineNum="134" parent="globals/TempMaxPicker" pc="268441398" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="67" lineNum="142" parent="globals/TempMaxPicker" pc="268441464" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="67" lineNum="149" parent="globals/TempMaxPicker" pc="268441536" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="67" lineNum="150" parent="globals/TempMaxPicker" pc="268441569" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="68" lineNum="7" parent="globals/SoundNotification" pc="268441670" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="68" lineNum="9" parent="globals/SoundNotification" pc="268441688" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="69" lineNum="22" parent="globals/SoundNotification" pc="268441723" symbol="onShow"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="69" lineNum="23" parent="globals/SoundNotification" pc="268441725" symbol="onShow"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="69" lineNum="25" parent="globals/SoundNotification" pc="268441735" symbol="onShow"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="69" lineNum="27" parent="globals/SoundNotification" pc="268441804" symbol="onShow"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="70" lineNum="16" parent="globals/SoundNotification" pc="268441849" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="70" lineNum="18" parent="globals/SoundNotification" pc="268441851" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="70" lineNum="19" parent="globals/SoundNotification" pc="268441870" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="71" lineNum="11" parent="globals/SoundNotification" pc="268441890" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="71" lineNum="12" parent="globals/SoundNotification" pc="268441892" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="72" lineNum="49" parent="globals/SoundNotification" pc="268441911" symbol="onHide"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="72" lineNum="50" parent="globals/SoundNotification" pc="268441913" symbol="onHide"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="73" lineNum="54" parent="globals/SoundNotification" pc="268441932" symbol="notificationDone"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="73" lineNum="56" parent="globals/SoundNotification" pc="268441934" symbol="notificationDone"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="74" lineNum="31" parent="globals/SoundNotification" pc="268442010" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="74" lineNum="33" parent="globals/SoundNotification" pc="268442012" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="74" lineNum="34" parent="globals/SoundNotification" pc="268442034" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="74" lineNum="37" parent="globals/SoundNotification" pc="268442072" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="74" lineNum="39" parent="globals/SoundNotification" pc="268442094" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="74" lineNum="40" parent="globals/SoundNotification" pc="268442192" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="74" lineNum="43" parent="globals/SoundNotification" pc="268442253" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="74" lineNum="44" parent="globals/SoundNotification" pc="268442273" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="74" lineNum="46" parent="globals/SoundNotification" pc="268442298" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="75" lineNum="8" parent="globals/NumberFactory" pc="268442397" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="76" lineNum="53" parent="globals/NumberFactory" pc="268442416" symbol="getValue"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="76" lineNum="55" parent="globals/NumberFactory" pc="268442418" symbol="getValue"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="76" lineNum="56" parent="globals/NumberFactory" pc="268442441" symbol="getValue"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="76" lineNum="60" parent="globals/NumberFactory" pc="268442446" symbol="getValue"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="77" lineNum="33" parent="globals/NumberFactory" pc="268442468" symbol="getDrawable"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="77" lineNum="34" parent="globals/NumberFactory" pc="268442472" symbol="getDrawable"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="77" lineNum="38" parent="globals/NumberFactory" pc="268442487" symbol="getDrawable"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="77" lineNum="37" parent="globals/NumberFactory" pc="268442487" symbol="getDrawable"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="77" lineNum="39" parent="globals/NumberFactory" pc="268442494" symbol="getDrawable"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="77" lineNum="41" parent="globals/NumberFactory" pc="268442504" symbol="getDrawable"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="77" lineNum="44" parent="globals/NumberFactory" pc="268442547" symbol="getDrawable"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="78" lineNum="64" parent="globals/NumberFactory" pc="268442642" symbol="getSize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="78" lineNum="66" parent="globals/NumberFactory" pc="268442644" symbol="getSize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="79" lineNum="14" parent="globals/NumberFactory" pc="268442677" symbol="getIndex"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="79" lineNum="16" parent="globals/NumberFactory" pc="268442679" symbol="getIndex"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="79" lineNum="17" parent="globals/NumberFactory" pc="268442686" symbol="getIndex"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="79" lineNum="21" parent="globals/NumberFactory" pc="268442707" symbol="getIndex"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="80" lineNum="25" parent="globals/NumberFactory" pc="268442729" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="80" lineNum="26" parent="globals/NumberFactory" pc="268442731" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="80" lineNum="27" parent="globals/NumberFactory" pc="268442749" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="80" lineNum="28" parent="globals/NumberFactory" pc="268442759" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="80" lineNum="29" parent="globals/NumberFactory" pc="268442769" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\NumberFactory.mc" id="80" lineNum="30" parent="globals/NumberFactory" pc="268442779" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\App.mc" id="81" lineNum="71" parent="globals" pc="268442790" symbol="getApp"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\App.mc" id="81" lineNum="72" parent="globals" pc="268442800" symbol="getApp"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="82" lineNum="95" parent="globals/ThresholdChangeConfirmation" pc="268442816" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="84" lineNum="102" parent="globals/ThresholdChangeConfirmation" pc="268442835" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="84" lineNum="104" parent="globals/ThresholdChangeConfirmation" pc="268442837" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="84" lineNum="105" parent="globals/ThresholdChangeConfirmation" pc="268442856" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="85" lineNum="98" parent="globals/ThresholdChangeConfirmation" pc="268442876" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="85" lineNum="99" parent="globals/ThresholdChangeConfirmation" pc="268442878" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="110" parent="globals/ThresholdChangeConfirmation" pc="268442897" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="112" parent="globals/ThresholdChangeConfirmation" pc="268442901" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="113" parent="globals/ThresholdChangeConfirmation" pc="268442923" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="116" parent="globals/ThresholdChangeConfirmation" pc="268442961" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="119" parent="globals/ThresholdChangeConfirmation" pc="268442983" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="123" parent="globals/ThresholdChangeConfirmation" pc="268442983" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="121" parent="globals/ThresholdChangeConfirmation" pc="268442983" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="120" parent="globals/ThresholdChangeConfirmation" pc="268442983" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="124" parent="globals/ThresholdChangeConfirmation" pc="268442996" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="126" parent="globals/ThresholdChangeConfirmation" pc="268443006" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="129" parent="globals/ThresholdChangeConfirmation" pc="268443050" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="130" parent="globals/ThresholdChangeConfirmation" pc="268443063" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="132" parent="globals/ThresholdChangeConfirmation" pc="268443073" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="135" parent="globals/ThresholdChangeConfirmation" pc="268443117" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="136" parent="globals/ThresholdChangeConfirmation" pc="268443130" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="138" parent="globals/ThresholdChangeConfirmation" pc="268443140" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="141" parent="globals/ThresholdChangeConfirmation" pc="268443184" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="142" parent="globals/ThresholdChangeConfirmation" pc="268443276" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="144" parent="globals/ThresholdChangeConfirmation" pc="268443372" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="87" lineNum="145" parent="globals/ThresholdChangeConfirmation" pc="268443394" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="88" lineNum="61" parent="globals/TempMinNotification" pc="268443456" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="88" lineNum="63" parent="globals/TempMinNotification" pc="268443474" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="89" lineNum="77" parent="globals/TempMinNotification" pc="268443509" symbol="onShow"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="89" lineNum="78" parent="globals/TempMinNotification" pc="268443511" symbol="onShow"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="89" lineNum="80" parent="globals/TempMinNotification" pc="268443521" symbol="onShow"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="89" lineNum="82" parent="globals/TempMinNotification" pc="268443590" symbol="onShow"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="90" lineNum="71" parent="globals/TempMinNotification" pc="268443635" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="90" lineNum="73" parent="globals/TempMinNotification" pc="268443637" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="90" lineNum="74" parent="globals/TempMinNotification" pc="268443656" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="91" lineNum="66" parent="globals/TempMinNotification" pc="268443676" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="91" lineNum="67" parent="globals/TempMinNotification" pc="268443678" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="92" lineNum="104" parent="globals/TempMinNotification" pc="268443697" symbol="onHide"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="92" lineNum="105" parent="globals/TempMinNotification" pc="268443699" symbol="onHide"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="93" lineNum="109" parent="globals/TempMinNotification" pc="268443718" symbol="notificationDone"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="93" lineNum="111" parent="globals/TempMinNotification" pc="268443720" symbol="notificationDone"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="94" lineNum="86" parent="globals/TempMinNotification" pc="268443796" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="94" lineNum="88" parent="globals/TempMinNotification" pc="268443798" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="94" lineNum="89" parent="globals/TempMinNotification" pc="268443820" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="94" lineNum="92" parent="globals/TempMinNotification" pc="268443858" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="94" lineNum="94" parent="globals/TempMinNotification" pc="268443880" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="94" lineNum="95" parent="globals/TempMinNotification" pc="268443978" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="94" lineNum="98" parent="globals/TempMinNotification" pc="268444039" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="94" lineNum="99" parent="globals/TempMinNotification" pc="268444059" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Notifications.mc" id="94" lineNum="101" parent="globals/TempMinNotification" pc="268444084" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="95" lineNum="89" parent="globals/SoundPicker" pc="268444183" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="95" lineNum="90" parent="globals/SoundPicker" pc="268444201" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="95" lineNum="91" parent="globals/SoundPicker" pc="268444293" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="96" lineNum="94" parent="globals/SoundPicker" pc="268444357" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="96" lineNum="95" parent="globals/SoundPicker" pc="268444359" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="96" lineNum="96" parent="globals/SoundPicker" pc="268444392" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="97" lineNum="58" parent="globals/SensorDisconnected" pc="268444493" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="98" lineNum="72" parent="globals/SensorDisconnected" pc="268444512" symbol="onShow"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="98" lineNum="73" parent="globals/SensorDisconnected" pc="268444514" symbol="onShow"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="98" lineNum="75" parent="globals/SensorDisconnected" pc="268444524" symbol="onShow"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="99" lineNum="66" parent="globals/SensorDisconnected" pc="268444594" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="99" lineNum="68" parent="globals/SensorDisconnected" pc="268444596" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="99" lineNum="69" parent="globals/SensorDisconnected" pc="268444615" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="100" lineNum="62" parent="globals/SensorDisconnected" pc="268444635" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="100" lineNum="63" parent="globals/SensorDisconnected" pc="268444637" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="102" lineNum="79" parent="globals/SensorDisconnected" pc="268444656" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="102" lineNum="81" parent="globals/SensorDisconnected" pc="268444658" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="102" lineNum="82" parent="globals/SensorDisconnected" pc="268444680" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="102" lineNum="85" parent="globals/SensorDisconnected" pc="268444718" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="102" lineNum="87" parent="globals/SensorDisconnected" pc="268444740" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Views.mc" id="102" lineNum="88" parent="globals/SensorDisconnected" pc="268444801" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="103" lineNum="7" parent="globals/SensoryBehaviorDelegate" pc="268444863" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="104" lineNum="17" parent="globals/SensoryBehaviorDelegate" pc="268444882" symbol="onBack"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="104" lineNum="18" parent="globals/SensoryBehaviorDelegate" pc="268444884" symbol="onBack"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="104" lineNum="19" parent="globals/SensoryBehaviorDelegate" pc="268444897" symbol="onBack"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="104" lineNum="21" parent="globals/SensoryBehaviorDelegate" pc="268444960" symbol="onBack"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="104" lineNum="23" parent="globals/SensoryBehaviorDelegate" pc="268444981" symbol="onBack"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="105" lineNum="27" parent="globals/SensoryBehaviorDelegate" pc="268444984" symbol="onSwipe"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="105" lineNum="28" parent="globals/SensoryBehaviorDelegate" pc="268444988" symbol="onSwipe"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="105" lineNum="29" parent="globals/SensoryBehaviorDelegate" pc="268445025" symbol="onSwipe"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="105" lineNum="30" parent="globals/SensoryBehaviorDelegate" pc="268445053" symbol="onSwipe"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="105" lineNum="31" parent="globals/SensoryBehaviorDelegate" pc="268445070" symbol="onSwipe"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="105" lineNum="32" parent="globals/SensoryBehaviorDelegate" pc="268445092" symbol="onSwipe"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="105" lineNum="33" parent="globals/SensoryBehaviorDelegate" pc="268445114" symbol="onSwipe"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="105" lineNum="34" parent="globals/SensoryBehaviorDelegate" pc="268445136" symbol="onSwipe"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="105" lineNum="36" parent="globals/SensoryBehaviorDelegate" pc="268445188" symbol="onSwipe"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="106" lineNum="11" parent="globals/SensoryBehaviorDelegate" pc="268445191" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="106" lineNum="12" parent="globals/SensoryBehaviorDelegate" pc="268445193" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="106" lineNum="13" parent="globals/SensoryBehaviorDelegate" pc="268445203" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\View_Delegates.mc" id="106" lineNum="14" parent="globals/SensoryBehaviorDelegate" pc="268445213" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="107" lineNum="67" parent="globals/TempMaxPickerDelegate" pc="268445232" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="108" lineNum="73" parent="globals/TempMaxPickerDelegate" pc="268445251" symbol="onCancel"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="108" lineNum="74" parent="globals/TempMaxPickerDelegate" pc="268445253" symbol="onCancel"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="108" lineNum="75" parent="globals/TempMaxPickerDelegate" pc="268445274" symbol="onCancel"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="109" lineNum="69" parent="globals/TempMaxPickerDelegate" pc="268445277" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="109" lineNum="70" parent="globals/TempMaxPickerDelegate" pc="268445279" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="110" lineNum="78" parent="globals/TempMaxPickerDelegate" pc="268445298" symbol="onAccept"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="110" lineNum="79" parent="globals/TempMaxPickerDelegate" pc="268445300" symbol="onAccept"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="110" lineNum="80" parent="globals/TempMaxPickerDelegate" pc="268445316" symbol="onAccept"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="110" lineNum="81" parent="globals/TempMaxPickerDelegate" pc="268445348" symbol="onAccept"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="110" lineNum="82" parent="globals/TempMaxPickerDelegate" pc="268445426" symbol="onAccept"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="111" lineNum="29" parent="globals/SoundPickerDelegate" pc="268445429" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="112" lineNum="35" parent="globals/SoundPickerDelegate" pc="268445448" symbol="onCancel"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="112" lineNum="36" parent="globals/SoundPickerDelegate" pc="268445450" symbol="onCancel"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="112" lineNum="37" parent="globals/SoundPickerDelegate" pc="268445471" symbol="onCancel"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="113" lineNum="31" parent="globals/SoundPickerDelegate" pc="268445474" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="113" lineNum="32" parent="globals/SoundPickerDelegate" pc="268445476" symbol="initialize"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="114" lineNum="40" parent="globals/SoundPickerDelegate" pc="268445495" symbol="onAccept"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="114" lineNum="41" parent="globals/SoundPickerDelegate" pc="268445497" symbol="onAccept"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="114" lineNum="42" parent="globals/SoundPickerDelegate" pc="268445513" symbol="onAccept"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="114" lineNum="43" parent="globals/SoundPickerDelegate" pc="268445545" symbol="onAccept"/>
+        <entry filename="C:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\CIQ\\source\\Settings.mc" id="114" lineNum="44" parent="globals/SoundPickerDelegate" pc="268445623" symbol="onAccept"/>
+        <entry filename="c:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\Latest Build\\gen\\006-B3703-00\\source\\Rez.mcgen" id="115" lineNum="22" parent="globals/Rez/Menus/MainMenu" pc="268445626" symbol="&lt;init&gt;"/>
+        <entry filename="c:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\Latest Build\\gen\\006-B3703-00\\source\\Rez.mcgen" id="116" lineNum="23" parent="globals/Rez/Menus/MainMenu" pc="268445645" symbol="initialize"/>
+        <entry filename="c:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\Latest Build\\gen\\006-B3703-00\\source\\Rez.mcgen" id="116" lineNum="24" parent="globals/Rez/Menus/MainMenu" pc="268445647" symbol="initialize"/>
+        <entry filename="c:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\Latest Build\\gen\\006-B3703-00\\source\\Rez.mcgen" id="116" lineNum="25" parent="globals/Rez/Menus/MainMenu" pc="268445665" symbol="initialize"/>
+        <entry filename="c:\\Users\\Harry\\Desktop\\sensory-device\\CIQ_app\\Latest Build\\gen\\006-B3703-00\\source\\Rez.mcgen" id="116" lineNum="26" parent="globals/Rez/Menus/MainMenu" pc="268445721" symbol="initialize"/>
     </pcToLineNum>
     <symbolTable>
-        <entry id="64" method="true" symbol="getScanResult"/>
+        <entry id="66" method="true" symbol="getScanResult"/>
         <entry id="8388639" module="true" symbol="Graphics"/>
         <entry id="27" object="true" symbol="SettingsMenuInputDelegate"/>
         <entry id="8389626" method="true" symbol="onAccept"/>
-        <entry field="true" id="73" symbol="mStop"/>
-        <entry field="true" id="76" symbol="soundTitle"/>
-        <entry field="true" id="67" symbol="tempMaxDefault"/>
+        <entry field="true" id="75" symbol="mStop"/>
+        <entry field="true" id="78" symbol="soundTitle"/>
+        <entry field="true" id="69" symbol="tempMaxDefault"/>
         <entry id="8389346" symbol="text"/>
-        <entry field="true" id="70" symbol="mFormat"/>
+        <entry field="true" id="72" symbol="mFormat"/>
         <entry field="true" id="49" symbol="tempMinTitle"/>
         <entry field="true" id="22" symbol="SOUND_THRESH_RANGE_LOW"/>
-        <entry id="85" symbol="sound"/>
+        <entry id="87" symbol="sound"/>
         <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
         <entry id="7" module="true" symbol="globals/Rez/Menus"/>
         <entry field="true" id="53" symbol="queue"/>
-        <entry field="true" id="74" symbol="soundDefault"/>
+        <entry field="true" id="76" symbol="soundDefault"/>
         <entry field="true" id="57" symbol="timer"/>
         <entry field="true" id="10" symbol="BLE_DELEGATE"/>
         <entry field="true" id="33" symbol="TEMP_MIN_THRESHOLD"/>
         <entry field="true" id="23" symbol="SUBSCRIPTION_COUNT"/>
-        <entry id="86" symbol="tempMin"/>
+        <entry id="88" symbol="tempMin"/>
         <entry id="31" object="true" symbol="Sub2NotifQueue"/>
         <entry id="8389629" method="true" symbol="getValue"/>
         <entry field="true" id="8388611" module="true" symbol="Toybox"/>
         <entry id="8391256" method="true" symbol="onScanResults"/>
-        <entry id="87" symbol="tempMax"/>
-        <entry field="true" id="81" symbol="AppName"/>
+        <entry id="89" symbol="tempMax"/>
+        <entry field="true" id="83" symbol="AppName"/>
+        <entry field="true" id="60" symbol="&lt;globals/BLEScanner/&lt;&gt;timer&gt;"/>
         <entry field="true" id="21" symbol="SOUND_THRESH_RANGE_HI"/>
         <entry id="8391262" method="true" symbol="onDescriptorWrite"/>
         <entry id="8" module="true" symbol="globals/Rez/Strings"/>
@@ -442,9 +449,9 @@
         <entry id="8389081" method="true" symbol="onBack"/>
         <entry field="true" id="34" symbol="TEMP_THRESH_INCREMENT"/>
         <entry id="2" module="true" symbol="globals/Rez"/>
-        <entry field="true" id="84" symbol="prompt"/>
+        <entry field="true" id="86" symbol="prompt"/>
         <entry id="45" object="true" symbol="ThresholdChangeConfirmationDelegate"/>
-        <entry field="true" id="78" symbol="back_page"/>
+        <entry field="true" id="80" symbol="back_page"/>
         <entry id="8391340" symbol="descriptors"/>
         <entry field="true" id="47" symbol="tempMinDefault"/>
         <entry id="8389124" method="true" symbol="onUpdate"/>
@@ -460,17 +467,17 @@
         <entry id="8391258" method="true" symbol="onConnectedStateChanged"/>
         <entry id="8389630" method="true" symbol="getSize"/>
         <entry id="44" object="true" symbol="ThresholdChangeConfirmation"/>
-        <entry id="89" symbol="item_2"/>
-        <entry id="88" symbol="item_1"/>
+        <entry id="91" symbol="item_2"/>
+        <entry id="90" symbol="item_1"/>
         <entry id="52" module="true" symbol="Menus"/>
         <entry id="8389275" method="true" symbol="getApp"/>
-        <entry field="true" id="77" symbol="back_back_page"/>
+        <entry field="true" id="79" symbol="back_back_page"/>
         <entry id="6" module="true" symbol="globals/Rez/Layouts"/>
-        <entry id="62" method="true" symbol="connect"/>
-        <entry field="true" id="61" symbol="TEMP_UUID"/>
+        <entry id="64" method="true" symbol="connect"/>
+        <entry field="true" id="63" symbol="TEMP_UUID"/>
         <entry id="8389122" method="true" symbol="onLayout"/>
         <entry field="true" id="36" symbol="TEMP_THRESH_RANGE_LOW"/>
-        <entry field="true" id="66" symbol="sensorScanResult"/>
+        <entry field="true" id="68" symbol="sensorScanResult"/>
         <entry id="8389644" symbol="defaults"/>
         <entry id="5" module="true" symbol="globals/Rez/JsonData"/>
         <entry id="41" object="true" symbol="TempMinNotification"/>
@@ -480,15 +487,15 @@
         <entry id="39" object="true" symbol="TempMaxPicker"/>
         <entry id="14" object="true" symbol="HomeDisplay"/>
         <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
-        <entry field="true" id="59" symbol="SERVICE_UUID"/>
+        <entry field="true" id="61" symbol="SERVICE_UUID"/>
         <entry id="54" method="true" symbol="run"/>
         <entry id="8389177" method="true" symbol="clear"/>
         <entry field="true" id="18" symbol="SOUND_LEVEL"/>
-        <entry id="80" object="true" symbol="MainMenu"/>
+        <entry id="82" object="true" symbol="MainMenu"/>
         <entry id="8389628" method="true" symbol="getDrawable"/>
         <entry id="11" object="true" symbol="CIQApp"/>
         <entry field="true" id="55" symbol="&lt;globals/CIQApp/&lt;&gt;_view&gt;"/>
-        <entry id="65" method="true" symbol="registerProfiles"/>
+        <entry id="67" method="true" symbol="registerProfiles"/>
         <entry id="40" object="true" symbol="TempMaxPickerDelegate"/>
         <entry id="8388769" module="true" object="true" symbol="Rez"/>
         <entry id="29" object="true" symbol="SoundPicker"/>
@@ -496,23 +503,23 @@
         <entry id="30" object="true" symbol="SoundPickerDelegate"/>
         <entry id="8388640" module="true" symbol="Lang"/>
         <entry id="8390088" module="true" object="true" symbol="JsonData"/>
-        <entry field="true" id="69" symbol="tempMaxTitle"/>
-        <entry field="true" id="79" symbol="LauncherIcon"/>
+        <entry field="true" id="71" symbol="tempMaxTitle"/>
+        <entry field="true" id="81" symbol="LauncherIcon"/>
         <entry id="8388610" symbol="statics"/>
         <entry id="8389123" method="true" symbol="onShow"/>
-        <entry field="true" id="71" symbol="mIncrement"/>
-        <entry field="true" id="60" symbol="SOUND_UUID"/>
+        <entry field="true" id="73" symbol="mIncrement"/>
+        <entry field="true" id="62" symbol="SOUND_UUID"/>
         <entry id="24" object="true" symbol="SensorDisconnected"/>
         <entry id="8389350" module="true" symbol="globals"/>
         <entry id="8391334" symbol="uuid"/>
         <entry id="8388770" module="true" object="true" symbol="Strings"/>
-        <entry field="true" id="72" symbol="mStart"/>
+        <entry field="true" id="74" symbol="mStart"/>
         <entry id="8388702" method="true" symbol="initialize"/>
         <entry id="8389279" method="true" symbol="onStart"/>
         <entry id="9" object="true" symbol="BLEScanner"/>
         <entry field="true" id="15" symbol="NOTIFICATION_DELAY"/>
         <entry id="8389541" method="true" symbol="onCancel"/>
-        <entry id="58" method="true" symbol="scanEnd"/>
+        <entry id="59" method="true" symbol="scanEnd"/>
         <entry field="true" id="46" symbol="VIBE_DURATION"/>
         <entry id="38" object="true" symbol="TempMaxNotification"/>
         <entry id="8389280" method="true" symbol="getInitialView"/>
@@ -524,9 +531,9 @@
         <entry id="56" method="true" symbol="notificationDone"/>
         <entry id="8391341" symbol="characteristics"/>
         <entry field="true" id="19" symbol="SOUND_THRESHOLD"/>
-        <entry field="true" id="68" symbol="tempMaxFactory"/>
+        <entry field="true" id="70" symbol="tempMaxFactory"/>
         <entry id="8392011" method="true" symbol="getIndex"/>
-        <entry field="true" id="63" symbol="device"/>
+        <entry field="true" id="65" symbol="device"/>
         <entry field="true" id="20" symbol="SOUND_THRESH_INCREMENT"/>
         <entry id="8388646" module="true" object="true" symbol="Timer"/>
         <entry id="51" module="true" symbol="Layouts"/>
@@ -534,7 +541,8 @@
         <entry id="8389643" symbol="pattern"/>
         <entry id="25" object="true" symbol="SensorNotFound"/>
         <entry id="4" module="true" symbol="globals/Rez/Fonts"/>
-        <entry field="true" id="75" symbol="soundFactory"/>
+        <entry field="true" id="77" symbol="soundFactory"/>
+        <entry field="true" id="58" symbol="&lt;globals/BLEScanner/&lt;&gt;curr_reps&gt;"/>
         <entry id="12" object="true" symbol="Connecting"/>
         <entry id="8389125" method="true" symbol="onHide"/>
         <entry field="true" id="48" symbol="tempMinFactory"/>
@@ -543,8 +551,8 @@
         <entry field="true" id="35" symbol="TEMP_THRESH_RANGE_HI"/>
         <entry field="true" id="8390079" symbol="y"/>
         <entry field="true" id="8390078" symbol="x"/>
-        <entry field="true" id="83" symbol="menu_label_2"/>
-        <entry field="true" id="82" symbol="menu_label_1"/>
+        <entry field="true" id="85" symbol="menu_label_2"/>
+        <entry field="true" id="84" symbol="menu_label_1"/>
         <entry id="8389101" method="true" symbol="onSwipe"/>
     </symbolTable>
     <localVars>
@@ -565,48 +573,48 @@
         <entry arg="true" endPc="268438839" name="dc" stackId="1" startPc="268438799"/>
         <entry arg="true" endPc="268439346" name="dc" stackId="1" startPc="268438960"/>
         <entry arg="true" endPc="268439515" name="dc" stackId="1" startPc="268439475"/>
-        <entry endPc="268439662" name="result" stackId="1" startPc="268439520"/>
-        <entry arg="true" endPc="268439848" name="dc" stackId="1" startPc="268439709"/>
-        <entry arg="true" endPc="268440072" name="char" stackId="1" startPc="268439954"/>
-        <entry arg="true" endPc="268440072" name="val" stackId="2" startPc="268439954"/>
-        <entry arg="true" endPc="268440299" name="descriptor" stackId="1" startPc="268440073"/>
-        <entry arg="true" endPc="268440299" name="status" stackId="2" startPc="268440073"/>
-        <entry arg="true" endPc="268440684" name="device" stackId="1" startPc="268440300"/>
-        <entry arg="true" endPc="268440684" name="state" stackId="2" startPc="268440300"/>
-        <entry endPc="268440558" name="sound_char" stackId="3" startPc="268440315"/>
-        <entry endPc="268440558" name="temp_char" stackId="4" startPc="268440315"/>
-        <entry endPc="268440878" name="profile" stackId="1" startPc="268440689"/>
-        <entry arg="true" endPc="268441103" name="scanResults" stackId="1" startPc="268440958"/>
-        <entry endPc="268441102" name="result" stackId="2" startPc="268440982"/>
-        <entry endPc="268441083" name="iter" stackId="3" startPc="268441000"/>
-        <entry endPc="268441083" name="uuid" stackId="4" startPc="268441033"/>
-        <entry arg="true" endPc="268441769" name="dc" stackId="1" startPc="268441729"/>
-        <entry arg="true" endPc="268442276" name="dc" stackId="1" startPc="268441890"/>
-        <entry arg="true" endPc="268442347" name="index" stackId="1" startPc="268442296"/>
-        <entry arg="true" endPc="268442521" name="index" stackId="1" startPc="268442348"/>
-        <entry arg="true" endPc="268442521" name="selected" stackId="2" startPc="268442348"/>
-        <entry endPc="268442521" name="value" stackId="3" startPc="268442352"/>
-        <entry endPc="268442521" name="pickerText" stackId="4" startPc="268442352"/>
-        <entry arg="true" endPc="268442608" name="value" stackId="1" startPc="268442557"/>
-        <entry arg="true" endPc="268442669" name="start" stackId="1" startPc="268442609"/>
-        <entry arg="true" endPc="268442669" name="stop" stackId="2" startPc="268442609"/>
-        <entry arg="true" endPc="268442669" name="increment" stackId="3" startPc="268442609"/>
-        <entry arg="true" endPc="268442669" name="format" stackId="4" startPc="268442609"/>
-        <entry arg="true" endPc="268442755" name="dc" stackId="1" startPc="268442715"/>
-        <entry arg="true" endPc="268443335" name="dc" stackId="1" startPc="268442777"/>
-        <entry endPc="268443334" name="soundThreshString" stackId="2" startPc="268442781"/>
-        <entry endPc="268443334" name="tempMinThreshString" stackId="3" startPc="268442781"/>
-        <entry endPc="268443334" name="tempMaxThreshString" stackId="4" startPc="268442781"/>
-        <entry arg="true" endPc="268443555" name="dc" stackId="1" startPc="268443515"/>
-        <entry arg="true" endPc="268444062" name="dc" stackId="1" startPc="268443676"/>
-        <entry arg="true" endPc="268444514" name="dc" stackId="1" startPc="268444474"/>
-        <entry arg="true" endPc="268444742" name="dc" stackId="1" startPc="268444536"/>
-        <entry arg="true" endPc="268445070" name="swipeEvent" stackId="1" startPc="268444864"/>
-        <entry endPc="268445064" name="menu" stackId="2" startPc="268444905"/>
-        <entry arg="true" endPc="268445111" name="_page" stackId="1" startPc="268445071"/>
-        <entry arg="true" endPc="268445111" name="_back_page" stackId="2" startPc="268445071"/>
-        <entry arg="true" endPc="268445308" name="values" stackId="1" startPc="268445178"/>
-        <entry arg="true" endPc="268445505" name="values" stackId="1" startPc="268445375"/>
+        <entry endPc="268439769" name="result" stackId="1" startPc="268439520"/>
+        <entry arg="true" endPc="268439968" name="dc" stackId="1" startPc="268439829"/>
+        <entry arg="true" endPc="268440192" name="char" stackId="1" startPc="268440074"/>
+        <entry arg="true" endPc="268440192" name="val" stackId="2" startPc="268440074"/>
+        <entry arg="true" endPc="268440419" name="descriptor" stackId="1" startPc="268440193"/>
+        <entry arg="true" endPc="268440419" name="status" stackId="2" startPc="268440193"/>
+        <entry arg="true" endPc="268440804" name="device" stackId="1" startPc="268440420"/>
+        <entry arg="true" endPc="268440804" name="state" stackId="2" startPc="268440420"/>
+        <entry endPc="268440678" name="sound_char" stackId="3" startPc="268440435"/>
+        <entry endPc="268440678" name="temp_char" stackId="4" startPc="268440435"/>
+        <entry endPc="268440998" name="profile" stackId="1" startPc="268440809"/>
+        <entry arg="true" endPc="268441223" name="scanResults" stackId="1" startPc="268441078"/>
+        <entry endPc="268441222" name="result" stackId="2" startPc="268441102"/>
+        <entry endPc="268441203" name="iter" stackId="3" startPc="268441120"/>
+        <entry endPc="268441203" name="uuid" stackId="4" startPc="268441153"/>
+        <entry arg="true" endPc="268441889" name="dc" stackId="1" startPc="268441849"/>
+        <entry arg="true" endPc="268442396" name="dc" stackId="1" startPc="268442010"/>
+        <entry arg="true" endPc="268442467" name="index" stackId="1" startPc="268442416"/>
+        <entry arg="true" endPc="268442641" name="index" stackId="1" startPc="268442468"/>
+        <entry arg="true" endPc="268442641" name="selected" stackId="2" startPc="268442468"/>
+        <entry endPc="268442641" name="value" stackId="3" startPc="268442472"/>
+        <entry endPc="268442641" name="pickerText" stackId="4" startPc="268442472"/>
+        <entry arg="true" endPc="268442728" name="value" stackId="1" startPc="268442677"/>
+        <entry arg="true" endPc="268442789" name="start" stackId="1" startPc="268442729"/>
+        <entry arg="true" endPc="268442789" name="stop" stackId="2" startPc="268442729"/>
+        <entry arg="true" endPc="268442789" name="increment" stackId="3" startPc="268442729"/>
+        <entry arg="true" endPc="268442789" name="format" stackId="4" startPc="268442729"/>
+        <entry arg="true" endPc="268442875" name="dc" stackId="1" startPc="268442835"/>
+        <entry arg="true" endPc="268443455" name="dc" stackId="1" startPc="268442897"/>
+        <entry endPc="268443454" name="soundThreshString" stackId="2" startPc="268442901"/>
+        <entry endPc="268443454" name="tempMinThreshString" stackId="3" startPc="268442901"/>
+        <entry endPc="268443454" name="tempMaxThreshString" stackId="4" startPc="268442901"/>
+        <entry arg="true" endPc="268443675" name="dc" stackId="1" startPc="268443635"/>
+        <entry arg="true" endPc="268444182" name="dc" stackId="1" startPc="268443796"/>
+        <entry arg="true" endPc="268444634" name="dc" stackId="1" startPc="268444594"/>
+        <entry arg="true" endPc="268444862" name="dc" stackId="1" startPc="268444656"/>
+        <entry arg="true" endPc="268445190" name="swipeEvent" stackId="1" startPc="268444984"/>
+        <entry endPc="268445184" name="menu" stackId="2" startPc="268445025"/>
+        <entry arg="true" endPc="268445231" name="_page" stackId="1" startPc="268445191"/>
+        <entry arg="true" endPc="268445231" name="_back_page" stackId="2" startPc="268445191"/>
+        <entry arg="true" endPc="268445428" name="values" stackId="1" startPc="268445298"/>
+        <entry arg="true" endPc="268445625" name="values" stackId="1" startPc="268445495"/>
     </localVars>
     <annotations>
         <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
@@ -629,24 +637,24 @@
         <dataEntry label="globals/Connecting" offset="1133" parentId="globals" symbolId="Connecting" type="class"/>
         <dataEntry label="globals/TempMaxNotification" offset="1228" parentId="globals" symbolId="TempMaxNotification" type="class"/>
         <dataEntry label="globals/BLEScanner" offset="1347" parentId="globals" symbolId="BLEScanner" type="class"/>
-        <dataEntry label="globals/Delegate" offset="1458" parentId="globals" symbolId="Delegate" type="class"/>
-        <dataEntry label="globals/TempMaxPicker" offset="1609" parentId="globals" symbolId="TempMaxPicker" type="class"/>
-        <dataEntry label="globals/SoundNotification" offset="1680" parentId="globals" symbolId="SoundNotification" type="class"/>
-        <dataEntry label="globals/NumberFactory" offset="1791" parentId="globals" symbolId="NumberFactory" type="class"/>
-        <dataEntry label="globals/ThresholdChangeConfirmation" offset="1902" parentId="globals" symbolId="ThresholdChangeConfirmation" type="class"/>
-        <dataEntry label="globals/TempMinNotification" offset="1997" parentId="globals" symbolId="TempMinNotification" type="class"/>
-        <dataEntry label="globals/SoundPicker" offset="2116" parentId="globals" symbolId="SoundPicker" type="class"/>
-        <dataEntry label="globals/SensorDisconnected" offset="2187" parentId="globals" symbolId="SensorDisconnected" type="class"/>
-        <dataEntry label="globals/SensoryBehaviorDelegate" offset="2282" parentId="globals" symbolId="SensoryBehaviorDelegate" type="class"/>
-        <dataEntry label="globals/TempMaxPickerDelegate" offset="2361" parentId="globals" symbolId="TempMaxPickerDelegate" type="class"/>
-        <dataEntry label="globals/SoundPickerDelegate" offset="2424" parentId="globals" symbolId="SoundPickerDelegate" type="class"/>
-        <dataEntry label="globals/Rez/Drawables" offset="2487" parentId="Rez" symbolId="Drawables" type="module"/>
-        <dataEntry label="globals/Rez/Layouts" offset="2526" parentId="Rez" symbolId="Layouts" type="module"/>
-        <dataEntry label="globals/Rez/Menus" offset="2557" parentId="Rez" symbolId="Menus" type="module"/>
-        <dataEntry label="globals/Rez/Fonts" offset="2596" parentId="Rez" symbolId="Fonts" type="module"/>
-        <dataEntry label="globals/Rez/Strings" offset="2627" parentId="Rez" symbolId="Strings" type="module"/>
-        <dataEntry label="globals/Rez/JsonData" offset="2690" parentId="Rez" symbolId="JsonData" type="module"/>
-        <dataEntry label="globals/Rez/Menus/MainMenu" offset="2721" parentId="Menus" symbolId="MainMenu" type="class"/>
+        <dataEntry label="globals/Delegate" offset="1466" parentId="globals" symbolId="Delegate" type="class"/>
+        <dataEntry label="globals/TempMaxPicker" offset="1617" parentId="globals" symbolId="TempMaxPicker" type="class"/>
+        <dataEntry label="globals/SoundNotification" offset="1688" parentId="globals" symbolId="SoundNotification" type="class"/>
+        <dataEntry label="globals/NumberFactory" offset="1799" parentId="globals" symbolId="NumberFactory" type="class"/>
+        <dataEntry label="globals/ThresholdChangeConfirmation" offset="1910" parentId="globals" symbolId="ThresholdChangeConfirmation" type="class"/>
+        <dataEntry label="globals/TempMinNotification" offset="2005" parentId="globals" symbolId="TempMinNotification" type="class"/>
+        <dataEntry label="globals/SoundPicker" offset="2124" parentId="globals" symbolId="SoundPicker" type="class"/>
+        <dataEntry label="globals/SensorDisconnected" offset="2195" parentId="globals" symbolId="SensorDisconnected" type="class"/>
+        <dataEntry label="globals/SensoryBehaviorDelegate" offset="2290" parentId="globals" symbolId="SensoryBehaviorDelegate" type="class"/>
+        <dataEntry label="globals/TempMaxPickerDelegate" offset="2369" parentId="globals" symbolId="TempMaxPickerDelegate" type="class"/>
+        <dataEntry label="globals/SoundPickerDelegate" offset="2432" parentId="globals" symbolId="SoundPickerDelegate" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="2495" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="2534" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="2565" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Fonts" offset="2604" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="2635" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/JsonData" offset="2698" parentId="Rez" symbolId="JsonData" type="module"/>
+        <dataEntry label="globals/Rez/Menus/MainMenu" offset="2729" parentId="Menus" symbolId="MainMenu" type="class"/>
     </dataEntryOffsetMappings>
     <functions>
         <functionEntry accessMode="public" endPc="268435570" name="&lt;init&gt;" parent="TempMinPicker" startPc="268435460">
@@ -821,218 +829,218 @@
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439663" name="scanEnd" parent="BLEScanner" startPc="268439516">
+        <functionEntry accessMode="public" endPc="268439770" name="scanEnd" parent="BLEScanner" startPc="268439516">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439684" name="initialize" parent="BLEScanner" startPc="268439664">
+        <functionEntry accessMode="public" endPc="268439804" name="initialize" parent="BLEScanner" startPc="268439771">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439708" name="onHide" parent="BLEScanner" startPc="268439685">
+        <functionEntry accessMode="public" endPc="268439828" name="onHide" parent="BLEScanner" startPc="268439805">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439848" name="onUpdate" parent="BLEScanner" startPc="268439709">
+        <functionEntry accessMode="public" endPc="268439968" name="onUpdate" parent="BLEScanner" startPc="268439829">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439953" name="&lt;init&gt;" parent="Delegate" startPc="268439849">
+        <functionEntry accessMode="public" endPc="268440073" name="&lt;init&gt;" parent="Delegate" startPc="268439969">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440072" name="onCharacteristicChanged" parent="Delegate" startPc="268439954">
+        <functionEntry accessMode="public" endPc="268440192" name="onCharacteristicChanged" parent="Delegate" startPc="268440074">
             <param id="char"/>
             <param id="val"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440299" name="onDescriptorWrite" parent="Delegate" startPc="268440073">
+        <functionEntry accessMode="public" endPc="268440419" name="onDescriptorWrite" parent="Delegate" startPc="268440193">
             <param id="descriptor"/>
             <param id="status"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440684" name="onConnectedStateChanged" parent="Delegate" startPc="268440300">
+        <functionEntry accessMode="public" endPc="268440804" name="onConnectedStateChanged" parent="Delegate" startPc="268440420">
             <param id="device"/>
             <param id="state"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440879" name="registerProfiles" parent="Delegate" startPc="268440685">
+        <functionEntry accessMode="public" endPc="268440999" name="registerProfiles" parent="Delegate" startPc="268440805">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440890" name="getScanResult" parent="Delegate" startPc="268440880">
+        <functionEntry accessMode="public" endPc="268441010" name="getScanResult" parent="Delegate" startPc="268441000">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440957" name="initialize" parent="Delegate" startPc="268440891">
+        <functionEntry accessMode="public" endPc="268441077" name="initialize" parent="Delegate" startPc="268441011">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268441103" name="onScanResults" parent="Delegate" startPc="268440958">
+        <functionEntry accessMode="public" endPc="268441223" name="onScanResults" parent="Delegate" startPc="268441078">
             <param id="scanResults"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268441151" name="connect" parent="Delegate" startPc="268441104">
+        <functionEntry accessMode="public" endPc="268441271" name="connect" parent="Delegate" startPc="268441224">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268441262" name="&lt;init&gt;" parent="TempMaxPicker" startPc="268441152">
+        <functionEntry accessMode="public" endPc="268441382" name="&lt;init&gt;" parent="TempMaxPicker" startPc="268441272">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268441549" name="initialize" parent="TempMaxPicker" startPc="268441263">
+        <functionEntry accessMode="public" endPc="268441669" name="initialize" parent="TempMaxPicker" startPc="268441383">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268441602" name="&lt;init&gt;" parent="SoundNotification" startPc="268441550">
+        <functionEntry accessMode="public" endPc="268441722" name="&lt;init&gt;" parent="SoundNotification" startPc="268441670">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268441728" name="onShow" parent="SoundNotification" startPc="268441603">
+        <functionEntry accessMode="public" endPc="268441848" name="onShow" parent="SoundNotification" startPc="268441723">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268441769" name="onLayout" parent="SoundNotification" startPc="268441729">
+        <functionEntry accessMode="public" endPc="268441889" name="onLayout" parent="SoundNotification" startPc="268441849">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268441790" name="initialize" parent="SoundNotification" startPc="268441770">
+        <functionEntry accessMode="public" endPc="268441910" name="initialize" parent="SoundNotification" startPc="268441890">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268441811" name="onHide" parent="SoundNotification" startPc="268441791">
+        <functionEntry accessMode="public" endPc="268441931" name="onHide" parent="SoundNotification" startPc="268441911">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268441889" name="notificationDone" parent="SoundNotification" startPc="268441812">
+        <functionEntry accessMode="public" endPc="268442009" name="notificationDone" parent="SoundNotification" startPc="268441932">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268442276" name="onUpdate" parent="SoundNotification" startPc="268441890">
+        <functionEntry accessMode="public" endPc="268442396" name="onUpdate" parent="SoundNotification" startPc="268442010">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268442295" name="&lt;init&gt;" parent="NumberFactory" startPc="268442277">
+        <functionEntry accessMode="public" endPc="268442415" name="&lt;init&gt;" parent="NumberFactory" startPc="268442397">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268442347" name="getValue" parent="NumberFactory" startPc="268442296">
+        <functionEntry accessMode="public" endPc="268442467" name="getValue" parent="NumberFactory" startPc="268442416">
             <param id="index"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268442521" name="getDrawable" parent="NumberFactory" startPc="268442348">
+        <functionEntry accessMode="public" endPc="268442641" name="getDrawable" parent="NumberFactory" startPc="268442468">
             <param id="index"/>
             <param id="selected"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268442556" name="getSize" parent="NumberFactory" startPc="268442522">
+        <functionEntry accessMode="public" endPc="268442676" name="getSize" parent="NumberFactory" startPc="268442642">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268442608" name="getIndex" parent="NumberFactory" startPc="268442557">
+        <functionEntry accessMode="public" endPc="268442728" name="getIndex" parent="NumberFactory" startPc="268442677">
             <param id="value"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268442669" name="initialize" parent="NumberFactory" startPc="268442609">
+        <functionEntry accessMode="public" endPc="268442789" name="initialize" parent="NumberFactory" startPc="268442729">
             <param id="start"/>
             <param id="stop"/>
             <param id="increment"/>
             <param id="format"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268442695" name="getApp" startPc="268442670">
+        <functionEntry accessMode="public" endPc="268442815" name="getApp" startPc="268442790">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268442714" name="&lt;init&gt;" parent="ThresholdChangeConfirmation" startPc="268442696">
+        <functionEntry accessMode="public" endPc="268442834" name="&lt;init&gt;" parent="ThresholdChangeConfirmation" startPc="268442816">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="onShow" parent="ThresholdChangeConfirmation">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268442755" name="onLayout" parent="ThresholdChangeConfirmation" startPc="268442715">
+        <functionEntry accessMode="public" endPc="268442875" name="onLayout" parent="ThresholdChangeConfirmation" startPc="268442835">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268442776" name="initialize" parent="ThresholdChangeConfirmation" startPc="268442756">
+        <functionEntry accessMode="public" endPc="268442896" name="initialize" parent="ThresholdChangeConfirmation" startPc="268442876">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="onHide" parent="ThresholdChangeConfirmation">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268443335" name="onUpdate" parent="ThresholdChangeConfirmation" startPc="268442777">
+        <functionEntry accessMode="public" endPc="268443455" name="onUpdate" parent="ThresholdChangeConfirmation" startPc="268442897">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268443388" name="&lt;init&gt;" parent="TempMinNotification" startPc="268443336">
+        <functionEntry accessMode="public" endPc="268443508" name="&lt;init&gt;" parent="TempMinNotification" startPc="268443456">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268443514" name="onShow" parent="TempMinNotification" startPc="268443389">
+        <functionEntry accessMode="public" endPc="268443634" name="onShow" parent="TempMinNotification" startPc="268443509">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268443555" name="onLayout" parent="TempMinNotification" startPc="268443515">
+        <functionEntry accessMode="public" endPc="268443675" name="onLayout" parent="TempMinNotification" startPc="268443635">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268443576" name="initialize" parent="TempMinNotification" startPc="268443556">
+        <functionEntry accessMode="public" endPc="268443696" name="initialize" parent="TempMinNotification" startPc="268443676">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268443597" name="onHide" parent="TempMinNotification" startPc="268443577">
+        <functionEntry accessMode="public" endPc="268443717" name="onHide" parent="TempMinNotification" startPc="268443697">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268443675" name="notificationDone" parent="TempMinNotification" startPc="268443598">
+        <functionEntry accessMode="public" endPc="268443795" name="notificationDone" parent="TempMinNotification" startPc="268443718">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268444062" name="onUpdate" parent="TempMinNotification" startPc="268443676">
+        <functionEntry accessMode="public" endPc="268444182" name="onUpdate" parent="TempMinNotification" startPc="268443796">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268444236" name="&lt;init&gt;" parent="SoundPicker" startPc="268444063">
+        <functionEntry accessMode="public" endPc="268444356" name="&lt;init&gt;" parent="SoundPicker" startPc="268444183">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268444372" name="initialize" parent="SoundPicker" startPc="268444237">
+        <functionEntry accessMode="public" endPc="268444492" name="initialize" parent="SoundPicker" startPc="268444357">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268444391" name="&lt;init&gt;" parent="SensorDisconnected" startPc="268444373">
+        <functionEntry accessMode="public" endPc="268444511" name="&lt;init&gt;" parent="SensorDisconnected" startPc="268444493">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268444473" name="onShow" parent="SensorDisconnected" startPc="268444392">
+        <functionEntry accessMode="public" endPc="268444593" name="onShow" parent="SensorDisconnected" startPc="268444512">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268444514" name="onLayout" parent="SensorDisconnected" startPc="268444474">
+        <functionEntry accessMode="public" endPc="268444634" name="onLayout" parent="SensorDisconnected" startPc="268444594">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268444535" name="initialize" parent="SensorDisconnected" startPc="268444515">
+        <functionEntry accessMode="public" endPc="268444655" name="initialize" parent="SensorDisconnected" startPc="268444635">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="onHide" parent="SensorDisconnected">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268444742" name="onUpdate" parent="SensorDisconnected" startPc="268444536">
+        <functionEntry accessMode="public" endPc="268444862" name="onUpdate" parent="SensorDisconnected" startPc="268444656">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268444761" name="&lt;init&gt;" parent="SensoryBehaviorDelegate" startPc="268444743">
+        <functionEntry accessMode="public" endPc="268444881" name="&lt;init&gt;" parent="SensoryBehaviorDelegate" startPc="268444863">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268444863" name="onBack" parent="SensoryBehaviorDelegate" startPc="268444762">
+        <functionEntry accessMode="public" endPc="268444983" name="onBack" parent="SensoryBehaviorDelegate" startPc="268444882">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268445070" name="onSwipe" parent="SensoryBehaviorDelegate" startPc="268444864">
+        <functionEntry accessMode="public" endPc="268445190" name="onSwipe" parent="SensoryBehaviorDelegate" startPc="268444984">
             <param id="swipeEvent"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268445111" name="initialize" parent="SensoryBehaviorDelegate" startPc="268445071">
+        <functionEntry accessMode="public" endPc="268445231" name="initialize" parent="SensoryBehaviorDelegate" startPc="268445191">
             <param id="_page"/>
             <param id="_back_page"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268445130" name="&lt;init&gt;" parent="TempMaxPickerDelegate" startPc="268445112">
+        <functionEntry accessMode="public" endPc="268445250" name="&lt;init&gt;" parent="TempMaxPickerDelegate" startPc="268445232">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268445156" name="onCancel" parent="TempMaxPickerDelegate" startPc="268445131">
+        <functionEntry accessMode="public" endPc="268445276" name="onCancel" parent="TempMaxPickerDelegate" startPc="268445251">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268445177" name="initialize" parent="TempMaxPickerDelegate" startPc="268445157">
+        <functionEntry accessMode="public" endPc="268445297" name="initialize" parent="TempMaxPickerDelegate" startPc="268445277">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268445308" name="onAccept" parent="TempMaxPickerDelegate" startPc="268445178">
+        <functionEntry accessMode="public" endPc="268445428" name="onAccept" parent="TempMaxPickerDelegate" startPc="268445298">
             <param id="values"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268445327" name="&lt;init&gt;" parent="SoundPickerDelegate" startPc="268445309">
+        <functionEntry accessMode="public" endPc="268445447" name="&lt;init&gt;" parent="SoundPickerDelegate" startPc="268445429">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268445353" name="onCancel" parent="SoundPickerDelegate" startPc="268445328">
+        <functionEntry accessMode="public" endPc="268445473" name="onCancel" parent="SoundPickerDelegate" startPc="268445448">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268445374" name="initialize" parent="SoundPickerDelegate" startPc="268445354">
+        <functionEntry accessMode="public" endPc="268445494" name="initialize" parent="SoundPickerDelegate" startPc="268445474">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268445505" name="onAccept" parent="SoundPickerDelegate" startPc="268445375">
+        <functionEntry accessMode="public" endPc="268445625" name="onAccept" parent="SoundPickerDelegate" startPc="268445495">
             <param id="values"/>
             <documentation/>
         </functionEntry>
@@ -1054,10 +1062,10 @@
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="JsonData">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268445524" name="&lt;init&gt;" parent="MainMenu" startPc="268445506">
+        <functionEntry accessMode="public" endPc="268445644" name="&lt;init&gt;" parent="MainMenu" startPc="268445626">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268445657" name="initialize" parent="MainMenu" startPc="268445525">
+        <functionEntry accessMode="public" endPc="268445777" name="initialize" parent="MainMenu" startPc="268445645">
             <documentation/>
         </functionEntry>
     </functions>
