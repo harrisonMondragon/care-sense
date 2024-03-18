@@ -78,13 +78,13 @@ class Delegate extends BLE.BleDelegate {
 
     function onCharacteristicChanged(char, val) {
         if(char.getUuid().equals(TEMP_UUID)){
-            // System.println("Temp changed to: " + val);
-            TEMP_VAL = val[0];
+            TEMP_VAL = val.decodeNumber(Lang.NUMBER_FORMAT_FLOAT, {});
+            // System.println("Temp changed to: " + TEMP_VAL);
         }
 
         else if (char.getUuid().equals(SOUND_UUID)){
-            // System.println("Sound changed to: " + val);
-            SOUND_LEVEL = val[0];
+            SOUND_VAL = val.decodeNumber(NUMBER_FORMAT_UINT8, {});
+            // System.println("Sound changed to: " + SOUND_VAL);
         }
         WatchUi.requestUpdate(); // update what ever watch face is displayed
     }

@@ -34,7 +34,7 @@ class EnvNotification extends WatchUi.View {
     // Update the view every time a new BLE value comes in (see CIQBLE.mc:onCharacteristicChanged)
     function onUpdate(dc as Dc) as Void {
         // move vibratio and timer start here (controlled with boolean variable) to manage the 2 types of notification triggers.
-        if (SOUND_THRESHOLD != null && SOUND_LEVEL > SOUND_THRESHOLD && sound_notif == false) {
+        if (SOUND_THRESHOLD != null && SOUND_VAL > SOUND_THRESHOLD && sound_notif == false) {
             Attention.vibrate([new Attention.VibeProfile(100, VIBE_DURATION)]);
             timer.stop(); // restart the timer
             timer.start(method(:notificationDone), NOTIFICATION_DELAY, false);
@@ -63,12 +63,12 @@ class EnvNotification extends WatchUi.View {
         dc.drawText(x / 2, y / 2 - 110, Graphics.FONT_MEDIUM, "Environment\nwarning:", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         dc.drawText(label_x, y / 2 - 20, Graphics.FONT_SMALL, "Sound:", Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
 
-        if (SOUND_LEVEL >= SOUND_THRESHOLD) { // set color based on thresholds
+        if (SOUND_VAL >= SOUND_THRESHOLD) { // set color based on thresholds
             dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
         } else {
             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         }
-        dc.drawText(value_x, y / 2 - 20, Graphics.FONT_SMALL, Lang.format("$1$ dB", [SOUND_LEVEL]), Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(value_x, y / 2 - 20, Graphics.FONT_SMALL, Lang.format("$1$ dB", [SOUND_VAL]), Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
 
         if (SOUND_THRESHOLD != null) { // if sound notifications enabled, display the current threshold
             dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
@@ -85,7 +85,7 @@ class EnvNotification extends WatchUi.View {
         } else {
             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         }
-        dc.drawText(value_x, y / 2 + 70, Graphics.FONT_SMALL, Lang.format("$1$ °C", [TEMP_VAL]), Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(value_x, y / 2 + 70, Graphics.FONT_SMALL, Lang.format("$1$ °C", [TEMP_VAL.format("%.1f")]), Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
 
         if (TEMP_MIN_THRESHOLD != null) {
             dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);

@@ -65,7 +65,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_12_begin:
         %tmp.5 = dup %tmp.4;
         bf %tmp.5 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_39_end;
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_39_true:
-        %tmp.7 = getv ? :SOUND_LEVEL;
+        %tmp.7 = getv ? :SOUND_VAL;
         %tmp.9 = getv ? :SOUND_THRESHOLD;
         %tmp.10 = as %tmp.9 { (!Null) };
         %tmp.11 = gt %tmp.7 %tmp.10;
@@ -75,7 +75,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_39_end:
         %tmp.13 = phi [%tmp.5 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_12_begin] [%tmp.12 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_39_true] [%tmp.13 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_39_end];
         bf %tmp.13 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_8_if_end;
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_8_if_true:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_70_start:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_68_start:
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 28 12 ]
         %tmp.14 = getm $.Toybox.WatchUi;
         %tmp.15 = getv function %tmp.14 :switchToView;
@@ -89,7 +89,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_70_start:
         %tmp.29 = getm $.Toybox.WatchUi;
         %tmp.30 = getv %tmp.29 :SLIDE_IMMEDIATE;
         invoke %tmp.14 %tmp.15(%tmp.16, %tmp.20, %tmp.30);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_70_stop:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_68_stop:
         goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_8_if_end;
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_27_8_if_end:
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc" 30 8 ]
@@ -225,7 +225,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_33_8_if_end:
         %tmp.146 = getv function %tmp.145 :format;
         %tmp.147 = "Sound: $1$ dB";
         %tmp.148 = newa 1;
-        %tmp.150 = getv ? :SOUND_LEVEL;
+        %tmp.150 = getv ? :SOUND_VAL;
         %tmp.151 = dup %tmp.148;
         %tmp.152 = aputv %tmp.151 0 %tmp.150;
         %tmp.153 = invoke %tmp.145 %tmp.146(%tmp.147, %tmp.152);
@@ -250,18 +250,21 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_33_8_if_end:
         %tmp.172 = getv %tmp.171 :FONT_MEDIUM;
         %tmp.173 = getm $.Toybox.Lang;
         %tmp.174 = getv function %tmp.173 :format;
-        %tmp.175 = "Temperature: $1$ °C";
+        %tmp.175 = "Temp: $1$ °C";
         %tmp.176 = newa 1;
         %tmp.178 = getv ? :TEMP_VAL;
-        %tmp.179 = dup %tmp.176;
-        %tmp.180 = aputv %tmp.179 0 %tmp.178;
-        %tmp.181 = invoke %tmp.173 %tmp.174(%tmp.175, %tmp.180);
-        %tmp.182 = getm $.Toybox.Graphics;
-        %tmp.183 = getv %tmp.182 :TEXT_JUSTIFY_CENTER;
-        %tmp.184 = getm $.Toybox.Graphics;
-        %tmp.185 = getv %tmp.184 :TEXT_JUSTIFY_VCENTER;
-        %tmp.186 = bitor %tmp.183 %tmp.185;
-        invoke %tmp.159 %tmp.160(%tmp.164, %tmp.170, %tmp.172, %tmp.181, %tmp.186);
+        %tmp.179 = getv function %tmp.178 :format;
+        %tmp.180 = "%.1f";
+        %tmp.181 = invoke %tmp.178 %tmp.179(%tmp.180);
+        %tmp.182 = dup %tmp.176;
+        %tmp.183 = aputv %tmp.182 0 %tmp.181;
+        %tmp.184 = invoke %tmp.173 %tmp.174(%tmp.175, %tmp.183);
+        %tmp.185 = getm $.Toybox.Graphics;
+        %tmp.186 = getv %tmp.185 :TEXT_JUSTIFY_CENTER;
+        %tmp.187 = getm $.Toybox.Graphics;
+        %tmp.188 = getv %tmp.187 :TEXT_JUSTIFY_VCENTER;
+        %tmp.189 = bitor %tmp.186 %tmp.188;
+        invoke %tmp.159 %tmp.160(%tmp.164, %tmp.170, %tmp.172, %tmp.184, %tmp.189);
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Views_mc_24_40_stop:
     }
     [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Views.mc"; @line = 48; ]

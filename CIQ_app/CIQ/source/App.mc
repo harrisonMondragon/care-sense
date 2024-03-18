@@ -5,8 +5,8 @@ using Toybox.BluetoothLowEnergy as BLE;
 
 // ------------------------------ GLOBALS ------------------------------
 // Current Values
-var SOUND_LEVEL = 0;
-var TEMP_VAL = 0;
+var SOUND_VAL;
+var TEMP_VAL;
 var SUBSCRIPTION_COUNT = 0;
 var SETTINGS_AVAILABLE = false;
 

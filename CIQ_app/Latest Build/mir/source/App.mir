@@ -7,9 +7,9 @@ import Toybox.WatchUi;
 [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 4; ]
 using Toybox.BluetoothLowEnergy as :BLE;
 [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 8; @position = 4; ]
-var SOUND_LEVEL = 0;
+var SOUND_VAL;
 [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 9; @position = 4; ]
-var TEMP_VAL = 0;
+var TEMP_VAL;
 [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 10; @position = 4; ]
 var SUBSCRIPTION_COUNT = 0;
 [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc"; @line = 11; @position = 4; ]

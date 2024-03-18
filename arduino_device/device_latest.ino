@@ -37,7 +37,7 @@ const char *tempCharacteristicUuid = "c4c7df1d-9cd1-4c15-aeb6-bdd362d8d344";
 // Create the service and characteristics
 BLEService sensorService(deviceServiceUuid);
 BLEByteCharacteristic soundCharacteristic(soundCharacteristicUuid, BLERead | BLENotify);
-BLEByteCharacteristic temperatureCharacteristic(tempCharacteristicUuid, BLERead | BLENotify);
+BLEFloatCharacteristic temperatureCharacteristic(tempCharacteristicUuid, BLERead | BLENotify);
 
 // PDM data receive callback
 void onPDMdata();
@@ -83,10 +83,8 @@ void setup(){
     sensorService.addCharacteristic(soundCharacteristic);
     sensorService.addCharacteristic(temperatureCharacteristic);
 
-    // Add service and set initial values
+    // Add service
     BLE.addService(sensorService);
-    soundCharacteristic.writeValue(-1);
-    temperatureCharacteristic.writeValue(-1);
 
     // Start advertising
     BLE.advertise();

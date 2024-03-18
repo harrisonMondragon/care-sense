@@ -24,7 +24,7 @@ class HomeDisplay extends WatchUi.View {
     function onUpdate(dc as Dc) as Void {
 
         // Check thresholds against sensor readings
-        if (SOUND_THRESHOLD != null && SOUND_LEVEL > SOUND_THRESHOLD) {
+        if (SOUND_THRESHOLD != null && SOUND_VAL > SOUND_THRESHOLD) {
             WatchUi.switchToView(new EnvNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
         }
         if (TEMP_MIN_THRESHOLD != null && TEMP_VAL < TEMP_MIN_THRESHOLD) {
@@ -41,8 +41,8 @@ class HomeDisplay extends WatchUi.View {
         // set foreground color
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(x / 2, y / 2-70, Graphics.FONT_MEDIUM, "Current Environment", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-        dc.drawText(x / 2, y / 2+10, Graphics.FONT_MEDIUM, Lang.format("Sound: $1$ dB", [SOUND_LEVEL]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-        dc.drawText(x / 2, y / 2+80, Graphics.FONT_MEDIUM, Lang.format("Temperature: $1$ °C", [TEMP_VAL]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x / 2, y / 2+10, Graphics.FONT_MEDIUM, Lang.format("Sound: $1$ dB", [SOUND_VAL]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x / 2, y / 2+80, Graphics.FONT_MEDIUM, Lang.format("Temp: $1$ °C", [TEMP_VAL.format("%.1f")]), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     function onHide() as Void {}

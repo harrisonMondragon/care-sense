@@ -340,38 +340,43 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_BLE_Delegates_mc_80_8_if
         bf %tmp.7 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_BLE_Delegates_mc_80_8_if_false;
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_BLE_Delegates_mc_80_8_if_true:
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_BLE_Delegates_mc_80_44_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\BLE_Delegates.mc" 82 12 ]
-        %tmp.9 = lgetv %val;
-        %tmp.10 = 0;
-        %tmp.11 = agetv %tmp.9 %tmp.10;
-        putv self :TEMP_VAL %tmp.11;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\BLE_Delegates.mc" 81 12 ]
+        %tmp.8 = lgetv %val;
+        %tmp.9 = getv function %tmp.8 :decodeNumber;
+        %tmp.11 = getv ? :Lang;
+        %tmp.12 = getv %tmp.11 :NUMBER_FORMAT_FLOAT;
+        %tmp.13 = newd 0;
+        %tmp.14 = invoke %tmp.8 %tmp.9(%tmp.12, %tmp.13);
+        putv self :TEMP_VAL %tmp.14;
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_BLE_Delegates_mc_80_44_stop:
         goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_BLE_Delegates_mc_80_8_if_end;
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_BLE_Delegates_mc_80_8_if_false:
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\BLE_Delegates.mc" 85 13 ]
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_BLE_Delegates_mc_85_13_if_stmt:
-        %tmp.12 = lgetv %char;
-        %tmp.13 = getv function %tmp.12 :getUuid;
-        %tmp.14 = invoke %tmp.12 %tmp.13();
-        %tmp.15 = getv function %tmp.14 :equals;
-        %tmp.17 = getv ? :SOUND_UUID;
-        %tmp.18 = invoke %tmp.14 %tmp.15(%tmp.17);
-        bf %tmp.18 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_BLE_Delegates_mc_85_13_if_end;
+        %tmp.15 = lgetv %char;
+        %tmp.16 = getv function %tmp.15 :getUuid;
+        %tmp.17 = invoke %tmp.15 %tmp.16();
+        %tmp.18 = getv function %tmp.17 :equals;
+        %tmp.20 = getv ? :SOUND_UUID;
+        %tmp.21 = invoke %tmp.17 %tmp.18(%tmp.20);
+        bf %tmp.21 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_BLE_Delegates_mc_85_13_if_end;
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_BLE_Delegates_mc_85_13_if_true:
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_BLE_Delegates_mc_85_51_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\BLE_Delegates.mc" 87 12 ]
-        %tmp.20 = lgetv %val;
-        %tmp.21 = 0;
-        %tmp.22 = agetv %tmp.20 %tmp.21;
-        putv self :SOUND_LEVEL %tmp.22;
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\BLE_Delegates.mc" 86 12 ]
+        %tmp.22 = lgetv %val;
+        %tmp.23 = getv function %tmp.22 :decodeNumber;
+        %tmp.25 = getv ? :NUMBER_FORMAT_UINT8;
+        %tmp.26 = newd 0;
+        %tmp.27 = invoke %tmp.22 %tmp.23(%tmp.25, %tmp.26);
+        putv self :SOUND_VAL %tmp.27;
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_BLE_Delegates_mc_85_51_stop:
         goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_BLE_Delegates_mc_85_13_if_end;
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_BLE_Delegates_mc_85_13_if_end:
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_BLE_Delegates_mc_80_8_if_end:
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\BLE_Delegates.mc" 89 8 ]
-        %tmp.23 = getm $.Toybox.WatchUi;
-        %tmp.24 = getv function %tmp.23 :requestUpdate;
-        invoke %tmp.23 %tmp.24();
+        %tmp.28 = getm $.Toybox.WatchUi;
+        %tmp.29 = getv function %tmp.28 :requestUpdate;
+        invoke %tmp.28 %tmp.29();
 C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_BLE_Delegates_mc_79_48_stop:
     }
     [ @file = "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\BLE_Delegates.mc"; @line = 92; ]
