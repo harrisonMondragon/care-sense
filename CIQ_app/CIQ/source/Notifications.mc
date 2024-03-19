@@ -33,24 +33,30 @@ class EnvNotification extends WatchUi.View {
 
     // Update the view every time a new BLE value comes in (see CIQBLE.mc:onCharacteristicChanged)
     function onUpdate(dc as Dc) as Void {
-        // move vibratio and timer start here (controlled with boolean variable) to manage the 2 types of notification triggers.
-        if (SOUND_THRESHOLD != null && SOUND_VAL > SOUND_THRESHOLD && sound_notif == false) {
-            Attention.vibrate([new Attention.VibeProfile(100, VIBE_DURATION)]);
-            timer.stop(); // restart the timer
-            timer.start(method(:notificationDone), NOTIFICATION_DELAY, false);
-            sound_notif = true;
+        // Vibration and timer start here (controlled with boolean variable) to manage the 2 types of notification triggers.
+        if (SOUND_THRESHOLD != null) {
+            if(SOUND_VAL > SOUND_THRESHOLD && sound_notif == false) {
+                Attention.vibrate([new Attention.VibeProfile(100, VIBE_DURATION)]);
+                timer.stop(); // restart the timer
+                timer.start(method(:notificationDone), NOTIFICATION_DELAY, false);
+                sound_notif = true;
+            }
         }
-        if (TEMP_MIN_THRESHOLD != null && TEMP_VAL < TEMP_MIN_THRESHOLD && temp_notif == false) {
-            Attention.vibrate([new Attention.VibeProfile(100, VIBE_DURATION)]);
-            timer.stop(); // restart the timer
-            timer.start(method(:notificationDone), NOTIFICATION_DELAY, false);
-            temp_notif = true;
+        if (TEMP_MIN_THRESHOLD != null) {
+            if (TEMP_VAL < TEMP_MIN_THRESHOLD && temp_notif == false){
+                Attention.vibrate([new Attention.VibeProfile(100, VIBE_DURATION)]);
+                timer.stop(); // restart the timer
+                timer.start(method(:notificationDone), NOTIFICATION_DELAY, false);
+                temp_notif = true;
+            }
         }
-        if (TEMP_MAX_THRESHOLD != null && TEMP_VAL > TEMP_MAX_THRESHOLD && temp_notif == false) {
-            Attention.vibrate([new Attention.VibeProfile(100, VIBE_DURATION)]);
-            timer.stop(); // restart the timer
-            timer.start(method(:notificationDone), NOTIFICATION_DELAY, false);
-            temp_notif = true;
+        if (TEMP_MAX_THRESHOLD != null) {
+            if(TEMP_VAL > TEMP_MAX_THRESHOLD && temp_notif == false) {
+                Attention.vibrate([new Attention.VibeProfile(100, VIBE_DURATION)]);
+                timer.stop(); // restart the timer
+                timer.start(method(:notificationDone), NOTIFICATION_DELAY, false);
+                temp_notif = true;
+            }
         }
 
         // set background color
@@ -63,8 +69,10 @@ class EnvNotification extends WatchUi.View {
         dc.drawText(x / 2, y / 2 - 110, Graphics.FONT_MEDIUM, "Environment\nwarning:", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         dc.drawText(label_x, y / 2 - 20, Graphics.FONT_SMALL, "Sound:", Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
 
-        if (SOUND_VAL >= SOUND_THRESHOLD) { // set color based on thresholds
-            dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
+        if (SOUND_THRESHOLD != null) {
+            if (SOUND_VAL >= SOUND_THRESHOLD) { // set color based on thresholds
+                dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
+            }
         } else {
             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         }
@@ -80,8 +88,14 @@ class EnvNotification extends WatchUi.View {
         dc.drawText(label_x, y / 2 + 70, Graphics.FONT_SMALL, "Temp:", Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
 
         // change font color
-        if (TEMP_VAL >= TEMP_MAX_THRESHOLD || TEMP_VAL <= TEMP_MIN_THRESHOLD) {
-            dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
+        if (TEMP_MAX_THRESHOLD != null) {
+            if (TEMP_VAL >= TEMP_MAX_THRESHOLD) {
+                dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
+            }
+        } else if (TEMP_MIN_THRESHOLD != null) {
+            if (TEMP_VAL <= TEMP_MIN_THRESHOLD) {
+                dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
+            }
         } else {
             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         }
