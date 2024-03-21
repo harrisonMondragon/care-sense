@@ -10,8 +10,7 @@ class EnvNotification extends WatchUi.View {
     var NOTIFICATION_DELAY = 15000;
     var label_x;
     var value_x;
-    var sound_notif = false;
-    var temp_notif = false;
+    var vibed;
 
     function initialize() {
         View.initialize();
@@ -29,33 +28,38 @@ class EnvNotification extends WatchUi.View {
 
     function onShow() as Void {
         SETTINGS_AVAILABLE = true;
+
+        // Start timer here
+        timer.start(method(:notificationDone), NOTIFICATION_DELAY, false); // start the timer
+        vibed = false;
     }
 
     // Update the view every time a new BLE value comes in (see CIQBLE.mc:onCharacteristicChanged)
     function onUpdate(dc as Dc) as Void {
-        // Vibration and timer start here (controlled with boolean variable) to manage the 2 types of notification triggers.
-        if (SOUND_THRESHOLD != null) {
-            if(SOUND_VAL > SOUND_THRESHOLD && sound_notif == false) {
+
+        // Vibrate and restart timer if we haven't vibrated yet
+        if (SOUND_THRESHOLD != null && vibed == false) {
+            if(SOUND_VAL > SOUND_THRESHOLD) {
                 Attention.vibrate([new Attention.VibeProfile(100, VIBE_DURATION)]);
-                timer.stop(); // restart the timer
+                timer.stop();
                 timer.start(method(:notificationDone), NOTIFICATION_DELAY, false);
-                sound_notif = true;
+                vibed = true;
             }
         }
-        if (TEMP_MIN_THRESHOLD != null) {
-            if (TEMP_VAL < TEMP_MIN_THRESHOLD && temp_notif == false){
+        if (TEMP_MIN_THRESHOLD != null && vibed == false) {
+            if (TEMP_VAL < TEMP_MIN_THRESHOLD){
                 Attention.vibrate([new Attention.VibeProfile(100, VIBE_DURATION)]);
-                timer.stop(); // restart the timer
+                timer.stop();
                 timer.start(method(:notificationDone), NOTIFICATION_DELAY, false);
-                temp_notif = true;
+                vibed = true;
             }
         }
-        if (TEMP_MAX_THRESHOLD != null) {
-            if(TEMP_VAL > TEMP_MAX_THRESHOLD && temp_notif == false) {
+        if (TEMP_MAX_THRESHOLD != null && vibed == false) {
+            if(TEMP_VAL > TEMP_MAX_THRESHOLD) {
                 Attention.vibrate([new Attention.VibeProfile(100, VIBE_DURATION)]);
-                timer.stop(); // restart the timer
+                timer.stop();
                 timer.start(method(:notificationDone), NOTIFICATION_DELAY, false);
-                temp_notif = true;
+                vibed = true;
             }
         }
 
