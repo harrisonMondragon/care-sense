@@ -69,6 +69,7 @@ class EnvNotification extends WatchUi.View {
         dc.drawText(x / 2, y / 2 - 110, Graphics.FONT_MEDIUM, "Environment\nwarning:", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         dc.drawText(label_x, y / 2 - 20, Graphics.FONT_SMALL, "Sound:", Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
 
+        // Display sound value in the correct text color
         if (SOUND_THRESHOLD != null) {
             if (SOUND_VAL >= SOUND_THRESHOLD) { // set color based on thresholds
                 dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
@@ -78,7 +79,8 @@ class EnvNotification extends WatchUi.View {
         }
         dc.drawText(value_x, y / 2 - 20, Graphics.FONT_SMALL, Lang.format("$1$ dB", [SOUND_VAL]), Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
 
-        if (SOUND_THRESHOLD != null) { // if sound notifications enabled, display the current threshold
+        // Display current sound threshold if it is enabled
+        if (SOUND_THRESHOLD != null) {
             dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
             dc.drawText(label_x, y / 2 + 20, Graphics.FONT_XTINY, "Max Sound:", Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
             dc.drawText(value_x, y / 2 + 20, Graphics.FONT_XTINY, Lang.format("$1$ dB", [SOUND_THRESHOLD]), Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
@@ -87,7 +89,7 @@ class EnvNotification extends WatchUi.View {
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(label_x, y / 2 + 70, Graphics.FONT_SMALL, "Temp:", Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
 
-        // change font color
+        // Display temp value in the correct text color
         if (TEMP_MAX_THRESHOLD != null) {
             if (TEMP_VAL >= TEMP_MAX_THRESHOLD) {
                 dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
@@ -101,6 +103,7 @@ class EnvNotification extends WatchUi.View {
         }
         dc.drawText(value_x, y / 2 + 70, Graphics.FONT_SMALL, Lang.format("$1$ °C", [TEMP_VAL.format("%.1f")]), Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
 
+        // Display current temp thresholds if they are enabled
         if (TEMP_MIN_THRESHOLD != null) {
             dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
             dc.drawText(label_x, y / 2 + 110, Graphics.FONT_XTINY, "Min Temp:", Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);

@@ -24,14 +24,20 @@ class HomeDisplay extends WatchUi.View {
     function onUpdate(dc as Dc) as Void {
 
         // Check thresholds against sensor readings
-        if (SOUND_THRESHOLD != null && SOUND_VAL > SOUND_THRESHOLD) {
-            WatchUi.switchToView(new EnvNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
-        }
-        if (TEMP_MIN_THRESHOLD != null && TEMP_VAL < TEMP_MIN_THRESHOLD) {
+        if (SOUND_THRESHOLD != null){
+            if (SOUND_VAL > SOUND_THRESHOLD) {
                 WatchUi.switchToView(new EnvNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
+            }
         }
-        if (TEMP_MAX_THRESHOLD != null && TEMP_VAL > TEMP_MAX_THRESHOLD) {
+        if (TEMP_MIN_THRESHOLD != null){
+            if (TEMP_VAL < TEMP_MIN_THRESHOLD) {
                 WatchUi.switchToView(new EnvNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
+            }
+        }
+        if (TEMP_MAX_THRESHOLD != null){
+            if (TEMP_VAL > TEMP_MAX_THRESHOLD) {
+                WatchUi.switchToView(new EnvNotification(), new SensoryBehaviorDelegate(new HomeDisplay(), null), WatchUi.SLIDE_IMMEDIATE);
+            }
         }
 
         // set background color
