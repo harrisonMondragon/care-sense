@@ -76,6 +76,8 @@ class CIQApp extends Application.AppBase {
 
     // onStop() is called when your application is exiting
     function onStop(state as Dictionary?) as Void {
+        SENSORY_ACTIVITY_SESSION.stop();
+        SENSORY_ACTIVITY_SESSION.save();
     }
 
     // Return the initial view of your application here
