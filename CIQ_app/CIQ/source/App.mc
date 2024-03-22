@@ -70,8 +70,8 @@ class CIQApp extends Application.AppBase {
         SOUND_VALUE_FIELD = SENSORY_ACTIVITY_SESSION.createField("Current Sound Value", 1, FitContributor.DATA_TYPE_UINT8, {:mesgType => FitContributor.MESG_TYPE_RECORD});
         SOUND_THRESH_FIELD = SENSORY_ACTIVITY_SESSION.createField("Maximum Sound Threshold", 2, FitContributor.DATA_TYPE_UINT8, {:mesgType => FitContributor.MESG_TYPE_RECORD});
         TEMP_VALUE_FIELD = SENSORY_ACTIVITY_SESSION.createField("Current Temperature Value", 3, FitContributor.DATA_TYPE_FLOAT, {:mesgType => FitContributor.MESG_TYPE_RECORD});
-        TEMP_MIN_THRESH_FIELD = SENSORY_ACTIVITY_SESSION.createField("Maximum Temperature Threshold", 4, FitContributor.DATA_TYPE_FLOAT, {:mesgType => FitContributor.MESG_TYPE_RECORD});
-        TEMP_MAX_THRESH_FIELD = SENSORY_ACTIVITY_SESSION.createField("Minimum Temperature Threshold", 5, FitContributor.DATA_TYPE_FLOAT, {:mesgType => FitContributor.MESG_TYPE_RECORD});
+        TEMP_MIN_THRESH_FIELD = SENSORY_ACTIVITY_SESSION.createField("Minimum Temperature Threshold", 4, FitContributor.DATA_TYPE_FLOAT, {:mesgType => FitContributor.MESG_TYPE_RECORD});
+        TEMP_MAX_THRESH_FIELD = SENSORY_ACTIVITY_SESSION.createField("Maximum Temperature Threshold", 5, FitContributor.DATA_TYPE_FLOAT, {:mesgType => FitContributor.MESG_TYPE_RECORD});
     }
 
     // onStop() is called when your application is exiting

@@ -27,7 +27,7 @@
     sortOrder = "2"
     precision="0"
     chartTitle="@Strings.temp_value_chart_title"
-    dataLabel="@Strings.current_min_temp_threshold_label"
+    dataLabel="@Strings.current_temp_label"
     unitLabel="@Strings.temp_units"
     fillColor="#000000"
   />
