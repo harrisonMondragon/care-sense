@@ -163,7 +163,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_App_mc_63_51_start:
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc" 73 8 ]
         %tmp.71 = getv ? :SENSORY_ACTIVITY_SESSION;
         %tmp.72 = getv function %tmp.71 :createField;
-        %tmp.73 = "Maximum Temperature Threshold";
+        %tmp.73 = "Minimum Temperature Threshold";
         %tmp.74 = 4;
         %tmp.75 = getm $.Toybox.FitContributor;
         %tmp.76 = getv %tmp.75 :DATA_TYPE_FLOAT;
@@ -178,7 +178,7 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_App_mc_63_51_start:
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\App.mc" 74 8 ]
         %tmp.86 = getv ? :SENSORY_ACTIVITY_SESSION;
         %tmp.87 = getv function %tmp.86 :createField;
-        %tmp.88 = "Minimum Temperature Threshold";
+        %tmp.88 = "Maximum Temperature Threshold";
         %tmp.89 = 5;
         %tmp.90 = getm $.Toybox.FitContributor;
         %tmp.91 = getv %tmp.90 :DATA_TYPE_FLOAT;
