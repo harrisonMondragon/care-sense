@@ -1,4 +1,3 @@
-
 /*
     This program uses the ArduinoBLE library to set-up an Arduino Nano 33 BLE Sense Rev2
     as a peripheral device and specifies a service and a characteristic for sound to connect to
@@ -122,14 +121,17 @@ void loop(){
                 // Update sound -------------------------
                 // Wait for samples to be read
                 if (samplesRead){
-                    // take the maximum value from the interval
-                    int maxVal = abs(sampleBuffer[0]);
-                    for (int i = 0; i < (sizeof(sampleBuffer) / sizeof(sampleBuffer[0])); i++) {
-                        maxVal = max(abs(sampleBuffer[i]), maxVal);
+
+                    // Calculate the RMS amplitude
+                    double sumSquared = 0.0;
+                    for (int i = 0; i < samplesRead; i++){
+                        sumSquared += pow(sampleBuffer[i], 2);
                     }
+                    double rmsAmplitude = sqrt(sumSquared / samplesRead);
 
                     // Amplitude to dBFSs
-                    float dBFS = 20 * log10(abs(maxVal));
+                    float dBFS = 20 * log10(abs(rmsAmplitude));
+
                     // dBFS to Positive dB Scale
                     // -26 +- 1 dBFS is reference for 0 dB
                     float dB = dBFS + 25;
