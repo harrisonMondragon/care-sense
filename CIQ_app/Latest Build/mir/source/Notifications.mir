@@ -503,79 +503,75 @@ C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_87_8_if
         %tmp.316 = bitor %tmp.313 %tmp.315;
         invoke %tmp.299 %tmp.300(%tmp.302, %tmp.308, %tmp.310, %tmp.311, %tmp.316);
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 97 8 ]
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_97_8_if_stmt:
-        %tmp.318 = getv ? :TEMP_MAX_THRESHOLD;
-        %tmp.319 = null;
-        %tmp.320 = ne %tmp.318 %tmp.319;
-        bf %tmp.320 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_97_8_if_false;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_97_8_if_true:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_97_40_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 98 12 ]
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_12_if_stmt:
-        %tmp.322 = getv ? :TEMP_VAL;
+        %tmp.317 = lgetv %dc;
+        %tmp.318 = getv function %tmp.317 :setColor;
+        %tmp.319 = getm $.Toybox.Graphics;
+        %tmp.320 = getv %tmp.319 :COLOR_WHITE;
+        %tmp.321 = getm $.Toybox.Graphics;
+        %tmp.322 = getv %tmp.321 :COLOR_TRANSPARENT;
+        invoke %tmp.317 %tmp.318(%tmp.320, %tmp.322);
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 98 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_8_if_stmt:
         %tmp.324 = getv ? :TEMP_MAX_THRESHOLD;
-        %tmp.325 = as %tmp.324 { (!Null) };
-        %tmp.326 = gte %tmp.322 %tmp.325;
-        bf %tmp.326 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_12_if_end;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_12_if_true:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_48_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 99 16 ]
-        %tmp.327 = lgetv %dc;
-        %tmp.328 = getv function %tmp.327 :setColor;
-        %tmp.329 = getm $.Toybox.Graphics;
-        %tmp.330 = getv %tmp.329 :COLOR_RED;
-        %tmp.331 = getm $.Toybox.Graphics;
-        %tmp.332 = getv %tmp.331 :COLOR_TRANSPARENT;
-        invoke %tmp.327 %tmp.328(%tmp.330, %tmp.332);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_48_stop:
-        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_12_if_end;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_12_if_end:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_97_40_stop:
-        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_97_8_if_end;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_97_8_if_false:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 101 15 ]
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_101_15_if_stmt:
-        %tmp.334 = getv ? :TEMP_MIN_THRESHOLD;
-        %tmp.335 = null;
-        %tmp.336 = ne %tmp.334 %tmp.335;
-        bf %tmp.336 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_101_15_if_false;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_101_15_if_true:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_101_47_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 102 12 ]
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_102_12_if_stmt:
-        %tmp.338 = getv ? :TEMP_VAL;
+        %tmp.325 = null;
+        %tmp.326 = ne %tmp.324 %tmp.325;
+        bf %tmp.326 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_8_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 99 12 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_99_12_if_stmt:
+        %tmp.328 = getv ? :TEMP_VAL;
+        %tmp.330 = getv ? :TEMP_MAX_THRESHOLD;
+        %tmp.331 = as %tmp.330 { (!Null) };
+        %tmp.332 = gte %tmp.328 %tmp.331;
+        bf %tmp.332 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_99_12_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_99_12_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_99_48_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 100 16 ]
+        %tmp.333 = lgetv %dc;
+        %tmp.334 = getv function %tmp.333 :setColor;
+        %tmp.335 = getm $.Toybox.Graphics;
+        %tmp.336 = getv %tmp.335 :COLOR_RED;
+        %tmp.337 = getm $.Toybox.Graphics;
+        %tmp.338 = getv %tmp.337 :COLOR_TRANSPARENT;
+        invoke %tmp.333 %tmp.334(%tmp.336, %tmp.338);
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_99_48_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_99_12_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_99_12_if_end:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_40_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_98_8_if_end:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 103 8 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_103_8_if_stmt:
         %tmp.340 = getv ? :TEMP_MIN_THRESHOLD;
-        %tmp.341 = as %tmp.340 { (!Null) };
-        %tmp.342 = lte %tmp.338 %tmp.341;
-        bf %tmp.342 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_102_12_if_end;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_102_12_if_true:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_102_48_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 103 16 ]
-        %tmp.343 = lgetv %dc;
-        %tmp.344 = getv function %tmp.343 :setColor;
-        %tmp.345 = getm $.Toybox.Graphics;
-        %tmp.346 = getv %tmp.345 :COLOR_RED;
-        %tmp.347 = getm $.Toybox.Graphics;
-        %tmp.348 = getv %tmp.347 :COLOR_TRANSPARENT;
-        invoke %tmp.343 %tmp.344(%tmp.346, %tmp.348);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_102_48_stop:
-        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_102_12_if_end;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_102_12_if_end:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_101_47_stop:
-        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_101_15_if_end;
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_101_15_if_false:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_105_15_start:
-[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 106 12 ]
+        %tmp.341 = null;
+        %tmp.342 = ne %tmp.340 %tmp.341;
+        bf %tmp.342 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_103_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_103_8_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_103_40_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 104 12 ]
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_104_12_if_stmt:
+        %tmp.344 = getv ? :TEMP_VAL;
+        %tmp.346 = getv ? :TEMP_MIN_THRESHOLD;
+        %tmp.347 = as %tmp.346 { (!Null) };
+        %tmp.348 = lte %tmp.344 %tmp.347;
+        bf %tmp.348 @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_104_12_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_104_12_if_true:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_104_48_start:
+[ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 105 16 ]
         %tmp.349 = lgetv %dc;
         %tmp.350 = getv function %tmp.349 :setColor;
         %tmp.351 = getm $.Toybox.Graphics;
-        %tmp.352 = getv %tmp.351 :COLOR_WHITE;
+        %tmp.352 = getv %tmp.351 :COLOR_RED;
         %tmp.353 = getm $.Toybox.Graphics;
         %tmp.354 = getv %tmp.353 :COLOR_TRANSPARENT;
         invoke %tmp.349 %tmp.350(%tmp.352, %tmp.354);
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_105_15_stop:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_101_15_if_end:
-C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_97_8_if_end:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_104_48_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_104_12_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_104_12_if_end:
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_103_40_stop:
+        goto @C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_103_8_if_end;
+C_Users_Harry_Desktop_sensory_device_CIQ_app_CIQ_source_Notifications_mc_103_8_if_end:
 [ "C:\Users\Harry\Desktop\sensory-device\CIQ_app\CIQ\source\Notifications.mc" 108 8 ]
         %tmp.355 = lgetv %dc;
         %tmp.356 = getv function %tmp.355 :drawText;
