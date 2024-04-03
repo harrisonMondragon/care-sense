@@ -94,16 +94,16 @@ class EnvNotification extends WatchUi.View {
         dc.drawText(label_x, y / 2 + 70, Graphics.FONT_SMALL, "Temp:", Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
 
         // Display temp value in the correct text color
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         if (TEMP_MAX_THRESHOLD != null) {
             if (TEMP_VAL >= TEMP_MAX_THRESHOLD) {
                 dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
             }
-        } else if (TEMP_MIN_THRESHOLD != null) {
+        }
+        if (TEMP_MIN_THRESHOLD != null) {
             if (TEMP_VAL <= TEMP_MIN_THRESHOLD) {
                 dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
             }
-        } else {
-            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         }
         dc.drawText(value_x, y / 2 + 70, Graphics.FONT_SMALL, Lang.format("$1$ °C", [TEMP_VAL.format("%.1f")]), Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
 

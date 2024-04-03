@@ -115,23 +115,21 @@ void loop(){
             if (millis() - lastTime >= interval){
 
                 // Update temperature -------------------------
-                float temperature = HS300x.readTemperature();
+                float temp = HS300x.readTemperature();
+                float temperature = temp - 3.0;
                 temperatureCharacteristic.writeValue(temperature);
 
                 // Update sound -------------------------
                 // Wait for samples to be read
                 if (samplesRead){
-
-                    // Calculate the RMS amplitude
-                    double sumSquared = 0.0;
-                    for (int i = 0; i < samplesRead; i++){
-                        sumSquared += pow(sampleBuffer[i], 2);
+                    // take the maximum value from the interval
+                    int maxVal = abs(sampleBuffer[0]);
+                    for (int i = 0; i < (sizeof(sampleBuffer) / sizeof(sampleBuffer[0])); i++) {
+                        maxVal = max(abs(sampleBuffer[i]), maxVal);
                     }
-                    double rmsAmplitude = sqrt(sumSquared / samplesRead);
 
                     // Amplitude to dBFSs
-                    float dBFS = 20 * log10(abs(rmsAmplitude));
-
+                    float dBFS = 20 * log10(abs(maxVal));
                     // dBFS to Positive dB Scale
                     // -26 +- 1 dBFS is reference for 0 dB
                     float dB = dBFS + 25;
