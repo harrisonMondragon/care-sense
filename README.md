@@ -23,6 +23,8 @@ The Sensory Monitor system helps caregivers become more alert to potential senso
 5. The devices should automatically connect, and after some time a home screen should be visible that displays current sensor readings
 
 ## Features
-- The Connect IQ app will automatically update as the Arduino Nano updates its BLE Characteristics for the sensor values
-- If sensor values surpass thresholds, dismissable notifications will occur on the Connect IQ app
+- The Connect IQ app will automatically update as the Arduino Nano updates its BLE Characteristics for the sound and temperature sensor values
+- If sensor values surpass thresholds, dismissable 15s notifications with a 2s vibration will occur on the Connect IQ app
 - Thresholds for maximum and minimum temperature, and maximum sound level can be adjusted by swiping down on the Connect IQ app
+- The watch records the data in an activity and uploads to Garmin Connect on the next sync
+- Activity is started once BLE subscription is complete, discarded on a disconnect of any kind, and saved on exiting the app from the home display
