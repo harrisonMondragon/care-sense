@@ -29,10 +29,22 @@ module Rez {
     } // Menus
 
     module Strings {
+        (:initialized) var current_sound_threshold_label as Symbol;
+        (:initialized) var current_sound_label as Symbol;
+        (:initialized) var current_min_temp_threshold_label as Symbol;
+        (:initialized) var temp_units as Symbol;
+        (:initialized) var current_max_temp_threshold_label as Symbol;
+        (:initialized) var sound_threshold_chart_title as Symbol;
+        (:initialized) var AppName as Symbol;
+        (:initialized) var current_temp_label as Symbol;
+        (:initialized) var sound_units as Symbol;
+        (:initialized) var temp_min_threshold_chart_title as Symbol;
         (:initialized) var menu_label_1 as Symbol;
         (:initialized) var menu_label_2 as Symbol;
+        (:initialized) var sound_value_chart_title as Symbol;
         (:initialized) var prompt as Symbol;
-        (:initialized) var AppName as Symbol;
+        (:initialized) var temp_value_chart_title as Symbol;
+        (:initialized) var temp_max_threshold_chart_title as Symbol;
     } // Strings
 
     module Styles {
